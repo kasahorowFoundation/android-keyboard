@@ -17,6 +17,11 @@ buildscript {
     }
 }
 
+ext {
+  compileSdkVersion = 26
+  buildToolsVersion = "26.0.2"
+}
+
 allprojects {
     repositories {
         google()

@@ -5,15 +5,15 @@ jacoco {
     toolVersion = "0.7.7.201606060606"
 }
 
-android {
-    testOptions {
-        unitTests.all {
-            jacoco {
-                includeNoLocationClasses = true
-            }
-        }
-    }
-}
+// android {
+//     testOptions {
+//         unitTests.all {
+//             jacoco {
+//                 includeNoLocationClasses = true
+//             }
+//         }
+//     }
+// }
 
 project.afterEvaluate {
 
