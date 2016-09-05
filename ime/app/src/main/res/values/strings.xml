@@ -628,9 +628,7 @@
     <string name="settings_long_press_timeout_never">Never</string>
 
     <string name="settings_force_locale_title">Force Locale</string>
-    <string name="settings_force_locale_summary">Force locale used inside AnySoftKeyboard (takes
-        awhile to take affect). Currently: %s.
-    </string>
+    <string name="settings_force_locale_summary">Force locale used inside kasahorow (takes awhile to take affect). Currently: %s.</string>
 
     <string name="tweak_workarounds_group">Workarounds</string>
     <string name="workaround_disable_rtl_fix">Use Android\'s Right-to-Left handling</string>
@@ -720,9 +718,7 @@
 
     <string name="developer_tools">Developer tools</string>
     <string name="click_for_developer_features">Developer tools</string>
-    <string name="click_for_developer_features_summary">Various tools for AnySoftKeyboard
-        developers
-    </string>
+    <string name="click_for_developer_features_summary">Various tools for kasahorow developers</string>
     <string name="failed_to_create_mem_dump">Failed to create memory dump file due to:
         <xliff:g id="message">%s</xliff:g>
     </string>
@@ -798,8 +794,7 @@
     <string name="setup_wizard_step_three_action_all_settings">Configure everything else…</string>
 
     <string name="setup_wizard_step_download_title">Download Language Packs</string>
-    <string name="setup_wizard_step_download_details">You\'ll be happy to know that <i>AnySoftKeyboard</i> supports dozens of languages. Just download the desired language-pack and enjoy typing in
-        any language on your device.</string>
+    <string name="setup_wizard_step_download_details">You\'ll be happy to know that <i>kasahorow</i> supports dozens of languages. Just download the desired language pack and enjoy typing in any language.</string>
     <string name="setup_wizard_step_download_action">Download language pack</string>
     <string name="setup_wizard_step_download_skip_action">Skip</string>
 
@@ -823,6 +818,9 @@
     <string name="clipboard_paste_entries_title">Pick text to paste</string>
     <string name="next_word_prefs_clear_data">Clear next-word data</string>
     <string name="next_word_prefs_clear_data_summary">This is irreversible. All your typing history will be cleared.</string>
+    <string name="wizard_allow_contacts_permission">Allow contacts-based typing suggestions</string>
+    <string name="setup_wizard_step_three_action_show_keyboard">Show me\nkasahorow!</string>
+    <string name="setup_wizard_step_three_action_go_to_home_fragment">Go to main page</string>
     <string name="notification_read_contacts_title">Can I read your contacts?</string>
     <string name="notification_read_contacts_text">We need to read your contacts to give you a better auto-complete experience.</string>
     <string name="wizard_allow_contacts_permission">Allow contacts-based typing suggestions</string>
@@ -836,7 +834,6 @@
         helping out to kill bugs before they reach the public.
     </string>
     <string name="clipboard_fine_select_enabled_toast">Fine-text-selection enabled. Use left/right arrows.</string>
-
     <string name="app_shortcut_keyboards_disabled">Keyboards navigation disabled</string>
     <string name="app_shortcut_keyboards_long_label">Pick keyboard layouts to use</string>
     <string name="app_shortcut_keyboards_short_label">Keyboards</string>
