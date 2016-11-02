@@ -68,6 +68,8 @@
             android:name="com.menny.android.anysoftkeyboard.LauncherSettingsActivity"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/ime_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+
             android:launchMode="singleTop"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:theme="@style/Theme.AskApp">
