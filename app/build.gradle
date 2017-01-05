@@ -20,7 +20,7 @@ if(project.hasProperty("kasahorow.signing.config") && new File(project.property(
     Properties properties = new Properties()
     properties.load(new FileInputStream(file(project.property("kasahorow.signing.config"))))
 
-    android {
+  android {
         packagingOptions {
             exclude 'LICENSE.txt'
             exclude 'META-INF/LICENSE'
