@@ -64,13 +64,23 @@
             nameResId="@string/azerty_keyboard"
             sentenceSeparators=".,)" />
 
+    <Keyboard
+            id="72eb875b-ef92-483a-a1c4-04538072a926"
+            defaultDictionaryLocale="ff"
+            description="@string/ff_desc"
+            iconResId="@drawable/ff"
+            index="6"
+            landscapeResId="@xml/ff_qwerty"
+            layoutResId="@xml/ff_qwerty"
+            nameResId="@string/ff_keyboard"/>
+
 
     <Keyboard
             id="5e8ea8c4-a287-42af-9781-55e7c6f4d53a"
       	    defaultDictionaryLocale="ge"
       	    description="@string/ge_desc"
       	    iconResId="@drawable/ge"
-            index="11"
+            index="7"
             landscapeResId="@xml/ge_qwerty"
             layoutResId="@xml/ge_qwerty"
             nameResId="@string/ge_keyboard"/>
@@ -80,7 +90,7 @@
             defaultDictionaryLocale="hau"
             description="@string/ha_desc"
             iconResId="@drawable/ha"
-            index="12"
+            index="8"
             landscapeResId="@xml/ha_qwerty"
             layoutResId="@xml/ha_qwerty"
             nameResId="@string/ha_keyboard"/>
@@ -90,7 +100,7 @@
             defaultDictionaryLocale="ig"
             description="@string/ig_desc"
             iconResId="@drawable/ig"
-            index="13"
+            index="9"
             landscapeResId="@xml/ig_qwerty"
             layoutResId="@xml/ig_qwerty"
             nameResId="@string/ig_keyboard"/>
@@ -100,7 +110,7 @@
             defaultDictionaryLocale="kik"
             description="@string/kik_desc"
             iconResId="@drawable/kik"
-            index="14"
+            index="10"
             landscapeResId="@xml/kik_qwerty"
             layoutResId="@xml/kik_qwerty"
             nameResId="@string/kik_keyboard"/>
@@ -110,7 +120,7 @@
             defaultDictionaryLocale="wo"
             description="@string/wo_desc"
             iconResId="@drawable/wo"
-            index="15"
+            index="11"
             landscapeResId="@xml/wo_qwerty"
             layoutResId="@xml/wo_qwerty"
             nameResId="@string/wo_keyboard"/>
@@ -120,7 +130,7 @@
             defaultDictionaryLocale="yor"
             description="@string/yo_desc"
             iconResId="@drawable/yo"
-            index="16"
+            index="12"
             landscapeResId="@xml/yo_qwerty"
             layoutResId="@xml/yo_qwerty"
             nameResId="@string/yo_keyboard"/>
