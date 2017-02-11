@@ -887,7 +887,7 @@
 
     <!-- kasahorow-specific strings -->
     <string name="ak_keyboard">Akan</string>
-    <string name="ak_desc">Write Akan for Twi, Fanti, Akuapem speakers.</string>
+    <string name="ak_desc">Write Akan for Twi, Fanti, Akuapem, Nzema, Baule speakers.</string>
     <string name="ge_keyboard">Ga</string>
     <string name="ge_desc">Write Ga for Ga, Ga-Dangme, Krobo speakers.</string>
     <string name="ee_keyboard">Gbe</string>
