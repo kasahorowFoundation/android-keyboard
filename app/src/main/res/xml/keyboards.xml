@@ -28,29 +28,13 @@
               defaultDictionaryLocale="en" description="QWERTY Latin keyboard with symbols (on long press)"
               index="3" defaultEnabled="false"
               physicalKeyboardMappingResId="@xml/physical" />
-    <Keyboard nameResId="@string/compact_keyboard" iconResId="@drawable/ic_stat_en"
-              layoutResId="@xml/qwerty_compact" landscapeResId="@xml/qwerty"
-              id="233838da-ed6c-4765-8fcc-b3e8f4090633"
-              defaultDictionaryLocale="en" description="Compact in portrait"
-              index="6" />
-    <Keyboard nameResId="@string/dvorak_keyboard" iconResId="@drawable/ic_stat_en"
-              layoutResId="@xml/dvorak" id="4100d602-ba06-40e5-b169-61881b065def"
-              defaultDictionaryLocale="en" description="Created with Stephen Paul Weber"
-              index="7"/>
-    <Keyboard nameResId="@string/colemak_keyboard" iconResId="@drawable/ic_stat_en"
-              layoutResId="@xml/colemak" id="86770389-9f38-4654-9e29-68d503410fcd"
-              defaultDictionaryLocale="en" description="Created with Hugo Lopes"
-              index="8"/>
-    <Keyboard nameResId="@string/terminal_keyboard" layoutResId="@xml/terminal"
-              id="b1c24b40-02ce-4857-9fb8-fb9e4e3b4318" index="7" description="Created with bittrance"/>
-
 
     <Keyboard
             id="f1533ec2-f971-42ed-9908-686b9426bf3f"
             defaultDictionaryLocale="ewe"
             description="@string/ee_desc"
             iconResId="@drawable/ee"
-            index="9"
+            index="4"
             landscapeResId="@xml/ee_qwerty"
             layoutResId="@xml/ee_qwerty"
             nameResId="@string/ee_keyboard"/>
@@ -59,7 +43,7 @@
             id="362b0871-f09a-411b-9a2a-3eb6034a18ea"
             defaultDictionaryLocale="fr"
             description="@string/fr_desc"
-            index="10"
+            index="5"
             layoutResId="@xml/azerty"
             nameResId="@string/azerty_keyboard"
             sentenceSeparators=".,)" />
