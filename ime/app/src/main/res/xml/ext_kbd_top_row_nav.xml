@@ -19,3 +19,4 @@
              android:codes="@integer/key_code_voice_input" ask:hintLabel=" " android:keyEdgeFlags="right"/>
     </Row>
 </Keyboard>
+

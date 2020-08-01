@@ -25,9 +25,11 @@ buildscript {
     }
 }
 
-ext {
-  compileSdkVersion = 26
-  buildToolsVersion = "26.0.2"
+apply plugin: 'com.github.sherter.google-java-format'
+
+googleJavaFormat {
+    toolVersion = '1.8'
+    options style: 'AOSP'
 }
 
 allprojects {

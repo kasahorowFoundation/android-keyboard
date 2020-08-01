@@ -12,3 +12,4 @@ class NextWordsContainer {
 
 
 #endif //ANYSOFTKEYBOARD_NEXTWORDSCONTAINER_H
+

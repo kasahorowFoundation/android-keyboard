@@ -187,3 +187,4 @@ jint JNI_OnLoad(JavaVM* vm, void* reserved)
 bail:
     return result;
 }
+

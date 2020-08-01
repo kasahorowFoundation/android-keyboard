@@ -14,3 +14,4 @@
         <Key android:keyLabel=".рф" android:keyOutputText=".рф" android:keyEdgeFlags="right"/>
     </Row>
 </Keyboard>
+

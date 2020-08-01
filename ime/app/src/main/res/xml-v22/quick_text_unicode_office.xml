@@ -123,3 +123,4 @@
     <Key android:keyLabel="⛓" android:keyOutputText="⛓" xmlns:ask="http://schemas.android.com/apk/res-auto" ask:tags="chain"/>
   </Row>
 </Keyboard>
+
