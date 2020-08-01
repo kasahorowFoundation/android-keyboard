@@ -1,0 +1,16 @@
+Executable : /Users/eyedol/Devel/android-ndk-r14b/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/Android.mk
+APP_ABI=mips
+NDK_ALL_ABIS=mips
+NDK_DEBUG=0
+APP_PLATFORM=android-9
+NDK_OUT=/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/build/intermediates/ndkBuild/release/obj
+NDK_LIBS_OUT=/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/build/intermediates/ndkBuild/release/lib
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-B
+-n
+jvmArgs : 
+

@@ -4,11 +4,36 @@ build/
 .DS_Store
 *.iml
 local.properties
-local.extra.properties
-/bin/
-/gen/
-/obj/
-/buildSrc/build
 /codecov.sh
-.java-version
-*keystore
+outputs/
+
+#jacoco
+*.exec
+
+#ndk stuff
+.cxx
+.externalNativeBuild/
+
+!/gradle/wrapper/gradle-wrapper.jar
+
+#vscode
+.project
+.settings/
+.classpath
+.vscode/
+
+#generated files
+*_words_*.dict
+*_words_dict_array.xml
+*.apk
+
+add_ons_apks/
+
+.robolectric-android-all-jars/
+
+#gradle build loggin
+build-logging/
+
+#changelogs are only included alpha.txt
+**/src/*/play/release-notes/*/beta.txt
+**/src/*/play/release-notes/*/production.txt

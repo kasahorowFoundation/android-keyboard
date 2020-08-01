@@ -1,0 +1,69 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android",
+      "sdkFolder": "/Users/eyedol/Library/Android/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/build/intermediates",
+      "gradleModulePathName": ":ime:dictionaries:jnidictionaryv1",
+      "moduleRootFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1",
+      "makeFile": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/Android.mk",
+      "buildSystem": "NDK_BUILD",
+      "compilerSettingsCacheFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/.cxx",
+      "cxxFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx",
+      "ndkFolder": "/Users/eyedol/Devel/android-ndk-r14b",
+      "ndkVersion": "14.1.3816874",
+      "ndkSupportedAbiList": [
+        "ARMEABI",
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64",
+        "MIPS",
+        "MIPS64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI",
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64",
+        "MIPS",
+        "MIPS64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "release",
+    "soFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/build/intermediates/ndkBuild/release/lib",
+    "objFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/build/intermediates/ndkBuild/release/obj/local",
+    "jsonFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/ndkBuild/release",
+    "gradleBuildOutputFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/cxx/release",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI",
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64",
+      "MIPS",
+      "MIPS64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "X86",
+  "abiPlatformVersion": 9,
+  "cxxBuildFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/ndkBuild/release/x86",
+  "jsonFile": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/ndkBuild/release/x86/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/cxx/release/x86",
+  "objFolder": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/build/intermediates/ndkBuild/release/obj/local/x86",
+  "buildCommandFile": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/ndkBuild/release/x86/build_command.txt",
+  "buildOutputFile": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/ndkBuild/release/x86/build_output.txt",
+  "modelOutputFile": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/ndkBuild/release/x86/build_model.json",
+  "jsonGenerationLoggingRecordFile": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/ndkBuild/release/x86/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/eyedol/Devel/Workspace/kasahorow-Keyboard-For-Android/ime/dictionaries/jnidictionaryv1/.cxx/ndkBuild/release/x86/compile_commands.json"
+}
