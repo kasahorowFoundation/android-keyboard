@@ -31,4 +31,3 @@
     <item ask:key_type_feedback="true" android:drawable="@drawable/sym_keyboard_shift_light"/>
     <item android:drawable="@drawable/sym_keyboard_shift_light"/>
 </selector>
-

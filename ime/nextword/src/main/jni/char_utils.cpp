@@ -897,4 +897,3 @@ unsigned short latin_tolower(unsigned short c) {
 }
 
 } // namespace nativeime
-

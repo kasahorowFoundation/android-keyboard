@@ -130,4 +130,3 @@
     <Key android:keyLabel="&#128171;" android:keyOutputText="&#128171;" xmlns:ask="http://schemas.android.com/apk/res-auto" ask:tags="comic,dizzy,star"/>
   </Row>
 </Keyboard>
-

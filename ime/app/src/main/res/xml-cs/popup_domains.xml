@@ -14,4 +14,3 @@
         <Key android:keyLabel=".com" android:keyOutputText=".com"/>
     </Row>
 </Keyboard>
-

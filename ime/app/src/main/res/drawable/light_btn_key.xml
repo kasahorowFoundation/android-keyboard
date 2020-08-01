@@ -48,4 +48,3 @@
           android:drawable="@drawable/light_btn_key_normal_pressed"/>
     <item android:drawable="@drawable/light_btn_key_normal"/>
 </selector>
-

@@ -4,11 +4,6 @@ build/
 .DS_Store
 *.iml
 local.properties
-local.extra.properties
-/bin/
-/gen/
-/obj/
-/buildSrc/build
 /codecov.sh
 outputs/
 

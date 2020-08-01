@@ -1,4 +1,3 @@
-
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ask="http://schemas.android.com/apk/res-auto" android:keyWidth="9.09%p" android:keyHeight="@integer/key_normal_height" ask:autoCap="false">
   <Row>
     <Key android:keyEdgeFlags="left" android:codes="ॉ" android:popupCharacters="ॲऄ" ask:shiftedCodes="ऑ"/>

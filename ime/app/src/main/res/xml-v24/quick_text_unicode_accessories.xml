@@ -31,4 +31,3 @@
     <Key android:keyLabel="&#128142;" android:keyOutputText="&#128142;" xmlns:ask="http://schemas.android.com/apk/res-auto" ask:tags="gem,stone,diamond,jewel"/>
   </Row>
 </Keyboard>
-

@@ -1,6 +1,7 @@
 package com.menny.android.anysoftkeyboard;
 
 import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
+
 import static org.junit.Assert.assertFalse;
 
 import android.app.Activity;

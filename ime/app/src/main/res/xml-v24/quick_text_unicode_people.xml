@@ -110,4 +110,3 @@
     <Key android:keyLabel="&#128068;" android:keyOutputText="&#128068;" xmlns:ask="http://schemas.android.com/apk/res-auto" ask:tags="mouth,lips"/>
   </Row>
 </Keyboard>
-

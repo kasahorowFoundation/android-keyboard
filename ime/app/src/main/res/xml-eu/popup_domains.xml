@@ -17,4 +17,3 @@
         <Key android:keyLabel=".biz" android:keyOutputText=".biz" android:keyEdgeFlags="right"/>
     </Row>
 </Keyboard>
-

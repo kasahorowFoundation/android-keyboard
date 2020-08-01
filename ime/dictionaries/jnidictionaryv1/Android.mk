@@ -10,4 +10,3 @@ LOCAL_SRC_FILES := \
 LOCAL_C_INCLUDES += src/main/jni/include/
 
 include $(BUILD_SHARED_LIBRARY)
-

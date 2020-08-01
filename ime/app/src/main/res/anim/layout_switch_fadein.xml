@@ -25,4 +25,3 @@
             android:toAlpha="1.0"
             android:duration="@integer/extendingAnimTime"/>
 </set>
-

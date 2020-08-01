@@ -28,4 +28,3 @@
             android:toAlpha="0.0"
             android:duration="@integer/popupAnimTime"/>
 </set>
-

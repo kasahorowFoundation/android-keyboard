@@ -8,4 +8,3 @@
     <Key android:keyLabel="&#128105;&#127999;" android:keyOutputText="&#128105;&#127999;" xmlns:ask="http://schemas.android.com/apk/res-auto" ask:tags=""/>
   </Row>
 </Keyboard>
-

@@ -18,4 +18,3 @@ void NextWordDictionary::load() {
 void NextWordDictionary::clear() {
 
 }
-

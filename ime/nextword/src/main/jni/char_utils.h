@@ -24,4 +24,3 @@ unsigned short latin_tolower(unsigned short c);
 }; // namespace nativeime
 
 #endif // LATINIME_CHAR_UTILS_H
-

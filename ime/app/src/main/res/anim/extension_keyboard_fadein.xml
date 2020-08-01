@@ -30,4 +30,3 @@
     <translate android:fromYDelta="50%" android:toYDelta="0"
                android:duration="@integer/extendingAnimTime"/>
 </set>
-

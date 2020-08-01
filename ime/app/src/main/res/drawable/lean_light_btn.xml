@@ -48,4 +48,3 @@
           android:drawable="@drawable/lean_light_normal_btn_pressed"/>
     <item android:drawable="@drawable/lean_light_btn_normal"/>
 </selector>
-

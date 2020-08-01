@@ -26,4 +26,3 @@
     <item ask:key_type_feedback="true" android:drawable="@drawable/sym_keyboard_ctrl_light"/>
     <item android:drawable="@drawable/sym_keyboard_ctrl_light"/>
 </selector>
-
