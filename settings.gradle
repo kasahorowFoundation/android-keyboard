@@ -21,6 +21,7 @@ include ':addons:languages:greek:pack', ':addons:languages:greek:apk'
 include ':addons:languages:hebrew:pack', ':addons:languages:hebrew:apk'
 include ':addons:languages:indonesian:pack', ':addons:languages:indonesian:apk'
 include ':addons:languages:italian:pack', ':addons:languages:italian:apk'
+include ":addons:languages:kasahorow:pack", ":addons:languages:kasahorow:apk"
 include ':addons:languages:lithuanian:pack', ':addons:languages:lithuanian:apk'
 include ':addons:languages:nias:pack', ':addons:languages:nias:apk'
 include ':addons:languages:ossturkish:pack', ':addons:languages:ossturkish:apk'
