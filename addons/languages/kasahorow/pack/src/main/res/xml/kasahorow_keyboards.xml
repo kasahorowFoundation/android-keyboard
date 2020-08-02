@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyboards>
+    <Keyboard
+        id="@string/main_kasahorow_keyboard_id"
+        defaultDictionaryLocale="aka"
+        description="@string/ak_desc"
+        iconResId="@drawable/ak"
+        defaultEnabled="false"
+        index="1"
+        landscapeResId="@xml/ak_qwerty"
+        layoutResId="@xml/ak_qwerty"
+        nameResId="@string/ak_keyboard"/>
+
+    <Keyboard
+        id="b419eee2-ff2d-4a12-926c-0c9c75756aab"
+        defaultDictionaryLocale="din"
+        description="@string/din_desc"
+        iconResId="@drawable/din"
+        index="2"
+        landscapeResId="@xml/din_qwerty"
+        layoutResId="@xml/din_qwerty"
+        nameResId="@string/din_keyboard"/>
+
+    <Keyboard nameResId="@string/english_keyboard_symbols" iconResId="@drawable/ic_status_english"
+        layoutResId="@xml/qwerty_with_symbols" landscapeResId="@xml/qwerty_with_symbols"
+        id="34CC76A3-91B3-4204-BB1B-421BA8FC8430"
+        defaultDictionaryLocale="en" description="@string/english_keyboard_symbols_description"
+        index="3" defaultEnabled="false"
+        physicalKeyboardMappingResId="@xml/english_physical" />
+
+    <Keyboard
+        id="f1533ec2-f971-42ed-9908-686b9426bf3f"
+        defaultDictionaryLocale="ewe"
+        description="@string/ee_desc"
+        iconResId="@drawable/ee"
+        index="4"
+        landscapeResId="@xml/ee_qwerty"
+        layoutResId="@xml/ee_qwerty"
+        nameResId="@string/ee_keyboard"/>
+
+    <Keyboard
+        id="362b0871-f09a-411b-9a2a-3eb6034a18ea"
+        defaultDictionaryLocale="fr"
+        description="@string/fr_desc"
+        index="5"
+        layoutResId="@xml/azerty"
+        nameResId="@string/azerty_keyboard"
+        sentenceSeparators=".,)" />
+
+    <Keyboard
+        id="72eb875b-ef92-483a-a1c4-04538072a926"
+        defaultDictionaryLocale="ff"
+        description="@string/ff_desc"
+        iconResId="@drawable/ff"
+        index="6"
+        landscapeResId="@xml/ff_qwerty"
+        layoutResId="@xml/ff_qwerty"
+        nameResId="@string/ff_keyboard"/>
+
+
+    <Keyboard
+        id="5e8ea8c4-a287-42af-9781-55e7c6f4d53a"
+        defaultDictionaryLocale="ge"
+        description="@string/ge_desc"
+        iconResId="@drawable/ge"
+        index="7"
+        landscapeResId="@xml/ge_qwerty"
+        layoutResId="@xml/ge_qwerty"
+        nameResId="@string/ge_keyboard"/>
+
+    <Keyboard
+        id="153987e5-0919-4a00-9326-87d23891e70d"
+        defaultDictionaryLocale="hau"
+        description="@string/ha_desc"
+        iconResId="@drawable/ha"
+        index="8"
+        landscapeResId="@xml/ha_qwerty"
+        layoutResId="@xml/ha_qwerty"
+        nameResId="@string/ha_keyboard"/>
+
+    <Keyboard
+        id="0f70c4df-7f03-4647-a8f9-70b7715a377f"
+        defaultDictionaryLocale="ig"
+        description="@string/ig_desc"
+        iconResId="@drawable/ig"
+        index="9"
+        landscapeResId="@xml/ig_qwerty"
+        layoutResId="@xml/ig_qwerty"
+        nameResId="@string/ig_keyboard"/>
+
+    <Keyboard
+        id="cdbdf63d-5e32-4ca1-87f0-c797e1a3fbec"
+        defaultDictionaryLocale="kik"
+        description="@string/kik_desc"
+        iconResId="@drawable/kik"
+        index="10"
+        landscapeResId="@xml/kik_qwerty"
+        layoutResId="@xml/kik_qwerty"
+        nameResId="@string/kik_keyboard"/>
+
+    <Keyboard
+        id="fdf0c017-150e-44d1-b567-7e2fef208b24"
+        defaultDictionaryLocale="wo"
+        description="@string/wo_desc"
+        iconResId="@drawable/wo"
+        index="11"
+        landscapeResId="@xml/wo_qwerty"
+        layoutResId="@xml/wo_qwerty"
+        nameResId="@string/wo_keyboard"/>
+
+    <Keyboard
+        id="89297ca8-549a-4344-9d9b-0d137f0d2179"
+        defaultDictionaryLocale="yor"
+        description="@string/yo_desc"
+        iconResId="@drawable/yo"
+        index="12"
+        landscapeResId="@xml/yo_qwerty"
+        layoutResId="@xml/yo_qwerty"
+        nameResId="@string/yo_keyboard"/>
+</Keyboards>

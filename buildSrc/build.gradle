@@ -1,11 +1,30 @@
 apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'java-gradle-plugin'
 
 repositories {
-    mavenCentral()
+    maven { url 'https://repo1.maven.org/maven2' /*maven-central with HTTPS*/}
+    maven { url "https://plugins.gradle.org/m2/" }
 }
 
 dependencies {
-    compile 'org.jsoup:jsoup:1.9.1'
-    compile gradleApi()
-    compile localGroovy()
+    implementation 'org.jsoup:jsoup:1.9.1'
+    implementation gradleApi()
+    implementation localGroovy()
+
+    implementation 'org.apache.httpcomponents:httpclient:4.5.11'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+gradlePlugin {
+    plugins {
+        makeDictionaryPlugin {
+            id = 'make-dictionary'
+            implementationClass = 'MakeDictionaryPlugin'
+        }
+        deploymentsPlugin {
+            id = 'anysoftkeyboard-deployment'
+            implementationClass = 'deployment.DeploymentPlugin'
+        }
+    }
 }
