@@ -4,7 +4,7 @@
           android:keyWidth="10%p"
           android:horizontalGap="0px"
           android:verticalGap="0px"
-          android:keyHeight="@dimen/default_key_height"
+          android:keyHeight="@integer/key_normal_height"
         >
 
     <Row>
