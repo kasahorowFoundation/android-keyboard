@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Keyboards>
     <Keyboard nameResId="@string/english_keyboard" iconResId="@drawable/ic_status_english"
-              layoutResId="@xml/qwerty" id="@string/main_english_keyboard_id"
+              layoutResId="@xml/qwerty" id="@string/main_kasahorow_keyboard_id"
               defaultDictionaryLocale="en" description="@string/english_keyboard_description"
               index="1" defaultEnabled="true"
               physicalKeyboardMappingResId="@xml/english_physical" />
