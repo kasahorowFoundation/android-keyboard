@@ -4,14 +4,14 @@
           android:keyWidth="10%p"
           android:horizontalGap="0px"
           android:verticalGap="0px"
-          android:keyHeight="@dimen/default_key_height"
+          android:keyHeight="@integer/key_normal_height"
         >
 
     <Row>
         <Key
-                android:codes="7865"
-                android:keyLabel="ẹ"
-                android:popupCharacters="q"
+                android:codes="113"
+                android:keyLabel="q"
+                android:popupCharacters=""
                 android:keyEdgeFlags="left"/>
         <Key
                 android:codes="119"
@@ -20,7 +20,7 @@
         <Key
                 android:codes="101"
                 android:keyLabel="e"
-                android:popupCharacters="₦"/>
+                android:popupCharacters="₣,₦"/>
         <Key
                 android:codes="114"
                 android:keyLabel="r"
@@ -32,7 +32,7 @@
         <Key
                 android:codes="121"
                 android:keyLabel="y"
-                android:popupCharacters=""/>
+                android:popupCharacters="ƴ"/>
         <Key
                 android:codes="117"
                 android:keyLabel="u"
@@ -65,11 +65,11 @@
         <Key
                 android:codes="100"
                 android:keyLabel="d"
-                android:popupCharacters=""/>
+                android:popupCharacters="d"/>
         <Key
                 android:codes="102"
                 android:keyLabel="f"
-                android:popupCharacters=""/>
+                android:popupCharacters="f"/>
         <Key
                 android:codes="103"
                 android:keyLabel="g"
@@ -85,7 +85,7 @@
         <Key
                 android:codes="107"
                 android:keyLabel="k"
-                android:popupCharacters=""/>
+                android:popupCharacters="k"/>
         <Key
                 android:codes="108"
                 android:keyLabel="l"
@@ -102,20 +102,20 @@
                 android:popupCharacters=""/>
         <Key
                 android:horizontalGap="5%p"
-                android:codes="122"
-                android:keyLabel="z"
-                android:popupCharacters=""/>
+                android:codes="599"
+                android:keyLabel="ɗ"
+                android:popupCharacters="z"/>
         <Key
-                android:codes="7885"
-                android:keyLabel="ọ"
+                android:codes="595"
+                android:keyLabel="ɓ"
                 android:popupCharacters="x"/>
         <Key
                 android:codes="99"
                 android:keyLabel="c"
-                android:popupCharacters=""/>
+                android:popupCharacters="ƴ"/>
         <Key
-                android:codes="7779"
-                android:keyLabel="ṣ"
+                android:codes="331"
+                android:keyLabel="ŋ"
                 android:popupCharacters="v"/>
         <Key
                 android:codes="98"

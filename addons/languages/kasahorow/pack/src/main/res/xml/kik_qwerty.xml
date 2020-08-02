@@ -4,14 +4,14 @@
           android:keyWidth="10%p"
           android:horizontalGap="0px"
           android:verticalGap="0px"
-          android:keyHeight="@dimen/default_key_height"
+          android:keyHeight="@integer/key_normal_height"
         >
 
     <Row>
         <Key
-                android:codes="603"
-                android:keyLabel="ɛ"
-                android:popupCharacters="q"
+                android:codes="297"
+                android:keyLabel="ĩ"
+                android:popupCharacters=""
                 android:keyEdgeFlags="left"/>
         <Key
                 android:codes="119"
@@ -20,7 +20,7 @@
         <Key
                 android:codes="101"
                 android:keyLabel="e"
-                android:popupCharacters="₵"/>
+                android:popupCharacters="KSh"/>
         <Key
                 android:codes="114"
                 android:keyLabel="r"
@@ -106,9 +106,9 @@
                 android:keyLabel="z"
                 android:popupCharacters=""/>
         <Key
-                android:codes="596"
-                android:keyLabel="ɔ"
-                android:popupCharacters="x"/>
+                android:codes="361"
+                android:keyLabel="ũ"
+                android:popupCharacters=""/>
         <Key
                 android:codes="99"
                 android:keyLabel="c"
