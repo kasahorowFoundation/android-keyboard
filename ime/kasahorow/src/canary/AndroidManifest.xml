@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.menny.android.anysoftkeyboard">
+          package="com.kasahorow.android.keyboard.app">
 
     <application
         android:name="com.anysoftkeyboard.canary.CanaryAnyApplication"
