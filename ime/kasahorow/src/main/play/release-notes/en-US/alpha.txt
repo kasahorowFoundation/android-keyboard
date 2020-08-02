@@ -1,0 +1,8 @@
+* Keep safe! #covid19
+* Suggesting recent clipboard entry.
+* Ability to backup/restore settings from a location.
+* A few bug fixes.
+* Updated translations.
+* YABTU
+
+More here: https://github.com/AnySoftKeyboard/AnySoftKeyboard/milestone/92

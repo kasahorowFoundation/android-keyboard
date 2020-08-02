@@ -71,4 +71,5 @@ include ':ime:dictionaries', ':ime:dictionaries:jnidictionaryv1', ':ime:dictiona
 include ':ime:pixel', ':ime:overlay'
 include 'ime:voiceime'
 include ':ime:app'
+include ':ime:kasahorow'
 
