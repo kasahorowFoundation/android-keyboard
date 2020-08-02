@@ -4,7 +4,7 @@
         autoTextResourceId="@xml/english_autotext"
         description="@string/english_dictionary_description"
         dictionaryResourceId="@array/english_words_dict_array"
-        id="8a678ccc-b62a-41e3-9d1b-0023bf710b2b"
+        id="0320c7bc-e0c2-4cf4-beae-7fdfec064d4c"
         initialSuggestions="@array/english_initial_suggestions"
         locale="en"
         nameResId="@string/english_dictionary"
