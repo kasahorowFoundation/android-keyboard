@@ -26,7 +26,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class ExternalAnyKeyboardRowsTest {
-    private static final KeyboardDimens SIMPLE_KeyboardDimens =
+    public static final KeyboardDimens SIMPLE_KeyboardDimens =
             new KeyboardDimens() {
                 @Override
                 public int getKeyboardMaxWidth() {

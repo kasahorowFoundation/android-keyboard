@@ -2,7 +2,6 @@ package com.anysoftkeyboard.keyboards.views;
 
 import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
 import static com.anysoftkeyboard.keyboards.Keyboard.KEYBOARD_ROW_MODE_NORMAL;
-import static com.menny.android.anysoftkeyboard.R.xml.keyboard_with_keys_with_no_codes;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -90,8 +89,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -130,8 +129,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -170,8 +169,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -212,8 +211,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext(), 7),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -252,8 +251,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -291,8 +290,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -334,8 +333,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -377,8 +376,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -417,8 +416,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
@@ -467,8 +466,8 @@ public class AnyKeyboardViewWithMiniKeyboardTest extends AnyKeyboardViewBaseTest
                 new ExternalAnyKeyboard(
                         new DefaultAddOn(getApplicationContext(), getApplicationContext()),
                         getApplicationContext(),
-                        keyboard_with_keys_with_no_codes,
-                        keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
+                        R.xml.keyboard_with_keys_with_no_codes,
                         "test",
                         0,
                         0,
