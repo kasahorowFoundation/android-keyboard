@@ -12,7 +12,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.kasahorow.android.keyboard.app.R;
-
 import java.util.List;
 import java.util.Locale;
 

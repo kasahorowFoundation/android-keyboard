@@ -8,9 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.kasahorow.android.keyboard.app.R;
 import com.kasahorow.android.keyboard.app.BuildConfig;
+import com.kasahorow.android.keyboard.app.R;
 import java.util.Calendar;
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
