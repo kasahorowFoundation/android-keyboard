@@ -112,7 +112,7 @@ jobs:
         with:
           index: ${{ matrix.index }}
           groups_count: ${{ matrix.groups_count }}
-          module: ":ime:kasahorow:"
+          module: ":ime:app:"
           extra_args: "-PexcludeTestClasses=\"**/*AllSdkTest*\""
       - uses: ./.github/actions/codecov
       - uses: ./.github/actions/collect-reports
