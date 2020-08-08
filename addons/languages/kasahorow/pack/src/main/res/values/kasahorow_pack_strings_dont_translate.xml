@@ -7,6 +7,7 @@
     <string name="english_keyboard">English</string>
     <string name="english_keyboard_symbols">English</string>
     <string name="main_kasahorow_keyboard_id">e99e252e-fc49-42dd-b763-9f78294cb0f0</string>
+    <string name="compact_keyboard_16keys">EN Keypad</string>
 
     <string-array name="english_initial_suggestions">
         <item>!</item>

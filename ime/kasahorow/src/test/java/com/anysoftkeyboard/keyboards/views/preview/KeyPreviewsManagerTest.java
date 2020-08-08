@@ -1,7 +1,7 @@
 package com.anysoftkeyboard.keyboards.views.preview;
 
 import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
-import static com.menny.android.anysoftkeyboard.R.drawable.blacktheme_preview_background;
+import static com.kasahorow.android.keyboard.app.R.drawable.blacktheme_preview_background;
 
 import android.app.Application;
 import android.support.v4.content.ContextCompat;
