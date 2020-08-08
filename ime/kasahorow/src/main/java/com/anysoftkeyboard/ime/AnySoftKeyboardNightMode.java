@@ -9,7 +9,6 @@ import com.anysoftkeyboard.overlay.OverlayData;
 import com.anysoftkeyboard.overlay.OverlyDataCreator;
 import com.anysoftkeyboard.rx.GenericOnError;
 import com.kasahorow.android.keyboard.app.R;
-
 import java.util.List;
 
 public abstract class AnySoftKeyboardNightMode extends AnySoftKeyboardThemeOverlay {

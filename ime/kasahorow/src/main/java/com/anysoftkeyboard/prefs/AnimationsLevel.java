@@ -2,8 +2,8 @@ package com.anysoftkeyboard.prefs;
 
 import android.content.Context;
 import com.anysoftkeyboard.android.PowerSaving;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import io.reactivex.Observable;
 
 public enum AnimationsLevel {

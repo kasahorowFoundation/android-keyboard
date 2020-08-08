@@ -33,8 +33,8 @@ import com.anysoftkeyboard.overlay.OverlayData;
 import com.anysoftkeyboard.overlay.OverlyDataCreatorForAndroid;
 import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.f2prateek.rx.preferences2.Preference;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 

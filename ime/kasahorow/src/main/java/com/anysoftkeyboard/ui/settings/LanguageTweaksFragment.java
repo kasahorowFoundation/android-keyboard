@@ -22,8 +22,8 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.view.View;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.List;
 
 public class LanguageTweaksFragment extends PreferenceFragmentCompat {

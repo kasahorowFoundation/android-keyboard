@@ -3,9 +3,7 @@ package com.anysoftkeyboard.ime;
 import android.os.Handler;
 import android.os.Message;
 import android.view.inputmethod.InputConnection;
-
 import com.kasahorow.android.keyboard.app.R;
-
 import java.lang.ref.WeakReference;
 
 /** handles all kind of UI thread related operations. */

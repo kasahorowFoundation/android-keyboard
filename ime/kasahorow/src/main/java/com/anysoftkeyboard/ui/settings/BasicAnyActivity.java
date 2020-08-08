@@ -32,7 +32,6 @@ import android.support.v7.app.AlertDialog;
 import com.anysoftkeyboard.PermissionsRequestCodes;
 import com.anysoftkeyboard.ui.settings.setup.SetUpKeyboardWizardFragment;
 import com.kasahorow.android.keyboard.app.R;
-
 import java.lang.ref.WeakReference;
 import net.evendanan.chauffeur.lib.permissions.PermissionsFragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;

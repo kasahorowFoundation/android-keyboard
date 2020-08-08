@@ -33,8 +33,8 @@ import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
 import com.anysoftkeyboard.saywhat.OnVisible;
 import com.anysoftkeyboard.saywhat.PublicNotice;
 import com.anysoftkeyboard.saywhat.PublicNotices;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.Calendar;
 import java.util.List;
 

@@ -22,8 +22,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.base.utils.Logger;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.BuildConfig;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 
 public class PackagesChangedReceiver extends BroadcastReceiver {
 

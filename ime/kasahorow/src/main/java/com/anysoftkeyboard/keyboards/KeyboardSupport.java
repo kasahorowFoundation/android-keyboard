@@ -7,8 +7,8 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.util.TypedValue;
 import com.anysoftkeyboard.base.utils.Logger;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import io.reactivex.Observable;
 import java.util.StringTokenizer;
 
