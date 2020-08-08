@@ -107,6 +107,15 @@ jobs:
       - name: check
         run: ./scripts/ci/ci_check_lint.sh
       - name: check-oom-due-to-lint-issue
+      - name: tests
+        uses: ./.github/actions/test-shard-run
+        with:
+          index: ${{ matrix.index }}
+          groups_count: ${{ matrix.groups_count }}
+          module: ":ime:kasahorow:"
+          extra_args: "-PexcludeTestClasses=\"**/*AllSdkTest*\""
+      - uses: ./.github/actions/codecov
+      - uses: ./.github/actions/collect-reports
         if: always()
         continue-on-error: true
         run: |
