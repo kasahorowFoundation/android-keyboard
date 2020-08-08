@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.test.SharedPrefsHelper;
 import com.kasahorow.android.keyboard.app.R;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
