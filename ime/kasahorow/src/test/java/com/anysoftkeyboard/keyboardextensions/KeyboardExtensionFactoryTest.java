@@ -64,7 +64,7 @@ public class KeyboardExtensionFactoryTest {
                 AnyApplication.getKeyboardExtensionFactory(getApplicationContext())
                         .getEnabledAddOn();
         Assert.assertNotNull(extension);
-        Assert.assertEquals("6f1ecea0-dee2-11e0-9572-0800200c9a66", extension.getId());
+        Assert.assertEquals("d8e1204b-6d19-4673-9b24-0ab9571681a5", extension.getId());
         Assert.assertEquals(KeyboardExtension.TYPE_EXTENSION, extension.getExtensionType());
         Assert.assertEquals(
                 R.xml.ext_kbd_ext_keyboard_numbers_symbols, extension.getKeyboardResId());

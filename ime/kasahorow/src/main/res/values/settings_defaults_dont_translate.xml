@@ -64,10 +64,10 @@
 
     <string name="settings_default_keyboard_id">@string/main_kasahorow_keyboard_id</string>
     <string name="settings_default_quick_text_key_id">698b8c20-19df-11e1-bddb-0800200c9a66</string>
-    <string name="settings_default_top_row_key">5d945f40-ded5-11e0-9572-0800200c9a66</string>
+    <string name="settings_default_top_row_key">e60bb32b-6688-4dec-b9d0-2b04c64916c5</string>
     <string name="settings_default_keyboard_theme_key">8774f99e-fb4a-49fa-b8d0-4083f762250a</string>
-    <string name="settings_default_ext_keyboard_key">6f1ecea0-dee2-11e0-9572-0800200c9a66</string>
-    <string name="settings_default_ext_kbd_bottom_row_key">09f8f280-dee2-11e0-9572-0800200c9a66</string>
+    <string name="settings_default_ext_keyboard_key">d8e1204b-6d19-4673-9b24-0ab9571681a5</string>
+    <string name="settings_default_ext_kbd_bottom_row_key">c921fb90-31ed-46f4-b8a2-1322d9a62238</string>
 
     <bool name="settings_default_workaround_disable_rtl_fix">false</bool>
     <bool name="settings_default_auto_space">true</bool>
