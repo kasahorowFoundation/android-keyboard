@@ -1,8 +1,8 @@
 package com.anysoftkeyboard.android;
 
 import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
-import static com.menny.android.anysoftkeyboard.R.bool.settings_default_false;
-import static com.menny.android.anysoftkeyboard.R.string.settings_key_power_save_mode_sound_control;
+import static com.kasahorow.android.keyboard.app.R.bool.settings_default_false;
+import static com.kasahorow.android.keyboard.app.R.string.settings_key_power_save_mode_sound_control;
 
 import android.app.Application;
 import android.app.Service;

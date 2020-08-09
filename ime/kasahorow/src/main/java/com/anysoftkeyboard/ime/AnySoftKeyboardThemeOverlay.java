@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-
 import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
 import com.anysoftkeyboard.overlay.OverlayData;
 import com.anysoftkeyboard.overlay.OverlayDataNormalizer;
@@ -17,7 +16,6 @@ import com.anysoftkeyboard.rx.GenericOnError;
 import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.kasahorow.android.keyboard.app.R;
-
 import java.util.Collections;
 import java.util.Locale;
 import java.util.Map;

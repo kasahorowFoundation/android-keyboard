@@ -40,7 +40,6 @@ import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.keyboards.views.DemoAnyKeyboardView;
 import com.anysoftkeyboard.ui.settings.widget.AddOnStoreSearchView;
 import com.kasahorow.android.keyboard.app.R;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;

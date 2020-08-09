@@ -14,8 +14,8 @@ import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.keyboardextensions.KeyboardExtension;
 import com.anysoftkeyboard.test.SharedPrefsHelper;
 import com.google.common.base.Preconditions;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -26,7 +26,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class ExternalAnyKeyboardRowsTest {
-    private static final KeyboardDimens SIMPLE_KeyboardDimens =
+    public static final KeyboardDimens SIMPLE_KeyboardDimens =
             new KeyboardDimens() {
                 @Override
                 public int getKeyboardMaxWidth() {

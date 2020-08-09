@@ -23,8 +23,8 @@ import com.anysoftkeyboard.dictionaries.content.AndroidUserDictionary;
 import com.anysoftkeyboard.dictionaries.sqlite.FallbackUserDictionary;
 import com.anysoftkeyboard.nextword.NextWordDictionary;
 import com.anysoftkeyboard.nextword.NextWordSuggestions;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 
 public class UserDictionary extends EditableDictionary {
 

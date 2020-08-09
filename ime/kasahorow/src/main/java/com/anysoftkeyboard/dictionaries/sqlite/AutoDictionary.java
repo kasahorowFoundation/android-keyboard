@@ -18,8 +18,8 @@ package com.anysoftkeyboard.dictionaries.sqlite;
 
 import android.content.Context;
 import com.anysoftkeyboard.base.utils.Logger;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import io.reactivex.disposables.Disposable;
 
 /**

@@ -14,8 +14,8 @@ import com.anysoftkeyboard.keyboards.views.DemoAnyKeyboardView;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
 import com.anysoftkeyboard.ui.settings.AbstractAddOnsBrowserFragment;
 import com.anysoftkeyboard.ui.settings.QuickTextSettingsFragment;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 

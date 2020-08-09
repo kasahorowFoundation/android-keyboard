@@ -11,9 +11,9 @@ import android.os.Bundle;
 import androidx.test.core.app.ApplicationProvider;
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -164,8 +164,8 @@ public class AnySoftKeyboardPackageChangedTest {
         packageInfoWithAddOns.receivers[0].applicationInfo.enabled = true;
         packageInfoWithAddOns.receivers[0].metaData = new Bundle();
         packageInfoWithAddOns.receivers[0].metaData.putInt(
-                "com.menny.android.anysoftkeyboard.keyboards", R.xml.english_keyboards);
-        Mockito.doReturn(getApplicationContext().getResources().getXml(R.xml.english_keyboards))
+                "com.menny.android.anysoftkeyboard.keyboards", R.xml.kasahorow_keyboards);
+        Mockito.doReturn(getApplicationContext().getResources().getXml(R.xml.kasahorow_keyboards))
                 .when(packageInfoWithAddOns.receivers[0])
                 .loadXmlMetaData(
                         Mockito.any(), Mockito.eq("com.menny.android.anysoftkeyboard.keyboards"));
@@ -218,7 +218,7 @@ public class AnySoftKeyboardPackageChangedTest {
         packageInfoWithAddOns.receivers[0].enabled = false;
         packageInfoWithAddOns.receivers[0].metaData = new Bundle();
         packageInfoWithAddOns.receivers[0].metaData.putInt(
-                "com.menny.android.anysoftkeyboard.keyboards", R.xml.english_keyboards);
+                "com.menny.android.anysoftkeyboard.keyboards", R.xml.kasahorow_keyboards);
         Shadows.shadowOf(getApplicationContext().getPackageManager())
                 .addPackage(packageInfoWithAddOns);
 

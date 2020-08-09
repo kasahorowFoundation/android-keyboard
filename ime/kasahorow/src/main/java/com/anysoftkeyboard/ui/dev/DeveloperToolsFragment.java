@@ -35,7 +35,6 @@ import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.rx.RxSchedulers;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.kasahorow.android.keyboard.app.R;
-
 import io.reactivex.disposables.Disposable;
 import io.reactivex.disposables.Disposables;
 import java.io.File;
@@ -59,8 +58,7 @@ public class DeveloperToolsFragment extends Fragment implements View.OnClickList
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(
-                R.layout.developer_tools, container, false);
+        return inflater.inflate(R.layout.developer_tools, container, false);
     }
 
     @Override
@@ -71,27 +69,17 @@ public class DeveloperToolsFragment extends Fragment implements View.OnClickList
                 .setText(DeveloperUtils.getAppDetails(getActivity().getApplicationContext()));
 
         mFlipper = view.findViewById(R.id.dev_flip_trace_file);
-        mProgressIndicator =
-                view.findViewById(
-                        R.id.dev_tracing_running_progress_bar);
-        mShareButton =
-                view.findViewById(R.id.dev_share_trace_file);
+        mProgressIndicator = view.findViewById(R.id.dev_tracing_running_progress_bar);
+        mShareButton = view.findViewById(R.id.dev_share_trace_file);
 
-        view.findViewById(R.id.memory_dump_button)
-                .setOnClickListener(this);
-        view.findViewById(R.id.dev_share_mem_file)
-                .setOnClickListener(this);
-        view.findViewById(R.id.dev_flip_trace_file)
-                .setOnClickListener(this);
-        view.findViewById(R.id.dev_share_trace_file)
-                .setOnClickListener(this);
-        view.findViewById(R.id.show_logcat_button)
-                .setOnClickListener(this);
-        view.findViewById(R.id.share_logcat_button)
-                .setOnClickListener(this);
+        view.findViewById(R.id.memory_dump_button).setOnClickListener(this);
+        view.findViewById(R.id.dev_share_mem_file).setOnClickListener(this);
+        view.findViewById(R.id.dev_flip_trace_file).setOnClickListener(this);
+        view.findViewById(R.id.dev_share_trace_file).setOnClickListener(this);
+        view.findViewById(R.id.show_logcat_button).setOnClickListener(this);
+        view.findViewById(R.id.share_logcat_button).setOnClickListener(this);
 
-        TextView textWithListener =
-                view.findViewById(R.id.actionDoneWithListener);
+        TextView textWithListener = view.findViewById(R.id.actionDoneWithListener);
         textWithListener.setOnEditorActionListener(
                 (textView, i, keyEvent) -> {
                     Toast.makeText(
@@ -140,8 +128,7 @@ public class DeveloperToolsFragment extends Fragment implements View.OnClickList
     public void onStart() {
         super.onStart();
         updateTracingState();
-        MainSettingsActivity.setActivityTitle(
-                this, getString(R.string.developer_tools));
+        MainSettingsActivity.setActivityTitle(this, getString(R.string.developer_tools));
     }
 
     @Override

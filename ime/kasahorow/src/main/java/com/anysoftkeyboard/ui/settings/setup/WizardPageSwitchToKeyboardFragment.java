@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-
 import com.kasahorow.android.keyboard.app.R;
 
 public class WizardPageSwitchToKeyboardFragment extends WizardPageBaseFragment {

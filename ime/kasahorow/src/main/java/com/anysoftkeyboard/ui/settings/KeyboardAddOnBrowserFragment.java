@@ -24,8 +24,8 @@ import com.anysoftkeyboard.keyboards.AnyKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.anysoftkeyboard.keyboards.views.DemoAnyKeyboardView;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 
 public class KeyboardAddOnBrowserFragment
         extends AbstractAddOnsBrowserFragment<KeyboardAddOnAndBuilder> {

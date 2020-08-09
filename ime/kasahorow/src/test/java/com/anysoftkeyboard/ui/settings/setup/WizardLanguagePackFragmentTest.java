@@ -47,7 +47,7 @@ public class WizardLanguagePackFragmentTest
 
     @Test
     public void testHappyPath() {
-        Locale.setDefault(Locale.FRANCE);
+        Locale.setDefault(Locale.CHINESE);
         WizardLanguagePackFragment fragment = startFragment();
         Assert.assertFalse(fragment.isStepCompleted(getApplicationContext()));
 

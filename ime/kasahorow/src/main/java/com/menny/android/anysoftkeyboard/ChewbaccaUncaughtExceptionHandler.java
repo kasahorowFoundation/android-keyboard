@@ -33,7 +33,6 @@ import com.anysoftkeyboard.ui.SendBugReportUiActivity;
 import com.anysoftkeyboard.ui.dev.DeveloperUtils;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;
-
 import io.reactivex.functions.Consumer;
 import java.io.File;
 import java.lang.Thread.UncaughtExceptionHandler;
