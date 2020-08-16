@@ -86,7 +86,7 @@
         description="@string/ig_dictionary_desc"
         dictionaryResourceId="@array/kasahorow_words_dict_array"
         initialSuggestions="@array/english_initial_suggestions"
-        locale="ha"
+        locale="ig"
         nameResId="@string/ig_dictionary"
         type="binary_resource" />
 </Dictionaries>
