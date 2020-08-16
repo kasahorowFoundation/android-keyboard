@@ -11,9 +11,19 @@
         type="binary_resource" />
 
     <Dictionary
+        autoTextResourceId="@xml/english_autotext"
+        description="@string/english_dictionary_description"
+        dictionaryResourceId="@array/kasahorow_words_dict_array"
+        id="0320c7bc-e0c2-4cf4-beae-7fdfec064d4c"
+        initialSuggestions="@array/english_initial_suggestions"
+        locale="en"
+        nameResId="@string/english_dictionary"
+        type="binary_resource" />
+
+    <Dictionary
         id="0a5f108d-516e-42d2-a20c-977c1838c508"
         autoTextResourceId="@xml/english_autotext"
-        description="@string/ee_dictionary"
+        description="@string/ee_dictionary_desc"
         dictionaryResourceId="@array/kasahorow_words_dict_array"
         initialSuggestions="@array/english_initial_suggestions"
         locale="ee"
@@ -31,13 +41,13 @@
         type="binary_resource" />
 
     <Dictionary
+        id="a5baeabc-88dd-4232-afcd-656778a86da8"
         autoTextResourceId="@xml/english_autotext"
-        description="@string/english_dictionary_description"
+        description="@string/fr_dictionary_desc"
         dictionaryResourceId="@array/kasahorow_words_dict_array"
-        id="0320c7bc-e0c2-4cf4-beae-7fdfec064d4c"
         initialSuggestions="@array/english_initial_suggestions"
-        locale="en"
-        nameResId="@string/english_dictionary"
+        locale="fr"
+        nameResId="@string/fr_dictionary"
         type="binary_resource" />
 
     <Dictionary
