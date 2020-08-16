@@ -34,6 +34,9 @@
     <string name="din_desc">Write Dinka</string>
     <!-- dictionary strings -->
     <string name="ee_dictionary">Ewe</string>
+    <string name="ee_dictionary_desc">Ewe dictionary for Ewe speakers</string>
     <string name="ff_dictionary">Fula</string>
     <string name="ff_dictionary_desc">Fula dictionary for Fufulde, Pulaar, Pular speakers.</string>
+    <string name="fr_dictionary">Fronsei</string>
+    <string name="fr_dictionary_desc">Fronsei dictionary for French speakers.</string>
 </resources>
