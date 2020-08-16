@@ -32,4 +32,5 @@
     <string name="wo_desc">Write Wolof.</string>
     <string name="din_keyboard">Dinka</string>
     <string name="din_desc">Write Dinka</string>
+    <string name="ee_dictionary">Ewe</string>
 </resources>
