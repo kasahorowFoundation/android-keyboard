@@ -32,5 +32,8 @@
     <string name="wo_desc">Write Wolof.</string>
     <string name="din_keyboard">Dinka</string>
     <string name="din_desc">Write Dinka</string>
+    <!-- dictionary strings -->
     <string name="ee_dictionary">Ewe</string>
+    <string name="ff_dictionary">Fula</string>
+    <string name="ff_dictionary_desc">Fula dictionary for Fufulde, Pulaar, Pular speakers.</string>
 </resources>
