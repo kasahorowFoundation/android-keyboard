@@ -69,4 +69,14 @@
         locale="ge"
         nameResId="@string/ge_dictionary"
         type="binary_resource" />
+
+    <Dictionary
+        id="6b68b72f-4174-4e6a-a45f-3e140e39f4e6"
+        autoTextResourceId="@xml/english_autotext"
+        description="@string/ha_dictionary_desc"
+        dictionaryResourceId="@array/kasahorow_words_dict_array"
+        initialSuggestions="@array/english_initial_suggestions"
+        locale="ha"
+        nameResId="@string/ha_dictionary"
+        type="binary_resource" />
 </Dictionaries>
