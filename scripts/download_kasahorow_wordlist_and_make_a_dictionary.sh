@@ -4,9 +4,19 @@ set -e
 TARGET_FOLDER="./addons/languages/kasahorow/pack/dictionary/"
 DOWNLOAD_URL="https://a.kasahorow.org/android?kasa"
 
+# Add a locale in alphabetical order
 KASAHOROW_LOCALES=( \
-  "ge" \
+  "ak" \
   "din" \
+  "ee" \
+  "ff" \
+  "fr" \
+  "ge" \
+  "ha" \
+  "ig" \
+  "ki" \
+  "wo" \
+  "yo" \
   )
 
 for locale in "${KASAHOROW_LOCALES[@]}"
