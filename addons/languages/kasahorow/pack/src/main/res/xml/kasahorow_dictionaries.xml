@@ -3,7 +3,7 @@
     <Dictionary
         id="12784f8d-ffa2-43f7-8946-737486e52218"
         autoTextResourceId="@xml/english_autotext"
-        description="@string/ak_dictionary"
+        description="@string/ak_dictionary_desc"
         dictionaryResourceId="@array/kasahorow_words_dict_array"
         initialSuggestions="@array/english_initial_suggestions"
         locale="ak"
