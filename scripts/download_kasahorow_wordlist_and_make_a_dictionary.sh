@@ -24,4 +24,4 @@ done
 
 echo "Now making dictionary"
 ./gradlew clean :addons:languages:kasahorow:pack:makeDictionary
-echo "Done making dictionar!"
+echo "Done making dictionary!"
