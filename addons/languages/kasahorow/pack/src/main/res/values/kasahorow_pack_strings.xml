@@ -32,26 +32,15 @@
     <string name="din_keyboard">Dinka</string>
     <string name="din_desc">Write Dinka</string>
     <!-- dictionary strings -->
-    <string name="ak_dictionary">Akan</string>
     <string name="ak_dictionary_desc">Akan dictionary for Akan speakers.</string>
-    <string name="din_dictionary">Dinka</string>
     <string name="din_dictionary_desc">Dinka dictionary</string>
-    <string name="ee_dictionary">Ewe</string>
     <string name="ee_dictionary_desc">Ewe dictionary for Ewe speakers.</string>
-    <string name="ff_dictionary">Fula</string>
     <string name="ff_dictionary_desc">Fula dictionary for Fufulde, Pulaar, Pular speakers.</string>
-    <string name="fr_dictionary">Fronsei</string>
     <string name="fr_dictionary_desc">Fronsei dictionary for French speakers.</string>
-    <string name="ge_dictionary">Ga-Dangme</string>
     <string name="ge_dictionary_desc">Ga-Dangme dictionary for Ga, Ga-Dangme, Krobo speakers.</string>
-    <string name="ha_dictionary">Hausa</string>
     <string name="ha_dictionary_desc">Hausa dictionary for Hausa speakers.</string>
-    <string name="ig_dictionary">Igbo</string>
     <string name="ig_dictionary_desc">Igbo dictionary for Igbo speakers.</string>
-    <string name="ki_dictionary">Gikuyu</string>
     <string name="ki_dictionary_desc">Gikuyu dictionary for Gikuyu speakers.</string>
-    <string name="wo_dictionary">Wolof</string>
     <string name="wo_dictionary_desc">Gikuyu dictionary for Gikuyu speakers.</string>
-    <string name="yo_dictionary">Yoruba</string>
     <string name="yo_dictionary_desc">Yoruba dictionary for Yoruba speakers.</string>
 </resources>
