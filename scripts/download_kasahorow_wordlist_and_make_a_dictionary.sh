@@ -2,7 +2,7 @@
 set -e
 
 TARGET_FOLDER="./addons/languages/kasahorow/pack/dictionary/"
-DOWNLOAD_URL="https://t9n-20200808-dot-fienipadict.appspot.com/android?kasa"
+DOWNLOAD_URL="https://a.kasahorow.org/android?kasa"
 
 KASAHOROW_LOCALES=( \
   "ge" \
