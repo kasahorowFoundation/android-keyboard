@@ -50,4 +50,6 @@
     <string name="ig_dictionary_desc">Igbo dictionary for Igbo speakers.</string>
     <string name="ki_dictionary">Gikuyu</string>
     <string name="ki_dictionary_desc">Gikuyu dictionary for Gikuyu speakers.</string>
+    <string name="wo_dictionary">Wolof</string>
+    <string name="wo_dictionary_desc">Gikuyu dictionary for Gikuyu speakers.</string>
 </resources>
