@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Dictionaries>
     <Dictionary
+        id="12784f8d-ffa2-43f7-8946-737486e52218"
+        autoTextResourceId="@xml/english_autotext"
+        description="@string/ak_dictionary"
+        dictionaryResourceId="@array/kasahorow_words_dict_array"
+        initialSuggestions="@array/english_initial_suggestions"
+        locale="ak"
+        nameResId="@string/ak_dictionary"
+        type="binary_resource" />
+    
+    <Dictionary
         autoTextResourceId="@xml/english_autotext"
         description="@string/english_dictionary_description"
         dictionaryResourceId="@array/kasahorow_words_dict_array"
