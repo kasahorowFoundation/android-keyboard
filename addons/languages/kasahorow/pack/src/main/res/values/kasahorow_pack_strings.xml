@@ -52,4 +52,6 @@
     <string name="ki_dictionary_desc">Gikuyu dictionary for Gikuyu speakers.</string>
     <string name="wo_dictionary">Wolof</string>
     <string name="wo_dictionary_desc">Gikuyu dictionary for Gikuyu speakers.</string>
+    <string name="yo_dictionary">Yoruba</string>
+    <string name="yo_dictionary_desc">Yoruba dictionary for Yoruba speakers.</string>
 </resources>
