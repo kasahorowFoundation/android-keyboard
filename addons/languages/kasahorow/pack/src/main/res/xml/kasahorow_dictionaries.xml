@@ -89,4 +89,13 @@
         locale="ig"
         nameResId="@string/ig_dictionary"
         type="binary_resource" />
+    <Dictionary
+        id="0001d4af-6182-40c4-98e0-1ce0335cb30f"
+        autoTextResourceId="@xml/english_autotext"
+        description="@string/ki_dictionary_desc"
+        dictionaryResourceId="@array/kasahorow_words_dict_array"
+        initialSuggestions="@array/english_initial_suggestions"
+        locale="ki"
+        nameResId="@string/ki_dictionary"
+        type="binary_resource" />
 </Dictionaries>
