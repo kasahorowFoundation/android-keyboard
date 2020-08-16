@@ -8,7 +8,17 @@
     <string name="english_keyboard_symbols">English</string>
     <string name="main_kasahorow_keyboard_id">e99e252e-fc49-42dd-b763-9f78294cb0f0</string>
     <string name="compact_keyboard_16keys">EN Keypad</string>
-
+    <string name="ak_dictionary">Akan</string>
+    <string name="din_dictionary">Dinka</string>
+    <string name="ee_dictionary">Ewe</string>
+    <string name="ff_dictionary">Fula</string>
+    <string name="fr_dictionary">Fronsei</string>
+    <string name="ge_dictionary">Ga-Dangme</string>
+    <string name="ha_dictionary">Hausa</string>
+    <string name="ig_dictionary">Igbo</string>
+    <string name="ki_dictionary">Gikuyu</string>
+    <string name="wo_dictionary">Wolof</string>
+    <string name="yo_dictionary">Yoruba</string>
     <string-array name="english_initial_suggestions">
         <item>!</item>
         <item>\?</item>
