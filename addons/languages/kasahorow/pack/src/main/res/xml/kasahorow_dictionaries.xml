@@ -9,4 +9,23 @@
         locale="en"
         nameResId="@string/english_dictionary"
         type="binary_resource" />
+
+    <Dictionary
+        id="97cb3ea7-f39b-49c8-ae57-a9fe5f7835aa"
+        autoTextResourceId="@xml/english_autotext"
+        description="@string/ge_dictionary_description"
+        dictionaryResourceId="@array/kasahorow_words_dict_array"
+        initialSuggestions="@array/english_initial_suggestions"
+        locale="ge"
+        nameResId="@string/ge_dictionary"
+        type="binary_resource" />
+    <Dictionary
+        id="41ee96da-d360-48ee-bfdc-340da35d53c6"
+        autoTextResourceId="@xml/english_autotext"
+        description="@string/din_dictionary_description"
+        dictionaryResourceId="@array/kasahorow_words_dict_array"
+        initialSuggestions="@array/english_initial_suggestions"
+        locale="ge"
+        nameResId="@string/din_dictionary"
+        type="binary_resource" />
 </Dictionaries>
