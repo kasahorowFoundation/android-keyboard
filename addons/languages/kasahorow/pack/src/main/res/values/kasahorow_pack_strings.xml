@@ -34,6 +34,8 @@
     <!-- dictionary strings -->
     <string name="ak_dictionary">Akan</string>
     <string name="ak_dictionary_desc">Akan dictionary for Akan speakers.</string>
+    <string name="din_dictionary">Dinka</string>
+    <string name="din_dictionary_desc">Dinka dictionary</string>
     <string name="ee_dictionary">Ewe</string>
     <string name="ee_dictionary_desc">Ewe dictionary for Ewe speakers.</string>
     <string name="ff_dictionary">Fula</string>

@@ -11,6 +11,16 @@
         type="binary_resource" />
 
     <Dictionary
+        id="41ee96da-d360-48ee-bfdc-340da35d53c6"
+        autoTextResourceId="@xml/english_autotext"
+        description="@string/din_dictionary_desc"
+        dictionaryResourceId="@array/kasahorow_words_dict_array"
+        initialSuggestions="@array/english_initial_suggestions"
+        locale="din"
+        nameResId="@string/din_dictionary"
+        type="binary_resource" />
+
+    <Dictionary
         autoTextResourceId="@xml/english_autotext"
         description="@string/english_dictionary_description"
         dictionaryResourceId="@array/kasahorow_words_dict_array"
@@ -58,14 +68,5 @@
         initialSuggestions="@array/english_initial_suggestions"
         locale="ge"
         nameResId="@string/ge_dictionary"
-        type="binary_resource" />
-    <Dictionary
-        id="41ee96da-d360-48ee-bfdc-340da35d53c6"
-        autoTextResourceId="@xml/english_autotext"
-        description="@string/din_dictionary_description"
-        dictionaryResourceId="@array/kasahorow_words_dict_array"
-        initialSuggestions="@array/english_initial_suggestions"
-        locale="din"
-        nameResId="@string/din_dictionary"
         type="binary_resource" />
 </Dictionaries>
