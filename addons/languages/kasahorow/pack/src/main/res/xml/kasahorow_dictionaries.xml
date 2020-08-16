@@ -109,4 +109,14 @@
         locale="wo"
         nameResId="@string/wo_dictionary"
         type="binary_resource" />
+
+    <Dictionary
+        id="81f935b5-313f-402e-b477-a2177b6c17a1"
+        autoTextResourceId="@xml/english_autotext"
+        description="@string/yo_dictionary_desc"
+        dictionaryResourceId="@array/kasahorow_words_dict_array"
+        initialSuggestions="@array/english_initial_suggestions"
+        locale="yo"
+        nameResId="@string/yo_dictionary"
+        type="binary_resource" />
 </Dictionaries>
