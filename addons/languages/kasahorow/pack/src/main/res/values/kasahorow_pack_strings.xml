@@ -44,4 +44,6 @@
     <string name="fr_dictionary_desc">Fronsei dictionary for French speakers.</string>
     <string name="ge_dictionary">Ga-Dangme</string>
     <string name="ge_dictionary_desc">Ga-Dangme dictionary for Ga, Ga-Dangme, Krobo speakers.</string>
+    <string name="ha_dictionary">Hausa</string>
+    <string name="ha_dictionary_desc">Hausa dictionary for Hausa speakers.</string>
 </resources>
