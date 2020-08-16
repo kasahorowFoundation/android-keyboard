@@ -48,4 +48,6 @@
     <string name="ha_dictionary_desc">Hausa dictionary for Hausa speakers.</string>
     <string name="ig_dictionary">Igbo</string>
     <string name="ig_dictionary_desc">Igbo dictionary for Igbo speakers.</string>
+    <string name="ki_dictionary">Gikuyu</string>
+    <string name="ki_dictionary_desc">Gikuyu dictionary for Gikuyu speakers.</string>
 </resources>
