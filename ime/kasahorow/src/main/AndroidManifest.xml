@@ -19,6 +19,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- REQUIRED BACKUP TO/RESTORE FROM SDCARD -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- currently, only support touch and fake-touch devices -->
     <uses-feature android:name="android.hardware.faketouch" />
@@ -28,6 +29,7 @@
 
     <!-- used in QuickTextViewFactory -->
     <uses-sdk tools:overrideLibrary="com.astuetz.pagerslidingtabstrip,androidx.test,androidx.test.core,android.support.v13" />
+
 
     <application
         android:name=".AnyApplication"
