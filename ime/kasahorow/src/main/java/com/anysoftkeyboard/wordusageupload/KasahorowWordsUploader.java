@@ -26,7 +26,7 @@ public class KasahorowWordsUploader {
 
     public KasahorowWordsUploader(NextWordsStorage nextWordsStorage) {
         this.mNextWordsStorage = nextWordsStorage;
-        this.requestBuilder = new Request.Builder().addHeader("Content-Type", "application/text");
+        this.requestBuilder = new Request.Builder();
     }
 
     public int upload(String locale) {
