@@ -18,12 +18,12 @@ public class KasahorowWordsUploader {
 
     private static String PATH = ".kasahorow.org/metrics/android";
     private static String TAG = "KasaWordsUploader";
-    private Request.Builder requestBuilder;
+    private Request.Builder mRequestBuilder;
     private NextWordsStorage mNextWordsStorage;
 
     public KasahorowWordsUploader(NextWordsStorage nextWordsStorage) {
         this.mNextWordsStorage = nextWordsStorage;
-        this.requestBuilder = new Request.Builder();
+        this.mRequestBuilder = new Request.Builder();
     }
 
     public int upload(String locale) {
@@ -41,7 +41,7 @@ public class KasahorowWordsUploader {
         if (BuildConfig.DEBUG)
             Log.d(TAG, "upload url " + url + "data: " + stringBuilder.toString());
         RequestBody body = new FormBody.Builder().add(locale, stringBuilder.toString()).build();
-        Request request = requestBuilder.url(url).post(body).build();
+        Request request = mRequestBuilder.url(url).post(body).build();
         try (Response response = new OkHttpClient().newCall(request).execute()) {
             if (BuildConfig.DEBUG) Log.d(TAG, "response code for " + response.code());
             code = response.code();
@@ -53,12 +53,12 @@ public class KasahorowWordsUploader {
 
     @SuppressWarnings("JdkObsolete")
     static class KasahorowData {
-        private String word;
-        private String date;
+        private String mWord;
+        private String mDate;
 
         KasahorowData(String word, Date date) {
-            this.word = word;
-            this.date = parseDate(date);
+            this.mWord = word;
+            this.mDate = parseDate(date);
         }
 
         KasahorowData(String word) {
@@ -67,7 +67,7 @@ public class KasahorowWordsUploader {
 
         @Override
         public String toString() {
-            return word + "\t" + date;
+            return mWord + "\t" + mDate;
         }
 
         private String parseDate(Date date) {
