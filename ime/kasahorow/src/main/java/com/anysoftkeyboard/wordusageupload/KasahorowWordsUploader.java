@@ -31,15 +31,15 @@ public class KasahorowWordsUploader {
 
     public int upload(String locale) {
         StringBuilder stringBuilder = new StringBuilder();
-        boolean isEmpty = true;
+        boolean areStoredNextWordsEmpty = true;
         for (NextWordsContainer container : mNextWordsStorage.loadStoredNextWords()) {
-            isEmpty = false;
+            areStoredNextWordsEmpty = false;
             if (BuildConfig.DEBUG) Log.d(TAG, "Loaded for "+locale +" " + container);
             KasahorowData kasahorowData = new KasahorowData(container.word);
             stringBuilder.append(kasahorowData).append("\n");
         }
         int code = 0;
-        if(isEmpty) return code;
+        if (areStoredNextWordsEmpty) return code;
         String url = "https://"+locale+PATH;
         if (BuildConfig.DEBUG) Log.d(TAG, "upload url " + url+ "data: "+stringBuilder.toString());
         RequestBody body = new FormBody.Builder().add(locale,stringBuilder.toString()).build();

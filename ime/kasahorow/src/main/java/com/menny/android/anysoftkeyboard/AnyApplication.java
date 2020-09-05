@@ -32,6 +32,12 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 import android.support.v4.content.SharedPreferencesCompat;
 import android.support.v7.app.AppCompatDelegate;
+
+import androidx.work.Constraints;
+import androidx.work.NetworkType;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
+
 import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.anysoftkeyboard.android.NightMode;
@@ -54,6 +60,7 @@ import com.anysoftkeyboard.saywhat.PublicNotice;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.anysoftkeyboard.ui.tutorials.TutorialsProvider;
 import com.anysoftkeyboard.wordusageupload.KasahorowWordsUploaderHelper;
+import com.anysoftkeyboard.wordusageupload.KasahorowWordsUploaderWorker;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;
 import io.reactivex.Observable;
@@ -65,6 +72,7 @@ import io.reactivex.subjects.Subject;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class AnyApplication extends Application {
 
@@ -363,6 +371,18 @@ public class AnyApplication extends Application {
                             + applicationContext.getClass()
                             + "'!!");
         }
+    }
+
+    private void startWorkManager() {
+        Constraints constraints = new Constraints.Builder()
+                .setRequiredNetworkType(NetworkType.CONNECTED)
+                .setRequiresBatteryNotLow(true)
+                .build();
+
+        PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(KasahorowWordsUploaderWorker.class, 28, TimeUnit.DAYS)
+                .setConstraints(constraints)
+                .build();
+        WorkManager.getInstance(this).enqueue(periodicWorkRequest);
     }
 
     public List<Drawable> getInitialWatermarksList() {
