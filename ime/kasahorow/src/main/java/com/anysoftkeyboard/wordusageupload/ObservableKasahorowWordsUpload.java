@@ -1,9 +1,7 @@
 package com.anysoftkeyboard.wordusageupload;
 
 import android.content.Context;
-
 import com.anysoftkeyboard.nextword.NextWordsStorage;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -24,13 +22,13 @@ public final class ObservableKasahorowWordsUpload implements ObservableOnSubscri
         KasahorowWordsUploader kasahorowWordsUploader = new KasahorowWordsUploader(storage);
         int code = 0;
         try {
-           code = kasahorowWordsUploader.upload(mLocale);
+            code = kasahorowWordsUploader.upload(mLocale);
         } catch (Exception e) {
-            if(!emitter.isDisposed()) {
+            if (!emitter.isDisposed()) {
                 emitter.onError(e);
             }
         }
-        if(!emitter.isDisposed()) {
+        if (!emitter.isDisposed()) {
             emitter.onNext(code);
             emitter.onComplete();
         }
