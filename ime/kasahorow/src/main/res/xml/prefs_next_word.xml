@@ -24,9 +24,18 @@
             android:entryValues="@array/next_word_suggestion_aggressiveness_values"
             android:summary="@string/use_next_words_dictionary_aggressiveness_summary"
             android:title="@string/use_next_words_dictionary_aggressiveness"/>
-
     </android.support.v7.preference.PreferenceCategory>
 
+    <android.support.v7.preference.PreferenceCategory
+        android:key="next_word_upload_group"
+        android:title="@string/next_word_upload_group">
+        <android.support.v7.preference.CheckBoxPreference
+            android:defaultValue="@bool/settings_default_next_word_upload"
+            android:key="@string/settings_key_next_word_upload"
+            android:persistent="true"
+            android:summary="@string/next_word_upload_summary"
+            android:title="@string/next_word_upload_action" />
+    </android.support.v7.preference.PreferenceCategory>
     <android.support.v7.preference.PreferenceCategory
         android:key="next_word_stats"
         android:title="@string/next_word_stats_group" />
