@@ -112,6 +112,7 @@ dependencies {
     implementation('com.github.menny.Chauffeur:permissions:0.1.1') {
         exclude group: 'com.android.support'
     }
+    implementation("com.squareup.okhttp3:okhttp:4.8.1")
 
     testImplementation project(path: ':ime:base-test')
     testImplementation 'com.github.triplet.simpleprovider:simpleprovider:1.1.0'
