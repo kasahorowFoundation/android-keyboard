@@ -179,16 +179,16 @@ public class SetupSupportTest {
     @Test
     public void testHasLanguagePackForCurrentLocale() {
         final KeyboardFactory spiedKeyboardFactory = mApplication.getSpiedKeyboardFactory();
+
         ArrayList<KeyboardAddOnAndBuilder> mockResponse =
                 new ArrayList<>(spiedKeyboardFactory.getAllAddOns());
-
         Assert.assertTrue(SetupSupport.hasLanguagePackForCurrentLocale(mockResponse));
 
-        Locale.setDefault(Locale.FRENCH);
+        Locale.setDefault(Locale.ITALIAN);
         Assert.assertFalse(SetupSupport.hasLanguagePackForCurrentLocale(mockResponse));
 
         KeyboardAddOnAndBuilder frenchBuilder = Mockito.mock(KeyboardAddOnAndBuilder.class);
-        Mockito.doReturn("fr").when(frenchBuilder).getKeyboardLocale();
+        Mockito.doReturn("it").when(frenchBuilder).getKeyboardLocale();
         mockResponse.add(frenchBuilder);
 
         Assert.assertTrue(SetupSupport.hasLanguagePackForCurrentLocale(mockResponse));

@@ -5,7 +5,7 @@
         defaultDictionaryLocale="ak"
         description="@string/ak_desc"
         iconResId="@drawable/ak"
-        defaultEnabled="false"
+        defaultEnabled="true"
         index="1"
         landscapeResId="@xml/ak_qwerty"
         layoutResId="@xml/ak_qwerty"

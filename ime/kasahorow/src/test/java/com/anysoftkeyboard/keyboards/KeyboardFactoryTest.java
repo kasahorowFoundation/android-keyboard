@@ -8,6 +8,7 @@ import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -35,18 +36,19 @@ public class KeyboardFactoryTest {
     @Test
     public void testDefaultKeyboardId() {
         final List<KeyboardAddOnAndBuilder> allAddOns = mKeyboardFactory.getAllAddOns();
-        Assert.assertEquals(10, allAddOns.size());
+        Assert.assertEquals(12, allAddOns.size());
         KeyboardAddOnAndBuilder addon = mKeyboardFactory.getEnabledAddOn();
         Assert.assertNotNull(addon);
-        Assert.assertEquals("c7535083-4fe6-49dc-81aa-c5438a1a343a", addon.getId());
+        Assert.assertEquals("e99e252e-fc49-42dd-b763-9f78294cb0f0", addon.getId());
 
         Assert.assertTrue(
-                mKeyboardFactory.isAddOnEnabledByDefault("c7535083-4fe6-49dc-81aa-c5438a1a343a"));
+                mKeyboardFactory.isAddOnEnabledByDefault("e99e252e-fc49-42dd-b763-9f78294cb0f0"));
         Assert.assertFalse(
                 mKeyboardFactory.isAddOnEnabledByDefault("c7535083-4fe6-49dc-81aa-c5438a1a343b"));
     }
 
     @Test
+    @Ignore("Kasahorow keyboard layout does not support english 16 keys layout")
     public void testParsesApiLevel() {
         final KeyboardAddOnAndBuilder english16Keys =
                 AnyApplication.getKeyboardFactory(getApplicationContext())

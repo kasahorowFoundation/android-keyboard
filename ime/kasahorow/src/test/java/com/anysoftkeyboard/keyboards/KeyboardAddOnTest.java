@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class KeyboardAddOnTest {
 
-    private static final String ASK_ENGLISH_1_ID = "c7535083-4fe6-49dc-81aa-c5438a1a343a";
+    private static final String KASAHOROW_AKAN_KEYBOARD_ID = "e99e252e-fc49-42dd-b763-9f78294cb0f0";
     private static final String ASK_ENGLISH_16_KEYS_ID = "12335055-4aa6-49dc-8456-c7d38a1a5123";
 
     @Test
@@ -28,7 +28,7 @@ public class KeyboardAddOnTest {
         // checking that ASK English is enabled
         boolean askEnglishEnabled = false;
         for (KeyboardAddOnAndBuilder addOnAndBuilder : enabledKeyboards) {
-            if (addOnAndBuilder.getId().equals(ASK_ENGLISH_1_ID)) {
+            if (addOnAndBuilder.getId().equals(KASAHOROW_AKAN_KEYBOARD_ID)) {
                 assertTrue(addOnAndBuilder.getKeyboardDefaultEnabled());
                 assertEquals(
                         addOnAndBuilder.getPackageName(), getApplicationContext().getPackageName());
@@ -51,9 +51,9 @@ public class KeyboardAddOnTest {
                     addOnAndBuilder.getId(), addOnAndBuilder.getKeyboardDefaultEnabled());
         }
 
-        Assert.assertEquals(10, keyboardsEnabled.size());
-        Assert.assertTrue(keyboardsEnabled.containsKey(ASK_ENGLISH_1_ID));
-        Assert.assertTrue(keyboardsEnabled.get(ASK_ENGLISH_1_ID));
+        Assert.assertEquals(12, keyboardsEnabled.size());
+        Assert.assertTrue(keyboardsEnabled.containsKey(KASAHOROW_AKAN_KEYBOARD_ID));
+        Assert.assertTrue(keyboardsEnabled.get(KASAHOROW_AKAN_KEYBOARD_ID));
         Assert.assertTrue(keyboardsEnabled.containsKey(ASK_ENGLISH_16_KEYS_ID));
         Assert.assertFalse(keyboardsEnabled.get(ASK_ENGLISH_16_KEYS_ID));
     }
@@ -73,9 +73,9 @@ public class KeyboardAddOnTest {
 
     @Test
     public void testGetKeyboardLocale() throws Exception {
-        KeyboardAddOnAndBuilder askEnglish = getKeyboardFromFactory(ASK_ENGLISH_1_ID);
+        KeyboardAddOnAndBuilder askEnglish = getKeyboardFromFactory(KASAHOROW_AKAN_KEYBOARD_ID);
         assertNotNull(askEnglish);
-        assertEquals(askEnglish.getKeyboardLocale(), "en");
+        assertEquals(askEnglish.getKeyboardLocale(), "ak");
 
         KeyboardAddOnAndBuilder testerEnglish = getKeyboardFromFactory(ASK_ENGLISH_16_KEYS_ID);
         assertNotNull(testerEnglish);
