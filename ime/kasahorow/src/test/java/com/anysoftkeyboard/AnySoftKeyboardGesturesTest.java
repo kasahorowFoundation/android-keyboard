@@ -99,7 +99,7 @@ public class AnySoftKeyboardGesturesTest extends AnySoftKeyboardBaseTest {
                 currentKeyboard.getKeyboardId(),
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardId().toString());
         Assert.assertEquals(
-                "12335055-4aa6-49dc-8456-c7d38a1a5123",
+                "b419eee2-ff2d-4a12-926c-0c9c75756aab",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardId().toString());
     }
 
