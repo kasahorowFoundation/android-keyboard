@@ -66,7 +66,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
     public void testSwitchLayouts() {
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
@@ -74,7 +74,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
@@ -94,13 +94,13 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
     public void testLayoutPersistentWithPackageId() {
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
 
         startInputFromPackage("com.app2");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
@@ -110,7 +110,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
 
@@ -122,7 +122,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
@@ -151,13 +151,13 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
 
         startInputFromPackage("com.app2");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
@@ -177,7 +177,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
 
@@ -186,7 +186,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
     }
 
@@ -194,13 +194,13 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
     public void testLayoutResetPersistentWithPackageIdWhenLayoutDisabled() {
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
 
         startInputFromPackage("com.app2");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
@@ -210,7 +210,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
 
@@ -218,7 +218,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app2");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
     }
@@ -240,13 +240,13 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app1");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
 
         startInputFromPackage("com.app2");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
@@ -272,13 +272,13 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.MODE_ALPHABET);
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
 
         startInputFromPackage("com.app2");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
     }
@@ -341,7 +341,7 @@ public class AnySoftKeyboardKeyboardPersistentLayoutTest {
 
         startInputFromPackage("com.app2");
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeyboardAddOn().getId());
         finishInput();
     }
