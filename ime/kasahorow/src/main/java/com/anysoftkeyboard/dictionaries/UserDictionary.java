@@ -122,8 +122,10 @@ public class UserDictionary extends EditableDictionary {
     @Override
     public final boolean addWord(String word, int frequency) {
         if (mActualDictionary != null) {
+            System.out.println("word add "+word);
             return mActualDictionary.addWord(word, frequency);
         } else {
+            System.out.println("There is no actual dictionary to use for adding word! How come?");
             Logger.d(TAG, "There is no actual dictionary to use for adding word! How come?");
             return false;
         }

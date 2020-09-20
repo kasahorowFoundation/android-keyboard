@@ -289,7 +289,7 @@ public class ExternalAnyKeyboardRowsTest {
     public void testKeyboardRowEmailModeWhenEmailRowProvided() throws Exception {
         // ensuring that 4 is actually the bottom row without password specific row
         Assert.assertEquals(
-                "3DFFC2AD-8BC8-47F3-962A-918156AD8DD0",
+                "a63d37a5-abdc-4a67-9892-24df66e9d744",
                 AnyApplication.getBottomRowFactory(getApplicationContext())
                         .getAllAddOns()
                         .get(4)
@@ -310,7 +310,7 @@ public class ExternalAnyKeyboardRowsTest {
                         Keyboard.KEYBOARD_ROW_MODE_PASSWORD, 4);
         // ensuring that 4 is actually the bottom row without password specific row
         Assert.assertEquals(
-                "3DFFC2AD-8BC8-47F3-962A-918156AD8DD0",
+                "a63d37a5-abdc-4a67-9892-24df66e9d744",
                 AnyApplication.getBottomRowFactory(getApplicationContext())
                         .getAllAddOns()
                         .get(4)
@@ -328,7 +328,7 @@ public class ExternalAnyKeyboardRowsTest {
                 createAndLoadKeyboardForModeWithRowsIndex(Keyboard.KEYBOARD_ROW_MODE_NORMAL, 0, 6);
         // sanity
         Assert.assertEquals(
-                "3659b9e0-dee2-11e0-9572-0800200c9a55",
+                "2a918967-13b3-4fd3-8368-815702dd6348",
                 AnyApplication.getBottomRowFactory(getApplicationContext())
                         .getAllAddOns()
                         .get(3)
@@ -361,7 +361,7 @@ public class ExternalAnyKeyboardRowsTest {
                         Keyboard.KEYBOARD_ROW_MODE_NORMAL, 3);
         // sanity
         Assert.assertEquals(
-                "3659b9e0-dee2-11e0-9572-0800200c9a55",
+                "2a918967-13b3-4fd3-8368-815702dd6348",
                 AnyApplication.getBottomRowFactory(getApplicationContext())
                         .getAllAddOns()
                         .get(3)
@@ -388,7 +388,7 @@ public class ExternalAnyKeyboardRowsTest {
                 createAndLoadKeyboardForModeWithRowsIndex(Keyboard.KEYBOARD_ROW_MODE_NORMAL, 1, 6);
         // sanity
         Assert.assertEquals(
-                "3659b9e0-dee2-11e0-9572-0800200c9a55",
+                "2a918967-13b3-4fd3-8368-815702dd6348",
                 AnyApplication.getBottomRowFactory(getApplicationContext())
                         .getAllAddOns()
                         .get(3)
@@ -426,7 +426,7 @@ public class ExternalAnyKeyboardRowsTest {
                 createAndLoadKeyboardForModeWithRowsIndex(Keyboard.KEYBOARD_ROW_MODE_NORMAL, 1, 6);
         // sanity
         Assert.assertEquals(
-                "3659b9e0-dee2-11e0-9572-0800200c9a55",
+                "2a918967-13b3-4fd3-8368-815702dd6348",
                 AnyApplication.getBottomRowFactory(getApplicationContext())
                         .getAllAddOns()
                         .get(3)

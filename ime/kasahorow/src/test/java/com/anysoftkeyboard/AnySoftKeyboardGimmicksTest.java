@@ -589,35 +589,35 @@ public class AnySoftKeyboardGimmicksTest extends AnySoftKeyboardBaseTest {
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SHIFT);
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQq", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SHIFT);
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SHIFT);
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQqQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqq", inputConnection.getCurrentTextInInputConnection());
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQqQQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SHIFT);
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQqQQq", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.onPress(KeyCodes.SHIFT);
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQqQQqQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqq", inputConnection.getCurrentTextInInputConnection());
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQqQQqQQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.onRelease(KeyCodes.SHIFT);
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQqQQqQQq", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqqq", inputConnection.getCurrentTextInInputConnection());
     }
 
     @Test
@@ -642,53 +642,53 @@ public class AnySoftKeyboardGimmicksTest extends AnySoftKeyboardBaseTest {
         SystemClock.sleep(longPressTime);
         mAnySoftKeyboardUnderTest.onRelease(KeyCodes.SHIFT);
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qq", inputConnection.getCurrentTextInInputConnection());
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqq", inputConnection.getCurrentTextInInputConnection());
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SHIFT);
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQq", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqq", inputConnection.getCurrentTextInInputConnection());
 
         // now from lock to unlock with just shift
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SHIFT_LOCK);
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SHIFT);
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQq", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqq", inputConnection.getCurrentTextInInputConnection());
 
         // and now long-press but multi-touch typing
         mAnySoftKeyboardUnderTest.onPress(KeyCodes.SHIFT);
         SystemClock.sleep(longPressTime);
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQqQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqq", inputConnection.getCurrentTextInInputConnection());
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQqQQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.onRelease(KeyCodes.SHIFT);
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQqQQq", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqqqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.onPress(KeyCodes.SHIFT);
         SystemClock.sleep(longPressTime);
         mAnySoftKeyboardUnderTest.onRelease(KeyCodes.SHIFT);
 
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQqQQqQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqqqqq", inputConnection.getCurrentTextInInputConnection());
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQqQQqQQ", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqqqqqq", inputConnection.getCurrentTextInInputConnection());
 
         mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SHIFT);
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQqQQqQQq", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqqqqqqq", inputConnection.getCurrentTextInInputConnection());
         mAnySoftKeyboardUnderTest.simulateKeyPress('q');
-        Assert.assertEquals("qQQQqQqQQqQQqq", inputConnection.getCurrentTextInInputConnection());
+        Assert.assertEquals("qqqqqqqqqqqqqq", inputConnection.getCurrentTextInInputConnection());
     }
 
     @Test
