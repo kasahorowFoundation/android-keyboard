@@ -16,6 +16,13 @@ coverage:
     - "ime/app/src/main/java/android"
     - "ime/app/src/main/java/com/google/android/voiceime"
     - "ime/app/src/main/java/com/emtronics/dragsortrecycler/DragSortRecycler.java"
+    - "ime/kasahorow/src/canary"
+    - "ime/kasahorow/src/test"
+    - "ime/kasahorow/src/main/java/com/anysoftkeyboard/ui/dev"
+    - "ime/kasahorow/src/main/java/android"
+    - "ime/kasahorow/src/main/java/com/google/android/voiceime"
+    - "ime/kasahorow/src/main/java/com/emtronics/dragsortrecycler/DragSortRecycler.java"
+
   status:
     project:
       default:
