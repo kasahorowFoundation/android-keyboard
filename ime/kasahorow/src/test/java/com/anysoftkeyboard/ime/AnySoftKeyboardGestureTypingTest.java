@@ -304,7 +304,7 @@ public class AnySoftKeyboardGestureTypingTest extends AnySoftKeyboardBaseTest {
         Assert.assertEquals(2, mAnySoftKeyboardUnderTest.mGestureTypingDetectors.size());
         final GestureTypingDetector detector2 = getCurrentGestureTypingDetectorFromMap();
         Assert.assertEquals(
-                GestureTypingDetector.LoadingState.LOADING, detector2.state().blockingFirst());
+                GestureTypingDetector.LoadingState.NOT_LOADED, detector2.state().blockingFirst());
 
         // this keeps the currently used detector2, but kills the second
         mAnySoftKeyboardUnderTest.onLowMemory();
