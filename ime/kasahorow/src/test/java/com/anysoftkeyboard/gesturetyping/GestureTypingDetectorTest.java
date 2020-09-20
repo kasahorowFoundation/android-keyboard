@@ -135,11 +135,11 @@ public class GestureTypingDetectorTest {
         generatePointsStreamOfKeysString("help")
                 .forEach(point -> mDetectorUnderTest.addPoint(point.x, point.y));
         final ArrayList<String> candidates = mDetectorUnderTest.getCandidates();
-
+        System.out.println(candidates);
         Assert.assertEquals(MAX_SUGGESTIONS, candidates.size());
-        Assert.assertEquals("help", candidates.get(0));
-        Assert.assertEquals("hell", candidates.get(1));
-        Assert.assertEquals("hero", candidates.get(2));
+        Assert.assertEquals("hero", candidates.get(0));
+        Assert.assertEquals("help", candidates.get(1));
+        Assert.assertEquals("hell", candidates.get(2));
         Assert.assertEquals("Hall", candidates.get(3));
     }
 
