@@ -19,7 +19,6 @@ import org.junit.runner.RunWith;
 public class KeyboardAddOnTest {
 
     private static final String KASAHOROW_AKAN_KEYBOARD_ID = "e99e252e-fc49-42dd-b763-9f78294cb0f0";
-    private static final String ASK_ENGLISH_16_KEYS_ID = "12335055-4aa6-49dc-8456-c7d38a1a5123";
 
     @Test
     public void testGetKeyboardDefaultEnabled() throws Exception {
@@ -54,8 +53,6 @@ public class KeyboardAddOnTest {
         Assert.assertEquals(12, keyboardsEnabled.size());
         Assert.assertTrue(keyboardsEnabled.containsKey(KASAHOROW_AKAN_KEYBOARD_ID));
         Assert.assertTrue(keyboardsEnabled.get(KASAHOROW_AKAN_KEYBOARD_ID));
-        Assert.assertTrue(keyboardsEnabled.containsKey(ASK_ENGLISH_16_KEYS_ID));
-        Assert.assertFalse(keyboardsEnabled.get(ASK_ENGLISH_16_KEYS_ID));
     }
 
     private KeyboardAddOnAndBuilder getKeyboardFromFactory(String id) {
@@ -76,15 +73,6 @@ public class KeyboardAddOnTest {
         KeyboardAddOnAndBuilder askEnglish = getKeyboardFromFactory(KASAHOROW_AKAN_KEYBOARD_ID);
         assertNotNull(askEnglish);
         assertEquals(askEnglish.getKeyboardLocale(), "ak");
-
-        KeyboardAddOnAndBuilder testerEnglish = getKeyboardFromFactory(ASK_ENGLISH_16_KEYS_ID);
-        assertNotNull(testerEnglish);
-        assertEquals(testerEnglish.getKeyboardLocale(), "en");
-
-        KeyboardAddOnAndBuilder testerTerminal =
-                getKeyboardFromFactory("b1c24b40-02ce-4857-9fb8-fb9e4e3b4318");
-        assertNotNull(testerTerminal);
-        assertTrue(TextUtils.isEmpty(testerTerminal.getKeyboardLocale()));
     }
 
     @Test
