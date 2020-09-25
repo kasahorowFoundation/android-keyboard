@@ -13,8 +13,6 @@ import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
 import com.menny.android.anysoftkeyboard.AnyApplication;
-
-import java.util.Arrays;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
