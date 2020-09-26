@@ -51,7 +51,7 @@ public class AnyKeyboardViewBaseTest {
 
         mEnglishKeyboard =
                 AnyApplication.getKeyboardFactory(getApplicationContext())
-                        .getEnabledAddOn()
+                        .getAddOnById("0f79d17d-9117-4aed-a1fe-76a5a400e654")
                         .createKeyboard(Keyboard.KEYBOARD_ROW_MODE_NORMAL);
         mEnglishKeyboard.loadKeyboard(mUnderTest.getThemedKeyboardDimens());
 
