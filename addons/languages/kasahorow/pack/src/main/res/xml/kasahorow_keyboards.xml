@@ -23,8 +23,8 @@
 
     <Keyboard nameResId="@string/english_keyboard_symbols"
         iconResId="@drawable/ic_status_english"
-        layoutResId="@xml/qwerty_with_symbols"
-        landscapeResId="@xml/qwerty_with_symbols"
+        layoutResId="@xml/qwerty"
+        landscapeResId="@xml/qwerty"
         id="0f79d17d-9117-4aed-a1fe-76a5a400e654"
         defaultDictionaryLocale="en" description="@string/english_keyboard_symbols_description"
         index="3"
