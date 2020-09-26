@@ -74,10 +74,10 @@ public class ExternalAnyKeyboardTest {
                         .createKeyboard(Keyboard.KEYBOARD_ROW_MODE_NORMAL);
         Assert.assertNotNull(keyboard);
         Assert.assertTrue(keyboard instanceof ExternalAnyKeyboard);
-        Assert.assertEquals("en", keyboard.getDefaultDictionaryLocale());
-        Assert.assertEquals("English", keyboard.getKeyboardName());
-        Assert.assertEquals("c7535083-4fe6-49dc-81aa-c5438a1a343a", keyboard.getKeyboardId());
-        Assert.assertEquals(R.drawable.ic_status_english, keyboard.getKeyboardIconResId());
+        Assert.assertEquals("ak", keyboard.getDefaultDictionaryLocale());
+        Assert.assertEquals("Akan", keyboard.getKeyboardName());
+        Assert.assertEquals("e99e252e-fc49-42dd-b763-9f78294cb0f0", keyboard.getKeyboardId());
+        Assert.assertEquals(R.drawable.ak, keyboard.getKeyboardIconResId());
         Assert.assertEquals(1, keyboard.getKeyboardMode());
     }
 

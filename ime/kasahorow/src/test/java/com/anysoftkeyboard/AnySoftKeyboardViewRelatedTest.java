@@ -29,7 +29,7 @@ public class AnySoftKeyboardViewRelatedTest extends AnySoftKeyboardBaseTest {
         Assert.assertNotNull(latestAlertDialog);
 
         Assert.assertEquals(
-                "AnySoftKeyboard", GeneralDialogTestUtil.getTitleFromDialog(latestAlertDialog));
+                "kasahorow", GeneralDialogTestUtil.getTitleFromDialog(latestAlertDialog));
         Assert.assertEquals(4, latestAlertDialog.getListView().getCount());
     }
 
@@ -87,7 +87,7 @@ public class AnySoftKeyboardViewRelatedTest extends AnySoftKeyboardBaseTest {
         Assert.assertNotSame(dictionaryAlertDialog, settingsAlertDialog);
 
         Assert.assertEquals(
-                "Override English dictionary",
+                "Override Akan dictionary",
                 GeneralDialogTestUtil.getTitleFromDialog(dictionaryAlertDialog));
         View.OnClickListener positiveListener =
                 Shadows.shadowOf(dictionaryAlertDialog.getButton(AlertDialog.BUTTON_POSITIVE))

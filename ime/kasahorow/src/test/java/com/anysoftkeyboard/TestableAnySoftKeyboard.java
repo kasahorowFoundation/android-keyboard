@@ -82,7 +82,7 @@ public class TestableAnySoftKeyboard extends SoftKeyboard {
 
     public static EditorInfo createEditorInfo(final int imeOptions, final int inputType) {
         EditorInfo editorInfo = new EditorInfo();
-        editorInfo.packageName = "com.menny.android.anysoftkeyboard";
+        editorInfo.packageName = "com.kasahorow.android.keyboard.app";
         editorInfo.imeOptions = imeOptions;
         editorInfo.inputType = inputType;
 

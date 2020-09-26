@@ -66,11 +66,11 @@ public class SingleSelectionAddOnsBrowserFragmentTest
         service.simulateTextTyping("start");
 
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 service.getCurrentKeyboardForTests().getKeyboardId().toString());
         service.simulateKeyPress(KeyCodes.KEYBOARD_CYCLE);
         Assert.assertEquals(
-                "12335055-4aa6-49dc-8456-c7d38a1a5123",
+                "b419eee2-ff2d-4a12-926c-0c9c75756aab",
                 service.getCurrentKeyboardForTests().getKeyboardId().toString());
 
         Fragment fragment = startFragment();
@@ -81,7 +81,7 @@ public class SingleSelectionAddOnsBrowserFragmentTest
 
         DemoAnyKeyboardView demoAnyKeyboardView = (DemoAnyKeyboardView) demoView;
         Assert.assertEquals(
-                "12335055-4aa6-49dc-8456-c7d38a1a5123",
+                "b419eee2-ff2d-4a12-926c-0c9c75756aab",
                 demoAnyKeyboardView.getKeyboard().getKeyboardId());
     }
 
@@ -94,7 +94,7 @@ public class SingleSelectionAddOnsBrowserFragmentTest
         service.simulateTextTyping("start");
 
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 service.getCurrentKeyboardForTests().getKeyboardId().toString());
         service.simulateKeyPress(KeyCodes.KEYBOARD_MODE_CHANGE);
         Assert.assertEquals(

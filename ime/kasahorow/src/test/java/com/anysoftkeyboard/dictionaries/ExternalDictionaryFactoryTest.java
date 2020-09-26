@@ -49,16 +49,16 @@ public class ExternalDictionaryFactoryTest {
     public void testDefault() {
         final List<DictionaryAddOnAndBuilder> enabledAddOns = mFactory.getEnabledAddOns();
         Assert.assertNotNull(enabledAddOns);
-        Assert.assertEquals(1, enabledAddOns.size());
+        Assert.assertEquals(12, enabledAddOns.size());
         Assert.assertSame(enabledAddOns.get(0), mFactory.getEnabledAddOn());
         final List<DictionaryAddOnAndBuilder> allAddOns = mFactory.getAllAddOns();
-        Assert.assertEquals(1, allAddOns.size());
+        Assert.assertEquals(12, allAddOns.size());
         Assert.assertSame(allAddOns.get(0), enabledAddOns.get(0));
 
         DictionaryAddOnAndBuilder builder = enabledAddOns.get(0);
 
         Assert.assertNotNull(builder);
-        Assert.assertEquals("en", builder.getLanguage());
+        Assert.assertEquals("ak", builder.getLanguage());
         Assert.assertTrue(builder.createInitialSuggestions().size() > 0);
         Assert.assertNotNull(builder.createAutoText());
     }
@@ -76,21 +76,21 @@ public class ExternalDictionaryFactoryTest {
     @Test
     public void testBuildersForKeyboardHappyPath() {
         AnyKeyboard keyboard = Mockito.mock(AnyKeyboard.class);
-        Mockito.doReturn("en").when(keyboard).getDefaultDictionaryLocale();
+        Mockito.doReturn("ak").when(keyboard).getDefaultDictionaryLocale();
         Mockito.doReturn("some_id").when(keyboard).getKeyboardId();
 
         final List<DictionaryAddOnAndBuilder> buildersForKeyboard =
                 mFactory.getBuildersForKeyboard(keyboard);
         Assert.assertNotNull(buildersForKeyboard);
         Assert.assertEquals(1, buildersForKeyboard.size());
-        Assert.assertEquals("en", buildersForKeyboard.get(0).getLanguage());
+        Assert.assertEquals("ak", buildersForKeyboard.get(0).getLanguage());
 
         mFactory.setBuildersForKeyboard(
                 keyboard, Collections.<DictionaryAddOnAndBuilder>emptyList());
         final List<DictionaryAddOnAndBuilder> buildersForKeyboardAgain =
                 mFactory.getBuildersForKeyboard(keyboard);
         Assert.assertEquals(1, buildersForKeyboardAgain.size());
-        Assert.assertEquals("en", buildersForKeyboardAgain.get(0).getLanguage());
+        Assert.assertEquals("ak", buildersForKeyboardAgain.get(0).getLanguage());
     }
 
     @Test
@@ -119,7 +119,7 @@ public class ExternalDictionaryFactoryTest {
                 mFactory.getBuildersForKeyboard(keyboard);
         Assert.assertNotNull(buildersForKeyboard);
         Assert.assertEquals(1, buildersForKeyboard.size());
-        Assert.assertEquals("en", buildersForKeyboard.get(0).getLanguage());
+        Assert.assertEquals("ak", buildersForKeyboard.get(0).getLanguage());
 
         mFactory.setBuildersForKeyboard(
                 keyboard, Collections.<DictionaryAddOnAndBuilder>emptyList());

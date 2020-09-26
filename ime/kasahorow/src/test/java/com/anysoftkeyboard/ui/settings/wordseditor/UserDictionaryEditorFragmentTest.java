@@ -100,7 +100,7 @@ public class UserDictionaryEditorFragmentTest
     @Test
     public void testAddNewWordFromMenuNotAtEmptyState() {
         // adding a few words to the dictionary
-        UserDictionary userDictionary = new UserDictionary(getApplicationContext(), "en");
+        UserDictionary userDictionary = new UserDictionary(getApplicationContext(), "ak");
         userDictionary.loadDictionary();
         userDictionary.addWord("hello", 1);
         userDictionary.addWord("you", 2);
@@ -140,7 +140,7 @@ public class UserDictionaryEditorFragmentTest
     @Test
     public void testTwiceAddNewWordFromMenuNotAtEmptyState() {
         // adding a few words to the dictionary
-        UserDictionary userDictionary = new UserDictionary(getApplicationContext(), "en");
+        UserDictionary userDictionary = new UserDictionary(getApplicationContext(), "ak");
         userDictionary.loadDictionary();
         userDictionary.addWord("hello", 1);
         userDictionary.addWord("you", 2);
@@ -185,7 +185,7 @@ public class UserDictionaryEditorFragmentTest
     @Test
     public void testDeleteWord() {
         // adding a few words to the dictionary
-        UserDictionary userDictionary = new UserDictionary(getApplicationContext(), "en");
+        UserDictionary userDictionary = new UserDictionary(getApplicationContext(), "ak");
         userDictionary.loadDictionary();
         userDictionary.addWord("hello", 1);
         userDictionary.addWord("you", 2);
@@ -228,8 +228,8 @@ public class UserDictionaryEditorFragmentTest
                 new AndroidUserDictionaryTest.AUDContentProvider();
         ContentProviderController.of(provider).create(provider.getAuthority());
         // setting up some dummy words
-        provider.addRow(1, "Dude", 1, "en");
-        provider.addRow(2, "Dudess", 2, "en");
+        provider.addRow(1, "Dude", 1, "ak");
+        provider.addRow(2, "Dudess", 2, "ak");
         provider.addRow(3, "shalom", 10, "iw");
         provider.addRow(4, "telephone", 2, "iw");
         provider.addRow(5, "catchall", 5, null);
@@ -256,7 +256,7 @@ public class UserDictionaryEditorFragmentTest
         // adding a few words to the dictionary
         WordsSQLiteConnection connectionEn =
                 new WordsSQLiteConnection(
-                        ApplicationProvider.getApplicationContext(), "fallback.db", "en");
+                        ApplicationProvider.getApplicationContext(), "fallback.db", "ak");
         connectionEn.addWord("Dude", 2);
         connectionEn.addWord("Dudess", 3);
 

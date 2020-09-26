@@ -18,7 +18,7 @@ public class KeyboardExtensionFactoryTest {
         KeyboardExtension extension =
                 AnyApplication.getBottomRowFactory(getApplicationContext()).getEnabledAddOn();
         Assert.assertNotNull(extension);
-        Assert.assertEquals("09f8f280-dee2-11e0-9572-0800200c9a66", extension.getId());
+        Assert.assertEquals("c921fb90-31ed-46f4-b8a2-1322d9a62238", extension.getId());
         Assert.assertEquals(KeyboardExtension.TYPE_BOTTOM, extension.getExtensionType());
         Assert.assertEquals(
                 R.xml.ext_kbd_bottom_row_regular_with_voice, extension.getKeyboardResId());
@@ -27,11 +27,11 @@ public class KeyboardExtensionFactoryTest {
     @Test
     public void testGetCurrentKeyboardExtensionBottomChanged() throws Exception {
         AnyApplication.getBottomRowFactory(getApplicationContext())
-                .setAddOnEnabled("3659b9e0-dee2-11e0-9572-0800200c9a55", true);
+                .setAddOnEnabled("2a918967-13b3-4fd3-8368-815702dd6348", true);
         KeyboardExtension extension =
                 AnyApplication.getBottomRowFactory(getApplicationContext()).getEnabledAddOn();
         Assert.assertNotNull(extension);
-        Assert.assertEquals("3659b9e0-dee2-11e0-9572-0800200c9a55", extension.getId());
+        Assert.assertEquals("2a918967-13b3-4fd3-8368-815702dd6348", extension.getId());
         Assert.assertEquals(KeyboardExtension.TYPE_BOTTOM, extension.getExtensionType());
         Assert.assertEquals(R.xml.ext_kbd_bottom_row_iphone, extension.getKeyboardResId());
     }
@@ -41,7 +41,7 @@ public class KeyboardExtensionFactoryTest {
         KeyboardExtension extension =
                 AnyApplication.getTopRowFactory(getApplicationContext()).getEnabledAddOn();
         Assert.assertNotNull(extension);
-        Assert.assertEquals("5d945f40-ded5-11e0-9572-0800200c9a66", extension.getId());
+        Assert.assertEquals("e60bb32b-6688-4dec-b9d0-2b04c64916c5", extension.getId());
         Assert.assertEquals(KeyboardExtension.TYPE_TOP, extension.getExtensionType());
         Assert.assertEquals(R.xml.ext_kbd_top_row_small, extension.getKeyboardResId());
     }
@@ -49,11 +49,11 @@ public class KeyboardExtensionFactoryTest {
     @Test
     public void testGetCurrentKeyboardExtensionTopChanged() throws Exception {
         AnyApplication.getTopRowFactory(getApplicationContext())
-                .setAddOnEnabled("642e9690-ded5-11e0-9572-0800200c9a66", true);
+                .setAddOnEnabled("5f1d6d76-f8f7-467c-b93f-6c8d6c4a6dfc", true);
         KeyboardExtension extension =
                 AnyApplication.getTopRowFactory(getApplicationContext()).getEnabledAddOn();
         Assert.assertNotNull(extension);
-        Assert.assertEquals("642e9690-ded5-11e0-9572-0800200c9a66", extension.getId());
+        Assert.assertEquals("5f1d6d76-f8f7-467c-b93f-6c8d6c4a6dfc", extension.getId());
         Assert.assertEquals(KeyboardExtension.TYPE_TOP, extension.getExtensionType());
         Assert.assertEquals(R.xml.ext_kbd_top_row_normal, extension.getKeyboardResId());
     }
