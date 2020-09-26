@@ -172,7 +172,7 @@ public class NextWordSettingsFragment extends PreferenceFragmentCompat {
 
     private void loadUsageStatistics() {
         findPreference("clear_next_word_data").setEnabled(false);
-        ((PreferenceCategory) findPreference("next_word_stats")).removeAll();
+        getActivity().runOnUiThread(() -> ((PreferenceCategory) findPreference("next_word_stats")).removeAll());
 
         mDisposable.add(
                 createDictionaryAddOnFragment(this)
