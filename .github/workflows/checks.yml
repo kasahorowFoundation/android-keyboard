@@ -245,7 +245,7 @@ jobs:
       - name: verify-add-ons
         run: |
           ./scripts/download_robolectric_jars_to_machine.sh
-          ./gradlew :ime:kasahorow:testAllAddOnsUnitTestCoverage :ime:kasahorow:testAllAddOnsUnitTest --tests="*LoadedKeyboardsVerificationTest*"
+          ./gradlew :ime:app:testAllAddOnsUnitTestCoverage :ime:app:testAllAddOnsUnitTest :ime:kasahorow:testAllAddOnsUnitTestCoverage :ime:kasahorow:testAllAddOnsUnitTest --tests="*LoadedKeyboardsVerificationTest*"
           chmod -R a+rwx .
       - uses: ./.github/actions/codecov
       - uses: ./.github/actions/collect-reports
