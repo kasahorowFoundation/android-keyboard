@@ -72,7 +72,7 @@ jobs:
         with:
           index: ${{ matrix.index }}
           groups_count: ${{ matrix.groups_count }}
-          module: ":ime:app:"
+          module: ":ime:kasahorow:"
           extra_args: "-PexcludeTestClasses=\"**/*AllSdkTest*\""
       - uses: ./.github/actions/codecov
       - uses: ./.github/actions/collect-reports
@@ -107,7 +107,7 @@ jobs:
         with:
           index: 0
           groups_count: 1
-          module: ":ime:app:"
+          module: ":ime:kasahorow:"
           extra_args: "--tests=*AllSdkTest*"
       - uses: ./.github/actions/codecov
       - uses: ./.github/actions/collect-reports
@@ -143,7 +143,7 @@ jobs:
           index: 0
           groups_count: 1
           module: ""
-          extra_args: "-x :ime:app:testDebugUnitTest -x :ime:app:testDebugUnitTestCoverage"
+          extra_args: "-x :ime:kasahorow:testDebugUnitTest -x :ime:kasahorow:testDebugUnitTestCoverage"
       - uses: ./.github/actions/codecov
       - uses: ./.github/actions/collect-reports
         if: always()
@@ -175,7 +175,7 @@ jobs:
       - name: verify-add-ons
         run: |
           ./scripts/download_robolectric_jars_to_machine.sh
-          ./gradlew :ime:app:testAllAddOnsUnitTestCoverage :ime:app:testAllAddOnsUnitTest --tests="*LoadedKeyboardsVerificationTest*"
+          ./gradlew :ime:kasahorow:testAllAddOnsUnitTestCoverage :ime:kasahorow:testAllAddOnsUnitTest --tests="*LoadedKeyboardsVerificationTest*"
           chmod -R a+rwx .
       - uses: ./.github/actions/codecov
       - uses: ./.github/actions/collect-reports
