@@ -78,7 +78,6 @@ public class OverlayData {
 
     @Override
     public String toString() {
-        System.out.println();
         return String.format(
                 Locale.US,
                 "Overlay primary-color %s, dark-primary-color %s, primary text color %s, secondary text color %s (is valid %b)",
