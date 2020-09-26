@@ -66,7 +66,7 @@ public class SingleSelectionAddOnsBrowserFragmentTest
         service.simulateTextTyping("start");
 
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 service.getCurrentKeyboardForTests().getKeyboardId().toString());
         service.simulateKeyPress(KeyCodes.KEYBOARD_CYCLE);
         Assert.assertEquals(
@@ -94,7 +94,7 @@ public class SingleSelectionAddOnsBrowserFragmentTest
         service.simulateTextTyping("start");
 
         Assert.assertEquals(
-                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
+                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
                 service.getCurrentKeyboardForTests().getKeyboardId().toString());
         service.simulateKeyPress(KeyCodes.KEYBOARD_MODE_CHANGE);
         Assert.assertEquals(
