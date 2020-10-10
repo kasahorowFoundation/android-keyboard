@@ -52,15 +52,15 @@ if [[ "${DEPLOYMENT_TASK}" == "deploy" ]]; then
   case "${PROCESS_NAME}" in
 
     imeMaster)
-      DEPLOY_TASKS+=( "ime:app:assembleCanary" "ime:app:publishCanary" )
+      DEPLOY_TASKS+=( "ime:kasahorow:assembleCanary" "ime:kasahorow:publishCanary" )
       ;;
 
     imeProduction)
-      DEPLOY_TASKS+=( "ime:app:assembleRelease" "ime:app:publishRelease" )
+      DEPLOY_TASKS+=( "ime:kasahorow:assembleRelease" "ime:kasahorow:publishRelease" )
       ;;
 
     addOns*)
-      DEPLOY_TASKS+=( "assembleRelease" "publishRelease" "-x" "ime:app:assembleRelease" "-x" "ime:app:publishRelease" )
+      DEPLOY_TASKS+=( "assembleRelease" "publishRelease" "-x" "ime:kasahorow:assembleRelease" "-x" "ime:kasahorow:publishRelease" )
       ;;
 
     *)
@@ -73,11 +73,11 @@ elif [[ "${DEPLOYMENT_TASK}" == "deploy:migration" ]]; then
   case "${PROCESS_NAME}" in
 
     ime*)
-      DEPLOY_TASKS+=( "ime:app:promoteReleaseArtifact" )
+      DEPLOY_TASKS+=( "ime:kasahorow:promoteReleaseArtifact" )
       ;;
 
     addOns*)
-      DEPLOY_TASKS+=( "promoteReleaseArtifact" "-x" "ime:app:promoteReleaseArtifact" )
+      DEPLOY_TASKS+=( "promoteReleaseArtifact" "-x" "ime:kasahorow:promoteReleaseArtifact" )
       ;;
 
   esac
