@@ -114,11 +114,11 @@ jobs:
         if: always()
         with:
           file_pattern: "**/build/reports/tests/**"
-      - uses: actions/upload-artifact@v1.0.0
-        if: always()
-        with:
-          name: app-less-tests
-          path: collected_reports
+      #- uses: actions/upload-artifact@v1.0.0
+      #  if: always()
+      #  with:
+      #    name: app-less-tests
+      #    path: collected_reports
       - uses: actions/upload-artifact@v1.0.0
         if: always()
         with:
@@ -217,7 +217,7 @@ jobs:
           path: outputs/fdroid
 
   master-green-requirement:
-    needs: [checks, app-all-sdks-tests, app-tests-shards, app-less-tests, deploy-dry-run, verify-all-addons]
+    needs: [checks, app-all-sdks-tests, app-tests-shards, deploy-dry-run, verify-all-addons]
     runs-on: ubuntu-18.04
     steps:
       - name: ready
