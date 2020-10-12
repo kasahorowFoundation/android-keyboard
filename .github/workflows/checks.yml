@@ -157,12 +157,12 @@ jobs:
       - uses: actions/upload-artifact@v1.0.0
         if: always()
         with:
-          name: app-less-tests
+          name: app-less-tests-${{ matrix.index }}
           path: collected_reports
       - uses: actions/upload-artifact@v1.0.0
         if: always()
         with:
-          name: app-less-tests-build-logging
+          name: app-less-tests-build-logging-${{ matrix.index }}
           path: build-logging
 
   verify-all-addons:
