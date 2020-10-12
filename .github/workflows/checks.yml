@@ -131,7 +131,7 @@ jobs:
     strategy:
       matrix:
         index: [0, 1]
-        groups_count: [1]
+        groups_count: [3]
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
