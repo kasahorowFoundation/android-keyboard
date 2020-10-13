@@ -18,7 +18,7 @@ if [[ "${SHA}" == "HEAD" ]]; then
   echo "HEAD SHA was found to be '${SHA}'."
 fi
 
-echo "Request deployment flow for sha ${SHA} on branch ${REF}. New deployment: ${NEW_DEPLOY}."
+echo "Request deployment flow for sha ${SHA} on branch ${REF}. New deployment: ${NEW_DEPLOY}. for ${API_USERNAME}"
 ./gradlew :deployment:deploymentRequestProcess -PRequest.sha="${SHA}" -PRequest.ref="${REF}" -PRequest.new_deploy="${NEW_DEPLOY}" -PRequest.apiUsername="${API_USERNAME}" -PRequest.apiUserToken="${API_TOKEN}"
 
 [[ -n "${GITHUB_ACTIONS}" ]] && chmod -R a+rwx .
