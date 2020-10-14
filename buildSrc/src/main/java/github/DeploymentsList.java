@@ -1,5 +1,6 @@
 package github;
 
+import deployment.DeploymentUrl;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 
@@ -13,8 +14,7 @@ public class DeploymentsList
     @Override
     protected HttpUriRequest createHttpRequest(Request request, String requestJsonAsString) {
         return new HttpGet(
-                "https://api.github.com/repos/AnySoftKeyboard/AnySoftKeyboard/deployments?sha="
-                        + request.sha);
+                DeploymentUrl.KASAHOROW_GITHUB_API_DEPLOYMENTS_URL + "?sha=" + request.sha);
     }
 
     public static class Request {

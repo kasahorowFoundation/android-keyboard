@@ -1,5 +1,6 @@
 package github;
 
+import deployment.DeploymentUrl;
 import java.nio.charset.StandardCharsets;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
@@ -16,7 +17,8 @@ public class DeploymentStatus
     protected HttpUriRequest createHttpRequest(Request request, String requestJsonAsString) {
         final HttpPost httpPost =
                 new HttpPost(
-                        "https://api.github.com/repos/AnySoftKeyboard/AnySoftKeyboard/deployments/"
+                        DeploymentUrl.KASAHOROW_GITHUB_API_DEPLOYMENTS_URL
+                                + "/"
                                 + request.id
                                 + "/statuses");
         httpPost.setEntity(new StringEntity(requestJsonAsString, StandardCharsets.UTF_8));
