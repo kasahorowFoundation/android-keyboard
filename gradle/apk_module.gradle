@@ -13,7 +13,7 @@ static <T> T getExtValue(Project proj, String key, T defaultValue) {
 
 static String calculateApplicationId(Project proj) {
     String addOnName = proj.parent.name
-    String defaultId = "com.anysoftkeyboard."
+    String defaultId = "com.kasahorow.android.keyboard.app."
     if (proj.path.contains('languages')) {
         defaultId += "languagepack.${addOnName}"
     } else if (proj.path.contains('themes')) {
@@ -21,7 +21,7 @@ static String calculateApplicationId(Project proj) {
     } else if (proj.path.contains('quicktexts')) {
         defaultId += "quicktexts.${addOnName}"
     } else if (proj.path.contains('ime')) {
-        defaultId = 'com.menny.android.anysoftkeyboard'
+        defaultId = 'com.kasahorow.android.keyboard.app'
     } else {
         throw new IllegalStateException('Called on an APK project that has an unknown parent')
     }
@@ -57,7 +57,7 @@ android {
             if (keystoreFile.exists()) {
                 storeFile keystoreFile
                 storePassword System.getenv("KEY_STORE_FILE_PASSWORD")
-                keyAlias getExtValue(project, 'override_release_key_alias', 'packs')
+                keyAlias getExtValue(project, 'override_release_key_alias', 'khorow')
                 keyPassword System.getenv("KEY_STORE_FILE_DEFAULT_ALIAS_PASSWORD")
                 println "Using '${storeFile.absolutePath}' to release APK ${path} (with alias '${keyAlias}')."
             } else {
