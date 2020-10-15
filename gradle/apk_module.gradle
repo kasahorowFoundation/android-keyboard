@@ -84,14 +84,14 @@ if (project.ext.shouldBePublished) {
     play {
         // you can promote from command-line by specifying the track to promote to:
         // ./gradlew promoteReleaseArtifact -DdeployChannel=beta -DdeployFraction=1.00
-        track = System.getProperty('deployChannel', 'alpha')
-        userFraction = Double.parseDouble(System.getProperty('deployFraction', '1.0')).doubleValue()
+        track.set(System.getProperty('deployChannel', 'alpha'))
+        userFraction.set(Double.parseDouble(System.getProperty('deployFraction', '1.0')).doubleValue())
         if (userFraction < 1.0) {
-            releaseStatus = 'inProgress'
+            releaseStatus.set('inProgress')
         } else {
-            releaseStatus = 'completed'
+            releaseStatus.set('completed')
         }
-        serviceAccountCredentials = file('/tmp/apk_upload_key.json')
+        serviceAccountCredentials.set(file('/tmp/apk_upload_key.json'))
 
         if ('alpha' != track) {
             //to keep things simple, we will only specify release-notes in the alpha
