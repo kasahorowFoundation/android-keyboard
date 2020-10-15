@@ -134,7 +134,7 @@ def addOnsPromoteRelease = tasks.register("addOnsPromoteRelease") {
     if (days > 0) {
         it.dependsOn tasks.named(getTaskNameByStepFor(it.project, "addOnsProduction", days))
     }
-}
+}*/
 //////// end - addons
 
 tasks.register('deploymentRequestProcess').configure {
