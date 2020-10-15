@@ -28,12 +28,12 @@ deployments {
         environmentSteps = ['production_010', '', 'production_020', '', '', 'production_030', 'production_040', 'production_050', '', '', '', 'production_075', '', 'production_100']
     }
 
-    addOnsMaster {
+    /*addOnsMaster {
         environmentSteps = ['beta_100']
     }
     addOnsProduction {
         environmentSteps = ['production_010', '', 'production_050', '', 'production_100']
-    }
+    }*/
 }
 
 long getDaysFromLastCommitFromGit() {
@@ -141,9 +141,9 @@ tasks.register('deploymentRequestProcess').configure {
         println(skipDeploymentReason);
     } else {
         if (imeOnMasterPush == null) throw new NullPointerException("imeOnMasterPush")
-        if (addOnsOnMasterPush == null) throw new NullPointerException("addOnsOnMasterPush")
+        //if (addOnsOnMasterPush == null) throw new NullPointerException("addOnsOnMasterPush")
         if (imePromoteMaster == null) throw new NullPointerException("imePromoteMaster")
-        if (addOnsPromoteMaster == null) throw new NullPointerException("addOnsPromoteMaster")
+        //if (addOnsPromoteMaster == null) throw new NullPointerException("addOnsPromoteMaster")
 
         if (ref != null && newDeploy != null) {
             def imeDeploy
@@ -154,41 +154,41 @@ tasks.register('deploymentRequestProcess').configure {
                 if (newDeploy == 'true') {
                     println('deploy-request for a new deploy')
                     imeDeploy = imeOnMasterPush
-                    addOnsDeploy = addOnsOnMasterPush
+                    //addOnsDeploy = addOnsOnMasterPush
                 } else if (newDeploy == 'false') {
                     println('deploy-request for a promote')
                     imeDeploy = imePromoteMaster
-                    addOnsDeploy = addOnsPromoteMaster
+                    //addOnsDeploy = addOnsPromoteMaster
                 }
             } else if (ref.matches('release-branch-ime-v.+')) {
                 println('deploy-request from ime release branch')
                 if (newDeploy == 'true') {
                     println('deploy-request for a new deploy')
                     imeDeploy = imeOnReleasePush
-                    addOnsDeploy = noOpTask
+                    //addOnsDeploy = noOpTask
                 } else if (newDeploy == 'false') {
                     println('deploy-request for a promote')
                     imeDeploy = imePromoteRelease
-                    addOnsDeploy = noOpTask
+                    //addOnsDeploy = noOpTask
                 }
             } else if (ref.matches('release-branch-addons-v.+')) {
                 println('deploy-request from addons release branch')
                 if (newDeploy == 'true') {
                     println('deploy-request for a new deploy')
                     imeDeploy = noOpTask
-                    addOnsDeploy = addOnsOnReleasePush
+                    //addOnsDeploy = addOnsOnReleasePush
                 } else if (newDeploy == 'false') {
                     println('deploy-request for a promote')
                     imeDeploy = noOpTask
-                    addOnsDeploy = addOnsPromoteRelease
+                    //addOnsDeploy = addOnsPromoteRelease
                 }
             }
 
-            if (imeDeploy == null || addOnsDeploy == null) {
+            if (imeDeploy == null) {
                 throw new IllegalStateException("Deployment flow for ref '${ref}' and new-deploy '${newDeploy}'.")
             }
 
-            it.dependsOn imeDeploy, addOnsDeploy
+            it.dependsOn imeDeploy
         }
     }
 }
