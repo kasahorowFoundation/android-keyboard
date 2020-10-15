@@ -100,7 +100,7 @@ def noOpTask = tasks.register("noOpDeployTask")
 
 //////// start - addons
 // master
-def addOnsOnMasterPush = tasks.register("addOnsOnMasterPush") {
+/*def addOnsOnMasterPush = tasks.register("addOnsOnMasterPush") {
     it.group "Publishing"
     it.description "Deployment request on master push for all addons"
     it.dependsOn tasks.named(getTaskNameByStepFor(it.project, "addOnsMaster", 0))
@@ -128,7 +128,7 @@ def addOnsPromoteRelease = tasks.register("addOnsPromoteRelease") {
     if (days > 0) {
         it.dependsOn tasks.named(getTaskNameByStepFor(it.project, "addOnsProduction", days))
     }
-}
+}*/
 //////// end - addons
 
 tasks.register('deploymentRequestProcess').configure {
