@@ -1,5 +1,5 @@
 ext.shouldBePublished = true
-ext.override_release_key_alias = 'persian'
+ext.override_release_key_alias = 'khorow'
 
 apply from: "$rootDir/addons/gradle/pack_apk.gradle"
 

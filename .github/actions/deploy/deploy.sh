@@ -59,9 +59,9 @@ if [[ "${DEPLOYMENT_TASK}" == "deploy" ]]; then
       DEPLOY_TASKS+=( "ime:kasahorow:assembleRelease" "ime:kasahorow:publishRelease" )
       ;;
 
-    addOns*)
-      DEPLOY_TASKS+=( "assembleRelease" "publishRelease" "-x" "ime:kasahorow:assembleRelease" "-x" "ime:kasahorow:publishRelease" )
-      ;;
+    #addOns*)
+    #  DEPLOY_TASKS+=( "assembleRelease" "publishRelease" "-x" "ime:kasahorow:assembleRelease" "-x" "ime:kasahorow:publishRelease" )
+    #  ;;
 
     *)
       echo "PROCESS_NAME '${PROCESS_NAME}' is unknown in task ${DEPLOYMENT_TASK}!"
@@ -76,9 +76,9 @@ elif [[ "${DEPLOYMENT_TASK}" == "deploy:migration" ]]; then
       DEPLOY_TASKS+=( "ime:kasahorow:promoteReleaseArtifact" )
       ;;
 
-    addOns*)
-      DEPLOY_TASKS+=( "promoteReleaseArtifact" "-x" "ime:kasahorow:promoteReleaseArtifact" )
-      ;;
+    #addOns*)
+    #  DEPLOY_TASKS+=( "promoteReleaseArtifact" "-x" "ime:kasahorow:promoteReleaseArtifact" )
+    #  ;;
 
   esac
 fi
