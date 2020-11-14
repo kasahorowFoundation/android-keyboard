@@ -19,6 +19,7 @@ package com.anysoftkeyboard.devicespecific;
 import android.annotation.TargetApi;
 import android.database.ContentObserver;
 import android.os.Build;
+
 import com.anysoftkeyboard.dictionaries.BTreeDictionary;
 import com.anysoftkeyboard.dictionaries.DictionaryContentObserverAPI16;
 
