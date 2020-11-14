@@ -26,8 +26,7 @@ public class ClipboardV3 implements Clipboard {
     private final ClipboardManager mClipboardManager;
 
     ClipboardV3(Context context) {
-        mClipboardManager =
-                (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        mClipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
     }
 
     @Override

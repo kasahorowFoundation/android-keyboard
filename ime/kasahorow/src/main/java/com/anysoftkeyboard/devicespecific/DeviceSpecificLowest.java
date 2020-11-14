@@ -26,11 +26,9 @@ import android.support.annotation.Nullable;
 import android.view.GestureDetector;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
-
 import com.anysoftkeyboard.dictionaries.BTreeDictionary;
 import com.anysoftkeyboard.dictionaries.DictionaryContentObserver;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
-
 import java.util.List;
 
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
