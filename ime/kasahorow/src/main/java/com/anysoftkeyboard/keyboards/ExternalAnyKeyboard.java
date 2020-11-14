@@ -63,7 +63,7 @@ public class ExternalAnyKeyboard extends AnyKeyboard implements HardKeyboardTran
     @NonNull private final CharSequence mName;
     private final int mIconId;
     private final String mDefaultDictionary;
-    private final Locale mLocale;
+    @NonNull private final Locale mLocale;
     private final HardKeyboardSequenceHandler mHardKeyboardTranslator;
     private final Set<Integer> mAdditionalIsLetterExceptions;
     private final char[] mSentenceSeparators;
@@ -353,7 +353,7 @@ public class ExternalAnyKeyboard extends AnyKeyboard implements HardKeyboardTran
     }
 
     @Override
-    public Locale getLocale() {
+    public @NonNull Locale getLocale() {
         return mLocale;
     }
 

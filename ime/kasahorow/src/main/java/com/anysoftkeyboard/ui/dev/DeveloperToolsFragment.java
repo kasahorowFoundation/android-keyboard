@@ -69,8 +69,11 @@ public class DeveloperToolsFragment extends Fragment implements View.OnClickList
                 .setText(DeveloperUtils.getAppDetails(getActivity().getApplicationContext()));
 
         mFlipper = view.findViewById(R.id.dev_flip_trace_file);
-        mProgressIndicator = view.findViewById(R.id.dev_tracing_running_progress_bar);
-        mShareButton = view.findViewById(R.id.dev_share_trace_file);
+        mProgressIndicator =
+                view.findViewById(
+                        R.id.dev_tracing_running_progress_bar);
+        mShareButton =
+                view.findViewById(R.id.dev_share_trace_file);
 
         view.findViewById(R.id.memory_dump_button).setOnClickListener(this);
         view.findViewById(R.id.dev_share_mem_file).setOnClickListener(this);
