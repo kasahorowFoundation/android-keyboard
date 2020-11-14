@@ -6,7 +6,7 @@ autoVersioning {
     major = 1
     minor = 3
     /*adding to build-counter value. Should never change (unless build-counter resets).*/
-    buildCounterOffset = 10324
+    buildCounterOffset = 20170707
     /*decrementing due to minor, every minor/major bump, this should be decremented*/
-    patchOffset = -10324
+    patchOffset = -20170706
 }
