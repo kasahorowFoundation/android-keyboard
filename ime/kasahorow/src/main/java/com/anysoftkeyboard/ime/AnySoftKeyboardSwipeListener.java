@@ -43,55 +43,6 @@ public abstract class AnySoftKeyboardSwipeListener extends AnySoftKeyboardPopTex
     private int mPinchKeyCode;
     private int mSeparateKeyCode;
 
-    private static int getIntFromSwipeConfiguration(final String keyValue) {
-        switch (keyValue) {
-            case "next_alphabet":
-                return KeyCodes.MODE_ALPHABET;
-            case "next_symbols":
-                return KeyCodes.MODE_SYMOBLS;
-            case "cycle_keyboards":
-                return KeyCodes.KEYBOARD_CYCLE;
-            case "reverse_cycle_keyboards":
-                return KeyCodes.KEYBOARD_REVERSE_CYCLE;
-            case "shift":
-                return KeyCodes.SHIFT;
-            case "space":
-                return KeyCodes.SPACE;
-            case "hide":
-                return KeyCodes.CANCEL;
-            case "backspace":
-                return KeyCodes.DELETE;
-            case "backword":
-                return KeyCodes.DELETE_WORD;
-            case "clear_input":
-                return KeyCodes.CLEAR_INPUT;
-            case "cursor_up":
-                return KeyCodes.ARROW_UP;
-            case "cursor_down":
-                return KeyCodes.ARROW_DOWN;
-            case "cursor_left":
-                return KeyCodes.ARROW_LEFT;
-            case "cursor_right":
-                return KeyCodes.ARROW_RIGHT;
-            case "next_inside_mode":
-                return KeyCodes.KEYBOARD_CYCLE_INSIDE_MODE;
-            case "switch_keyboard_mode":
-                return KeyCodes.KEYBOARD_MODE_CHANGE;
-            case "split_layout":
-                return KeyCodes.SPLIT_LAYOUT;
-            case "merge_layout":
-                return KeyCodes.MERGE_LAYOUT;
-            case "compact_to_left":
-                return KeyCodes.COMPACT_LAYOUT_TO_LEFT;
-            case "compact_to_right":
-                return KeyCodes.COMPACT_LAYOUT_TO_RIGHT;
-            case "utility_keyboard":
-                return KeyCodes.UTILITY_KEYBOARD;
-            default:
-                return 0; // 0 means no action
-        }
-    }
-
     private void subPrefs(
             @StringRes int keyRes,
             @StringRes int defaultValue,
@@ -253,5 +204,54 @@ public abstract class AnySoftKeyboardSwipeListener extends AnySoftKeyboardPopTex
     @Override
     public void onFirstDownKey(int primaryCode) {
         mFirstDownKeyCode = primaryCode;
+    }
+
+    private static int getIntFromSwipeConfiguration(final String keyValue) {
+        switch (keyValue) {
+            case "next_alphabet":
+                return KeyCodes.MODE_ALPHABET;
+            case "next_symbols":
+                return KeyCodes.MODE_SYMOBLS;
+            case "cycle_keyboards":
+                return KeyCodes.KEYBOARD_CYCLE;
+            case "reverse_cycle_keyboards":
+                return KeyCodes.KEYBOARD_REVERSE_CYCLE;
+            case "shift":
+                return KeyCodes.SHIFT;
+            case "space":
+                return KeyCodes.SPACE;
+            case "hide":
+                return KeyCodes.CANCEL;
+            case "backspace":
+                return KeyCodes.DELETE;
+            case "backword":
+                return KeyCodes.DELETE_WORD;
+            case "clear_input":
+                return KeyCodes.CLEAR_INPUT;
+            case "cursor_up":
+                return KeyCodes.ARROW_UP;
+            case "cursor_down":
+                return KeyCodes.ARROW_DOWN;
+            case "cursor_left":
+                return KeyCodes.ARROW_LEFT;
+            case "cursor_right":
+                return KeyCodes.ARROW_RIGHT;
+            case "next_inside_mode":
+                return KeyCodes.KEYBOARD_CYCLE_INSIDE_MODE;
+            case "switch_keyboard_mode":
+                return KeyCodes.KEYBOARD_MODE_CHANGE;
+            case "split_layout":
+                return KeyCodes.SPLIT_LAYOUT;
+            case "merge_layout":
+                return KeyCodes.MERGE_LAYOUT;
+            case "compact_to_left":
+                return KeyCodes.COMPACT_LAYOUT_TO_LEFT;
+            case "compact_to_right":
+                return KeyCodes.COMPACT_LAYOUT_TO_RIGHT;
+            case "utility_keyboard":
+                return KeyCodes.UTILITY_KEYBOARD;
+            default:
+                return 0; // 0 means no action
+        }
     }
 }
