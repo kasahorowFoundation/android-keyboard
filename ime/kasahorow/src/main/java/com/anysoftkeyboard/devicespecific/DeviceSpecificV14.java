@@ -24,10 +24,8 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
-
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.keyboards.KeyboardAddOnAndBuilder;
-
 import java.util.ArrayList;
 import java.util.List;
 
