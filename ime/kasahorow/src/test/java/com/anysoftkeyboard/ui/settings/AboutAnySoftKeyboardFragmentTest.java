@@ -95,7 +95,7 @@ public class AboutAnySoftKeyboardFragmentTest
         Assert.assertNotNull(intent);
         Assert.assertEquals(Intent.ACTION_VIEW, intent.getAction());
         Assert.assertEquals(
-                "http://anysoftkeyboard.github.io/privacy-policy/", intent.getData().toString());
+                "https://www.kasahorow.org/obu", intent.getData().toString());
     }
 
     @Test
