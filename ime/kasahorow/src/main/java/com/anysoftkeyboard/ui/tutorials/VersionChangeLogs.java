@@ -12,8 +12,8 @@ public class VersionChangeLogs {
 
         log.add(
                 new VersionChangeLog(
-                        1,
-                        10,
+                        4,
+                        0,
                         "r4",
                         Uri.parse(
                                 "https://github.com/AnySoftKeyboard/AnySoftKeyboard/milestone/92"),
