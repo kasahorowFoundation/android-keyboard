@@ -199,8 +199,7 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.add_on_selector_menu, menu);
-        menu.findItem(R.id.add_on_market_search_menu_option)
-                .setVisible(false);
+        menu.findItem(R.id.add_on_market_search_menu_option).setVisible(false);
         menu.findItem(R.id.tweaks_menu_option).setVisible(mHasTweaksOption);
     }
 
