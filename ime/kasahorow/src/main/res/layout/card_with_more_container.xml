@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"
         android:layout_marginTop="6dp"
+        android:visibility="gone"
         android:text="@string/click_for_more" />
 
 </LinearLayout>
