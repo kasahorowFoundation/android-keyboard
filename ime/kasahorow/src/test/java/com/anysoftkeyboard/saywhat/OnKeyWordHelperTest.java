@@ -2,7 +2,6 @@ package com.anysoftkeyboard.saywhat;
 
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.keyboards.Keyboard;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

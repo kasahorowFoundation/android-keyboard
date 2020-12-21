@@ -42,7 +42,6 @@ import com.anysoftkeyboard.overlay.OverlyDataCreator;
 import com.anysoftkeyboard.quicktextkeys.QuickKeyHistoryRecords;
 import com.anysoftkeyboard.quicktextkeys.TagsExtractor;
 import com.anysoftkeyboard.remote.RemoteInsertion;
-import com.anysoftkeyboard.saywhat.PublicNotice;
 import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.SoftKeyboard;
 import java.util.ArrayList;

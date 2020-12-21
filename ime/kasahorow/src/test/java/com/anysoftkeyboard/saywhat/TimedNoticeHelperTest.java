@@ -1,20 +1,16 @@
 package com.anysoftkeyboard.saywhat;
 
 import android.os.SystemClock;
-
 import androidx.test.core.app.ApplicationProvider;
-
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.test.SharedPrefsHelper;
 import com.kasahorow.android.keyboard.app.R;
-
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicLong;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicLong;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class TimedNoticeHelperTest {

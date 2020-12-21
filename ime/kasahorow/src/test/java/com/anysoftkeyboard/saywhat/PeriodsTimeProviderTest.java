@@ -1,12 +1,10 @@
 package com.anysoftkeyboard.saywhat;
 
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
-
+import java.util.Calendar;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.util.Calendar;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class PeriodsTimeProviderTest {

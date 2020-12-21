@@ -4,10 +4,9 @@ import android.content.Context;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
-
 import com.f2prateek.rx.preferences2.Preference;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 
 public class TimedNoticeHelper {
     public interface NextTimeProvider {
