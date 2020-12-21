@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ImageView;
-
 import com.anysoftkeyboard.ime.InputViewBinder;
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
@@ -21,7 +20,6 @@ import com.anysoftkeyboard.keyboards.views.AnyKeyboardViewWithExtraDraw;
 import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
 import com.anysoftkeyboard.keyboards.views.extradraw.TypingExtraDraw;
 import com.kasahorow.android.keyboard.app.R;
-
 import java.util.Locale;
 
 class OnKeyEasterEggBaseImpl implements OnKey, OnVisible {

@@ -1,7 +1,6 @@
 package com.anysoftkeyboard;
 
 import com.anysoftkeyboard.api.KeyCodes;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

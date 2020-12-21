@@ -1,19 +1,15 @@
 package com.anysoftkeyboard.saywhat;
 
 import android.text.TextUtils;
-
 import androidx.test.core.app.ApplicationProvider;
-
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.menny.android.anysoftkeyboard.AnyRoboApplication;
-
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class PublicNoticesTest {
