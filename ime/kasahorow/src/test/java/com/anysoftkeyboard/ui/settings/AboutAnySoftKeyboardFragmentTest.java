@@ -39,7 +39,9 @@ public class AboutAnySoftKeyboardFragmentTest
 
         Assert.assertNotNull(intent);
         Assert.assertEquals(Intent.ACTION_VIEW, intent.getAction());
-        Assert.assertEquals("https://github.com/kasahorowFoundation/android-keyboard/", intent.getData().toString());
+        Assert.assertEquals(
+                "https://github.com/kasahorowFoundation/android-keyboard/",
+                intent.getData().toString());
     }
 
     @Test
@@ -94,8 +96,7 @@ public class AboutAnySoftKeyboardFragmentTest
 
         Assert.assertNotNull(intent);
         Assert.assertEquals(Intent.ACTION_VIEW, intent.getAction());
-        Assert.assertEquals(
-                "https://www.kasahorow.org/obu", intent.getData().toString());
+        Assert.assertEquals("https://www.kasahorow.org/obu", intent.getData().toString());
     }
 
     @Test

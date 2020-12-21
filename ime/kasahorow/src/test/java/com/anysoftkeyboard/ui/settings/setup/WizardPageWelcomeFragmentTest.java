@@ -56,9 +56,7 @@ public class WizardPageWelcomeFragmentTest
                 Shadows.shadowOf((Application) ApplicationProvider.getApplicationContext())
                         .getNextStartedActivity();
         Assert.assertEquals(Intent.ACTION_VIEW, wikiIntent.getAction());
-        Assert.assertEquals(
-                "https://www.kasahorow.org/obu",
-                wikiIntent.getData().toString());
+        Assert.assertEquals("https://www.kasahorow.org/obu", wikiIntent.getData().toString());
     }
 
     @Test
