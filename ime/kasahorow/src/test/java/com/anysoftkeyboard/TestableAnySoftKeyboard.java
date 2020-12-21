@@ -97,11 +97,6 @@ public class TestableAnySoftKeyboard extends SoftKeyboard {
     }
 
     @Override
-    protected List<PublicNotice> generatePublicNotices() {
-        return Collections.emptyList();
-    }
-
-    @Override
     protected boolean commitMediaToInputConnection(
             InputContentInfoCompat inputContentInfo,
             InputConnection inputConnection,
