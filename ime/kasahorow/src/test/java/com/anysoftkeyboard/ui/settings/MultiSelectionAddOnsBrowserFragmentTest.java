@@ -72,7 +72,7 @@ public class MultiSelectionAddOnsBrowserFragmentTest
     }
 
     @Test
-    public void testHasTweaksAndMarket() {
+    public void testHasTweaksAndNoMarket() {
         KeyboardAddOnBrowserFragment fragment = startFragment();
         Assert.assertNotEquals(0, fragment.getMarketSearchTitle());
         Menu menu = Shadows.shadowOf(fragment.getActivity()).getOptionsMenu();
@@ -82,6 +82,6 @@ public class MultiSelectionAddOnsBrowserFragmentTest
 
         Assert.assertNotNull(menu);
         Assert.assertNotNull(menu.findItem(R.id.add_on_market_search_menu_option));
-        Assert.assertTrue(menu.findItem(R.id.add_on_market_search_menu_option).isVisible());
+        Assert.assertFalse(menu.findItem(R.id.add_on_market_search_menu_option).isVisible());
     }
 }
