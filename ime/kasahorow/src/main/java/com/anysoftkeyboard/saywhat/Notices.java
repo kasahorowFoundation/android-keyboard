@@ -211,17 +211,6 @@ public class Notices {
                             .inflate(R.layout.beta_purge_action, parent, false);
             TextView message = rootView.findViewById(R.id.purge_message);
             message.setText(mActionText);
-            rootView.setOnClickListener(
-                    view -> {
-                        String betaInfoWebPage =
-                                view.getContext().getString(R.string.beta_purge_web_page_url);
-                        final Intent intent =
-                                new Intent(Intent.ACTION_VIEW, Uri.parse(betaInfoWebPage));
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        view.getContext().startActivity(intent);
-                        rootView.setVisibility(View.GONE);
-                    });
-
             return rootView;
         }
 
