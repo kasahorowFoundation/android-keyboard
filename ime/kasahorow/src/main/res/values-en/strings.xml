@@ -39,6 +39,7 @@
     <string name="no_market_store_available">Could not find an app store on your device.\nUnable to search for add-ons!</string>
     <string name="keyboard_theme_tweak_group">Tweaks</string>
     <string name="close_button">Close</string>
+    <string name="delete_button">Delete</string>
 
     <!-- Indicates that a word has been added to the dictionary -->
     <string name="added_word">Saved:\u0020<xliff:g id="word">%s</xliff:g></string>
@@ -943,4 +944,11 @@
     <string name="click_me_for_easter_egg_info">click me for a surprise</string>
     <!-- this URL should be localized - it should point to a web-site with information in the locale language. -->
     <string name="codvid_info_url">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</string>
+
+    <string name="beta_pre_purge_action_text">Tester Unsubscribe Approaching</string>
+    <string name="beta_post_purge_action_text">Tester Unsubscribe Done</string>
+
+    <string name="next_word_upload_group">Next Word Usage Upload</string>
+    <string name="next_word_upload_summary">Allow us to collect your word usage to our servers to help us better suggest words for you as you type.</string>
+    <string name="next_word_upload_action">Enable next word usage upload</string>
 </resources>
