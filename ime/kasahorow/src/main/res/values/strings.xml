@@ -16,7 +16,7 @@
     <string name="change_log_card_version_title_template">\u0020\u0020Latest changes for v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">More:\u0020<xliff:g id="url">%s</xliff:g></string>
-    <string name="ime_name_beta">kasahorow BETA</string>
+
     <string name="notification_text_testers">This is a beta version. Use with caution!</string>
     <string name="testers_version">Testers build!</string>
 
@@ -944,9 +944,6 @@
     <string name="click_me_for_easter_egg_info">click me for a surprise</string>
     <!-- this URL should be localized - it should point to a web-site with information in the locale language. -->
     <string name="codvid_info_url">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</string>
-
-    <string name="beta_pre_purge_action_text">Tester Unsubscribe Approaching</string>
-    <string name="beta_post_purge_action_text">Tester Unsubscribe Done</string>
 
     <string name="next_word_upload_group">Next Word Usage Upload</string>
     <string name="next_word_upload_summary">Allow us to collect your word usage to our servers to help us better suggest words for you as you type.</string>
