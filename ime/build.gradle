@@ -5,7 +5,7 @@ autoVersioning {
     buildCounterEnvKey = "BUILD_COUNT_FOR_VERSION"
     major = 4
     minor = 0
-    patchOffset = 0
+    patchOffset = -1
     /*adding to build-counter value. Should never change (unless build-counter resets).*/
     buildCounterOffset = 20170707
 }
