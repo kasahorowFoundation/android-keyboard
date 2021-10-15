@@ -3,9 +3,9 @@ package com.anysoftkeyboard.utils;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.anysoftkeyboard.base.utils.Logger;
 import java.util.Locale;
 
@@ -46,7 +46,7 @@ public class LocaleTools {
                     parsedLocale = new Locale(localeString);
                 }
 
-                if (parsedLocale == null || TextUtils.isEmpty(parsedLocale.getLanguage())) {
+                if (TextUtils.isEmpty(parsedLocale.getLanguage())) {
                     return Locale.getDefault();
                 } else {
                     return parsedLocale;

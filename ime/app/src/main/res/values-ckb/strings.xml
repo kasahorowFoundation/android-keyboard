@@ -77,6 +77,9 @@
     <string name="effects_group">کاریگەرییەکان</string>
     <string name="ime_settings">ڕێکخستنەکانی تەختەکلیل</string>
     <string name="switch_incognito">شێوازی نادیار</string>
+    <string name="use_system_vibration_title">بەپێی سیستەم</string>
+    <string name="use_system_vibration_off_summary">ڕێکخستنی تایبەت</string>
+    <string name="use_system_vibration_on_summary">بەکارهێنانی ڕێکخستنی مۆبایلەکە</string>
     <string name="vibrate_on_key_press_title">لەرزین لەکاتی نووسین</string>
     <string name="vibrate_on_key_press_value_template">%d میلی چرکە</string>
     <string name="night_mode_screen">ڕێکخستنەکانی دۆخی تاریک</string>
@@ -489,6 +492,7 @@
     <string name="extension_kbd_extension_numbers_symbols">ژمارەکان و هێماکان</string>
     <string name="extension_kbd_bottom_minimal">بچووک</string>
     <string name="extension_kbd_bottom_minimal_no_emoji">بچووک (بێ ئیمۆجی)</string>
+    <string name="extension_kbd_bottom_minimal_less_punctuation">کەمترین (خاڵبەندی کەم)</string>
     <!-- Tutorials -->
     <!-- Special soft keyboard keys text -->
     <string name="label_go_key">بڕۆ</string>
@@ -605,6 +609,12 @@
     <string name="emoji_default_skin_tone_value_type_5">قاوەیی</string>
     <string name="emoji_default_skin_tone_value_type_6">ڕەش</string>
     <string name="emoji_default_skin_tone_value_random_type">ڕەنگی هەڕەمەکی</string>
+    <string name="emoji_default_gender_title">ڕەگەزی بنەڕەتی خەندەکان</string>
+    <string name="emoji_default_gender_summary">ڕەگەزی بنەڕەتی خەندەکان: %s</string>
+    <string name="emoji_default_gender_value_person">ئاسایی</string>
+    <string name="emoji_default_gender_value_woman">ئافرەت</string>
+    <string name="emoji_default_gender_value_man">پیاو</string>
+    <string name="emoji_default_gender_value_random_type">هەڕەمەکی</string>
     <string name="developer_tools">ئامرازەکان</string>
     <string name="click_for_developer_features">ئامرازەکانی داڕێژەر</string>
     <string name="click_for_developer_features_summary">ئامرازی هەمەڕەنگ بۆ داڕێژەرەکان
@@ -694,6 +704,7 @@
     <string name="clipboard_paste_entries_title">دەقە لەبەرگیراوەکان</string>
     <string name="next_word_prefs_clear_data">سڕینەوەی پێشنیارەکان</string>
     <string name="next_word_prefs_clear_data_summary">ئەم کردارە ئەبێتە هۆی سڕینەوەی سەرجەم مێژووی ئەو ووشانەی کە نووسیوتە</string>
+    <string name="storage_permission_rationale">AnySoftKeyboard پێویستی بە ڕێگەپێدانی داتا و فایلەکانە بۆ پاشەکەوتکردنی داتاکانی بەنامەکە.</string>
     <string name="notification_read_contacts_title">ڕێگەپێدان بۆ پێشنیارکردنی ناوەکان بۆ خێرا دۆزینەوە پێویستە</string>
     <string name="notification_read_contacts_text">بۆ پێشنیارکردنی ناوەکان بۆ خێرا دۆزینەوە، ڕێگەپێدان پێویستە</string>
     <string name="notification_read_contacts_ticker">ڕێگەپێدانی ناوەکان پێویستە</string>
@@ -702,7 +713,6 @@
     </string>
     <string name="wizard_allow_contacts_permission">ڕێگەدان بە پێشنیارکردنی ناوەکان</string>
     <string name="allow_permission">ڕێگەپێدان</string>
-    <string name="navigate_to_app_permissions">چوون بۆ ڕێگەپێدانەکان</string>
     <string name="turn_off_contacts_dictionary">نا چالاککردنی پێشنیارکردنی ناوەکان</string>
     <string name="read_more_about_permissions">زانیاری زیاتر لەسەر رێگەپێدانەکان</string>
     <string name="ask_beta_link_promo">بۆ وەرگرتنی زانیاری زیاتر لەسەر <b>تەختەکلیلی کوردی</b> یان لەکاتی بوونی هەر کێشەکەدا، پەیوەندی بکە بە لاپەڕەی <b>کـــــوردرۆیــــــد</b>" 
@@ -794,8 +804,6 @@
     <string name="app_share_title">باشترین تەختەکلیلی سیستەمی ئەندرۆید</string>
     <string name="app_share_menu_title">بڵاوکردنەوە لەڕێی</string>
     <string name="app_share_text">یەکێک لە باشترین و خیڕاترین تەختەکلیلەکانی سیستەمی ئەندرۆید کە چەندین تایبەتمەندی جیاواز و پێشکەوتوی تێدایە وەک ڕووکاری هەمەڕەنگ، بەشی سەرەو خواری جیاواز، سەدان ئیممۆجی نایاب بەتەنها لە AnySoftKeyboard.\nدابەزاندن لە گۆگڵ پلەی:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
-    <string name="covid_19_click_for_info">بەهیوای لەش ساغی! پەنجەبنێ بێرەدا بۆ زانیاری لەسەر ڤایرۆسی کۆرۆنا</string>
     <string name="click_me_for_easter_egg_info">پەنجەبنێ بێرەدا بۆ سوپرایز</string>
     <!-- this URL should be localized - it should point to a web-site with information in the locale language. -->
-    <string name="codvid_info_url">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</string>
 </resources>

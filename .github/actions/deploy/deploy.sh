@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 set -e
+
 DEPLOYMENT_ENVIRONMENT="${1}"
 shift
 DEPLOYMENT_TASK="${1}"
 shift
 export ANYSOFTKEYBOARD_CRASH_REPORT_EMAIL="${1}"
 shift
-KEYSTORE_FILE_URL="${1}"
+SECRETS_REPO_FOLDER="${1}"
 shift
 export KEY_STORE_FILE_PASSWORD="${1}"
 shift
 export KEY_STORE_FILE_DEFAULT_ALIAS_PASSWORD="${1}"
-shift
-PUBLISH_JSON_URL="${1}"
 shift
 
 function deployProcessFromEnvironmentName() {
@@ -41,21 +40,34 @@ FRACTION=$(deployFractionFromEnvironmentName "${DEPLOYMENT_ENVIRONMENT}")
 echo "for ${DEPLOYMENT_ENVIRONMENT}: will deploy process ${PROCESS_NAME} to ${DEPLOY_CHANNEL} with ${FRACTION} fraction."
 export BUILD_COUNT_FOR_VERSION=${GITHUB_RUN_NUMBER}
 
-echo "Downloading secret files..."
-wget --tries=5 --waitretry=5 "${KEYSTORE_FILE_URL}" -q -O /tmp/anysoftkeyboard.keystore
-stat /tmp/anysoftkeyboard.keystore
-wget --tries=5 --waitretry=5 "${PUBLISH_JSON_URL}" -q -O /tmp/apk_upload_key.json
-stat /tmp/apk_upload_key.json
+echo "Copying secret files..."
+cp "${SECRETS_REPO_FOLDER}/anysoftkeyboard.keystore" /tmp/anysoftkeyboard.keystore
+cp "${SECRETS_REPO_FOLDER}/playstore-publisher-certs.json" /tmp/apk_upload_key.json
 
-DEPLOY_TASKS=( "--continue" "--stacktrace" "-PwithAutoVersioning" ":generateFdroidYamls" "-DdeployChannel=${DEPLOY_CHANNEL}" "-DdeployFraction=${FRACTION}" )
+echo "Preparing change log files..."
+for f in $(find . -name 'alpha.txt'); do
+  cp $f "$(dirname $f)/beta.txt"
+  cp $f "$(dirname $f)/production.txt"
+done
+
+DEPLOY_ARGS=()
+DEPLOY_TASKS=( "--rerun-tasks" "--continue" "--stacktrace" "-PwithAutoVersioning" ":generateFdroidYamls" )
+if [[ "${FRACTION}" == "1.00" ]]; then
+  DEPLOY_ARGS+=("--release-status" "completed")
+else
+  DEPLOY_ARGS+=("--release-status" "inProgress" "--user-fraction" "${FRACTION}")
+fi
+
 if [[ "${DEPLOYMENT_TASK}" == "deploy" ]]; then
   case "${PROCESS_NAME}" in
 
     imeMaster)
       DEPLOY_TASKS+=( "ime:kasahorow:assembleCanary" "ime:kasahorow:publishCanary" )
+      DEPLOY_ARGS+=( "--promote-track" "${DEPLOY_CHANNEL}" )
       ;;
 
     imeProduction)
+      DEPLOY_ARGS+=( "--promote-track" "${DEPLOY_CHANNEL}" )
       DEPLOY_TASKS+=( "ime:kasahorow:assembleRelease" "ime:kasahorow:publishRelease" )
       ;;
 
@@ -73,6 +85,7 @@ elif [[ "${DEPLOYMENT_TASK}" == "deploy:migration" ]]; then
   case "${PROCESS_NAME}" in
 
     ime*)
+      DEPLOY_ARGS+=( "--promote-track" "${DEPLOY_CHANNEL}" )
       DEPLOY_TASKS+=( "ime:kasahorow:promoteReleaseArtifact" )
       ;;
 
@@ -85,7 +98,7 @@ fi
 
 echo "Counter is ${BUILD_COUNT_FOR_VERSION}, crash email: ${ANYSOFTKEYBOARD_CRASH_REPORT_EMAIL}, and tasks: ${DEPLOY_TASKS[*]}"
 
-./gradlew "${DEPLOY_TASKS[@]}"
+./gradlew "${DEPLOY_TASKS[@]}" "${DEPLOY_ARGS[@]}"
 
 #Making sure no future deployments will happen on this branch.
 if [[ "${FRACTION}" == "1.00" ]] && [[ "${DEPLOY_CHANNEL}" == "production" ]]; then
@@ -96,7 +109,7 @@ if [[ "${FRACTION}" == "1.00" ]] && [[ "${DEPLOY_CHANNEL}" == "production" ]]; t
   else
     BRANCH_NAME="$(git name-rev --name-only HEAD)"
     echo "Will create ${MARKER_FILE} to halt future releases in the branch '${BRANCH_NAME}'."
-    echo "Full deployment to production '${DEPLOYMENT_ENVIRONMENT}' was done succesfully" > "${MARKER_FILE}"
+    echo "Full deployment to production '${DEPLOYMENT_ENVIRONMENT}' was successful." > "${MARKER_FILE}"
     git config --global user.email "ask@evendanan.net"
     git config --global user.name "Polyglot"
     git add "${MARKER_FILE}"

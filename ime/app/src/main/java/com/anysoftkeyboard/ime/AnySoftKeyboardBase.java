@@ -16,11 +16,9 @@
 
 package com.anysoftkeyboard.ime;
 
+import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import android.inputmethodservice.InputMethodService;
-import android.support.annotation.CallSuper;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +31,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import androidx.annotation.CallSuper;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.anysoftkeyboard.base.utils.GCUtils;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
@@ -103,7 +104,7 @@ public abstract class AnySoftKeyboardBase extends InputMethodService
     }
 
     @Nullable
-    public InputViewBinder getInputView() {
+    public final InputViewBinder getInputView() {
         return mInputView;
     }
 
@@ -134,7 +135,7 @@ public abstract class AnySoftKeyboardBase extends InputMethodService
 
     @Override
     public View onCreateInputView() {
-        if (getInputView() != null) getInputView().onViewNotRequired();
+        if (mInputView != null) mInputView.onViewNotRequired();
         mInputView = null;
 
         GCUtils.getInstance()
@@ -238,6 +239,7 @@ public abstract class AnySoftKeyboardBase extends InputMethodService
         }
     }
 
+    @SuppressLint("InflateParams")
     protected KeyboardViewContainerView createInputViewContainer() {
         return (KeyboardViewContainerView)
                 getLayoutInflater().inflate(R.layout.main_keyboard_layout, null);

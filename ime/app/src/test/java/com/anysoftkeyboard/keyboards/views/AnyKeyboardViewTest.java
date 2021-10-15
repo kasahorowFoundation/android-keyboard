@@ -19,9 +19,9 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
 import android.view.MotionEvent;
 import android.widget.PopupWindow;
+import androidx.annotation.NonNull;
 import androidx.test.core.app.ApplicationProvider;
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.ViewTestUtils;
@@ -29,8 +29,6 @@ import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.views.extradraw.ExtraDraw;
-import com.anysoftkeyboard.keyboards.views.preview.KeyPreviewsController;
-import com.anysoftkeyboard.keyboards.views.preview.PreviewPopupTheme;
 import com.anysoftkeyboard.test.SharedPrefsHelper;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
 import com.menny.android.anysoftkeyboard.AnyApplication;
@@ -52,7 +50,6 @@ public class AnyKeyboardViewTest extends AnyKeyboardViewWithMiniKeyboardTest {
 
     private AnyKeyboardView mViewUnderTest;
     private boolean mThemeWasSet;
-    private KeyPreviewsController mSpiedPreviewManager;
 
     @Override
     protected AnyKeyboardViewBase createViewToTest(Context context) {
@@ -67,13 +64,6 @@ public class AnyKeyboardViewTest extends AnyKeyboardViewWithMiniKeyboardTest {
                 mThemeWasSet = true;
                 return super.setValueFromTheme(
                         remoteTypedArray, padding, localAttrId, remoteTypedArrayIndex);
-            }
-
-            @Override
-            protected KeyPreviewsController createKeyPreviewManager(
-                    Context context, PreviewPopupTheme previewPopupTheme) {
-                return mSpiedPreviewManager =
-                        Mockito.spy(super.createKeyPreviewManager(context, previewPopupTheme));
             }
         };
     }
@@ -769,19 +759,6 @@ public class AnyKeyboardViewTest extends AnyKeyboardViewWithMiniKeyboardTest {
                 Assert.assertEquals(KeyCodes.DELETE_WORD, keyCode);
             }
         }
-    }
-
-    @Test
-    public void testPreviewsShouldBeClearedOnThemeSet() {
-        Mockito.reset(mSpiedPreviewManager);
-
-        mViewUnderTest.setKeyboardTheme(
-                AnyApplication.getKeyboardThemeFactory(getApplicationContext())
-                        .getAllAddOns()
-                        .get(1));
-
-        Mockito.verify(mSpiedPreviewManager).resetTheme();
-        Mockito.verify(mSpiedPreviewManager, Mockito.never()).destroy();
     }
 
     @Test

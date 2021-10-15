@@ -4,12 +4,6 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
-import android.support.annotation.CallSuper;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.util.Pair;
 import android.text.TextUtils;
 import android.util.SparseBooleanArray;
 import android.view.KeyEvent;
@@ -21,6 +15,12 @@ import android.view.animation.AnimationUtils;
 import android.view.inputmethod.CompletionInfo;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
+import android.widget.ImageView;
+import androidx.annotation.CallSuper;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
+import androidx.core.content.ContextCompat;
 import com.anysoftkeyboard.android.PowerSaving;
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.base.utils.Logger;
@@ -28,6 +28,7 @@ import com.anysoftkeyboard.dictionaries.Dictionary;
 import com.anysoftkeyboard.dictionaries.DictionaryAddOnAndBuilder;
 import com.anysoftkeyboard.dictionaries.DictionaryBackgroundLoader;
 import com.anysoftkeyboard.dictionaries.Suggest;
+import com.anysoftkeyboard.dictionaries.SuggestImpl;
 import com.anysoftkeyboard.dictionaries.WordComposer;
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
@@ -66,6 +67,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                 public void onDictionaryLoadingFailed(Dictionary dictionary, Throwable exception) {}
             };
     private static final CompletionInfo[] EMPTY_COMPLETIONS = new CompletionInfo[0];
+    @VisibleForTesting public static final long GET_SUGGESTIONS_DELAY = 5 * ONE_FRAME_DELAY;
 
     @VisibleForTesting
     final KeyboardUIStateHandler mKeyboardHandler = new KeyboardUIStateHandler(this);
@@ -410,7 +412,11 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
             int candidatesEnd) {
         super.onUpdateSelection(
                 oldSelStart, oldSelEnd, newSelStart, newSelEnd, candidatesStart, candidatesEnd);
-
+        Logger.v(
+                TAG,
+                "onUpdateSelection: word '%s', position %d.",
+                mWord.getTypedWord(),
+                mWord.cursorPosition());
         final boolean isExpectedEvent = SystemClock.uptimeMillis() < mExpectingSelectionUpdateBy;
         mExpectingSelectionUpdateBy = NEVER_TIME_STAMP;
 
@@ -463,7 +469,11 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                 if (newSelStart >= candidatesStart && newSelStart <= candidatesEnd) {
                     // 1) predicting and moved inside the word - just update the
                     // cursor position and shift state
-                    // inside the currently selected word
+                    // inside the currently typed word
+                    Logger.d(
+                            TAG,
+                            "onUpdateSelection: inside the currently typed word to location %d.",
+                            newSelEnd - candidatesStart);
                     mWord.setCursorPosition(newSelEnd - candidatesStart);
                 } else {
                     Logger.d(
@@ -478,6 +488,8 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                         "onUpdateSelection: not predicting at this moment, maybe the cursor is now at a new word?");
                 postRestartWordSuggestion();
             }
+        } else {
+            Logger.v(TAG, "onUpdateSelection: cursor moved expectedly");
         }
     }
 
@@ -486,6 +498,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
         final View view = super.onCreateInputView();
         mCandidateView = getInputViewContainer().getCandidateView();
         mCandidateView.setService(this);
+        mCancelSuggestionsAction.setOwningCandidateView(mCandidateView);
         return view;
     }
 
@@ -521,6 +534,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
     }
 
     private void postRestartWordSuggestion() {
+        mKeyboardHandler.removeMessages(KeyboardUIStateHandler.MSG_UPDATE_SUGGESTIONS);
         mKeyboardHandler.removeMessages(KeyboardUIStateHandler.MSG_RESTART_NEW_WORD_SUGGESTIONS);
         mKeyboardHandler.sendEmptyMessageDelayed(
                 KeyboardUIStateHandler.MSG_RESTART_NEW_WORD_SUGGESTIONS, 10 * ONE_FRAME_DELAY);
@@ -671,7 +685,8 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                 // Add the word to the auto dictionary if it's not a known word
                 // this is "typed" if the auto-correction is off, or "picked" if it is on or
                 // momentarily off.
-                checkAddToDictionaryWithAutoDictionary(wordToOutput, Suggest.AdditionType.Typed);
+                checkAddToDictionaryWithAutoDictionary(
+                        wordToOutput, SuggestImpl.AdditionType.Typed);
             }
             // Picked the suggestion by a space/punctuation character: we will treat it
             // as "added an auto space".
@@ -765,6 +780,8 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
     }
 
     public void performRestartWordSuggestion(final InputConnection ic) {
+        mKeyboardHandler.removeMessages(KeyboardUIStateHandler.MSG_RESTART_NEW_WORD_SUGGESTIONS);
+        mKeyboardHandler.removeMessages(KeyboardUIStateHandler.MSG_UPDATE_SUGGESTIONS);
         // I assume ASK DOES NOT predict at this moment!
 
         // 2) predicting and moved outside the word - abort predicting, update
@@ -882,9 +899,6 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
             onKey(pointCode, key, 0, new int[] {pointCode}, true);
         }
         mAutoCorrectOn = originalAutoCorrect;
-        // this will be the revert
-        mWordRevertLength = initialWordComposer.charCount() + text.length();
-        mPreviousWord = initialWordComposer;
 
         ic.endBatchEdit();
     }
@@ -985,7 +999,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                     mAllowSuggestionsRestart,
                     mCurrentlyAllowSuggestionRestart);
             return false;
-        } else if (isCursorNotTouchingWord()) {
+        } else if (!isCursorTouchingWord()) {
             Logger.d(TAG, "User moved cursor to no-man land. Bye bye.");
             return false;
         }
@@ -1026,7 +1040,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
 
     @NonNull
     protected Suggest createSuggest() {
-        return new Suggest(this);
+        return new SuggestImpl(this);
     }
 
     protected abstract boolean isAlphabet(int code);
@@ -1052,27 +1066,12 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                                                 word)));
     }
 
+    /** posts an update suggestions request to the messages queue. Removes any previous request. */
     protected void postUpdateSuggestions() {
-        postUpdateSuggestions(5 * ONE_FRAME_DELAY);
-    }
-
-    /**
-     * posts an update suggestions request to the messages queue. Removes any previous request.
-     *
-     * @param delay negative value will cause the call to be done now, in this thread.
-     */
-    protected void postUpdateSuggestions(long delay) {
         mKeyboardHandler.removeMessages(KeyboardUIStateHandler.MSG_UPDATE_SUGGESTIONS);
-        if (delay > 0) {
-            mKeyboardHandler.sendMessageDelayed(
-                    mKeyboardHandler.obtainMessage(KeyboardUIStateHandler.MSG_UPDATE_SUGGESTIONS),
-                    delay);
-        } else if (delay == 0) {
-            mKeyboardHandler.sendMessage(
-                    mKeyboardHandler.obtainMessage(KeyboardUIStateHandler.MSG_UPDATE_SUGGESTIONS));
-        } else {
-            performUpdateSuggestions();
-        }
+        mKeyboardHandler.sendMessageDelayed(
+                mKeyboardHandler.obtainMessage(KeyboardUIStateHandler.MSG_UPDATE_SUGGESTIONS),
+                GET_SUGGESTIONS_DELAY);
     }
 
     protected boolean isPredictionOn() {
@@ -1088,6 +1087,8 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
     }
 
     public void performUpdateSuggestions() {
+        mKeyboardHandler.removeMessages(KeyboardUIStateHandler.MSG_UPDATE_SUGGESTIONS);
+
         if (!isPredictionOn() || !mShowSuggestions) {
             clearSuggestions();
             return;
@@ -1161,7 +1162,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
             if (!typedWord.isAtTagsSearchState()) {
                 if (index == 0) {
                     checkAddToDictionaryWithAutoDictionary(
-                            typedWord.getTypedWord(), Suggest.AdditionType.Picked);
+                            typedWord.getTypedWord(), SuggestImpl.AdditionType.Picked);
                 }
 
                 final boolean showingAddToDictionaryHint =
@@ -1223,27 +1224,25 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
         clearSuggestions();
     }
 
-    private boolean isCursorNotTouchingWord() {
+    private boolean isCursorTouchingWord() {
         InputConnection ic = getCurrentInputConnection();
         if (ic == null) {
-            return true;
+            return false;
         }
 
         CharSequence toLeft = ic.getTextBeforeCursor(1, 0);
         // It is not exactly clear to me why, but sometimes, although I request
-        // 1 character, I get
-        // the entire text. This causes me to incorrectly detect restart
-        // suggestions...
-        if (!TextUtils.isEmpty(toLeft)
-                && toLeft.length() == 1
-                && !isWordSeparator(toLeft.charAt(0))) {
-            return false;
+        // 1 character, I get the entire text
+        if (!TextUtils.isEmpty(toLeft) && !isWordSeparator(toLeft.charAt(0))) {
+            return true;
         }
 
         CharSequence toRight = ic.getTextAfterCursor(1, 0);
-        return TextUtils.isEmpty(toRight)
-                || toRight.length() != 1
-                || isWordSeparator(toRight.charAt(0));
+        if (!TextUtils.isEmpty(toRight) && !isWordSeparator(toRight.charAt(0))) {
+            return true;
+        }
+
+        return false;
     }
 
     private void setSpaceTimeStamp(boolean isSpace) {
@@ -1261,7 +1260,6 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
         final Locale locale = keyboard.getLocale();
         mFrenchSpacePunctuationBehavior =
                 mSwapPunctuationAndSpace
-                        && locale != null
                         && locale.toString().toLowerCase(Locale.US).startsWith("fr");
     }
 
@@ -1336,22 +1334,11 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
             CharSequence newWord, Suggest.AdditionType type) {
         mJustAutoAddedWord = false;
 
-        mInputSessionDisposables.add(
-                Observable.just(Pair.create(newWord, type))
-                        .subscribeOn(RxSchedulers.background())
-                        .map(
-                                pair ->
-                                        Pair.create(
-                                                mSuggest.tryToLearnNewWord(pair.first, pair.second),
-                                                pair.first))
-                        .filter(pair -> pair.first)
-                        .observeOn(RxSchedulers.mainThread())
-                        .subscribe(
-                                pair -> {
-                                    addWordToDictionary(pair.second.toString());
-                                    mJustAutoAddedWord = true;
-                                },
-                                e -> Logger.w(TAG, e, "Failed to try-lean word '%s'!", newWord)));
+        // unfortunately, has to do it on the main-thread (because we checking mJustAutoAddedWord)
+        if (mSuggest.tryToLearnNewWord(newWord, type)) {
+            addWordToDictionary(newWord.toString());
+            mJustAutoAddedWord = true;
+        }
     }
 
     @CallSuper
@@ -1389,20 +1376,21 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
     static class CancelSuggestionsAction implements KeyboardViewContainerView.StripActionProvider {
         // two seconds is enough.
         private static final long DOUBLE_TAP_TIMEOUT = 2 * 1000 - 50;
-        private final Runnable mCancelPrediction;
+        @NonNull private final Runnable mCancelPrediction;
         private Animation mCancelToGoneAnimation;
         private Animation mCancelToVisibleAnimation;
         private Animation mCloseTextToGoneAnimation;
         private Animation mCloseTextToVisibleAnimation;
         private View mRootView;
         private View mCloseText;
+        @Nullable private CandidateView mCandidateView;
         private final Runnable mReHideTextAction =
                 () -> {
                     mCloseTextToGoneAnimation.reset();
                     mCloseText.startAnimation(mCloseTextToGoneAnimation);
                 };
 
-        CancelSuggestionsAction(Runnable cancelPrediction) {
+        CancelSuggestionsAction(@NonNull Runnable cancelPrediction) {
             mCancelPrediction = cancelPrediction;
         }
 
@@ -1451,6 +1439,10 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
 
             mCloseText = mRootView.findViewById(R.id.close_suggestions_strip_text);
 
+            ImageView closeIcon = mRootView.findViewById(R.id.close_suggestions_strip_icon);
+            if (mCandidateView != null) {
+                closeIcon.setImageDrawable(mCandidateView.getCloseIcon());
+            }
             mRootView.setOnClickListener(
                     view -> {
                         mRootView.removeCallbacks(mReHideTextAction);
@@ -1471,6 +1463,10 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
         @Override
         public void onRemoved() {
             mRootView.removeCallbacks(mReHideTextAction);
+        }
+
+        void setOwningCandidateView(@NonNull CandidateView view) {
+            mCandidateView = view;
         }
 
         void setCancelIconVisible(boolean visible) {

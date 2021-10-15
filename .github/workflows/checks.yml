@@ -22,14 +22,15 @@ env:
 jobs:
   static-checks:
     runs-on: ubuntu-18.04
-    container: menny/ndk_ask:1.14.0
+    container: menny/android_ndk:1.15.3
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v1.1.2
         with:
           path: .github_cache_gradle/
-          key: checks-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
-          restore-keys: checks-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
+          key: checks-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
+          restore-keys: checks-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
       - name: setup
         run: ./scripts/ci/ci_setup.sh
       - name: check
@@ -47,17 +48,20 @@ jobs:
 
   linters:
     runs-on: ubuntu-18.04
-    container: menny/ndk_ask:1.14.0
+    container: menny/android_ndk:1.15.3
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v1.1.2
         with:
           path: .github_cache_gradle/
-          key: linters-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
-          restore-keys: linters-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
+          key: linters-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
+          restore-keys: linters-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
       - name: setup
         run: ./scripts/ci/ci_setup.sh
       - name: check
+        # Due to an issue with lint in merge commits, only running in PRs
+        if: github.event_name != 'push'
         run: ./scripts/ci/ci_check_lint.sh
       - uses: ./.github/actions/collect-reports
         if: always()
@@ -72,7 +76,8 @@ jobs:
 
   app-tests-shards:
     runs-on: ubuntu-18.04
-    container: menny/ndk_ask:1.14.0
+    container: menny/android_ndk:1.15.3
+    timeout-minutes: 15
     strategy:
       matrix:
         index: [0, 1]
@@ -83,8 +88,8 @@ jobs:
       - uses: actions/cache@v1.1.2
         with:
           path: .github_cache_gradle/
-          key: tests-shards-gradle-v2-${{ matrix.index }}-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
-          restore-keys: tests-shards-gradle-v2-${{ matrix.index }}-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
+          key: tests-shards-gradle-v3-${{ matrix.index }}-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
+          restore-keys: tests-shards-gradle-v3-${{ matrix.index }}-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
       - name: setup
         run: ./scripts/ci/ci_setup.sh
       - name: tests
@@ -112,14 +117,15 @@ jobs:
 
   app-all-sdks-tests:
     runs-on: ubuntu-18.04
-    container: menny/ndk_ask:1.14.0
+    container: menny/android_ndk:1.15.3
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v1.1.2
         with:
           path: .github_cache_gradle/
-          key: tests-all-sdks-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
-          restore-keys: tests-all-sdks-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
+          key: tests-all-sdks-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
+          restore-keys: tests-all-sdks-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
       - name: setup
         run: ./scripts/ci/ci_setup.sh
       - name: tests
@@ -147,19 +153,15 @@ jobs:
 
   app-less-tests:
     runs-on: ubuntu-18.04
-    container: menny/ndk_ask:1.14.0
-    strategy:
-      matrix:
-        index: [0, 1]
-        groups_count: [3]
-      fail-fast: false
+    container: menny/android_ndk:1.15.3
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v1.1.2
         with:
           path: .github_cache_gradle/
-          key: tests-app-less-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
-          restore-keys: tests-app-less-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
+          key: tests-app-less-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
+          restore-keys: tests-app-less-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
       - name: setup
         run: ./scripts/ci/ci_setup.sh
       - name: tests
@@ -187,14 +189,15 @@ jobs:
 
   verify-all-addons:
     runs-on: ubuntu-18.04
-    container: menny/ndk_ask:1.14.0
+    container: menny/android_ndk:1.15.3
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v1.1.2
         with:
           path: .github_cache_gradle/
-          key: verify-all-addons-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
-          restore-keys: verify-all-addons-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
+          key: verify-all-addons-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
+          restore-keys: verify-all-addons-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
       - name: setup
         run: ./scripts/ci/ci_setup.sh
       - name: verify-add-ons
@@ -220,14 +223,15 @@ jobs:
 
   deploy-dry-run:
     runs-on: ubuntu-18.04
-    container: menny/ndk_ask:1.14.0
+    container: menny/android_ndk:1.15.3
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v1.1.2
         with:
           path: .github_cache_gradle/
-          key: dry-run-deploy-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
-          restore-keys: dry-run-deploy-gradle-v2-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
+          key: dry-run-deploy-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('buildSrc/**/*.java') }}
+          restore-keys: dry-run-deploy-gradle-v3-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-
       - name: setup
         run: ./scripts/ci/ci_setup.sh
       - name: dry-run-release-build
@@ -252,7 +256,7 @@ jobs:
     if: github.event_name == 'push'
     needs: [master-green-requirement]
     runs-on: ubuntu-18.04
-    container: menny/android_base:1.14.0
+    container: menny/android_base:1.15.3
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/deploy-request
@@ -268,7 +272,7 @@ jobs:
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/release-branch-')
     needs: [master-green-requirement]
     runs-on: ubuntu-18.04
-    container: menny/android_base:1.14.0
+    container: menny/android_base:1.15.3
     steps:
       - uses: actions/checkout@v2
         with:
