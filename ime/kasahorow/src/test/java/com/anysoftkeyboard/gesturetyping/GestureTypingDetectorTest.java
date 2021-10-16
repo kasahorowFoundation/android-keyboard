@@ -1,17 +1,18 @@
 package com.anysoftkeyboard.gesturetyping;
 
-import static com.anysoftkeyboard.keyboards.ExternalAnyKeyboardRowsTest.SIMPLE_KeyboardDimens;
+import static com.anysoftkeyboard.keyboards.ExternalAnyKeyboardTest.SIMPLE_KeyboardDimens;
 import static com.anysoftkeyboard.keyboards.Keyboard.KEYBOARD_ROW_MODE_NORMAL;
 
 import android.content.Context;
 import android.graphics.Point;
-import android.support.v4.util.Pair;
+import androidx.core.util.Pair;
 import androidx.test.core.app.ApplicationProvider;
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
-import com.kasahorow.android.keyboard.app.R;
+import com.anysoftkeyboard.rx.TestRxSchedulers;
 import com.menny.android.anysoftkeyboard.AnyApplication;
+import com.kasahorow.android.keyboard.app.R;
 import io.reactivex.disposables.Disposable;
 import java.util.ArrayList;
 import java.util.Arrays;

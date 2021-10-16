@@ -14,6 +14,7 @@ import org.robolectric.annotation.Config;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class QuickTextKeyFactoryTest {
+    private static final String KEY_OUTPUT = "\uD83D\uDE03";
 
     @Test
     public void testDefaultOrder() {
@@ -32,8 +33,8 @@ public class QuickTextKeyFactoryTest {
 
         QuickTextKey emoticons = addOns.get(0);
         Assert.assertEquals("698b8c20-19df-11e1-bddb-0800200c9a66", emoticons.getId());
-        Assert.assertEquals("\uD83D\uDE03", emoticons.getKeyOutputText().toString());
-        Assert.assertEquals("\uD83D\uDE03", emoticons.getKeyLabel().toString());
+        Assert.assertEquals(KEY_OUTPUT, emoticons.getKeyOutputText().toString());
+        Assert.assertEquals(KEY_OUTPUT, emoticons.getKeyLabel().toString());
     }
 
     @Test
@@ -44,8 +45,8 @@ public class QuickTextKeyFactoryTest {
 
         QuickTextKey emoticons = addOns.get(0);
         Assert.assertEquals("698b8c20-19df-11e1-bddb-0800200c9a66", emoticons.getId());
-        Assert.assertEquals("\uD83D\uDE03", emoticons.getKeyOutputText().toString());
-        Assert.assertEquals("\uD83D\uDE03", emoticons.getKeyLabel().toString());
+        Assert.assertEquals(KEY_OUTPUT, emoticons.getKeyOutputText().toString());
+        Assert.assertEquals(KEY_OUTPUT, emoticons.getKeyLabel().toString());
     }
 
     @Test
@@ -56,8 +57,8 @@ public class QuickTextKeyFactoryTest {
 
         QuickTextKey emoticons = addOns.get(0);
         Assert.assertEquals("698b8c20-19df-11e1-bddb-0800200c9a66", emoticons.getId());
-        Assert.assertEquals("\uD83D\uDE03", emoticons.getKeyOutputText().toString());
-        Assert.assertEquals("\uD83D\uDE03", emoticons.getKeyLabel().toString());
+        Assert.assertEquals(KEY_OUTPUT, emoticons.getKeyOutputText().toString());
+        Assert.assertEquals(KEY_OUTPUT, emoticons.getKeyLabel().toString());
     }
 
     @Test

@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import com.anysoftkeyboard.AddOnTestUtils;
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
 import com.anysoftkeyboard.TestableAnySoftKeyboard;

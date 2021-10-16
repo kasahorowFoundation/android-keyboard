@@ -160,11 +160,11 @@ public class BTreeDictionaryTest {
         Assert.assertEquals(50, mDictionaryUnderTest.wordFrequencyRequestedToAddedToStorage);
         assertTrue(mDictionaryUnderTest.isValidWord("neabb"));
         Assert.assertFalse(mDictionaryUnderTest.isValidWord("neab"));
-        Assert.assertEquals(mDictionaryUnderTest.getWordFrequency("new"), 34);
-        Assert.assertEquals(mDictionaryUnderTest.getWordFrequency("newa"), 45);
-        Assert.assertEquals(mDictionaryUnderTest.getWordFrequency("nea"), 47);
-        Assert.assertEquals(mDictionaryUnderTest.getWordFrequency("neabb"), 50);
-        Assert.assertEquals(mDictionaryUnderTest.getWordFrequency("neab"), 0);
+        Assert.assertEquals(34, mDictionaryUnderTest.getWordFrequency("new"));
+        Assert.assertEquals(45, mDictionaryUnderTest.getWordFrequency("newa"));
+        Assert.assertEquals(47, mDictionaryUnderTest.getWordFrequency("nea"));
+        Assert.assertEquals(50, mDictionaryUnderTest.getWordFrequency("neabb"));
+        Assert.assertEquals(0, mDictionaryUnderTest.getWordFrequency("neab"));
         // checking validity of the internal structure
         assetNodeArrayIsValid(mDictionaryUnderTest.getRoot());
     }
@@ -276,9 +276,9 @@ public class BTreeDictionaryTest {
         Assert.assertFalse(
                 mDictionaryUnderTest.isValidWord((String) TestableBTreeDictionary.STORAGE[0][1]));
         Assert.assertEquals(
+                0,
                 mDictionaryUnderTest.getWordFrequency(
-                        (String) TestableBTreeDictionary.STORAGE[0][1]),
-                0);
+                        (String) TestableBTreeDictionary.STORAGE[0][1]));
         Assert.assertFalse(mDictionaryUnderTest.addWord("fail", 1));
     }
 

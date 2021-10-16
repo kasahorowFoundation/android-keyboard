@@ -5,11 +5,12 @@ import android.content.ComponentName;
 import android.database.ContentObserver;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
+import com.anysoftkeyboard.rx.TestRxSchedulers;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.SoftKeyboard;
@@ -83,13 +84,14 @@ public class SetUpKeyboardWizardFragmentTest
                 .getView()
                 .findViewById(R.id.go_to_start_setup)
                 .performClick();
-        ensureAllScheduledJobsAreDone();
+        TestRxSchedulers.foregroundAdvanceBy(1000 /*after the animation*/);
         Robolectric.getForegroundThreadScheduler().setIdleState(Scheduler.IdleState.UNPAUSED);
+        // TestRxSchedulers.foregroundFlushAllJobs();
 
         // page two - enable ASK
         Assert.assertEquals(1, pager.getCurrentItem());
         // now, lets say that ASK was enabled.
-        getFragmentController().pause().stop();
+        getActivityController().pause().stop();
         ensureAllScheduledJobsAreDone();
 
         final String flatASKComponent =
@@ -103,15 +105,15 @@ public class SetUpKeyboardWizardFragmentTest
         ensureAllScheduledJobsAreDone();
         Robolectric.getForegroundThreadScheduler().setIdleState(Scheduler.IdleState.PAUSED);
         // notifying about the change.
-        getFragmentController().start().resume();
-        ensureAllScheduledJobsAreDone();
+        getActivityController().start().resume();
+        TestRxSchedulers.foregroundAdvanceBy(1000 /*after the animation*/);
 
         // now at page three - activate keyboard
         Assert.assertEquals(2, pager.getCurrentItem());
 
         Robolectric.getForegroundThreadScheduler().setIdleState(Scheduler.IdleState.UNPAUSED);
 
-        getFragmentController().pause();
+        getActivityController().pause();
         Settings.Secure.putString(
                 fragment.getActivity().getContentResolver(),
                 Settings.Secure.DEFAULT_INPUT_METHOD,
@@ -121,13 +123,13 @@ public class SetUpKeyboardWizardFragmentTest
         ensureAllScheduledJobsAreDone();
         Robolectric.getForegroundThreadScheduler().setIdleState(Scheduler.IdleState.PAUSED);
 
-        getFragmentController().resume();
-        ensureAllScheduledJobsAreDone();
+        getActivityController().resume();
+        TestRxSchedulers.foregroundAdvanceBy(1000 /*after the animation*/);
         // now at page four - more settings.
         Assert.assertEquals(3, pager.getCurrentItem());
 
         // destroying the fragment should unregister from Secure content provider
-        getFragmentController().stop().pause().destroy();
+        getActivityController().stop().pause().destroy();
         Assert.assertEquals(
                 0, shadowContentResolver.getContentObservers(Settings.Secure.CONTENT_URI).size());
     }

@@ -39,9 +39,7 @@ public class AboveKeyPositionCalculatorTest {
 
         int[] offsets = new int[] {50, 60};
 
-        Point result =
-                mUnderTest.calculatePositionForPreview(
-                        mTestKey, Mockito.mock(View.class), mTheme, offsets);
+        Point result = mUnderTest.calculatePositionForPreview(mTestKey, mTheme, offsets);
 
         Assert.assertEquals(mTestKey.x + mTestKey.width / 2 + offsets[0], result.x);
         Assert.assertEquals(mTestKey.y + offsets[1], result.y);
@@ -53,9 +51,7 @@ public class AboveKeyPositionCalculatorTest {
 
         int[] offsets = new int[] {50, 60};
 
-        Point result =
-                mUnderTest.calculatePositionForPreview(
-                        mTestKey, Mockito.mock(View.class), mTheme, offsets);
+        Point result = mUnderTest.calculatePositionForPreview(mTestKey, mTheme, offsets);
 
         Assert.assertEquals(mTestKey.x + mTestKey.width / 2 + offsets[0], result.x);
         Assert.assertEquals(mTestKey.y + mTestKey.height + offsets[1], result.y);
@@ -78,9 +74,7 @@ public class AboveKeyPositionCalculatorTest {
 
         int[] offsets = new int[] {50, 60};
 
-        Point result =
-                mUnderTest.calculatePositionForPreview(
-                        mTestKey, Mockito.mock(View.class), mTheme, offsets);
+        Point result = mUnderTest.calculatePositionForPreview(mTestKey, mTheme, offsets);
 
         Assert.assertEquals(mTestKey.x + mTestKey.width / 2 + offsets[0], result.x);
         Assert.assertEquals(mTestKey.y + offsets[1] + 13 /*padding*/, result.y);
