@@ -20,7 +20,7 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.StrictMode;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;
@@ -32,16 +32,13 @@ public class DebugAnyApplication extends AnyApplication {
     protected void setupCrashHandler(SharedPreferences sp) {
         super.setupCrashHandler(sp);
         Logger.setLogProvider(new LogCatLogProvider());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            StrictMode.setThreadPolicy(
-                    new StrictMode.ThreadPolicy.Builder()
-                            .detectAll()
-                            .penaltyLog()
-                            .penaltyFlashScreen()
-                            .build());
-            StrictMode.setVmPolicy(
-                    new StrictMode.VmPolicy.Builder().detectAll().penaltyLog().build());
-        }
+        StrictMode.setThreadPolicy(
+                new StrictMode.ThreadPolicy.Builder()
+                        .detectAll()
+                        .penaltyLog()
+                        .penaltyFlashScreen()
+                        .build());
+        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectAll().penaltyLog().build());
     }
 
     @Override
