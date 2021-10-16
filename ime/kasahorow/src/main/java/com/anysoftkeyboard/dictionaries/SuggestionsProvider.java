@@ -1,8 +1,8 @@
 package com.anysoftkeyboard.dictionaries;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import androidx.annotation.NonNull;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.dictionaries.content.ContactsDictionary;
 import com.anysoftkeyboard.dictionaries.sqlite.AbbreviationsDictionary;
@@ -10,9 +10,9 @@ import com.anysoftkeyboard.dictionaries.sqlite.AutoDictionary;
 import com.anysoftkeyboard.nextword.NextWordSuggestions;
 import com.anysoftkeyboard.prefs.RxSharedPrefs;
 import com.anysoftkeyboard.rx.GenericOnError;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import io.reactivex.disposables.CompositeDisposable;
 import java.util.ArrayList;
 import java.util.Arrays;

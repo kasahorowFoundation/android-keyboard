@@ -24,22 +24,22 @@ import static com.anysoftkeyboard.keyboards.Keyboard.KEYBOARD_ROW_MODE_URL;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Build;
-import android.support.annotation.IntDef;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 import android.view.inputmethod.EditorInfo;
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.annotation.VisibleForTesting;
+import androidx.collection.ArrayMap;
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.addons.DefaultAddOn;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.ime.InputViewBinder;
 import com.anysoftkeyboard.keyboards.AnyKeyboard.HardKeyboardTranslator;
 import com.anysoftkeyboard.prefs.RxSharedPrefs;
-import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;
+import com.kasahorow.android.keyboard.app.R;
 import io.reactivex.disposables.CompositeDisposable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -169,9 +169,7 @@ public class KeyboardSwitcher {
                 };
         mKeyboardRowMode = KEYBOARD_ROW_MODE_NORMAL;
         // loading saved package-id from prefs
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            loadKeyboardAppMapping();
-        }
+        loadKeyboardAppMapping();
 
         final RxSharedPrefs prefs = AnyApplication.prefs(mContext);
         mDisposable.add(
@@ -932,9 +930,7 @@ public class KeyboardSwitcher {
 
     public void destroy() {
         mDisposable.dispose();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            storeKeyboardByAppMapping();
-        }
+        storeKeyboardByAppMapping();
         flushKeyboardsCache();
         mAlphabetKeyboardIndexByPackageId.clear();
     }

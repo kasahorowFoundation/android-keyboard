@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 Menny Even-Danan
+ * Copyright (c) 2021 Menny Even-Danan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,21 +16,19 @@
 
 package com.anysoftkeyboard.devicespecific;
 
-import androidx.annotation.Nullable;
+import android.annotation.TargetApi;
+import android.os.Vibrator;
+import androidx.annotation.NonNull;
 
-public interface Clipboard {
-
-    interface ClipboardUpdatedListener {
-        void onClipboardEntryAdded(CharSequence text);
+@TargetApi(26)
+public class DeviceSpecificV26 extends DeviceSpecificV24 {
+    @Override
+    public String getApiLevel() {
+        return "DeviceSpecificV26";
     }
 
-    CharSequence getText(int entryIndex);
-
-    int getClipboardEntriesCount();
-
-    void setText(CharSequence text);
-
-    void deleteEntry(int entryIndex);
-
-    void setClipboardUpdatedListener(@Nullable ClipboardUpdatedListener listener);
+    @Override
+    public PressVibrator createPressVibrator(@NonNull Vibrator vibe) {
+        return new PressVibratorV26(vibe);
+    }
 }

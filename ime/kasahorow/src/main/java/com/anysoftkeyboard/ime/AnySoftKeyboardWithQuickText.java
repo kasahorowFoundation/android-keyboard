@@ -7,18 +7,20 @@ import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
 import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKey;
+import com.anysoftkeyboard.quicktextkeys.ui.DefaultGenderPrefTracker;
 import com.anysoftkeyboard.quicktextkeys.ui.DefaultSkinTonePrefTracker;
 import com.anysoftkeyboard.quicktextkeys.ui.QuickTextPagerView;
 import com.anysoftkeyboard.quicktextkeys.ui.QuickTextViewFactory;
 import com.anysoftkeyboard.rx.GenericOnError;
-import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;
+import com.kasahorow.android.keyboard.app.R;
 
 public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaInsertion {
 
     private boolean mDoNotFlipQuickTextKeyAndPopupFunctionality;
     private String mOverrideQuickTextText = "";
     private DefaultSkinTonePrefTracker mDefaultSkinTonePrefTracker;
+    private DefaultGenderPrefTracker mDefaultGenderPrefTracker;
 
     @Override
     public void onCreate() {
@@ -44,6 +46,8 @@ public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaI
 
         mDefaultSkinTonePrefTracker = new DefaultSkinTonePrefTracker(prefs());
         addDisposable(mDefaultSkinTonePrefTracker);
+        mDefaultGenderPrefTracker = new DefaultGenderPrefTracker(prefs());
+        addDisposable(mDefaultGenderPrefTracker);
     }
 
     protected void onQuickTextRequested(Keyboard.Key key) {
@@ -65,7 +69,8 @@ public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaI
     private void outputCurrentQuickTextKey(Keyboard.Key key) {
         QuickTextKey quickTextKey = AnyApplication.getQuickTextKeyFactory(this).getEnabledAddOn();
         if (TextUtils.isEmpty(mOverrideQuickTextText)) {
-            onText(key, quickTextKey.getKeyOutputText());
+            final CharSequence keyOutputText = quickTextKey.getKeyOutputText();
+            onText(key, keyOutputText);
         } else {
             onText(key, mOverrideQuickTextText);
         }
@@ -91,7 +96,8 @@ public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaI
                         getApplicationContext(),
                         inputViewContainer,
                         getQuickKeyHistoryRecords(),
-                        mDefaultSkinTonePrefTracker);
+                        mDefaultSkinTonePrefTracker,
+                        mDefaultGenderPrefTracker);
         actualInputView.resetInputView();
         quickTextsLayout.setThemeValues(
                 mCurrentTheme,
@@ -102,6 +108,7 @@ public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaI
                 actualInputView.getDrawableForKeyCode(KeyCodes.SETTINGS),
                 actualInputView.getBackground(),
                 actualInputView.getDrawableForKeyCode(KeyCodes.IMAGE_MEDIA_POPUP),
+                actualInputView.getDrawableForKeyCode(KeyCodes.DELETE_RECENT_USED_SMILEYS),
                 actualInputView.getPaddingBottom(),
                 getSupportedMediaTypesForInput());
 
@@ -115,7 +122,9 @@ public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaI
 
         if (reshowStandardKeyboard) {
             View standardKeyboardView = (View) getInputView();
-            standardKeyboardView.setVisibility(View.VISIBLE);
+            if (standardKeyboardView != null) {
+                standardKeyboardView.setVisibility(View.VISIBLE);
+            }
         }
 
         QuickTextPagerView quickTextsLayout =
