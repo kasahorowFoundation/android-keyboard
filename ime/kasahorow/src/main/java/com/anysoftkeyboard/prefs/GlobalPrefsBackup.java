@@ -1,12 +1,11 @@
 package com.anysoftkeyboard.prefs;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.util.Pair;
-import android.support.v7.preference.PreferenceManager;
-import com.anysoftkeyboard.base.utils.Logger;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.annotation.VisibleForTesting;
+import androidx.core.util.Pair;
+import androidx.preference.PreferenceManager;
 import com.anysoftkeyboard.dictionaries.ExternalDictionaryFactory;
 import com.anysoftkeyboard.dictionaries.prefsprovider.UserDictionaryPrefsProvider;
 import com.anysoftkeyboard.dictionaries.sqlite.AbbreviationsDictionary;
@@ -23,13 +22,20 @@ import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.Function;
 import java.io.File;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
 public class GlobalPrefsBackup {
     public static final String GLOBAL_BACKUP_FILENAME = "AnySoftKeyboardPrefs.xml";
 
-    private static File customFilename = null;
+    public static List<ProviderDetails> getAllAutoApplyPrefsProviders(@NonNull Context context) {
+        return Collections.singletonList(
+                new ProviderDetails(
+                        new RxSharedPrefs.SharedPrefsProvider(
+                                PreferenceManager.getDefaultSharedPreferences(context)),
+                        R.string.shared_prefs_provider_name));
+    }
 
     public static List<ProviderDetails> getAllPrefsProviders(@NonNull Context context) {
         return Arrays.asList(
@@ -52,7 +58,6 @@ public class GlobalPrefsBackup {
     }
 
     private static Boolean backupProvider(PrefsProvider provider, PrefsRoot prefsRoot) {
-        Logger.d("backupProvider", "BackupProvider is called");
         final PrefsRoot providerRoot = provider.getPrefsRoot();
         prefsRoot
                 .createChild()
@@ -89,20 +94,20 @@ public class GlobalPrefsBackup {
 
     @NonNull
     public static Observable<ProviderDetails> backup(
-            Pair<List<ProviderDetails>, Boolean[]> enabledProviders) {
+            Pair<List<ProviderDetails>, Boolean[]> enabledProviders, @NonNull File outputFile) {
         return doIt(
                 enabledProviders,
                 s -> new PrefsRoot(1),
                 GlobalPrefsBackup::backupProvider,
-                PrefsXmlStorage::store);
+                (storage, root) -> storage.store(root, outputFile));
     }
 
     @NonNull
     public static Observable<ProviderDetails> restore(
-            Pair<List<ProviderDetails>, Boolean[]> enabledProviders) {
+            Pair<List<ProviderDetails>, Boolean[]> enabledProviders, @NonNull File inputFile) {
         return doIt(
                 enabledProviders,
-                PrefsXmlStorage::load,
+                s -> s.load(inputFile),
                 GlobalPrefsBackup::restoreProvider,
                 (s, p) -> {
                     /*no-op*/
@@ -124,7 +129,7 @@ public class GlobalPrefsBackup {
                         .filter(pair -> pair.second)
                         .map(pair -> pair.first);
 
-        final PrefsXmlStorage storage = new PrefsXmlStorage(getBackupFile());
+        final PrefsXmlStorage storage = new PrefsXmlStorage();
 
         return Observable.using(
                 () -> prefsRootFactory.apply(storage),
@@ -137,20 +142,8 @@ public class GlobalPrefsBackup {
                 prefsRoot -> prefsRootFinalizer.accept(storage, prefsRoot));
     }
 
-    public static void updateCustomFilename(File filename) {
-        customFilename = filename;
-    }
-
-    public static File getBackupFile() {
-        File tempFilename;
-
-        if (customFilename == null) return AnyApplication.getBackupFile(GLOBAL_BACKUP_FILENAME);
-        else {
-            // We reset the customFilename
-            tempFilename = customFilename;
-            customFilename = null;
-            return tempFilename;
-        }
+    public static File getDefaultBackupFile(@NonNull Context context) {
+        return AnyApplication.getBackupFile(context, GLOBAL_BACKUP_FILENAME);
     }
 
     public static class ProviderDetails {

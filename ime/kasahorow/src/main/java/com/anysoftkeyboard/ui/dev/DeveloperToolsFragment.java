@@ -21,16 +21,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.util.Pair;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.util.Pair;
+import androidx.fragment.app.Fragment;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.rx.RxSchedulers;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
@@ -58,28 +58,39 @@ public class DeveloperToolsFragment extends Fragment implements View.OnClickList
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.developer_tools, container, false);
+        return inflater.inflate(
+                com.menny.android.anysoftkeyboard.R.layout.developer_tools, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mGeneralDialogController = new GeneralDialogController(getActivity(), this::setupDialog);
-        ((TextView) view.findViewById(R.id.dev_title))
+        ((TextView) view.findViewById(com.menny.android.anysoftkeyboard.R.id.dev_title))
                 .setText(DeveloperUtils.getAppDetails(getActivity().getApplicationContext()));
 
-        mFlipper = view.findViewById(R.id.dev_flip_trace_file);
-        mProgressIndicator = view.findViewById(R.id.dev_tracing_running_progress_bar);
-        mShareButton = view.findViewById(R.id.dev_share_trace_file);
+        mFlipper = view.findViewById(com.menny.android.anysoftkeyboard.R.id.dev_flip_trace_file);
+        mProgressIndicator =
+                view.findViewById(
+                        com.menny.android.anysoftkeyboard.R.id.dev_tracing_running_progress_bar);
+        mShareButton =
+                view.findViewById(com.menny.android.anysoftkeyboard.R.id.dev_share_trace_file);
 
-        view.findViewById(R.id.memory_dump_button).setOnClickListener(this);
-        view.findViewById(R.id.dev_share_mem_file).setOnClickListener(this);
-        view.findViewById(R.id.dev_flip_trace_file).setOnClickListener(this);
-        view.findViewById(R.id.dev_share_trace_file).setOnClickListener(this);
-        view.findViewById(R.id.show_logcat_button).setOnClickListener(this);
-        view.findViewById(R.id.share_logcat_button).setOnClickListener(this);
+        view.findViewById(com.menny.android.anysoftkeyboard.R.id.memory_dump_button)
+                .setOnClickListener(this);
+        view.findViewById(com.menny.android.anysoftkeyboard.R.id.dev_share_mem_file)
+                .setOnClickListener(this);
+        view.findViewById(com.menny.android.anysoftkeyboard.R.id.dev_flip_trace_file)
+                .setOnClickListener(this);
+        view.findViewById(com.menny.android.anysoftkeyboard.R.id.dev_share_trace_file)
+                .setOnClickListener(this);
+        view.findViewById(com.menny.android.anysoftkeyboard.R.id.show_logcat_button)
+                .setOnClickListener(this);
+        view.findViewById(com.menny.android.anysoftkeyboard.R.id.share_logcat_button)
+                .setOnClickListener(this);
 
-        TextView textWithListener = view.findViewById(R.id.actionDoneWithListener);
+        TextView textWithListener =
+                view.findViewById(com.menny.android.anysoftkeyboard.R.id.actionDoneWithListener);
         textWithListener.setOnEditorActionListener(
                 (textView, i, keyEvent) -> {
                     Toast.makeText(
@@ -128,7 +139,8 @@ public class DeveloperToolsFragment extends Fragment implements View.OnClickList
     public void onStart() {
         super.onStart();
         updateTracingState();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.developer_tools));
+        MainSettingsActivity.setActivityTitle(
+                this, getString(com.menny.android.anysoftkeyboard.R.string.developer_tools));
     }
 
     @Override
@@ -160,22 +172,22 @@ public class DeveloperToolsFragment extends Fragment implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.memory_dump_button:
+            case com.menny.android.anysoftkeyboard.R.id.memory_dump_button:
                 onUserClickedMemoryDump();
                 break;
-            case R.id.dev_share_mem_file:
+            case com.menny.android.anysoftkeyboard.R.id.dev_share_mem_file:
                 onUserClickedShareMemoryDump(v);
                 break;
-            case R.id.dev_flip_trace_file:
+            case com.menny.android.anysoftkeyboard.R.id.dev_flip_trace_file:
                 onUserClickedFlipTracing();
                 break;
-            case R.id.dev_share_trace_file:
+            case com.menny.android.anysoftkeyboard.R.id.dev_share_trace_file:
                 onUserClickedShareTracingFile();
                 break;
-            case R.id.show_logcat_button:
+            case com.menny.android.anysoftkeyboard.R.id.show_logcat_button:
                 onUserClickedShowLogCat();
                 break;
-            case R.id.share_logcat_button:
+            case com.menny.android.anysoftkeyboard.R.id.share_logcat_button:
                 onUserClickedShareLogCat();
                 break;
             default:

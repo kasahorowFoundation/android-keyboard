@@ -16,9 +16,9 @@
 
 package com.anysoftkeyboard.utils;
 
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.inputmethod.EditorInfo;
+import androidx.annotation.NonNull;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import java.util.List;

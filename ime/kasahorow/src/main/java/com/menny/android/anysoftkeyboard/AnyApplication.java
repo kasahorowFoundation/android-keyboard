@@ -16,7 +16,6 @@
 
 package com.menny.android.anysoftkeyboard;
 
-import android.app.Application;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -26,29 +25,30 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.support.annotation.CallSuper;
-import android.support.annotation.NonNull;
-import android.support.v4.content.SharedPreferencesCompat;
-import android.support.v7.app.AppCompatDelegate;
+import androidx.annotation.CallSuper;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.util.Pair;
+import androidx.multidex.MultiDexApplication;
 import com.anysoftkeyboard.AnySoftKeyboard;
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.anysoftkeyboard.android.NightMode;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.base.utils.NullLogProvider;
 import com.anysoftkeyboard.devicespecific.DeviceSpecific;
-import com.anysoftkeyboard.devicespecific.DeviceSpecificLowest;
-import com.anysoftkeyboard.devicespecific.DeviceSpecificV11;
-import com.anysoftkeyboard.devicespecific.DeviceSpecificV14;
+import com.anysoftkeyboard.devicespecific.DeviceSpecificV15;
 import com.anysoftkeyboard.devicespecific.DeviceSpecificV16;
 import com.anysoftkeyboard.devicespecific.DeviceSpecificV19;
 import com.anysoftkeyboard.devicespecific.DeviceSpecificV24;
+import com.anysoftkeyboard.devicespecific.DeviceSpecificV26;
 import com.anysoftkeyboard.devicespecific.DeviceSpecificV28;
+import com.anysoftkeyboard.devicespecific.DeviceSpecificV29;
 import com.anysoftkeyboard.dictionaries.ExternalDictionaryFactory;
 import com.anysoftkeyboard.keyboardextensions.KeyboardExtension;
 import com.anysoftkeyboard.keyboardextensions.KeyboardExtensionFactory;
 import com.anysoftkeyboard.keyboards.KeyboardFactory;
+import com.anysoftkeyboard.prefs.GlobalPrefsBackup;
 import com.anysoftkeyboard.prefs.RxSharedPrefs;
 import com.anysoftkeyboard.quicktextkeys.QuickTextKeyFactory;
 import com.anysoftkeyboard.saywhat.EasterEggs;
@@ -70,9 +70,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class AnyApplication extends Application {
-
-    private static final String TAG = "ASKApp";
+public class AnyApplication extends MultiDexApplication {
 
     static final String PREF_KEYS_FIRST_INSTALLED_APP_VERSION =
             "settings_key_first_app_version_installed";
@@ -82,9 +80,10 @@ public class AnyApplication extends Application {
             "settings_key_last_app_version_installed";
     static final String PREF_KEYS_LAST_INSTALLED_APP_TIME =
             "settings_key_first_time_current_version_installed";
-
+    private static final String TAG = "ASKApp";
     private static DeviceSpecific msDeviceSpecific;
     private final CompositeDisposable mCompositeDisposable = new CompositeDisposable();
+    private final Subject<Boolean> mNightModeSubject = ReplaySubject.createWithSize(1);
     private KeyboardFactory mKeyboardFactory;
     private ExternalDictionaryFactory mExternalDictionaryFactory;
     private KeyboardExtensionFactory mBottomRowFactory;
@@ -93,7 +92,6 @@ public class AnyApplication extends Application {
     private KeyboardThemeFactory mKeyboardThemeFactory;
     private QuickTextKeyFactory mQuickTextKeyFactory;
     private RxSharedPrefs mRxSharedPrefs;
-    private final Subject<Boolean> mNightModeSubject = ReplaySubject.createWithSize(1);
     private ArrayList<PublicNotice> mPublicNotices;
 
     public static DeviceSpecific getDeviceSpecific() {
@@ -129,12 +127,48 @@ public class AnyApplication extends Application {
     }
 
     @NonNull
-    public static File getBackupFile(String filename) {
-        // http://developer.android.com/guide/topics/data/data-storage.html#filesExternal
-        final File externalFolder = Environment.getExternalStorageDirectory();
-        return new File(
-                new File(externalFolder, "/Android/data/" + BuildConfig.APPLICATION_ID + "/files/"),
-                filename);
+    public static File getBackupFile(@NonNull Context context, @NonNull String filename) {
+        // https://github.com/AnySoftKeyboard/AnySoftKeyboard/pull/2864/files#r636605962
+
+        // For Android 11 (maybe earlier?) we need to make sure the external application directory
+        // exists, to do so, just have the system get an empty file from it and Android will create
+        // it for us.  Likewise we have to do it here instead of in the getBackupFile function as
+        // we don't have the right context by that time.  We need this to write backups too and
+        // with Android 11 we can no longer do this ourselves.
+        final File externalFolder = context.getExternalFilesDir(null);
+        return new File(externalFolder, filename);
+    }
+
+    public static long getCurrentVersionInstallTime(Context appContext) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(appContext);
+        return sp.getLong(PREF_KEYS_LAST_INSTALLED_APP_TIME, 0);
+    }
+
+    public static int getFirstAppVersionInstalled(Context appContext) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(appContext);
+        return sp.getInt(PREF_KEYS_FIRST_INSTALLED_APP_VERSION, 0);
+    }
+
+    public static RxSharedPrefs prefs(Context context) {
+        final Context applicationContext = context.getApplicationContext();
+        if (applicationContext instanceof AnyApplication) {
+            return ((AnyApplication) applicationContext).mRxSharedPrefs;
+        } else {
+            throw new IllegalStateException(
+                    "What? expected 'context.getApplicationContext()' to be AnyApplication, but was '"
+                            + applicationContext.getClass()
+                            + "'!!");
+        }
+    }
+
+    private static DeviceSpecific createDeviceSpecificImplementation(final int apiLevel) {
+        if (apiLevel < 16) return new DeviceSpecificV15();
+        if (apiLevel < 19) return new DeviceSpecificV16();
+        if (apiLevel < 24) return new DeviceSpecificV19();
+        if (apiLevel < 26) return new DeviceSpecificV24();
+        if (apiLevel < 28) return new DeviceSpecificV26();
+        if (apiLevel < 29) return new DeviceSpecificV28();
+        return new DeviceSpecificV29();
     }
 
     @Override
@@ -159,7 +193,7 @@ public class AnyApplication extends Application {
         // setting some statistics
         updateStatistics(this);
 
-        mRxSharedPrefs = new RxSharedPrefs(this, sp);
+        mRxSharedPrefs = new RxSharedPrefs(this, sp, this::prefsAutoRestoreFunction);
 
         mKeyboardFactory = createKeyboardFactory();
         mExternalDictionaryFactory = createExternalDictionaryFactory();
@@ -207,8 +241,37 @@ public class AnyApplication extends Application {
 
         mPublicNotices = new ArrayList<>(EasterEggs.create());
         mPublicNotices.addAll(Notices.create(this));
+    }
 
-        mCompositeDisposable.add(KasahorowWordsUploaderHelper.getAddons(this));
+    private void prefsAutoRestoreFunction(@NonNull File file) {
+        Logger.d(TAG, "Starting prefsAutoRestoreFunction for '%s'", file.getAbsolutePath());
+        // NOTE: shared_prefs_provider_name is the only supported prefs. All others require
+        // dictionaries to load prior.
+        final Pair<List<GlobalPrefsBackup.ProviderDetails>, Boolean[]> providers =
+                Observable.fromIterable(GlobalPrefsBackup.getAllAutoApplyPrefsProviders(this))
+                        .map(p -> Pair.create(p, true))
+                        .collectInto(
+                                Pair.create(
+                                        new ArrayList<GlobalPrefsBackup.ProviderDetails>(),
+                                        new ArrayList<Boolean>()),
+                                (collectInto, aPair) -> {
+                                    collectInto.first.add(aPair.first);
+                                    collectInto.second.add(aPair.second);
+                                })
+                        .map(
+                                p ->
+                                        Pair.create(
+                                                (List<GlobalPrefsBackup.ProviderDetails>) p.first,
+                                                p.second.toArray(new Boolean[0])))
+                        .blockingGet();
+
+        GlobalPrefsBackup.restore(providers, file)
+                .blockingForEach(
+                        providerDetails ->
+                                Logger.i(
+                                        TAG,
+                                        "Restored prefs for '%s'",
+                                        getString(providerDetails.providerTitle)));
     }
 
     public List<PublicNotice> getPublicNotices() {
@@ -260,7 +323,7 @@ public class AnyApplication extends Application {
                 editor.putInt(PREF_KEYS_LAST_INSTALLED_APP_VERSION, BuildConfig.VERSION_CODE);
                 editor.putLong(PREF_KEYS_LAST_INSTALLED_APP_TIME, installTime);
             }
-            SharedPreferencesCompat.EditorCompat.getInstance().apply(editor);
+            editor.apply();
         }
     }
 
@@ -311,16 +374,6 @@ public class AnyApplication extends Application {
         return new KeyboardFactory(this);
     }
 
-    private static DeviceSpecific createDeviceSpecificImplementation(final int apiLevel) {
-        if (apiLevel < 11) return new DeviceSpecificLowest();
-        if (apiLevel < 14) return new DeviceSpecificV11();
-        if (apiLevel < 16) return new DeviceSpecificV14();
-        if (apiLevel < 19) return new DeviceSpecificV16();
-        if (apiLevel < 24) return new DeviceSpecificV19();
-        if (apiLevel < 28) return new DeviceSpecificV24();
-        return new DeviceSpecificV28();
-    }
-
     @CallSuper
     protected void setupCrashHandler(SharedPreferences sp) {
         JustPrintExceptionHandler globalErrorHandler = new JustPrintExceptionHandler();
@@ -350,28 +403,6 @@ public class AnyApplication extends Application {
                 mKeyboardFactory,
                 mKeyboardThemeFactory,
                 mQuickTextKeyFactory);
-    }
-
-    public static long getCurrentVersionInstallTime(Context appContext) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(appContext);
-        return sp.getLong(PREF_KEYS_LAST_INSTALLED_APP_TIME, 0);
-    }
-
-    public static int getFirstAppVersionInstalled(Context appContext) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(appContext);
-        return sp.getInt(PREF_KEYS_FIRST_INSTALLED_APP_VERSION, 0);
-    }
-
-    public static RxSharedPrefs prefs(Context context) {
-        final Context applicationContext = context.getApplicationContext();
-        if (applicationContext instanceof AnyApplication) {
-            return ((AnyApplication) applicationContext).mRxSharedPrefs;
-        } else {
-            throw new IllegalStateException(
-                    "What? expected 'context.getApplicationContext()' to be AnyApplication, but was '"
-                            + applicationContext.getClass()
-                            + "'!!");
-        }
     }
 
     public List<Drawable> getInitialWatermarksList() {
