@@ -18,6 +18,7 @@ import com.anysoftkeyboard.prefs.GlobalPrefsBackup;
 import com.anysoftkeyboard.rx.RxSchedulers;
 import com.anysoftkeyboard.ui.settings.MainFragment;
 import com.kasahorow.android.keyboard.app.R;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import java.io.File;
 import net.evendanan.pixel.RxProgressDialog;

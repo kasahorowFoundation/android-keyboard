@@ -20,7 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
-import com.menny.android.anysoftkeyboard.R;
+import com.kasahorow.android.keyboard.app.R;
 
 public class QuickTextSettingsFragment extends PreferenceFragmentCompat {
 

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.fragment.app.Fragment;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;
 import java.util.Calendar;

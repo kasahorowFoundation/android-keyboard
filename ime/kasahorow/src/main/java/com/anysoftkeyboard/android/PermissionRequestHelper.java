@@ -6,7 +6,7 @@ import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
-import com.menny.android.anysoftkeyboard.R;
+import com.kasahorow.android.keyboard.app.R;
 import pub.devrel.easypermissions.EasyPermissions;
 import pub.devrel.easypermissions.PermissionRequest;
 

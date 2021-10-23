@@ -679,7 +679,7 @@ public abstract class AnyKeyboard extends Keyboard {
         // filling popup res for external keyboards
         if (key.popupCharacters != null) {
             if (key.popupCharacters.length() > 0) {
-                key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
             }
             return true;
         }

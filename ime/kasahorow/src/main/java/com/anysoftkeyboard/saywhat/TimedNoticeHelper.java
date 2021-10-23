@@ -5,6 +5,7 @@ import android.os.SystemClock;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import com.f2prateek.rx.preferences2.Preference;
+import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;
 
 public class TimedNoticeHelper {

@@ -12,7 +12,7 @@ import androidx.annotation.VisibleForTesting;
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.keyboards.Keyboard;
-import com.menny.android.anysoftkeyboard.R;
+import com.kasahorow.android.keyboard.app.R;
 import java.lang.ref.WeakReference;
 import java.util.ArrayDeque;
 import java.util.HashMap;

@@ -14,6 +14,7 @@ import com.anysoftkeyboard.prefs.GlobalPrefsBackup;
 import com.anysoftkeyboard.rx.RxSchedulers;
 import com.anysoftkeyboard.ui.settings.MainFragment;
 import com.kasahorow.android.keyboard.app.R;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import java.io.File;
 import net.evendanan.pixel.RxProgressDialog;
@@ -26,10 +27,10 @@ public class FileExplorerRestore extends AppCompatActivity {
 
     private Disposable launchRestore(@NonNull File file) {
         return RxProgressDialog.create(
-                        new Pair<>(MainFragment.supportedProviders, MainFragment.checked),
-                        this,
-                        getText(R.string.take_a_while_progress_message),
-                        R.layout.progress_window)
+                new Pair<>(MainFragment.supportedProviders, MainFragment.checked),
+                this,
+                getText(R.string.take_a_while_progress_message),
+                R.layout.progress_window)
                 .subscribeOn(RxSchedulers.background())
                 .flatMap(p -> GlobalPrefsBackup.restore(p, file))
                 .observeOn(RxSchedulers.mainThread())
@@ -46,19 +47,19 @@ public class FileExplorerRestore extends AppCompatActivity {
                                     "Failed to do operation due to %s",
                                     e.getMessage());
                             Toast.makeText(
-                                            getApplicationContext(),
-                                            this.getString(R.string.file_explorer_restore_failed),
-                                            Toast.LENGTH_LONG)
+                                    getApplicationContext(),
+                                    this.getString(R.string.file_explorer_restore_failed),
+                                    Toast.LENGTH_LONG)
                                     .show();
                         },
                         () ->
                                 Toast.makeText(
-                                                getApplicationContext(),
-                                                this.getString(
-                                                                R.string
-                                                                        .file_explorer_restore_success)
-                                                        + file,
-                                                Toast.LENGTH_LONG)
+                                        getApplicationContext(),
+                                        this.getString(
+                                                R.string
+                                                        .file_explorer_restore_success)
+                                                + file,
+                                        Toast.LENGTH_LONG)
                                         .show());
     }
 

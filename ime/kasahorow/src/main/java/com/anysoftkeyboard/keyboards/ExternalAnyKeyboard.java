@@ -446,105 +446,105 @@ public class ExternalAnyKeyboard extends AnyKeyboard implements HardKeyboardTran
             switch (key.getPrimaryCode()) {
                 case 'a':
                     key.popupCharacters = "àáâãāäåæąăα";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'b':
                     key.popupCharacters = "β";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'c':
                     key.popupCharacters = "çćĉčψ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'd':
                     key.popupCharacters = "đďδ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'e':
                     key.popupCharacters =
                             "\u00e8\u00e9\u00ea\u00eb\u0119\u20ac\u0117\u03b5\u0113"; // "èéêëęėε€";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'f':
                     key.popupCharacters = "φ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'g':
                     key.popupCharacters = "\u011d\u011f\u03b3"; // "ĝğγ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'h':
                     key.popupCharacters = "ĥη";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'i':
                     key.popupCharacters = "ìíîïłīįι";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'j':
                     key.popupCharacters = "\u0135\u03be"; // "ĵξ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'k':
                     key.popupCharacters = "κ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'l':
                     key.popupCharacters = "ľĺłλ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'm':
                     key.popupCharacters = "μ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'n':
                     key.popupCharacters = "ñńν";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'o':
                     key.popupCharacters = "òóôǒōõöőøœo";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'p':
                     key.popupCharacters = "π";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'r':
                     key.popupCharacters = "ρ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 's':
                     key.popupCharacters = "§ßśŝšșσ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 't':
                     key.popupCharacters = "τ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'u':
                     key.popupCharacters =
                             "\u00f9\u00fa\u00fb\u00fc\u016d\u0171\u016B\u0173\u03b8"; // "ùúûüŭűųθ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'v':
                     key.popupCharacters = "ω";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'w':
                     key.popupCharacters = "ς";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'x':
                     key.popupCharacters = "χ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'y':
                     key.popupCharacters = "ýÿυ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 case 'z':
                     key.popupCharacters = "żžźζ";
-                    key.popupResId = com.menny.android.anysoftkeyboard.R.xml.popup_one_row;
+                    key.popupResId = com.kasahorow.android.keyboard.app.R.xml.popup_one_row;
                     break;
                 default:
                     super.setupKeyAfterCreation(key);

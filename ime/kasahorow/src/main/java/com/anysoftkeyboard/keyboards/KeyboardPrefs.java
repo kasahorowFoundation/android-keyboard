@@ -6,7 +6,7 @@ import android.content.Context;
 import androidx.annotation.BoolRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
-import com.menny.android.anysoftkeyboard.R;
+import com.kasahorow.android.keyboard.app.R;
 
 public class KeyboardPrefs {
 
