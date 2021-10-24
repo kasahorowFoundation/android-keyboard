@@ -13,6 +13,7 @@ android {
         println 'crash report email is: ' + support_email_address
 
         buildConfigField "String", "CRASH_REPORT_EMAIL_ADDRESS", '"' + support_email_address + '"'
+        multiDexEnabled true
     }
 
     buildTypes {
