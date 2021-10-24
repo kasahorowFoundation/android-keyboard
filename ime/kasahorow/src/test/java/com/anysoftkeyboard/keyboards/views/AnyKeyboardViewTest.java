@@ -31,8 +31,8 @@ import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.views.extradraw.ExtraDraw;
 import com.anysoftkeyboard.test.SharedPrefsHelper;
 import com.anysoftkeyboard.theme.KeyboardThemeFactory;
-import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;
+import com.kasahorow.android.keyboard.app.R;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.Assert;
@@ -50,7 +50,6 @@ public class AnyKeyboardViewTest extends AnyKeyboardViewWithMiniKeyboardTest {
 
     private AnyKeyboardView mViewUnderTest;
     private boolean mThemeWasSet;
-    private KeyPreviewsController mSpiedPreviewManager;
 
     @Override
     protected AnyKeyboardViewBase createViewToTest(Context context) {
@@ -760,19 +759,6 @@ public class AnyKeyboardViewTest extends AnyKeyboardViewWithMiniKeyboardTest {
                 Assert.assertEquals(KeyCodes.DELETE_WORD, keyCode);
             }
         }
-    }
-
-    @Test
-    public void testPreviewsShouldBeClearedOnThemeSet() {
-        Mockito.reset(mSpiedPreviewManager);
-
-        mViewUnderTest.setKeyboardTheme(
-                AnyApplication.getKeyboardThemeFactory(getApplicationContext())
-                        .getAllAddOns()
-                        .get(1));
-
-        Mockito.verify(mSpiedPreviewManager).resetTheme();
-        Mockito.verify(mSpiedPreviewManager, Mockito.never()).destroy();
     }
 
     @Test

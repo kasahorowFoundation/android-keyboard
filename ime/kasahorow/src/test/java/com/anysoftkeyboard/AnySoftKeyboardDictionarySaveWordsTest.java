@@ -53,6 +53,7 @@ public class AnySoftKeyboardDictionarySaveWordsTest extends AnySoftKeyboardBaseT
 
     @Test
     public void testAutoAddUnknownWordIfPickedFrequently() {
+        final String typedWord = "blah";
         TestInputConnection inputConnection =
                 (TestInputConnection) mAnySoftKeyboardUnderTest.getCurrentInputConnection();
 

@@ -8,6 +8,8 @@ import android.preference.PreferenceManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethod;
 import androidx.annotation.Nullable;
+import androidx.core.content.SharedPreferencesCompat;
+
 import com.anysoftkeyboard.api.KeyCodes;
 import com.kasahorow.android.keyboard.app.R;
 import org.junit.After;

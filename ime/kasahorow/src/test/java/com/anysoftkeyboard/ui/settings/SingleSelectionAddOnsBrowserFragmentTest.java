@@ -5,8 +5,6 @@ import static com.anysoftkeyboard.keyboards.KeyboardSwitcher.INPUT_MODE_TEXT;
 
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
@@ -68,11 +66,11 @@ public class SingleSelectionAddOnsBrowserFragmentTest
         service.simulateTextTyping("start");
 
         Assert.assertEquals(
-                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
+                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
                 service.getCurrentKeyboardForTests().getKeyboardId().toString());
         service.simulateKeyPress(KeyCodes.KEYBOARD_CYCLE);
         Assert.assertEquals(
-                "b419eee2-ff2d-4a12-926c-0c9c75756aab",
+                "12335055-4aa6-49dc-8456-c7d38a1a5123",
                 service.getCurrentKeyboardForTests().getKeyboardId().toString());
 
         Fragment fragment = startFragment();
@@ -83,7 +81,7 @@ public class SingleSelectionAddOnsBrowserFragmentTest
 
         DemoAnyKeyboardView demoAnyKeyboardView = (DemoAnyKeyboardView) demoView;
         Assert.assertEquals(
-                "b419eee2-ff2d-4a12-926c-0c9c75756aab",
+                "12335055-4aa6-49dc-8456-c7d38a1a5123",
                 demoAnyKeyboardView.getKeyboard().getKeyboardId());
     }
 
@@ -96,7 +94,7 @@ public class SingleSelectionAddOnsBrowserFragmentTest
         service.simulateTextTyping("start");
 
         Assert.assertEquals(
-                "e99e252e-fc49-42dd-b763-9f78294cb0f0",
+                "c7535083-4fe6-49dc-81aa-c5438a1a343a",
                 service.getCurrentKeyboardForTests().getKeyboardId().toString());
         service.simulateKeyPress(KeyCodes.KEYBOARD_MODE_CHANGE);
         Assert.assertEquals(
@@ -207,7 +205,7 @@ public class SingleSelectionAddOnsBrowserFragmentTest
     }
 
     @Test
-    public void testHasTweaksAndNoMarket() {
+    public void testHasTweaksAndMarket() {
         KeyboardThemeSelectorFragment fragment = startFragment();
         Assert.assertNotEquals(0, fragment.getMarketSearchTitle());
 
@@ -218,6 +216,6 @@ public class SingleSelectionAddOnsBrowserFragmentTest
 
         Assert.assertNotNull(menu);
         Assert.assertNotNull(menu.findItem(R.id.add_on_market_search_menu_option));
-        Assert.assertFalse(menu.findItem(R.id.add_on_market_search_menu_option).isVisible());
+        Assert.assertTrue(menu.findItem(R.id.add_on_market_search_menu_option).isVisible());
     }
 }

@@ -2,7 +2,7 @@ package com.anysoftkeyboard.keyboards.views;
 
 import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
 import static com.anysoftkeyboard.keyboards.Keyboard.KEYBOARD_ROW_MODE_NORMAL;
-import static com.menny.android.anysoftkeyboard.R.xml.keyboard_with_keys_with_no_codes;
+import static com.kasahorow.android.keyboard.app.R.xml.keyboard_with_keys_with_no_codes;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.ArgumentMatchers.anyInt;

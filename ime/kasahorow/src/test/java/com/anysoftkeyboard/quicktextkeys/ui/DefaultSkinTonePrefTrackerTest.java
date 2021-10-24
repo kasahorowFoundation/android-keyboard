@@ -4,7 +4,6 @@ import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
 
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.test.SharedPrefsHelper;
-import com.anysoftkeyboard.utils.EmojiUtils;
 import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.HashSet;
@@ -12,6 +11,8 @@ import java.util.Set;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import emoji.utils.JavaEmojiUtils;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class DefaultSkinTonePrefTrackerTest {

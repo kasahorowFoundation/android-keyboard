@@ -10,6 +10,7 @@ import com.anysoftkeyboard.MyShadowPaint;
 import com.anysoftkeyboard.addons.DefaultAddOn;
 import com.anysoftkeyboard.utils.EmojiUtils;
 import com.kasahorow.android.keyboard.app.R;
+import emoji.utils.JavaEmojiUtils;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;

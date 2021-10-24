@@ -72,7 +72,7 @@ public class KeyboardAddOnTest {
     public void testGetKeyboardLocale() throws Exception {
         KeyboardAddOnAndBuilder askEnglish = getKeyboardFromFactory(KASAHOROW_AKAN_KEYBOARD_ID);
         assertNotNull(askEnglish);
-        assertEquals(askEnglish.getKeyboardLocale(), "ak");
+        assertEquals("ak", askEnglish.getKeyboardLocale());
     }
 
     @Test

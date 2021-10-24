@@ -18,6 +18,7 @@ import org.mockito.Mockito;
 public class InMemoryDictionaryTest {
 
     private InMemoryDictionary mUnderTest;
+    private InMemoryDictionary mUnderTestWithTypedWord;
 
     @Before
     public void setup() {
