@@ -6,6 +6,7 @@
         android:id="@+id/add_on_market_search_menu_option"
         android:icon="@drawable/ic_menu_market_search"
         android:title="@string/search_market_for_addons"
+        android:visible="false"
         app:showAsAction="always|withText" />
     <item
         android:id="@+id/tweaks_menu_option"
