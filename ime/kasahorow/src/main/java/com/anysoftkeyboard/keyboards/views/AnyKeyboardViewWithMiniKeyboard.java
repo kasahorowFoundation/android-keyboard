@@ -21,18 +21,19 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.PopupWindow;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.view.MotionEventCompat;
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.base.utils.CompatUtils;
 import com.anysoftkeyboard.base.utils.Logger;
+import com.anysoftkeyboard.devicespecific.PressVibrator;
 import com.anysoftkeyboard.keyboards.AnyPopupKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.overlay.OverlayData;
@@ -159,6 +160,7 @@ public class AnyKeyboardViewWithMiniKeyboard extends SizeSensitiveAnyKeyboardVie
                     popupKey.popupResId,
                     mMiniKeyboard.getThemedKeyboardDimens(),
                     "",
+                    null,
                     null);
         }
     }
@@ -221,6 +223,8 @@ public class AnyKeyboardViewWithMiniKeyboard extends SizeSensitiveAnyKeyboardVie
         if (super.onLongPress(keyboardAddOn, key, isSticky, tracker)) return true;
         if (key.popupResId == 0) return false;
 
+        // don't vibrate when selecting the first popup keyboard key
+        PressVibrator.suppressNextVibration();
         showMiniKeyboardForPopupKey(keyboardAddOn, key, isSticky);
         return true;
     }
@@ -242,7 +246,8 @@ public class AnyKeyboardViewWithMiniKeyboard extends SizeSensitiveAnyKeyboardVie
 
     protected void showMiniKeyboardForPopupKey(
             @NonNull AddOn keyboardAddOn, @NonNull Keyboard.Key popupKey, boolean isSticky) {
-        int[] windowOffset = getLocationInWindow();
+        final int[] windowOffset = new int[2];
+        getLocationInWindow(windowOffset);
 
         ensureMiniKeyboardInitialized();
 

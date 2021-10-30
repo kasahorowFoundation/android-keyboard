@@ -20,9 +20,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.XmlResourceParser;
 import android.preference.PreferenceManager;
-import android.support.annotation.CallSuper;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.CallSuper;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.dictionaries.WordComposer;
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
@@ -45,7 +45,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
-public abstract class AnySoftKeyboardKeyboardTagsSearcher extends AnySoftKeyboardSuggestions {
+public abstract class AnySoftKeyboardKeyboardTagsSearcher extends AnySoftKeyboardInlineSuggestions {
 
     public static final String MAGNIFYING_GLASS_CHARACTER = "\uD83D\uDD0D";
 

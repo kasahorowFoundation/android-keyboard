@@ -33,15 +33,9 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.NinePatchDrawable;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
-import android.support.annotation.CallSuper;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.util.ArrayMap;
-import android.support.v4.view.MotionEventCompat;
-import android.support.v4.view.ViewCompat;
 import android.text.Layout.Alignment;
 import android.text.StaticLayout;
 import android.text.TextPaint;
@@ -53,6 +47,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Toast;
+import androidx.annotation.CallSuper;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
+import androidx.collection.ArrayMap;
+import androidx.core.view.MotionEventCompat;
+import androidx.core.view.ViewCompat;
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.addons.DefaultAddOn;
 import com.anysoftkeyboard.api.KeyCodes;
@@ -66,6 +67,7 @@ import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.KeyboardDimens;
 import com.anysoftkeyboard.keyboards.KeyboardSupport;
 import com.anysoftkeyboard.keyboards.views.preview.KeyPreviewsController;
+import com.anysoftkeyboard.keyboards.views.preview.NullKeyPreviewsManager;
 import com.anysoftkeyboard.keyboards.views.preview.PreviewPopupTheme;
 import com.anysoftkeyboard.overlay.OverlayData;
 import com.anysoftkeyboard.overlay.ThemeOverlayCombiner;
@@ -144,7 +146,6 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
     int mSwipeYDistanceThreshold;
     int mSwipeSpaceXDistanceThreshold;
     int mKeyboardActionType = EditorInfo.IME_ACTION_UNSPECIFIED;
-    private final int[] mThisWindowOffset = new int[2];
     private KeyDrawableStateProvider mDrawableStatesProvider;
     // XML attribute
     private float mKeyTextSize;
@@ -170,7 +171,7 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
 
     // Drawing
     private Keyboard.Key[] mKeys;
-    private KeyPreviewsController mKeyPreviewsManager;
+    private KeyPreviewsController mKeyPreviewsManager = new NullKeyPreviewsManager();
     private long mLastTimeHadTwoFingers = 0;
 
     private Keyboard.Key mInvalidatedKey;
@@ -202,7 +203,6 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
 
         mDisplayDensity = getResources().getDisplayMetrics().density;
         mDefaultAddOn = new DefaultAddOn(context, context);
-        mKeyPreviewsManager = createKeyPreviewManager(context, mPreviewPopupTheme);
 
         mKeyPressTimingHandler = new KeyPressTimingHandler(this);
 
@@ -388,11 +388,6 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
                                 value -> mSharedPointerTrackersData.multiTapKeyTimeout = value,
                                 GenericOnError.onError(
                                         "failed to get settings_key_multitap_timeout")));
-    }
-
-    protected KeyPreviewsController createKeyPreviewManager(
-            Context context, PreviewPopupTheme previewPopupTheme) {
-        return new NullKeyPreviewsManager();
     }
 
     protected static boolean isSpaceKey(final AnyKey key) {
@@ -608,8 +603,6 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
         final int viewWidth = (getWidth() > 0) ? getWidth() : res.getDisplayMetrics().widthPixels;
         mKeyboardDimens.setKeyboardMaxWidth(viewWidth - padding[0] - padding[2]);
         mPaint.setTextSize(mKeyTextSize);
-
-        mKeyPreviewsManager.resetTheme();
     }
 
     @Override
@@ -951,6 +944,9 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
                 break;
             case R.attr.iconKeyImageInsert:
                 keyCode = KeyCodes.IMAGE_MEDIA_POPUP;
+                break;
+            case R.attr.iconKeyDeleteRecentlyUsed:
+                keyCode = KeyCodes.DELETE_RECENT_USED_SMILEYS;
                 break;
             default:
                 keyCode = 0;
@@ -1830,14 +1826,14 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
 
             // Should not draw hint icon in key preview
             if (iconToDraw != null) {
-                mKeyPreviewsManager.showPreviewForKey(key, iconToDraw);
+                mKeyPreviewsManager.showPreviewForKey(key, iconToDraw, this, mPreviewPopupTheme);
             } else {
                 CharSequence label = tracker.getPreviewText(key);
                 if (TextUtils.isEmpty(label)) {
                     label = guessLabelForKey(key.getPrimaryCode());
                 }
 
-                mKeyPreviewsManager.showPreviewForKey(key, label);
+                mKeyPreviewsManager.showPreviewForKey(key, label, this, mPreviewPopupTheme);
             }
         }
     }
@@ -1942,11 +1938,6 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
         }
 
         return false;
-    }
-
-    public int[] getLocationInWindow() {
-        getLocationInWindow(mThisWindowOffset);
-        return mThisWindowOffset;
     }
 
     protected PointerTracker getPointerTracker(@NonNull final MotionEvent motionEvent) {
@@ -2153,7 +2144,6 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
         CompatUtils.unbindDrawable(getBackground());
         clearKeyIconsCache(false);
         mKeysIconBuilders.clear();
-        mKeyPreviewsManager.destroy();
 
         mKeyboardActionListener = null;
         mKeyboard = null;
@@ -2196,6 +2186,10 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
         }
     }
 
+    public void setKeyPreviewController(@NonNull KeyPreviewsController controller) {
+        mKeyPreviewsManager = controller;
+    }
+
     protected static class KeyPressTimingHandler extends Handler {
 
         private static final int MSG_REPEAT_KEY = 3;
@@ -2205,6 +2199,7 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
         private boolean mInKeyRepeat;
 
         KeyPressTimingHandler(AnyKeyboardViewBase keyboard) {
+            super(Looper.getMainLooper());
             mKeyboard = new WeakReference<>(keyboard);
         }
 
@@ -2276,7 +2271,8 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
     }
 
     static class PointerQueue {
-        private ArrayList<PointerTracker> mQueue = new ArrayList<>();
+        private final ArrayList<PointerTracker> mQueue = new ArrayList<>();
+        private static final PointerTracker[] EMPTY_TRACKERS = new PointerTracker[0];
 
         public void add(PointerTracker tracker) {
             mQueue.add(tracker);
@@ -2295,7 +2291,7 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
 
         void releaseAllPointersOlderThan(final PointerTracker tracker, final long eventTime) {
             // doing a copy to prevent ConcurrentModificationException
-            PointerTracker[] trackers = mQueue.toArray(new PointerTracker[mQueue.size()]);
+            PointerTracker[] trackers = mQueue.toArray(EMPTY_TRACKERS);
             for (PointerTracker t : trackers) {
                 if (t == tracker) break;
                 if (!t.isModifier()) {
@@ -2369,25 +2365,5 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
                     && ((TextWidthCacheKey) o).mKeyWidth == mKeyWidth
                     && TextUtils.equals(((TextWidthCacheKey) o).mLabel, mLabel);
         }
-    }
-
-    private static class NullKeyPreviewsManager implements KeyPreviewsController {
-        @Override
-        public void hidePreviewForKey(Keyboard.Key key) {}
-
-        @Override
-        public void showPreviewForKey(Keyboard.Key key, Drawable icon) {}
-
-        @Override
-        public void showPreviewForKey(Keyboard.Key key, CharSequence label) {}
-
-        @Override
-        public void cancelAllPreviews() {}
-
-        @Override
-        public void resetTheme() {}
-
-        @Override
-        public void destroy() {}
     }
 }

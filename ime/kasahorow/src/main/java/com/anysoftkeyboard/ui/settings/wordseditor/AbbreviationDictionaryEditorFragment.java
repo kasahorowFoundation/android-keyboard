@@ -2,15 +2,15 @@ package com.anysoftkeyboard.ui.settings.wordseditor;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.util.Pair;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.util.Pair;
 import com.anysoftkeyboard.dictionaries.EditableDictionary;
 import com.anysoftkeyboard.dictionaries.sqlite.AbbreviationsDictionary;
 import com.anysoftkeyboard.dictionaries.sqlite.WordsSQLiteConnectionPrefsProvider;
@@ -50,8 +50,7 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
         mDisposable.dispose();
         mDisposable = new CompositeDisposable();
 
-        PrefsXmlStorage storage =
-                new PrefsXmlStorage(AnyApplication.getBackupFile(ASK_ABBR_WORDS_SDCARD_FILENAME));
+        PrefsXmlStorage storage = new PrefsXmlStorage();
         WordsSQLiteConnectionPrefsProvider provider =
                 new WordsSQLiteConnectionPrefsProvider(
                         getContext(), AbbreviationsDictionary.ABBREVIATIONS_DB);
@@ -59,12 +58,16 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
         mDisposable.add(
                 RxProgressDialog.create(
                                 Pair.create(storage, provider),
-                                getActivity(),
+                                requireActivity(),
                                 R.layout.progress_window)
                         .subscribeOn(RxSchedulers.background())
                         .map(
                                 pair -> {
-                                    final PrefsRoot prefsRoot = pair.first.load();
+                                    final PrefsRoot prefsRoot =
+                                            pair.first.load(
+                                                    AnyApplication.getBackupFile(
+                                                            requireContext(),
+                                                            ASK_ABBR_WORDS_SDCARD_FILENAME));
                                     pair.second.storePrefsRoot(prefsRoot);
                                     return Boolean.TRUE;
                                 })
@@ -86,8 +89,7 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
         mDisposable.dispose();
         mDisposable = new CompositeDisposable();
 
-        PrefsXmlStorage storage =
-                new PrefsXmlStorage(AnyApplication.getBackupFile(ASK_ABBR_WORDS_SDCARD_FILENAME));
+        PrefsXmlStorage storage = new PrefsXmlStorage();
         WordsSQLiteConnectionPrefsProvider provider =
                 new WordsSQLiteConnectionPrefsProvider(
                         getContext(), AbbreviationsDictionary.ABBREVIATIONS_DB);
@@ -95,13 +97,17 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
         mDisposable.add(
                 RxProgressDialog.create(
                                 Pair.create(storage, provider),
-                                getActivity(),
+                                requireActivity(),
                                 R.layout.progress_window)
                         .subscribeOn(RxSchedulers.background())
                         .map(
                                 pair -> {
                                     final PrefsRoot prefsRoot = pair.second.getPrefsRoot();
-                                    pair.first.store(prefsRoot);
+                                    pair.first.store(
+                                            prefsRoot,
+                                            AnyApplication.getBackupFile(
+                                                    requireContext(),
+                                                    ASK_ABBR_WORDS_SDCARD_FILENAME));
 
                                     return Boolean.TRUE;
                                 })
@@ -119,7 +125,7 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
 
     @Override
     protected EditableDictionary createEditableDictionary(String locale) {
-        return new MyAbbreviationsDictionary(getActivity().getApplicationContext(), locale);
+        return new MyAbbreviationsDictionary(requireContext().getApplicationContext(), locale);
     }
 
     @Override
@@ -139,6 +145,16 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
                 DictionaryCallbacks dictionaryCallbacks) {
             super(editorWords, LayoutInflater.from(context), dictionaryCallbacks);
             mContext = context;
+        }
+
+        private static String getAbbreviation(@Nullable LoadedWord word) {
+            if (word == null) return "";
+            return AbbreviationsDictionary.getAbbreviation(word.word, word.freq);
+        }
+
+        private static String getExplodedSentence(@Nullable LoadedWord word) {
+            if (word == null) return "";
+            return AbbreviationsDictionary.getExplodedSentence(word.word, word.freq);
         }
 
         @Override
@@ -182,22 +198,12 @@ public class AbbreviationDictionaryEditorFragment extends UserDictionaryEditorFr
                         newAbbreviation + newExplodedSentence, newAbbreviation.length());
             }
         }
-
-        private static String getAbbreviation(@Nullable LoadedWord word) {
-            if (word == null) return "";
-            return AbbreviationsDictionary.getAbbreviation(word.word, word.freq);
-        }
-
-        private static String getExplodedSentence(@Nullable LoadedWord word) {
-            if (word == null) return "";
-            return AbbreviationsDictionary.getExplodedSentence(word.word, word.freq);
-        }
     }
 
     private static class MyAbbreviationsDictionary extends AbbreviationsDictionary
             implements MyEditableDictionary {
 
-        @NonNull private List<LoadedWord> mLoadedWords = new ArrayList<>();
+        @NonNull private final List<LoadedWord> mLoadedWords = new ArrayList<>();
 
         public MyAbbreviationsDictionary(Context context, String locale) {
             super(context, locale);

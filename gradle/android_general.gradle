@@ -11,7 +11,7 @@ android {
     }
 
     compileSdkVersion sdkCompileVersion
-    buildToolsVersion androidBuildTools
+    //buildToolsVersion androidBuildTools
 
     defaultConfig {
         minSdkVersion sdkMinimumVersion

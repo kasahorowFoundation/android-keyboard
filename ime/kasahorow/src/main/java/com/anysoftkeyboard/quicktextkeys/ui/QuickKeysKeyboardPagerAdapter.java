@@ -1,11 +1,11 @@
 package com.anysoftkeyboard.quicktextkeys.ui;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
 import com.anysoftkeyboard.addons.DefaultAddOn;
 import com.anysoftkeyboard.keyboards.AnyPopupKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
@@ -32,6 +32,7 @@ import java.util.List;
     private final DefaultAddOn mDefaultLocalAddOn;
     private final ViewPagerWithDisable mViewPager;
     private final DefaultSkinTonePrefTracker mDefaultSkinTonePrefTracker;
+    private final DefaultGenderPrefTracker mDefaultGenderPrefTracker;
     private final KeyboardTheme mKeyboardTheme;
     private int mBottomPadding;
 
@@ -41,6 +42,7 @@ import java.util.List;
             @NonNull List<QuickTextKey> keyAddOns,
             @NonNull OnKeyboardActionListener keyboardActionListener,
             @NonNull DefaultSkinTonePrefTracker defaultSkinTonePrefTracker,
+            @NonNull DefaultGenderPrefTracker defaultGenderPrefTracker,
             @NonNull KeyboardTheme keyboardTheme,
             int bottomPadding) {
         mViewPager = ownerPager;
@@ -52,6 +54,7 @@ import java.util.List;
         mIsAutoFitKeyboards = new boolean[mAddOns.length];
         mLayoutInflater = LayoutInflater.from(context);
         mDefaultSkinTonePrefTracker = defaultSkinTonePrefTracker;
+        mDefaultGenderPrefTracker = defaultGenderPrefTracker;
         mKeyboardTheme = keyboardTheme;
         mBottomPadding = bottomPadding;
     }
@@ -91,7 +94,8 @@ import java.util.List;
                                 addOn.getPopupKeyboardResId(),
                                 keyboardView.getThemedKeyboardDimens(),
                                 addOn.getName(),
-                                mDefaultSkinTonePrefTracker.getDefaultSkinTone());
+                                mDefaultSkinTonePrefTracker.getDefaultSkinTone(),
+                                mDefaultGenderPrefTracker.getDefaultGender());
             } else {
                 keyboard =
                         new PopupListKeyboard(

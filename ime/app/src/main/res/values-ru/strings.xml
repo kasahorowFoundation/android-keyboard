@@ -52,6 +52,9 @@
     <string name="effects_group">Эффекты</string>
     <string name="ime_settings">Настройки Клавиатуры</string>
     <string name="switch_incognito">Режим инкогнито</string>
+    <string name="use_system_vibration_title">Использовать системную вибрацию</string>
+    <string name="use_system_vibration_off_summary">Использовать пользовательские параметры вибрации</string>
+    <string name="use_system_vibration_on_summary">Использовать системные параметры вибрации Android</string>
     <string name="vibrate_on_key_press_title">Вибрация при нажатии</string>
     <string name="vibrate_on_key_press_value_template">%d миллисекунд</string>
     <string name="night_mode_screen">Настройки ночного режима</string>
@@ -511,6 +514,12 @@
     <string name="emoji_default_skin_tone_value_type_5">Средний тёмный тон кожи</string>
     <string name="emoji_default_skin_tone_value_type_6">Тёмный тон кожи</string>
     <string name="emoji_default_skin_tone_value_random_type">Случайный тон кожи</string>
+    <string name="emoji_default_gender_title">Пол Эмодзи по умолчанию</string>
+    <string name="emoji_default_gender_summary">Стандартный пол: %s</string>
+    <string name="emoji_default_gender_value_person">Человек</string>
+    <string name="emoji_default_gender_value_woman">Женский</string>
+    <string name="emoji_default_gender_value_man">Мужской</string>
+    <string name="emoji_default_gender_value_random_type">Случайный пол</string>
     <string name="developer_tools">Инструменты разработчика</string>
     <string name="click_for_developer_features">Инструменты разработчика</string>
     <string name="click_for_developer_features_summary">Различные инструменты для разработчиков AnySoftKeyboard</string>
@@ -577,13 +586,13 @@
     <string name="clipboard_paste_entries_title">Выбрать текст для вставки</string>
     <string name="next_word_prefs_clear_data">Очистить данные следующего слова</string>
     <string name="next_word_prefs_clear_data_summary">Это необратимо. Вся ваша история набора будет очищена.</string>
+    <string name="storage_permission_rationale">AnySoftKeyboard требуется разрешение на чтение и запись резервных копий ваших файлов.</string>
     <string name="notification_read_contacts_title">Можно ли читать ваши контакты?</string>
     <string name="notification_read_contacts_text">Мы должны читать ваши контакты, чтобы дать вам лучшее автозаполнение.</string>
     <string name="notification_read_contacts_ticker">Контакты, требуется разрешение</string>
     <string name="contacts_permissions_dialog_message">AnySoftKeyboard использует ваши имена контактов, чтобы предоставить вам персонализированное слово предложение: при вводе слова, мы ищем подобные слова к автозаполнению и автоматической корректировки вашей печати.</string>
     <string name="wizard_allow_contacts_permission">Разрешить предложения на основе контактов</string>
     <string name="allow_permission">Разрешить</string>
-    <string name="navigate_to_app_permissions">Перейти к разрешениям приложения</string>
     <string name="turn_off_contacts_dictionary">Выключить словарь из Контакты</string>
     <string name="read_more_about_permissions">Прочитать больше про разрешения…</string>
     <string name="ask_beta_link_promo">Эй! Хочешь быстрее получать новые функции <i>AnySoftKeyboard</i>? Тогда тебе повезло! Канал <i>BETA</i> просто создан для <b>ТЕБЯ</b>!\nПросто зарегистрируйся по ссылке ниже и обнови через <i>Google Play Маркет</i>!\n\nhttps://play.google.com/apps/testing/com.menny.android.anysoftkeyboard\n\nИ спасибо за помощь в устранении багов перед переходом нововведений в релиз.</string>
@@ -664,8 +673,6 @@
     <string name="app_share_title">Привет из AnySoftKeyboard</string>
     <string name="app_share_menu_title">Поделился использованием AnySoftKeyboard</string>
     <string name="app_share_text">Позвольте мне порекомендовать вам приватно-ориентированное, бесплатное, легконастраиваемое, многоязычное приложение с открытым исходным кодом для Android AnySoftKeyboard.\nЗагрузите его из:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
-    <string name="covid_19_click_for_info">Будьте в безопасности! Нажмите для поручения информации о Covid-19. </string>
     <string name="click_me_for_easter_egg_info">нажмите сюда, чтобы увидеть сюрприз</string>
     <!-- this URL should be localized - it should point to a web-site with information in the locale language. -->
-    <string name="codvid_info_url">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</string>
 </resources>

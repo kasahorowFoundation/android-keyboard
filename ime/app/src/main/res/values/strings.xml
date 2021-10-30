@@ -73,6 +73,10 @@
     <string name="effects_group">Effects</string>
     <string name="ime_settings">Keyboard settings</string>
     <string name="switch_incognito">Incognito Mode</string>
+
+    <string name="use_system_vibration_title">Use system vibration</string>
+    <string name="use_system_vibration_off_summary">Using custom vibration setting</string>
+    <string name="use_system_vibration_on_summary">Using Android system vibration setting</string>
     <string name="vibrate_on_key_press_title">Vibrate on key-press</string>
     <string name="vibrate_on_key_press_value_template">%d milliseconds</string>
 
@@ -552,6 +556,7 @@
     <string name="extension_kbd_extension_numbers_symbols">Numbers and symbols</string>
     <string name="extension_kbd_bottom_minimal">Minimal</string>
     <string name="extension_kbd_bottom_minimal_no_emoji">Minimal (no emoji)</string>
+    <string name="extension_kbd_bottom_minimal_less_punctuation">Minimal (less punctuation)</string>
 
     <!-- Tutorials -->
     <!-- Special soft keyboard keys text -->
@@ -703,6 +708,12 @@
     <string name="emoji_default_skin_tone_value_type_5">Medium-Dark Skin Tone</string>
     <string name="emoji_default_skin_tone_value_type_6">Dark Skin Tone</string>
     <string name="emoji_default_skin_tone_value_random_type">Random Skin Tone</string>
+    <string name="emoji_default_gender_title">Emoji default gender</string>
+    <string name="emoji_default_gender_summary">Default gender to use: %s</string>
+    <string name="emoji_default_gender_value_person">Person</string>
+    <string name="emoji_default_gender_value_woman">Woman</string>
+    <string name="emoji_default_gender_value_man">Man</string>
+    <string name="emoji_default_gender_value_random_type">Random gender</string>
 
     <string name="developer_tools">Developer tools</string>
     <string name="click_for_developer_features">Developer tools</string>
@@ -746,7 +757,7 @@
     <string name="file_explorer_backup_alert_message">This file will be overwritten.</string>
 
     <string name="file_explorer_backup_success">Your data have been saved to\u0020</string>
-    <string name="file_explorer_backup_failed">Your data have failed to ba saved.</string>
+    <string name="file_explorer_backup_failed">Your data have failed to be saved.</string>
     <string name="file_explorer_restore_success">Your data have been restored from\u0020</string>
     <string name="file_explorer_restore_failed">Your data have failed to be restored.</string>
 
@@ -781,7 +792,7 @@
     <string name="setup_wizard_step_three_details">Thank you for choosing <i>AnySoftKeyboard</i>.
     </string>
     <string name="setup_wizard_step_three_details_done">
-        <b>You are done 🎉\nGo to you favorite app to try it out.</b>
+        <b>You are done 🎉\nGo to your favorite app to try it out.</b>
     </string>
     <string name="setup_wizard_step_three_details_actions">Or, you can customize and personalize the
         keyboard to your likings:
@@ -821,6 +832,7 @@
     <string name="clipboard_paste_entries_title">Pick text to paste</string>
     <string name="next_word_prefs_clear_data">Clear next-word data</string>
     <string name="next_word_prefs_clear_data_summary">This is irreversible. All your typing history will be cleared.</string>
+    <string name="storage_permission_rationale">AnySoftKeyboard requires your permission to read and write to storage your backup files.</string>
     <string name="notification_read_contacts_title">Can I read your contacts?</string>
     <string name="notification_read_contacts_text">We need to read your contacts to give you a better auto-complete experience.</string>
     <string name="notification_read_contacts_ticker">Contacts permission needed</string>
@@ -830,14 +842,14 @@
     </string>
     <string name="wizard_allow_contacts_permission">Allow contacts-based typing suggestions</string>
     <string name="allow_permission">Allow</string>
-    <string name="navigate_to_app_permissions">Go to App permissions</string>
+    
     <string name="turn_off_contacts_dictionary">Turn off Contacts Dictionary</string>
     <string name="read_more_about_permissions">Read more about permissions…</string>
     <string name="ask_beta_link_promo">Hey! Want new <i>AnySoftKeyboard</i> stuff faster? Then
         you\'re in luck! <i>BETA</i> channel is now available for <b>YOU</b>!\nJust sign up at the
         link below, and update through <i>Google Play</i> app store!\n\n
         https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nAnd thanks for
-        helping out to kill bugs before the reach the public.
+        helping out to kill bugs before they reach the public.
     </string>
     <string name="clipboard_fine_select_enabled_toast">Fine-text-selection enabled. Use left/right arrows.</string>
 
@@ -940,11 +952,10 @@
     <string name="app_share_title">Hello from AnySoftKeyboard</string>
     <string name="app_share_menu_title">Share AnySoftKeyboard using</string>
     <string name="app_share_text">Let me recommend the open-source, privacy-focus, free, highly customizable, multi-language Android keyboard app AnySoftKeyboard.\nGet it from:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
-    <string name="covid_19_click_for_info">Keep safe! Click for info on CoronaVirus.</string>
+    
     <string name="click_me_for_easter_egg_info">click me for a surprise</string>
     <!-- this URL should be localized - it should point to a web-site with information in the locale language. -->
-    <string name="codvid_info_url">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</string>
+    
 
-    
-    
+
 </resources>

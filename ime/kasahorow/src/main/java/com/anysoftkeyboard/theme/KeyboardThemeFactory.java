@@ -18,9 +18,9 @@ package com.anysoftkeyboard.theme;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
-import android.support.v7.preference.PreferenceManager;
 import android.util.AttributeSet;
+import androidx.annotation.NonNull;
+import androidx.preference.PreferenceManager;
 import com.anysoftkeyboard.addons.AddOnsFactory;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;

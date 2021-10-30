@@ -1,8 +1,8 @@
 package com.anysoftkeyboard.quicktextkeys;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.VisibleForTesting;
 import android.text.TextUtils;
+import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
 import com.anysoftkeyboard.prefs.RxSharedPrefs;
 import com.f2prateek.rx.preferences2.Preference;
 import com.menny.android.anysoftkeyboard.R;
@@ -79,7 +79,18 @@ public class QuickKeyHistoryRecords {
         return stringBuilder.toString();
     }
 
+    public void clearHistory() {
+        mLoadedKeys.clear();
+        // For a unknown reason, we cannot have 0 history emoji...
+        mLoadedKeys.add(new HistoryKey(DEFAULT_EMOJI, DEFAULT_EMOJI));
+        final String encodedHistory = encodeForOldDevices(mLoadedKeys);
+        mRxPref.set(encodedHistory);
+    }
+
     public List<HistoryKey> getCurrentHistory() {
+        if (mLoadedKeys.size() == 0)
+            // For a unknown reason, we cannot have 0 history emoji...
+            mLoadedKeys.add(new HistoryKey(DEFAULT_EMOJI, DEFAULT_EMOJI));
         return Collections.unmodifiableList(mLoadedKeys);
     }
 

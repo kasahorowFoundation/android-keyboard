@@ -51,7 +51,7 @@ public class KeyboardAddOnTest {
                     addOnAndBuilder.getId(), addOnAndBuilder.getKeyboardDefaultEnabled());
         }
 
-        Assert.assertEquals(10, keyboardsEnabled.size());
+        Assert.assertEquals(12, keyboardsEnabled.size());
         Assert.assertTrue(keyboardsEnabled.containsKey(ASK_ENGLISH_1_ID));
         Assert.assertTrue(keyboardsEnabled.get(ASK_ENGLISH_1_ID));
         Assert.assertTrue(keyboardsEnabled.containsKey(ASK_ENGLISH_16_KEYS_ID));
@@ -75,11 +75,11 @@ public class KeyboardAddOnTest {
     public void testGetKeyboardLocale() throws Exception {
         KeyboardAddOnAndBuilder askEnglish = getKeyboardFromFactory(ASK_ENGLISH_1_ID);
         assertNotNull(askEnglish);
-        assertEquals(askEnglish.getKeyboardLocale(), "en");
+        assertEquals("en", askEnglish.getKeyboardLocale());
 
         KeyboardAddOnAndBuilder testerEnglish = getKeyboardFromFactory(ASK_ENGLISH_16_KEYS_ID);
         assertNotNull(testerEnglish);
-        assertEquals(testerEnglish.getKeyboardLocale(), "en");
+        assertEquals("en", testerEnglish.getKeyboardLocale());
 
         KeyboardAddOnAndBuilder testerTerminal =
                 getKeyboardFromFactory("b1c24b40-02ce-4857-9fb8-fb9e4e3b4318");

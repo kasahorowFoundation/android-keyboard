@@ -1,9 +1,9 @@
 package com.anysoftkeyboard.android;
 
 import android.content.Context;
-import android.support.annotation.BoolRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
+import androidx.annotation.BoolRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import com.anysoftkeyboard.prefs.RxSharedPrefs;
 import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;

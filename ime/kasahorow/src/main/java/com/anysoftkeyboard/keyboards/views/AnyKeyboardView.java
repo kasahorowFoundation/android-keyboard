@@ -17,18 +17,20 @@
 package com.anysoftkeyboard.keyboards.views;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
-import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.animation.Animation;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.MotionEventCompat;
 import com.anysoftkeyboard.addons.AddOn;
 import com.anysoftkeyboard.api.KeyCodes;
 import com.anysoftkeyboard.base.utils.Logger;
@@ -40,9 +42,6 @@ import com.anysoftkeyboard.keyboards.AnyKeyboard.AnyKey;
 import com.anysoftkeyboard.keyboards.ExternalAnyKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.Keyboard.Row;
-import com.anysoftkeyboard.keyboards.views.preview.KeyPreviewsController;
-import com.anysoftkeyboard.keyboards.views.preview.KeyPreviewsManager;
-import com.anysoftkeyboard.keyboards.views.preview.PreviewPopupTheme;
 import com.anysoftkeyboard.prefs.AnimationsLevel;
 import com.anysoftkeyboard.rx.GenericOnError;
 import com.anysoftkeyboard.theme.KeyboardTheme;
@@ -65,14 +64,13 @@ public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw
     private Keyboard.Key mExtensionKey;
     private Keyboard.Key mUtilityKey;
     private Keyboard.Key mSpaceBarKey = null;
-    private Point mFirstTouchPoint = new Point(0, 0);
+    private final Point mFirstTouchPoint = new Point(0, 0);
     private boolean mIsFirstDownEventInsideSpaceBar = false;
     private Animation mInAnimation;
 
     // List of motion events for tracking gesture typing
-    private final GestureTypingPathDrawHelper mGestureDrawingHelper;
+    private GestureTypingPathDrawHelper mGestureDrawingHelper;
     private boolean mGestureTypingPathShouldBeDrawn = false;
-    private final Paint mGesturePaint = new Paint();
 
     private final GestureDetector mGestureDetector;
     private boolean mIsStickyExtensionKeyboard;
@@ -123,17 +121,6 @@ public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw
 
         mInAnimation = null;
 
-        // TODO: should come from a theme
-        mGesturePaint.setColor(Color.GREEN);
-        mGesturePaint.setStrokeWidth(10);
-        mGesturePaint.setStyle(Paint.Style.STROKE);
-        mGesturePaint.setStrokeJoin(Paint.Join.BEVEL);
-        mGesturePaint.setStrokeCap(Paint.Cap.BUTT);
-
-        mGestureDrawingHelper =
-                new GestureTypingPathDrawHelper(
-                        context, AnyKeyboardView.this::invalidate, mGesturePaint);
-
         mDisposables.add(
                 mAnimationLevelSubject.subscribe(
                         value -> mAnimationLevel = value,
@@ -173,6 +160,45 @@ public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw
         super.setKeyboardTheme(theme);
 
         mExtensionKeyboardYDismissPoint = getThemedKeyboardDimens().getNormalKeyHeight();
+
+        final AddOn.AddOnResourceMapping remoteAttrs = theme.getResourceMapping();
+        final int[] remoteStyleableArray =
+                remoteAttrs.getRemoteStyleableArrayFromLocal(R.styleable.AnyKeyboardViewTheme);
+        TypedArray a =
+                theme.getPackageContext()
+                        .obtainStyledAttributes(theme.getThemeResId(), remoteStyleableArray);
+        Paint paint = new Paint();
+        paint.setColor(Color.GREEN);
+        paint.setStrokeWidth(
+                getContext().getResources().getDimension(R.dimen.gesture_stroke_width));
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeJoin(Paint.Join.BEVEL);
+        paint.setStrokeCap(Paint.Cap.BUTT);
+        final int resolvedAttrsCount = a.getIndexCount();
+        for (int attrIndex = 0; attrIndex < resolvedAttrsCount; attrIndex++) {
+            final int remoteIndex = a.getIndex(attrIndex);
+            try {
+                // CHECKSTYLE:OFF: missingswitchdefault
+                switch (remoteAttrs.getLocalAttrId(remoteStyleableArray[remoteIndex])) {
+                    case R.attr.swipeTypingColor:
+                        paint.setColor(
+                                a.getColor(
+                                        remoteIndex,
+                                        ContextCompat.getColor(
+                                                getContext(), R.color.candidate_normal)));
+                        break;
+                    case R.attr.swipeTypingStrokeWidth:
+                        paint.setStrokeWidth(a.getDimension(remoteIndex, paint.getStrokeWidth()));
+                        break;
+                }
+                // CHECKSTYLE:ON: missingswitchdefault
+            } catch (Exception e) {
+                Logger.w(TAG, "Got an exception while reading theme data", e);
+            }
+        }
+        a.recycle();
+        mGestureDrawingHelper =
+                new GestureTypingPathDrawHelper(AnyKeyboardView.this::invalidate, paint);
     }
 
     @Override
@@ -196,12 +222,6 @@ public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw
             mMiniKeyboardPopup.setAnimationStyle(R.style.MiniKeyboardAnimation);
         }
         return super.onLongPress(keyboardAddOn, key, isSticky, tracker);
-    }
-
-    @Override
-    protected KeyPreviewsController createKeyPreviewManager(
-            Context context, PreviewPopupTheme previewPopupTheme) {
-        return new KeyPreviewsManager(context, this, mPreviewPopupTheme);
     }
 
     @Override

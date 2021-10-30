@@ -17,8 +17,7 @@
 package com.anysoftkeyboard.alladdons;
 
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
-import com.kasahorow.android.keyboard.app.R;
+import androidx.core.content.ContextCompat;
 import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.List;
 

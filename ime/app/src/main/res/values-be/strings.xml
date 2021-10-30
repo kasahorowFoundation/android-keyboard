@@ -55,6 +55,9 @@
     <string name="effects_group">Эфекты</string>
     <string name="ime_settings">Налады клавіятуры</string>
     <string name="switch_incognito">Рэжым інкогніта</string>
+    <string name="use_system_vibration_title">Выкарыстоўваць сістэмную вібрацыю</string>
+    <string name="use_system_vibration_off_summary">Выкарыстоўваць уласныя налады вібрацыі</string>
+    <string name="use_system_vibration_on_summary">Выкарыстоўваць сістэмныя налады вібрацыі Android</string>
     <string name="vibrate_on_key_press_title">Вібрыраваць падчас націску клавішаў</string>
     <string name="vibrate_on_key_press_value_template">Мілісекунд: %d</string>
     <string name="night_mode_screen">Налады начнога рэжыму</string>
@@ -414,6 +417,7 @@
     <string name="extension_kbd_extension_numbers_symbols">Лічбы і сімвалы</string>
     <string name="extension_kbd_bottom_minimal">Мінімалістычны</string>
     <string name="extension_kbd_bottom_minimal_no_emoji">Мінімалістычны (без эмодзі)</string>
+    <string name="extension_kbd_bottom_minimal_less_punctuation">Мінімальны (менш пунктуацыі)</string>
     <!-- Tutorials -->
     <!-- Special soft keyboard keys text -->
     <string name="label_go_key">Пачаць</string>
@@ -523,6 +527,12 @@
     <string name="emoji_default_skin_tone_value_type_5">Умерана-цёмны колер вокладкі</string>
     <string name="emoji_default_skin_tone_value_type_6">Цёмны колер вокладкі</string>
     <string name="emoji_default_skin_tone_value_random_type">Адвольны колер вокладкі</string>
+    <string name="emoji_default_gender_title">Стандартны пол эмодзі</string>
+    <string name="emoji_default_gender_summary">Стандартны пол: %s</string>
+    <string name="emoji_default_gender_value_person">Асоба</string>
+    <string name="emoji_default_gender_value_woman">Жанчына</string>
+    <string name="emoji_default_gender_value_man">Мужчына</string>
+    <string name="emoji_default_gender_value_random_type">Адвольны пол</string>
     <string name="developer_tools">Інструменты распрацоўшчыка</string>
     <string name="click_for_developer_features">Інструменты распрацоўшчыка</string>
     <string name="click_for_developer_features_summary">Разнастайныя інструменты для распрацоўшчыкаў AnySoftKeyboard</string>
@@ -593,13 +603,13 @@
     <string name="clipboard_paste_entries_title">Выберыце тэкст, каб уставіць</string>
     <string name="next_word_prefs_clear_data">Ачысціць даныя наступнага слова</string>
     <string name="next_word_prefs_clear_data_summary">Гэта аперацыя незваротная. Уся ваша гісторыя набору будзе ачышчаная.</string>
+    <string name="storage_permission_rationale">Праграма патрабуе ваш дазвол на чытанне і запіс рэзервовых копій вашых файлаў.</string>
     <string name="notification_read_contacts_title">Ці можна прачытаць вашы кантакты?</string>
     <string name="notification_read_contacts_text">Нам неабходна прачытаць вашы кантакты, каб даць вам магчымасць яшчэ лепш выкарыстоўваць аўтазапаўненне.</string>
     <string name="notification_read_contacts_ticker">Неабходны дазвол на доступ да кантактаў</string>
     <string name="contacts_permissions_dialog_message">AnySoftKeyboard выкарыстоўвае вашы імёны кантактаў, каб даць вам персаналізаваную прапанову слова: падчас набору слова, мы шукаем падобныя словы для аўтазапаўнення і аўтавыпраўлення вашага друку.</string>
     <string name="wizard_allow_contacts_permission">Дазволіць прапановы на падставе кантактаў</string>
     <string name="allow_permission">Дазволіць</string>
-    <string name="navigate_to_app_permissions">Перайсці да дазволаў праграмы</string>
     <string name="turn_off_contacts_dictionary">Выключыць слоўнік кантактаў</string>
     <string name="read_more_about_permissions">Даведацца больш пра дазволы…</string>
     <string name="ask_beta_link_promo">Вітаем! Хочаце імгненна атрымліваць доступ да новых функцый <i>AnySoftKeyboard</i>? Тады наперад! Для <b>ВАС</b> цяпер працуе <i>BETA</i> канал!\nПроста зарэгіструйцеся па спасылцы ніжэй і абнавіце праграму ў <i>Google Play</i>!\n\n https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nШчыра ўдзячныя вам за тое, што дапамагаеце выпраўляць памылкі, перш чым яны трапяць у фінальную версію праграмы.</string>
@@ -680,8 +690,6 @@
     <string name="app_share_title">Вітанні ад AnySoftKeyboard</string>
     <string name="app_share_menu_title">Парайце AnySoftKeyboard іншым</string>
     <string name="app_share_text">Я хачу параіць вам экранную клавіятуру для Android адметнымі рысамі якой з\'яўляюцца: адкрытасць зыходнага кода, бясплатнае распаўсюджанне, падтрымка ўводу амаль на ўсіх мовах свету, клопат пра прыватнасць вашых даных, тонкая настройка пад вашы задачы. \nАтрымаць па спасылцы ў Play Store:\nhttps://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
-    <string name="covid_19_click_for_info">Беражыце сябе! Націсніце, каб даведацца больш пра каронавірус</string>
     <string name="click_me_for_easter_egg_info">націсні на мяне для сюрпрызу</string>
     <!-- this URL should be localized - it should point to a web-site with information in the locale language. -->
-    <string name="codvid_info_url">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</string>
 </resources>

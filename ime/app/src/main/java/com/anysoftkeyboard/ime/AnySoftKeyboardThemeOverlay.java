@@ -2,10 +2,10 @@ package com.anysoftkeyboard.ime;
 
 import android.content.ComponentName;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.VisibleForTesting;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
 import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
 import com.anysoftkeyboard.overlay.OverlayData;
 import com.anysoftkeyboard.overlay.OverlayDataNormalizer;
@@ -72,6 +72,7 @@ public abstract class AnySoftKeyboardThemeOverlay extends AnySoftKeyboardKeyboar
         final KeyboardViewContainerView inputViewContainer = getInputViewContainer();
         if (inputViewContainer != null) {
             inputViewContainer.setKeyboardTheme(mCurrentTheme);
+            inputViewContainer.setThemeOverlay(mCurrentOverlayData);
         }
     }
 

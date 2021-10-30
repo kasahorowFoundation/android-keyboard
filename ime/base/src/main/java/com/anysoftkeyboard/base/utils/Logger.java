@@ -16,7 +16,7 @@
 
 package com.anysoftkeyboard.base.utils;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -171,7 +171,7 @@ public class Logger {
     public static synchronized void w(final String tag, Throwable e, String text, Object... args) {
         if (msLogger.supportsW()) {
             String msg = getFormattedString(text, args);
-            msLogger.w(tag, appendErrorText(text, e));
+            msLogger.w(tag, appendErrorText(msg, e));
             addLog(LVL_W, tag, msg);
         }
     }

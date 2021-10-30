@@ -2,11 +2,13 @@ package com.anysoftkeyboard.keyboards.views;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import com.anysoftkeyboard.ime.InputViewActionsProvider;
 import com.anysoftkeyboard.ime.InputViewBinder;
 import com.anysoftkeyboard.overlay.OverlayData;
@@ -27,6 +29,8 @@ public class KeyboardViewContainerView extends ViewGroup implements ThemeableChi
     private OnKeyboardActionListener mKeyboardActionListener;
     private KeyboardTheme mKeyboardTheme;
     private OverlayData mOverlayData = new OverlayData();
+    private LinearLayout mInlineAutofillView;
+    private HorizontalScrollView mInlineScrollView;
 
     public KeyboardViewContainerView(Context context) {
         super(context);
@@ -89,7 +93,10 @@ public class KeyboardViewContainerView extends ViewGroup implements ThemeableChi
 
                 for (View stripActionView : mStripActionViews) {
                     if (visible) {
-                        addView(stripActionView);
+                        // it might already be visible
+                        if (stripActionView.getParent() == null) {
+                            addView(stripActionView);
+                        }
                     } else {
                         removeView(stripActionView);
                     }
@@ -108,6 +115,8 @@ public class KeyboardViewContainerView extends ViewGroup implements ThemeableChi
         }
 
         View actionView = provider.inflateActionView(this);
+        if (actionView.getParent() != null)
+            throw new IllegalStateException("StripActionProvider inflated a view with a parent!");
         actionView.setTag(PROVIDER_TAG_ID, provider);
         if (mShowActionStrip) {
             addView(actionView);
@@ -194,16 +203,32 @@ public class KeyboardViewContainerView extends ViewGroup implements ThemeableChi
         }
     }
 
+    public HorizontalScrollView getInlineScrollView() {
+        if (mInlineScrollView == null) {
+            mInlineScrollView = (HorizontalScrollView) getChildAt(0);
+        }
+
+        return mInlineScrollView;
+    }
+
+    public LinearLayout getInlineAutofillView() {
+        if (mInlineAutofillView == null) {
+            mInlineAutofillView = (LinearLayout) getInlineScrollView().getChildAt(0);
+        }
+
+        return mInlineAutofillView;
+    }
+
     public CandidateView getCandidateView() {
         if (mCandidateView == null) {
-            mCandidateView = (CandidateView) getChildAt(0);
+            mCandidateView = (CandidateView) getChildAt(1);
         }
         return mCandidateView;
     }
 
     public InputViewBinder getStandardKeyboardView() {
         if (mStandardKeyboardView == null) {
-            mStandardKeyboardView = (InputViewBinder) getChildAt(1);
+            mStandardKeyboardView = (InputViewBinder) getChildAt(2);
         }
         return mStandardKeyboardView;
     }
