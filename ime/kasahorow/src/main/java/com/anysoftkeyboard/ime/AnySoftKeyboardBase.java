@@ -16,7 +16,6 @@
 
 package com.anysoftkeyboard.ime;
 
-import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import android.inputmethodservice.InputMethodService;
 import android.view.Gravity;
@@ -40,9 +39,9 @@ import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
 import com.anysoftkeyboard.keyboards.views.OnKeyboardActionListener;
 import com.anysoftkeyboard.ui.dev.DeveloperUtils;
 import com.anysoftkeyboard.utils.ModifierKeyState;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import io.reactivex.disposables.CompositeDisposable;
 import java.util.List;
 

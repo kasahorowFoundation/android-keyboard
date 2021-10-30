@@ -38,9 +38,9 @@ import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
 import com.anysoftkeyboard.rx.GenericOnError;
 import com.anysoftkeyboard.rx.RxSchedulers;
 import com.anysoftkeyboard.utils.Triple;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.BuildConfig;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import io.reactivex.Observable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -135,8 +135,8 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
 
         addDisposable(
                 prefs().getBoolean(
-                        R.string.settings_key_allow_suggestions_restart,
-                        R.bool.settings_default_allow_suggestions_restart)
+                                R.string.settings_key_allow_suggestions_restart,
+                                R.bool.settings_default_allow_suggestions_restart)
                         .asObservable()
                         .subscribe(
                                 aBoolean -> mAllowSuggestionsRestart = aBoolean,
@@ -145,8 +145,8 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
         final Observable<Boolean> powerSavingShowSuggestionsObservable =
                 Observable.combineLatest(
                         prefs().getBoolean(
-                                R.string.settings_key_show_suggestions,
-                                R.bool.settings_default_show_suggestions)
+                                        R.string.settings_key_show_suggestions,
+                                        R.bool.settings_default_show_suggestions)
                                 .asObservable(),
                         PowerSaving.observePowerSavingState(
                                 getApplicationContext(),
@@ -161,20 +161,20 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
 
         addDisposable(
                 Observable.combineLatest(
-                        powerSavingShowSuggestionsObservable,
-                        prefs().getString(
-                                R.string
-                                        .settings_key_auto_pick_suggestion_aggressiveness,
-                                R.string
-                                        .settings_default_auto_pick_suggestion_aggressiveness)
-                                .asObservable(),
-                        prefs().getInteger(
-                                R.string
-                                        .settings_key_min_length_for_word_correction__,
-                                R.integer
-                                        .settings_default_min_word_length_for_suggestion)
-                                .asObservable(),
-                        Triple::new)
+                                powerSavingShowSuggestionsObservable,
+                                prefs().getString(
+                                                R.string
+                                                        .settings_key_auto_pick_suggestion_aggressiveness,
+                                                R.string
+                                                        .settings_default_auto_pick_suggestion_aggressiveness)
+                                        .asObservable(),
+                                prefs().getInteger(
+                                                R.string
+                                                        .settings_key_min_length_for_word_correction__,
+                                                R.integer
+                                                        .settings_default_min_word_length_for_suggestion)
+                                        .asObservable(),
+                                Triple::new)
                         .subscribe(
                                 triple -> {
                                     final boolean showSuggestionsChanged =
@@ -527,8 +527,8 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
         setSpaceTimeStamp(primaryCode == KeyCodes.SPACE);
         if (!isCurrentlyPredicting()
                 && (primaryCode == KeyCodes.DELETE
-                || primaryCode == KeyCodes.DELETE_WORD
-                || primaryCode == KeyCodes.FORWARD_DELETE)) {
+                        || primaryCode == KeyCodes.DELETE_WORD
+                        || primaryCode == KeyCodes.FORWARD_DELETE)) {
             postRestartWordSuggestion();
         }
     }
@@ -713,7 +713,7 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                     handledOutputToInputConnection = true;
                 }
             } else if (mLastSpaceTimeStamp
-                    != NEVER_TIME_STAMP /*meaning the previous key was SPACE*/
+                            != NEVER_TIME_STAMP /*meaning the previous key was SPACE*/
                     && (mSwapPunctuationAndSpace || newLine)
                     && isSpaceSwapCharacter(primaryCode)) {
                 // current text in the input-box should be something like "word "
@@ -1170,13 +1170,13 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                                 && index == 0
                                 && mShowSuggestions
                                 && !mSuggest.isValidWord(
-                                suggestion) // this is for the case that the word was
+                                        suggestion) // this is for the case that the word was
                                 // auto-added upon picking
                                 && !mSuggest.isValidWord(
-                                suggestion
-                                        .toString()
-                                        .toLowerCase(
-                                                getCurrentAlphabetKeyboard().getLocale()));
+                                        suggestion
+                                                .toString()
+                                                .toLowerCase(
+                                                        getCurrentAlphabetKeyboard().getLocale()));
 
                 if (showingAddToDictionaryHint) {
                     if (mCandidateView != null) mCandidateView.showAddToDictionaryHint(suggestion);

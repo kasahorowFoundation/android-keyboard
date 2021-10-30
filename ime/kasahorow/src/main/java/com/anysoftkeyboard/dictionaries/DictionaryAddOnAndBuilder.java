@@ -23,7 +23,6 @@ import com.anysoftkeyboard.addons.AddOnImpl;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.dictionaries.jni.BinaryDictionary;
 import com.anysoftkeyboard.dictionaries.jni.ResourceBinaryDictionary;
-import com.kasahorow.android.keyboard.app.BuildConfig;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

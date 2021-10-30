@@ -16,8 +16,8 @@ import androidx.core.content.ContextCompat;
 import com.anysoftkeyboard.android.PermissionRequestHelper;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.ui.settings.BasicAnyActivity;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 
 public class WizardPermissionsFragment extends WizardPageBaseFragment

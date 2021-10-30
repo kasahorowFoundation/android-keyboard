@@ -15,8 +15,8 @@ import com.anysoftkeyboard.quicktextkeys.QuickTextKeyFactory;
 import com.anysoftkeyboard.remote.MediaType;
 import com.anysoftkeyboard.theme.KeyboardTheme;
 import com.anysoftkeyboard.ui.ViewPagerWithDisable;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
+import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.Collections;
 import org.junit.Assert;
 import org.junit.Before;
@@ -160,32 +160,32 @@ public class QuickTextPagerViewTest {
         Assert.assertEquals(
                 R.drawable.ic_cancel,
                 Shadows.shadowOf(
-                        ((ImageView) mUnderTest.findViewById(R.id.quick_keys_popup_close))
-                                .getDrawable())
+                                ((ImageView) mUnderTest.findViewById(R.id.quick_keys_popup_close))
+                                        .getDrawable())
                         .getCreatedFromResId());
         Assert.assertEquals(
                 R.drawable.sym_keyboard_delete_light,
                 Shadows.shadowOf(
-                        ((ImageView)
-                                mUnderTest.findViewById(
-                                        R.id.quick_keys_popup_backspace))
-                                .getDrawable())
+                                ((ImageView)
+                                                mUnderTest.findViewById(
+                                                        R.id.quick_keys_popup_backspace))
+                                        .getDrawable())
                         .getCreatedFromResId());
         Assert.assertEquals(
                 R.drawable.ic_action_settings,
                 Shadows.shadowOf(
-                        ((ImageView)
-                                mUnderTest.findViewById(
-                                        R.id.quick_keys_popup_quick_keys_settings))
-                                .getDrawable())
+                                ((ImageView)
+                                                mUnderTest.findViewById(
+                                                        R.id.quick_keys_popup_quick_keys_settings))
+                                        .getDrawable())
                         .getCreatedFromResId());
         Assert.assertEquals(
                 R.drawable.ic_media_insertion,
                 Shadows.shadowOf(
-                        ((ImageView)
-                                mUnderTest.findViewById(
-                                        R.id.quick_keys_popup_quick_keys_insert_media))
-                                .getDrawable())
+                                ((ImageView)
+                                                mUnderTest.findViewById(
+                                                        R.id.quick_keys_popup_quick_keys_insert_media))
+                                        .getDrawable())
                         .getCreatedFromResId());
 
         Assert.assertEquals(

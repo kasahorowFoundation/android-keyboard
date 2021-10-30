@@ -18,7 +18,6 @@ package com.anysoftkeyboard.debug;
 
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.StrictMode;
 import androidx.core.content.ContextCompat;
 import com.anysoftkeyboard.base.utils.Logger;

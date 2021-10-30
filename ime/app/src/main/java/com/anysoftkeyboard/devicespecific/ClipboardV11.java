@@ -20,7 +20,6 @@ import android.annotation.TargetApi;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;

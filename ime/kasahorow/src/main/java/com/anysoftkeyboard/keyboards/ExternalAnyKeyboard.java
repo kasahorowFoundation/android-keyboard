@@ -34,7 +34,6 @@ import com.anysoftkeyboard.keyboardextensions.KeyboardExtension;
 import com.anysoftkeyboard.keyboards.AnyKeyboard.HardKeyboardTranslator;
 import com.anysoftkeyboard.utils.LocaleTools;
 import com.kasahorow.android.keyboard.app.BuildConfig;
-import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.io.IOException;
 import java.text.ParseException;

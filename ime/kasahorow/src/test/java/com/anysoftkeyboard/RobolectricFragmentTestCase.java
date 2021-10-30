@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.rx.TestRxSchedulers;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
-import com.kasahorow.android.keyboard.app.R;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
