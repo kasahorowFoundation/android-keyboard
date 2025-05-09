@@ -57,23 +57,8 @@
     <color name="blacktheme_color_normal_pressed_stroke">#FFFFFFFF</color>
     <color name="blacktheme_color_normal_keytext">#FFEEEEEE</color>
     <color name="blacktheme_color_normal_pressed_keytext">#FFFFFFFF</color>
-    <color name="blacktheme_color_normal_hint">#0099FE</color>
+    <color name="blacktheme_color_normal_hint">#FF0088FF</color>
     <color name="blacktheme_color_normal_pressed_hint">#FF00BBFF</color>
-
-    <color name="menu_background_normal">#FFF</color>
-
-    <color name="menu_divider">#0099FE</color>
-
-    <color name="notification_background_error">#F33</color>
-    <color name="notification_background_debug_version">#FF3399</color>
-
-    <color name="app_accent">#0099FE</color>
-    <color name="app_color_primary">#323332</color>
-    <color name="app_color_primary_dark">#292929</color>
-    <color name="text_color_link">#0099FE</color>
-    <color name="app_card_background">#FFF</color>
-    <color name="text_color">#CBCCCB</color>
-
 
     <color name="aosp_dark_background">#32373A</color>
     <color name="aosp_dark_suggestions_background">#222</color>

@@ -1,36 +1,29 @@
 package com.anysoftkeyboard.ui.settings;
 
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v7.preference.Preference;
+import androidx.fragment.app.Fragment;
+import androidx.preference.Preference;
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
+import com.anysoftkeyboard.rx.TestRxSchedulers;
 import com.anysoftkeyboard.ui.dev.DeveloperToolsFragment;
 import com.kasahorow.android.keyboard.app.R;
 import org.junit.Assert;
 import org.junit.Test;
-import org.robolectric.Robolectric;
 
 public class MainTweaksFragmentTest extends RobolectricFragmentTestCase<MainTweaksFragment> {
+  @Override
+  protected int getStartFragmentNavigationId() {
+    return R.id.mainTweaksFragment;
+  }
 
-    @NonNull
-    @Override
-    protected MainTweaksFragment createFragment() {
-        return new MainTweaksFragment();
-    }
+  @Test
+  public void testNavigateToDevTools() {
+    MainTweaksFragment fragment = startFragment();
 
-    @Test
-    public void testNavigateToDevTools() {
-        MainTweaksFragment fragment = startFragment();
+    final Preference preferenceDevTools = fragment.findPreference(MainTweaksFragment.DEV_TOOLS_KEY);
+    preferenceDevTools.getOnPreferenceClickListener().onPreferenceClick(preferenceDevTools);
 
-        final Preference preferenceDevTools =
-                fragment.findPreference(MainTweaksFragment.DEV_TOOLS_KEY);
-        preferenceDevTools.getOnPreferenceClickListener().onPreferenceClick(preferenceDevTools);
-
-        Robolectric.flushForegroundThreadScheduler();
-        Fragment navigatedToFragment =
-                fragment.getActivity()
-                        .getSupportFragmentManager()
-                        .findFragmentById(R.id.main_ui_content);
-        Assert.assertTrue(navigatedToFragment instanceof DeveloperToolsFragment);
-    }
+    TestRxSchedulers.foregroundFlushAllJobs();
+    Fragment navigatedToFragment = getCurrentFragment();
+    Assert.assertTrue(navigatedToFragment instanceof DeveloperToolsFragment);
+  }
 }

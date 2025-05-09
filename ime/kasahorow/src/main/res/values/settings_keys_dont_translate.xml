@@ -7,6 +7,7 @@
     <string name="settings_key_auto_capitalization">auto_caps</string>
     <string name="settings_key_show_suggestions">candidates_on</string>
 
+    <string name="settings_key_use_system_vibration">settings_key_use_system_vibration</string>
     <string name="settings_key_vibrate_on_key_press_duration_int">settings_key_vibrate_on_key_press_duration_int</string>
 
     <string name="settings_key_night_mode">settings_key_night_mode</string>
@@ -166,6 +167,20 @@
         <item>@string/emoji_default_skin_tone_value_random_type</item>
     </string-array>
 
+    <string name="settings_key_default_emoji_gender">settings_key_default_emoji_gender</string>
+    <string-array name="settings_key_default_emoji_gender_values">
+        <item>person</item>
+        <item>woman</item>
+        <item>man</item>
+        <item>random</item>
+    </string-array>
+    <string-array name="settings_key_default_emoji_gender_names">
+        <item>@string/emoji_default_gender_value_person</item>
+        <item>@string/emoji_default_gender_value_woman</item>
+        <item>@string/emoji_default_gender_value_man</item>
+        <item>@string/emoji_default_gender_value_random_type</item>
+    </string-array>
+
     <string-array name="tweak_animations_level_types">
         <item>@string/tweak_animations_level_types_full</item>
         <item>@string/tweak_animations_level_types_some</item>
@@ -251,54 +266,6 @@
         <item>1000000</item>
     </string-array>
 
-    <string name="settings_key_force_locale">settings_key_force_locale</string>
-    <!-- this should hold the locales the app is translated to-->
-    <string-array name="settings_key_force_locale_values">
-        <item>System</item>
-        <item>ar</item>
-        <item>be</item>
-        <item>bg</item>
-        <item>ca</item>
-        <item>cs</item>
-        <item>da</item>
-        <item>de</item>
-        <item>el</item>
-        <item>eo</item>
-        <item>en</item>
-        <item>es</item>
-        <item>eu</item>
-        <item>fi</item>
-        <item>fr</item>
-        <item>hu</item>
-        <item>hy</item>
-        <item>in</item>
-        <item>it</item>
-        <item>iw</item>
-        <item>ka</item>
-        <item>kn</item>
-        <item>ku</item>
-        <item>lt</item>
-        <item>mk</item>
-        <item>my</item>
-        <item>nl</item>
-        <item>no</item>
-        <item>pl</item>
-        <item>pt</item>
-        <item>pt-rBR</item>
-        <item>ro</item>
-        <item>ru</item>
-        <item>se</item>
-        <item>sk</item>
-        <item>sl</item>
-        <item>ta</item>
-        <item>th</item>
-        <item>tl</item>
-        <item>tlh</item>
-        <item>tr</item>
-        <item>uk</item>
-        <item>vi</item>
-    </string-array>
-
     <string-array name="settings_key_long_press_timeout_names">
         <item>@string/settings_long_press_timeout_faster</item>
         <item>@string/settings_long_press_timeout_fast</item>
@@ -324,10 +291,9 @@
         <item>@string/settings_split_state_compact_right_always</item>
         <item>@string/settings_split_state_compact_left_always</item>
     </string-array>
-    <!-- added a _ to handle a preference tpye change from int to string -->
-    <string name="settings_key_min_length_for_word_correction__">settings_key_min_length_for_word_correction__</string>
 
     <string name="settings_key_allow_suggestions_restart">settings_key_allow_suggestions_restart</string>
+    <string name="settings_key_try_splitting_words_for_correction">settings_key_try_splitting_words_for_correction</string>
     <string name="settings_key_switch_keyboard_on_space">settings_key_switch_keyboard_on_space</string>
     <string name="settings_key_persistent_layout_per_package_id">settings_key_persistent_layout_per_package_id</string>
     <string name="settings_key_double_space_to_period">double_space_to_period</string>
@@ -364,9 +330,6 @@
 
     <string name="settings_key_hint_size">settings_key_hint_size</string>
 
-    <string name="settings_key_landscape_keyboard_height_factor">zoom_factor_keys_in_landscape</string>
-    <string name="settings_key_portrait_keyboard_height_factor">zoom_factor_keys_in_portrait</string>
-
     <string name="settings_key_support_keyboard_type_state_row_type_2">settings_key_support_keyboard_type_state_row_type_2</string>
     <string name="settings_key_support_keyboard_type_state_row_type_3">settings_key_support_keyboard_type_state_row_type_3</string>
     <string name="settings_key_support_keyboard_type_state_row_type_4">settings_key_support_keyboard_type_state_row_type_4</string>
@@ -375,7 +338,12 @@
     <string name="settings_key_allow_layouts_to_provide_generic_rows">settings_key_allow_layouts_to_provide_generic_rows</string>
     <string name="settings_key_apply_remote_app_colors">settings_key_apply_remote_app_colors</string>
 
-    <string name="settings_key_public_notice_timed_covid">settings_key_public_notice_timed_covid</string>
+    <string name="settings_key_show_slide_for_gesture_back_word_counter">settings_key_show_slide_for_gesture_back_word_counter</string>
 
-    <string name="settings_key_next_word_upload">settings_key_next_word_upload</string>
+    <string name="settings_key_strict_mode_enabled">settings_key_strict_mode_enabled</string>
+
+    <string name="settings_key_zoom_percent_in_portrait">settings_key_zoom_percent_in_portrait</string>
+    <string name="settings_key_zoom_percent_in_landscape">settings_key_zoom_percent_in_landscape</string>
+
+    <string name="settings_key_bottom_extra_padding_in_portrait">settings_key_bottom_extra_padding_in_portrait</string>
 </resources>

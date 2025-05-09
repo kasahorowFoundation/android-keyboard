@@ -37,6 +37,8 @@
         <item name="iconKeyMic">@drawable/yochees_dark_mic_popoup</item>
         <!-- should support normal, feedback -->
         <item name="iconKeySettings">@drawable/yochees_dark_settings_popup</item>
+        <!-- should support normal, feedback -->
+        <item name="iconKeyClearQuickTextHistory">@drawable/ic_delete_forever_dark</item>
 
         <!-- condensing icons -->
         <item name="iconKeyCondenseNormal">@drawable/yochees_dark_keyboard_normal</item>
@@ -69,7 +71,6 @@
 
         <item name="keyboardNameTextSize">@dimen/key_label_text_size</item>
 
-        <item name="keyHysteresisDistance">@dimen/key_hysteresis_distance</item>
         <!-- this is what Android team figured verticalCorrection should be -->
         <item name="verticalCorrection">0px</item>
 
@@ -126,6 +127,7 @@
         <item name="suggestionNormalTextColor">#888</item>
         <item name="suggestionRecommendedTextColor">#FFF</item>
         <item name="suggestionOthersTextColor">#888</item>
+        <item name="suggestionSelectionHighlight">@drawable/dark_candidate_selected_background</item>
         <item name="suggestionTextSize">@dimen/candidate_font_height</item>
         <item name="suggestionBackgroundImage">@drawable/yochees_dark_main_background</item>
         <item name="suggestionCloseImage">@drawable/yochees_dark_close_suggetions</item>
@@ -180,7 +182,9 @@
 
     <!-- light theme -->
     <style name="YocheesLightKeyIconTheme"
-           parent="YocheesDarkKeyIconTheme" />
+           parent="LeanLightKeyIconTheme">
+        <!-- TODO: create light-theme versions of Yochees icons instead of using ones from Lean Light -->
+    </style>
 
     <style name="YocheesLightTheme"
            parent="YocheesBaseTheme">
@@ -201,7 +205,8 @@
         <item name="suggestionOthersTextColor">#888</item>
         <item name="suggestionTextSize">@dimen/candidate_font_height</item>
         <item name="suggestionBackgroundImage">@drawable/yochees_light_main_background</item>
-        <item name="suggestionCloseImage">@drawable/close_suggestions_strip_icon</item>
+        <item name="suggestionCloseImage">@drawable/close_suggestions_light</item>
+        <item name="suggestionSelectionHighlight">@drawable/light_candidate_selected_background</item>
     </style>
 
     <style name="YocheesLightPopup"

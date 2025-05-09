@@ -17,43 +17,41 @@
 package com.anysoftkeyboard.ui.settings;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.preference.PreferenceFragmentCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceFragmentCompat;
 import com.anysoftkeyboard.android.NightMode;
 import com.anysoftkeyboard.rx.GenericOnError;
 import com.kasahorow.android.keyboard.app.R;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.disposables.Disposables;
+import net.evendanan.pixel.UiUtils;
 
 public class NightModeSettingsFragment extends PreferenceFragmentCompat {
 
-    private Disposable mAppNightModeDisposable = Disposables.empty();
+  private Disposable mAppNightModeDisposable = Disposables.empty();
 
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.night_mode_prefs);
-    }
+  @Override
+  public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+    addPreferencesFromResource(R.xml.night_mode_prefs);
+  }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.night_mode_screen));
-        mAppNightModeDisposable =
-                NightMode.observeNightModeState(
-                                getContext(),
-                                R.string.settings_key_night_mode_app_theme_control,
-                                R.bool.settings_default_true)
-                        .subscribe(
-                                enabled ->
-                                        ((AppCompatActivity) getActivity())
-                                                .getDelegate()
-                                                .applyDayNight(),
-                                GenericOnError.onError("NightModeSettingsFragment"));
-    }
+  @Override
+  public void onStart() {
+    super.onStart();
+    UiUtils.setActivityTitle(this, getString(R.string.night_mode_screen));
+    mAppNightModeDisposable =
+        NightMode.observeNightModeState(
+                requireContext(),
+                R.string.settings_key_night_mode_app_theme_control,
+                R.bool.settings_default_true)
+            .subscribe(
+                enabled -> ((AppCompatActivity) requireActivity()).getDelegate().applyDayNight(),
+                GenericOnError.onError("NightModeSettingsFragment"));
+  }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        mAppNightModeDisposable.dispose();
-    }
+  @Override
+  public void onStop() {
+    super.onStop();
+    mAppNightModeDisposable.dispose();
+  }
 }

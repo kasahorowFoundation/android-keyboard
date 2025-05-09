@@ -1,37 +1,32 @@
 package com.anysoftkeyboard.ui.settings;
 
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
 import com.anysoftkeyboard.RobolectricFragmentTestCase;
 import com.anysoftkeyboard.ViewTestUtils;
+import com.anysoftkeyboard.rx.TestRxSchedulers;
 import com.kasahorow.android.keyboard.app.R;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class EffectsSettingsFragmentTest
-        extends RobolectricFragmentTestCase<EffectsSettingsFragment> {
+    extends RobolectricFragmentTestCase<EffectsSettingsFragment> {
 
-    @NonNull
-    @Override
-    protected EffectsSettingsFragment createFragment() {
-        return new EffectsSettingsFragment();
-    }
+  @Override
+  protected int getStartFragmentNavigationId() {
+    return R.id.effectsSettingsFragment;
+  }
 
-    @Test
-    public void testNavigateToPowerSavingFragment() {
-        final EffectsSettingsFragment fragment = startFragment();
+  @Test
+  public void testNavigateToPowerSavingFragment() {
+    final EffectsSettingsFragment fragment = startFragment();
 
-        ViewTestUtils.performClick(fragment.findPreference("settings_key_power_save_mode"));
+    ViewTestUtils.performClick(fragment.findPreference("settings_key_power_save_mode"));
 
-        Robolectric.flushForegroundThreadScheduler();
-        final Fragment next =
-                fragment.getActivity()
-                        .getSupportFragmentManager()
-                        .findFragmentById(R.id.main_ui_content);
-        Assert.assertTrue(next instanceof PowerSavingSettingsFragment);
-    }
+    TestRxSchedulers.foregroundFlushAllJobs();
+    final Fragment next = getCurrentFragment();
+    Assert.assertTrue(next instanceof PowerSavingSettingsFragment);
+  }
 }

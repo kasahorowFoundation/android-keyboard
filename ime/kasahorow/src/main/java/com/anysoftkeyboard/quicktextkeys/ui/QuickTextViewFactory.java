@@ -1,6 +1,5 @@
 package com.anysoftkeyboard.quicktextkeys.ui;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -9,24 +8,23 @@ import com.kasahorow.android.keyboard.app.R;
 
 public class QuickTextViewFactory {
 
-    public static QuickTextPagerView createQuickTextView(
-            Context context,
-            ViewGroup parent,
-            QuickKeyHistoryRecords quickKeyHistoryRecords,
-            DefaultSkinTonePrefTracker defaultSkinTonePrefTracker) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        @SuppressLint("InflateParams")
-        QuickTextPagerView rootView =
-                (QuickTextPagerView)
-                        inflater.inflate(R.layout.quick_text_popup_root_view, parent, false);
-        // hard setting the height - this should be the same height as the standard keyboard
-        ViewGroup.LayoutParams params = rootView.getLayoutParams();
-        params.height = parent.getHeight();
+  public static QuickTextPagerView createQuickTextView(
+      Context context,
+      ViewGroup parent,
+      QuickKeyHistoryRecords quickKeyHistoryRecords,
+      DefaultSkinTonePrefTracker defaultSkinTonePrefTracker,
+      DefaultGenderPrefTracker defaultGenderPrefTracker) {
+    LayoutInflater inflater = LayoutInflater.from(context);
+    QuickTextPagerView rootView =
+        (QuickTextPagerView) inflater.inflate(R.layout.quick_text_popup_root_view, parent, false);
+    // hard setting the height - this should be the same height as the standard keyboard
+    ViewGroup.LayoutParams params = rootView.getLayoutParams();
+    params.height = parent.getHeight();
 
-        rootView.setLayoutParams(params);
-        rootView.setQuickKeyHistoryRecords(quickKeyHistoryRecords);
-        rootView.setDefaultSkinTonePrefTracker(defaultSkinTonePrefTracker);
+    rootView.setLayoutParams(params);
+    rootView.setQuickKeyHistoryRecords(quickKeyHistoryRecords);
+    rootView.setEmojiVariantsPrefTrackers(defaultSkinTonePrefTracker, defaultGenderPrefTracker);
 
-        return rootView;
-    }
+    return rootView;
+  }
 }

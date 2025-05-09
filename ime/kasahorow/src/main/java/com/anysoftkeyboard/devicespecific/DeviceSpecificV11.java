@@ -34,6 +34,7 @@ public class DeviceSpecificV11 extends DeviceSpecificLowest {
             InputConnection ic, int wordOffsetInInput, CharSequence oldWord, CharSequence newWord) {
         super.commitCorrectionToInputConnection(ic, wordOffsetInInput, oldWord, newWord);
         CorrectionInfo correctionInfo = new CorrectionInfo(wordOffsetInInput, oldWord, newWord);
+
         ic.commitCorrection(correctionInfo);
     }
 

@@ -25,13 +25,6 @@ buildscript {
     }
 }
 
-apply plugin: 'com.github.sherter.google-java-format'
-
-googleJavaFormat {
-    toolVersion = '1.8'
-    options style: 'AOSP'
-}
-
 allprojects {
     repositories {
         google()

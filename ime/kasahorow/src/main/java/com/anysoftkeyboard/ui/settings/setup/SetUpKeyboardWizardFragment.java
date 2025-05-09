@@ -14,8 +14,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.kasahorow.android.keyboard.app.R;
 import com.menny.android.anysoftkeyboard.AnyApplication;
+import com.kasahorow.android.keyboard.app.R;
 import java.lang.ref.WeakReference;
 
 /**

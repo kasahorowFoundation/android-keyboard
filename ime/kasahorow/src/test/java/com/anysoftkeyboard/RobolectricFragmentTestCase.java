@@ -1,118 +1,66 @@
 package com.anysoftkeyboard;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+import com.anysoftkeyboard.rx.TestRxSchedulers;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.kasahorow.android.keyboard.app.R;
-import org.junit.Test;
+import java.util.List;
+import org.junit.Assert;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
-import org.robolectric.annotation.Config;
-import org.robolectric.shadows.support.v4.SupportFragmentController;
+import org.robolectric.android.controller.ActivityController;
+import org.robolectric.annotation.LooperMode;
 
 /** Driver for a Fragment unit-tests */
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
-public abstract class RobolectricFragmentTestCase<T extends Fragment> {
+@LooperMode(LooperMode.Mode.PAUSED)
+public abstract class RobolectricFragmentTestCase<F extends Fragment>
+    extends RobolectricFragmentActivityTestCase<
+        RobolectricFragmentTestCase.TestMainSettingsActivity, F> {
 
-    private SupportFragmentController<T> mFragmentController;
+  @IdRes
+  protected abstract int getStartFragmentNavigationId();
 
-    @NonNull
-    protected abstract T createFragment();
+  @Override
+  protected Fragment getCurrentFragment() {
+    return getCurrentFragmentFromActivity(getActivityController().get());
+  }
 
-    @NonNull
-    protected final T startFragment() {
-        return startFragmentWithState(null);
+  @NonNull
+  public static Fragment getCurrentFragmentFromActivity(@NonNull FragmentActivity activity) {
+    NavHostFragment navHostFragment =
+        (NavHostFragment)
+            activity.getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+    Assert.assertNotNull(navHostFragment);
+    final List<Fragment> fragments = navHostFragment.getChildFragmentManager().getFragments();
+    Assert.assertFalse(fragments.isEmpty());
+    final Fragment fragment = fragments.get(0);
+    Assert.assertNotNull(fragment);
+    return fragment;
+  }
+
+  @Override
+  protected ActivityController<TestMainSettingsActivity> createActivityController() {
+    TestMainSettingsActivity.CREATED_FRAGMENT = getStartFragmentNavigationId();
+    return ActivityController.of(new TestMainSettingsActivity());
+  }
+
+  public static class TestMainSettingsActivity extends MainSettingsActivity {
+    @IdRes private static int CREATED_FRAGMENT;
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+      super.onPostCreate(savedInstanceState);
+      final NavController navController =
+          ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment))
+              .getNavController();
+      navController.navigate(CREATED_FRAGMENT);
+      TestRxSchedulers.drainAllTasks();
     }
-
-    @NonNull
-    protected final T startFragmentWithState(@Nullable Bundle state) {
-        T fragment = createFragment();
-        TestMainSettingsActivity.CREATED_FRAGMENT = fragment;
-
-        mFragmentController =
-                SupportFragmentController.of(fragment, TestMainSettingsActivity.class)
-                        .create(R.id.main_ui_content, state)
-                        .start()
-                        .postCreate(state)
-                        .resume()
-                        .visible();
-
-        ensureAllScheduledJobsAreDone();
-
-        return mFragmentController.get();
-    }
-
-    protected SupportFragmentController<T> getFragmentController() {
-        return mFragmentController;
-    }
-
-    protected void ensureAllScheduledJobsAreDone() {
-        int maxLoops = 20; // sometimes there is a re-added task. Animation?
-        while (maxLoops > 0
-                && (Robolectric.getForegroundThreadScheduler().size() > 0
-                        || Robolectric.getBackgroundThreadScheduler().size() > 0)) {
-            Robolectric.flushBackgroundThreadScheduler();
-            Robolectric.flushForegroundThreadScheduler();
-            maxLoops--;
-        }
-    }
-    /*Ahead are some basic tests we can run regardless*/
-
-    @Test
-    public void testEnsurePortraitFragmentHandlesHappyPathLifecycle() {
-        startFragment();
-
-        mFragmentController.pause().stop().destroy();
-        ensureAllScheduledJobsAreDone();
-    }
-
-    @Test
-    @Config(qualifiers = "w480dp-h800dp-land-mdpi")
-    public void testEnsureLandscapeFragmentHandlesHappyPathLifecycle() {
-        startFragment();
-
-        mFragmentController.pause().stop().destroy();
-
-        ensureAllScheduledJobsAreDone();
-    }
-
-    @Test
-    public void testEnsureFragmentHandlesHappyPathLifecycleWithResume() {
-        startFragment();
-
-        mFragmentController.pause().stop();
-        ensureAllScheduledJobsAreDone();
-
-        mFragmentController.start().resume();
-        ensureAllScheduledJobsAreDone();
-
-        mFragmentController.pause().stop().destroy();
-        ensureAllScheduledJobsAreDone();
-    }
-
-    @Test
-    public void testEnsureFragmentHandlesRecreateWithInstanceState() {
-        startFragment();
-
-        mFragmentController.pause().stop();
-        Bundle state = new Bundle();
-        mFragmentController.get().onSaveInstanceState(state);
-        mFragmentController.destroy();
-
-        ensureAllScheduledJobsAreDone();
-
-        startFragmentWithState(state);
-    }
-
-    public static class TestMainSettingsActivity extends MainSettingsActivity {
-        private static Fragment CREATED_FRAGMENT;
-
-        @NonNull
-        @Override
-        protected Fragment createRootFragmentInstance() {
-            return CREATED_FRAGMENT;
-        }
-    }
+  }
 }

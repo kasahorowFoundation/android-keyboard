@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
-    <string name="ime_name">kasahorow</string>
+    
 
     <string name="debug_tracing_starting">Tracing started!\nMake sure you stop it at some point
     </string>
@@ -11,12 +11,12 @@
 
     <string name="menu_about_item">About</string>
 
-    <string name="how_to_pointer_title">Welcome to kasahorow</string>
+    <string name="how_to_pointer_title">Welcome to AnySoftKeyboard</string>
 
     <string name="change_log_card_version_title_template">\u0020\u0020Latest changes for v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">More:\u0020<xliff:g id="url">%s</xliff:g></string>
-
+    
     <string name="notification_text_testers">This is a beta version. Use with caution!</string>
     <string name="testers_version">Testers build!</string>
 
@@ -31,14 +31,11 @@
     <string name="ui_effects_settings_tile">Keyboard effects and experience.</string>
 
     <!-- welcome -->
-    <!-- changelog -->
-    <string name="changelog">Change Log</string>
-    <string name="search_market_for_addons">Search for add-ons</string>
+    
     <string name="search_market_for_keyboard_addons">Get more keyboards at the app store</string>
     <string name="search_market_for_quick_key_addons">Get more <i>Quick-Text</i> add-ons at the app store…</string>
-    <string name="no_market_store_available">Could not find an app store on your device.\nUnable to search for add-ons!</string>
+    
     <string name="keyboard_theme_tweak_group">Tweaks</string>
-    <string name="close_button">Close</string>
     <string name="delete_button">Delete</string>
 
     <!-- Indicates that a word has been added to the dictionary -->
@@ -47,6 +44,8 @@
     <string name="removed_word">Removed:\u0020<xliff:g id="word">%s</xliff:g></string>
     <string name="hint_add_to_dictionary">\u2190 Touch again to save</string>
     <string name="hint_double_tap_to_close">Again to remove suggestions</string>
+
+    <string name="hint_click_for_inline_suggestions">Available auto-fill suggestions</string>
 
     <!-- voice -->
     <string name="voice_input_not_installed_title">Voice Is Not Installed</string>
@@ -73,6 +72,10 @@
     <string name="effects_group">Effects</string>
     <string name="ime_settings">Keyboard settings</string>
     <string name="switch_incognito">Incognito Mode</string>
+
+    <string name="use_system_vibration_title">Use system vibration</string>
+    <string name="use_system_vibration_off_summary">Using custom vibration setting</string>
+    <string name="use_system_vibration_on_summary">Using Android system vibration setting</string>
     <string name="vibrate_on_key_press_title">Vibrate on key-press</string>
     <string name="vibrate_on_key_press_value_template">%d milliseconds</string>
 
@@ -92,7 +95,7 @@
     <string name="night_mode_vibration_control">Disable key-press vibrations</string>
 
     <string name="power_save_mode_screen">Power-Saving settings</string>
-    <string name="power_save_mode_description">Power-Saving mode will reduce the energy consumption of kasahorow by disabling features:</string>
+    <string name="power_save_mode_description">Power-Saving mode will reduce the energy consumption of AnySoftKeyboard by disabling features:</string>
 
     <string name="power_save_mode_state_summary">Currently, Power-Saving trigger:\u0020%s</string>
 
@@ -244,6 +247,7 @@
     <string name="swipe_action_name_compact_layout_to_left">Compact layout to left</string>
 
     <string name="swipe_action_name_utility_keyboard">Show utility keyboard</string>
+    <string name="swipe_action_name_quick_text_popup">Show emoji popup</string>
 
     <string name="settings_swipe_velocity_threshold_title">Swipe velocity threshold</string>
     <string name="settings_swipe_velocity_threshold_summary">The minimal swipe gesture speed. Currently, %s</string>
@@ -271,12 +275,12 @@
     <string name="more_ui_settings_group">User Interface</string>
 
     <string name="special_dictionaries_group">Special dictionaries</string>
-    <string name="special_dictionaries_group_summary">Suggestion dictionaries used in kasahorow</string>
+    <string name="special_dictionaries_group_summary">Suggestion dictionaries used in AnySoftKeyboard</string>
     <string name="use_user_dictionary">User-dictionary</string>
     <string name="use_user_dictionary_on_summary">Suggest user added words (double-click a typed-suggestion to add)</string>
     <string name="use_user_dictionary_off_summary"/>
     <string name="always_use_fallback_user_dictionary">Use private User-Dictionary storage</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Use private-storage kasahorow\'s built-in User-dictionary mechanism.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Use private-storage AnySoftKeyboard\'s built-in User-dictionary mechanism.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Try to use Android\'s global built-in User-dictionary.</string>
     <string name="use_auto_dictionary">Auto dictionary</string>
     <string name="use_auto_dictionary_dialog_title">Select learn method</string>
@@ -319,8 +323,7 @@
     </string>
 
     <string name="tweak_dictionary_group">Dictionary tweaks</string>
-    <string name="settings_min_length_for_word_correction">Minimum word length for correction
-    </string>
+    
 
     <string name="show_keyboard_name_text">Show keyboard name</string>
     <string name="show_keyboard_name_on_summary">Show keyboard name on space-bar</string>
@@ -411,6 +414,10 @@
     <string name="key_press_preview_popup_off_summary">Do not show popup upon key-press</string>
     <string name="zoom_factor_keys_in_portrait">Keys height factor in portrait mode</string>
     <string name="zoom_factor_keys_in_landscape">Keys height factor in landscape mode</string>
+    <string name="keys_zoom_factor_template">%d%%</string>
+
+    <string name="bottom_padding_in_dp_title">Keyboard bottom offset</string>
+    <string name="bottom_padding_in_dp_template">%d points</string>
 
     <string name="insert_space_after_word_suggestion_selection">Space after candidate pick</string>
     <string name="insert_space_after_word_suggestion_selection_on_summary">Insert space after word
@@ -436,8 +443,8 @@
     <string name="lang_key_shows_popup_off_summary">Language key will cycle languages</string>
 
     <string name="settings_os_clipboard_sync">Sync clipboard with OS</string>
-    <string name="settings_os_clipboard_sync_summary_on">Detect clipboard changes and sync with kasahorow.</string>
-    <string name="settings_os_clipboard_sync_summary_off">Do not listen to clipboard operations outside of kasahorow.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Detect clipboard changes and sync with AnySoftKeyboard.</string>
+    <string name="settings_os_clipboard_sync_summary_off">Do not listen to clipboard operations outside of AnySoftKeyboard.</string>
 
     <string name="auto_caps">Auto-capitalization</string>
     <string name="grammar_group">Grammar</string>
@@ -449,10 +456,15 @@
     <string name="candidates_off_summary">No suggestions will be shown</string>
     <string name="quick_fix">Quick fixes and abbreviations</string>
     <string name="quick_fix_summary">Corrects commonly typed mistakes, and expands abbreviations</string>
-    <string name="quick_fix_secon_disabled">&#8230;on first language only</string>
+    <string name="quick_fix_secon_disabled">…on first language only</string>
     <string name="quick_fix_secon_disabled_summ_on">Quick fixes and abbreviations will work only on current layout language</string> 
     <string name="quick_fix_secon_disabled_summ_off">Quick fixes and abbreviations will work on every language 
                   checked in override default dictionary</string>
+
+
+    <string name="try_split_words_for_correction">Correct by splitting typed word</string>
+    <string name="try_split_words_for_correction_summary_on">Split typed word by guessing missing SPACE.</string>
+    <string name="try_split_words_for_correction_summary_off"/>
 
     <string name="allow_suggestions_restart">Suggestions restart</string>
     <string name="allow_suggestions_restart_summary">Restart word suggestion upon cursor movement
@@ -552,6 +564,8 @@
     <string name="extension_kbd_extension_numbers_symbols">Numbers and symbols</string>
     <string name="extension_kbd_bottom_minimal">Minimal</string>
     <string name="extension_kbd_bottom_minimal_no_emoji">Minimal (no emoji)</string>
+    <string name="extension_kbd_bottom_minimal_less_punctuation">Minimal (less punctuation)</string>
+    <string name="extension_kbd_bottom_minimal_alt">Minimal (alternate)</string>
 
     <!-- Tutorials -->
     <!-- Special soft keyboard keys text -->
@@ -614,16 +628,14 @@
     <string name="settings_long_press_timeout_never">Never</string>
 
     <string name="settings_force_locale_title">Force Locale</string>
-    <string name="settings_force_locale_summary">Force locale used inside kasahorow (takes
-        awhile to take affect). Currently: %s.
-    </string>
+    <string name="settings_force_locale_summary">Force locale used inside kasahorow (takes awhile to take affect). Currently: %s.</string>
 
     <string name="tweak_workarounds_group">Workarounds</string>
     <string name="workaround_disable_rtl_fix">Use Android\'s Right-to-Left handling</string>
     <string name="workaround_disable_rtl_fix_summary_on">Use OS RTL handling. Should work fine on
         newer devices.
     </string>
-    <string name="workaround_disable_rtl_fix_summary_off">Use kasahorow RTL handling. Should
+    <string name="workaround_disable_rtl_fix_summary_off">Use AnySoftKeyboard RTL handling. Should
         only be used if OS fails to do RTL.
     </string>
 
@@ -665,21 +677,15 @@
         You can add your first word now.
     </string>
 
-    <string name="user_dict_backup_success_title">Backup done!</string>
-    <string name="user_dict_backup_success_text">Successfully stored your words on device storage
-        at\u0020/Android/data/com.menny.android.anysoftkeyboard/files/
-    </string>
-    <string name="user_dict_backup_fail_title">Backup failed!</string>
-    <string name="user_dict_backup_fail_text_with_error">Failed to store words due to:\u0020
-        <xliff:g id="error">%s</xliff:g>
-    </string>
+    
+    
+    
+    
 
-    <string name="user_dict_restore_success_title">Restore done!</string>
-    <string name="user_dict_restore_success_text">Successfully restored your words.</string>
-    <string name="user_dict_restore_fail_title">Restore failed!</string>
-    <string name="user_dict_restore_fail_text_with_error">Failed to restore words due to:\u0020
-        <xliff:g id="error">%s</xliff:g>
-    </string>
+    
+    
+    
+    
 
     <string name="should_swap_punctuation_and_space_title">Swap punctuation and space</string>
     <string name="should_swap_punctuation_and_space_off_summary">Do not swap space and
@@ -703,12 +709,16 @@
     <string name="emoji_default_skin_tone_value_type_5">Medium-Dark Skin Tone</string>
     <string name="emoji_default_skin_tone_value_type_6">Dark Skin Tone</string>
     <string name="emoji_default_skin_tone_value_random_type">Random Skin Tone</string>
+    <string name="emoji_default_gender_title">Emoji default gender</string>
+    <string name="emoji_default_gender_summary">Default gender to use: %s</string>
+    <string name="emoji_default_gender_value_person">Person</string>
+    <string name="emoji_default_gender_value_woman">Woman</string>
+    <string name="emoji_default_gender_value_man">Man</string>
+    <string name="emoji_default_gender_value_random_type">Random gender</string>
 
     <string name="developer_tools">Developer tools</string>
     <string name="click_for_developer_features">Developer tools</string>
-    <string name="click_for_developer_features_summary">Various tools for kasahorow
-        developers
-    </string>
+    <string name="click_for_developer_features_summary">Various tools for kasahorow developers</string>
     <string name="failed_to_create_mem_dump">Failed to create memory dump file due to:
         <xliff:g id="message">%s</xliff:g>
     </string>
@@ -717,12 +727,11 @@
     </string>
 
 
-    <string name="not_configured_with_click_here">kasahorow is not fully set-up for use. Click
+    <string name="not_configured_with_click_here">AnySoftKeyboard is not fully set-up for use. Click
         here to set up.
     </string>
+    <string name="not_notification_permission_text">AnySoftKeyboard does not have your permission to post notifications. We might, rarely, need to notify you with critical issues (like crashes).</string>
     <string name="not_configured_with_just_click_here">Click here</string>
-
-    <string name="click_for_more">more…</string>
 
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
 
@@ -738,50 +747,44 @@
     <string name="enter_abbreviation_target_hint">Full sentence</string>
     <string name="toast_error_custom_path_backup">Error: Any contextual app could be open</string>
 
-    <string name="file_explorer_menu_add_folder">Create folder</string>
-    <string name="file_explorer_filename">Backup filename&#8230;</string>
-    <string name="file_explorer_filename_empty">Filename cannot be empty&#8230;</string>
-    <string name="file_explorer_alert_title">Select this file ?</string>
-    <string name="file_explorer_restore_alert_message">Do you want to restore this file ?</string>
-    <string name="file_explorer_backup_alert_message">This file will be overwritten.</string>
+    
+    
+    
+    
+    
+    
 
-    <string name="file_explorer_backup_success">Your data have been saved to\u0020</string>
-    <string name="file_explorer_backup_failed">Your data have failed to ba saved.</string>
-    <string name="file_explorer_restore_success">Your data have been restored from\u0020</string>
-    <string name="file_explorer_restore_failed">Your data have failed to be restored.</string>
+    
+    
+    
+    
 
     <string name="about_additional_software_licenses">Additional Software Licenses</string>
 
-    <string name="setup_wizard_step_one_title">Enable kasahorow</string>
+    <string name="setup_wizard_step_one_title">Enable AnySoftKeyboard</string>
     <string name="setup_wizard_step_one_details">In this step, you\'ll need to enable <i>
-        kasahorow</i>. Please check <i>\'kasahorow\'</i> in your <i>Language&amp;Input
+        AnySoftKeyboard</i>. Please check <i>\'AnySoftKeyboard\'</i> in your <i>Language&amp;Input
         settings</i>. This will allow us to run on your device.
     </string>
     <string name="setup_wizard_step_one_action">Go to your <i>Language&amp;Input settings</i>…
     </string>
     <string name="setup_wizard_step_one_action_error_no_settings_activity">Error: Your device does
-        not support 3rd-party keyboards. kasahorow can not be activated!
+        not support 3rd-party keyboards. AnySoftKeyboard can not be activated!
     </string>
 
     <string name="setup_wizard_step_permissions_title">Enable Permissions</string>
 
-    <string name="setup_wizard_step_permissions_details">In this step, you can approve <i>
-        kasahorow
-    </i> to read contacts stored on your device. If you wish to block this access, you may disable
-        Contacts Dictionary.
-    </string>
-
-    <string name="setup_wizard_step_two_title">Switch to kasahorow</string>
-    <string name="setup_wizard_step_two_details">Your system can use <i>kasahorow</i> now, but
-        it is not set as the active keyboard.\nBy switching, <i>kasahorow</i> will be your new
+    <string name="setup_wizard_step_two_title">Switch to AnySoftKeyboard</string>
+    <string name="setup_wizard_step_two_details">Your system can use <i>AnySoftKeyboard</i> now, but
+        it is not set as the active keyboard.\nBy switching, <i>AnySoftKeyboard</i> will be your new
         on-screen keyboard, along with all its features!
     </string>
     <string name="setup_wizard_step_two_action">Switch active keyboards</string>
     <string name="setup_wizard_step_three_title">What\'s next</string>
-    <string name="setup_wizard_step_three_details">Thank you for choosing <i>kasahorow</i>.
+    <string name="setup_wizard_step_three_details">Thank you for choosing <i>AnySoftKeyboard</i>.
     </string>
     <string name="setup_wizard_step_three_details_done">
-        <b>You are done 🎉\nGo to you favorite app to try it out.</b>
+        <b>You are done 🎉\nGo to your favorite app to try it out.</b>
     </string>
     <string name="setup_wizard_step_three_details_actions">Or, you can customize and personalize the
         keyboard to your likings:
@@ -791,17 +794,11 @@
     <string name="setup_wizard_step_three_action_all_settings">Configure everything else…</string>
 
     <string name="setup_wizard_step_download_title">Download Language Packs</string>
-    <string name="setup_wizard_step_download_details">You\'ll be happy to know that <i>kasahorow</i> supports dozens of languages. Just download the desired language-pack and enjoy typing in
-        any language on your device.</string>
+    <string name="setup_wizard_step_download_details">You\'ll be happy to know that <i>kasahorow</i> supports dozens of languages. Just download the desired language pack and enjoy typing in any language.</string>
     <string name="setup_wizard_step_download_action">Download language pack</string>
     <string name="setup_wizard_step_download_skip_action">Skip</string>
 
-
-    <string name="ime_crashed_title">kasahorow Crashed!</string>
-    <string name="ime_crashed_sub_text">Oops, didn\'t see that coming…</string>
-    <string name="ime_crashed_ticker">Oops, kasahorow crashed, didn\'t see that coming…
-    </string>
-    <string name="ime_crashed_text">Unfortunately, there is a problem with <i>kasahorow</i>.
+    <string name="ime_crashed_text">Unfortunately, there is a problem with <i>AnySoftKeyboard</i>.
         Do not panic, there is something <b>you</b> can do to help resolve this: send us the crash
         report, and we\'ll do our best to solve this crash and get you back with an awesome keyboard
         experience!\n\nWith sincere apology, the Dev team.
@@ -821,26 +818,22 @@
     <string name="clipboard_paste_entries_title">Pick text to paste</string>
     <string name="next_word_prefs_clear_data">Clear next-word data</string>
     <string name="next_word_prefs_clear_data_summary">This is irreversible. All your typing history will be cleared.</string>
+    <string name="wizard_allow_contacts_permission">Allow contacts-based typing suggestions</string>
+    <string name="setup_wizard_step_three_action_show_keyboard">Show me\nkasahorow!</string>
+    <string name="setup_wizard_step_three_action_go_to_home_fragment">Go to main page</string>
     <string name="notification_read_contacts_title">Can I read your contacts?</string>
     <string name="notification_read_contacts_text">We need to read your contacts to give you a better auto-complete experience.</string>
-    <string name="notification_read_contacts_ticker">Contacts permission needed</string>
-    <string name="contacts_permissions_dialog_message">kasahorow is using your contacts\'
-        names to provide you with a personalized word suggestion: as you type a word, we look for
-        similar words to auto-complete and auto-correct your typing.
-    </string>
     <string name="wizard_allow_contacts_permission">Allow contacts-based typing suggestions</string>
-    <string name="allow_permission">Allow</string>
-    <string name="navigate_to_app_permissions">Go to App permissions</string>
+    
     <string name="turn_off_contacts_dictionary">Turn off Contacts Dictionary</string>
     <string name="read_more_about_permissions">Read more about permissions…</string>
-    <string name="ask_beta_link_promo">Hey! Want new <i>kasahorow</i> stuff faster? Then
+    <string name="ask_beta_link_promo">Hey! Want new <i>AnySoftKeyboard</i> stuff faster? Then
         you\'re in luck! <i>BETA</i> channel is now available for <b>YOU</b>!\nJust sign up at the
         link below, and update through <i>Google Play</i> app store!\n\n
         https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nAnd thanks for
-        helping out to kill bugs before the reach the public.
+        helping out to kill bugs before they reach the public.
     </string>
     <string name="clipboard_fine_select_enabled_toast">Fine-text-selection enabled. Use left/right arrows.</string>
-
     <string name="app_shortcut_keyboards_disabled">Keyboards navigation disabled</string>
     <string name="app_shortcut_keyboards_long_label">Pick keyboard layouts to use</string>
     <string name="app_shortcut_keyboards_short_label">Keyboards</string>
@@ -868,20 +861,21 @@
     <string name="no_internet_fields_specific_layout">None</string>
     <string name="bottom_nav_home">Hello</string>
     <string name="setup_wizard_welcome_title">Welcome!</string>
-    <string name="setup_wizard_welcome_sub_title">Thank you for giving kasahorow a try!
+    <string name="setup_wizard_welcome_sub_title">Thank you for giving AnySoftKeyboard a try!
     </string>
     <string name="setup_wizard_welcome_info">As with any other Android keyboard, you are required to
-        enable kasahorow in Android Settings pages. This is required by Android to ensure that
+        enable AnySoftKeyboard in Android Settings pages. This is required by Android to ensure that
         your typing data is not stolen by evil keyboards*.
     </string>
     <string name="setup_wizard_welcome_info_2">Okay, ready? click below to start, I\'ll guide you through this.</string>
     <string name="setup_wizard_welcome_start_action">Start setup…</string>
 
-    <string name="setup_wizard_welcome_info_footnote">* Of course, kasahorow is not evil. You
+    <string name="setup_wizard_welcome_info_footnote">* Of course, AnySoftKeyboard is not evil. You
         are encouraged to look at our source code and verify that. Plus, we do not have <i>NETWORK
         </i> permissions, so we can not send any data off the device.
     </string>
     <string name="setup_wizard_welcome_privacy_action">Go to Privacy Policy…</string>
+    <string name="setup_wizard_skip">Skip</string>
     <string name="clear_all_dictionary_override">Clear overrides</string>
 
     <string name="theme_case_type_override_dialog_title">Pick letter-case override</string>
@@ -914,7 +908,7 @@
     <string name="prefs_providers_backed_up_to">You data was successfully backed-up to %s</string>
     <string name="prefs_providers_failed_restore_due_to">Failed to restore your data due to %s</string>
     <string name="prefs_providers_restored_to">You data was successfully restored from %s</string>
-    <string name="word_editor_action_choose_path">Choose custom path</string>
+    
 
     <string name="allow_layouts_to_provide_generic_rows">Keyboards can provide generic rows</string>
     <string name="allow_layouts_to_provide_generic_rows_off_summary">Always use selected generic rows.</string>
@@ -926,6 +920,7 @@
     <string name="gesture_typing_alert_title">BETA Feature!</string>
     <string name="gesture_typing_alert_message">The gesture-typing ➿ feature is at <b>beta</b> maturity. It has some bugs, not that fast, and not that complete.\nSaying that, you should try it out.</string>
     <string name="gesture_typing_alert_button">Got it</string>
+    <string name="undo_gesture_typing">Undo gesture typing</string>
     <string name="apply_remote_app_colors_to_theme">Change theme colors based on used app</string>
     <string name="apply_overlay_summary_on">Keyboard\'s colors will match active app (to the best of our ability).</string>
     <string name="apply_overlay_summary_off">Always use theme\'s colors.</string>
@@ -937,15 +932,18 @@
     <string name="aosp_light_theme_name">AOSP Light theme</string>
     <string name="aosp_light_theme_description">AOSP-Inspired light colors keyboard theme</string>
 
-    <string name="app_share_title">Hello from kasahorow</string>
-    <string name="app_share_menu_title">Share kasahorow using</string>
-    <string name="app_share_text">Let me recommend the open-source, privacy-focus, free, highly customizable, multi-language Android keyboard app kasahorow.\nGet it from:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
-    <string name="covid_19_click_for_info">Keep safe! Click for info on CoronaVirus.</string>
-    <string name="click_me_for_easter_egg_info">click me for a surprise</string>
-    <!-- this URL should be localized - it should point to a web-site with information in the locale language. -->
-    <string name="codvid_info_url">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</string>
+    <string name="app_share_title">Hello from AnySoftKeyboard</string>
+    <string name="app_share_menu_title">Share AnySoftKeyboard using</string>
+    <string name="app_share_text">Let me recommend the open-source, privacy-focus, free, highly customizable, multi-language Android keyboard app AnySoftKeyboard.\nGet it from:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
 
-    <string name="next_word_upload_group">Next Word Usage Upload</string>
-    <string name="next_word_upload_summary">Allow us to collect your word usage to our servers to help us better suggest words for you as you type.</string>
-    <string name="next_word_upload_action">Enable next word usage upload</string>
+    <string name="click_me_for_easter_egg_info">click me for a surprise</string>
+    
+    
+    <string name="delete_all_clipboard_entries">Empty clipboard</string>
+
+    <string name="tip_swipe_from_backspace_to_clear">Tip: you can swipe-left from the backspace to clear the word!</string>
+    <string name="notification_read_contacts_ticker">Contacts permission needed</string>
+    <string name="wizard_allow_notification_permission">Allow notifications from AnySoftKeyboard</string>
+    <string name="setup_wizard_step_notification_permissions_details">In rare cases (for example app crashes) we would need to post a device notification. This is recommended but disallow notification will not affect the behavior of this app.</string>
+    <string name="wizard_skip_notification_permission">Do not allow notifications</string>
 </resources>

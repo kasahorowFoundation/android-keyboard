@@ -1,31 +1,31 @@
-Share something interesting in your language today  - write.kasahorow.org
+Any Soft Keyboard is an open-source, on-screen keyboard with multiple languages support with emphasis on privacy.
+This is one of the most customizable keyboards available.
 
-Features
-=======
-- Conveniently type Akan (Fanti, Twi, Akuapem), English, Ga-Dangme, Gbe (Ewe, Ewegbe, Fon), Gikuyu, Hausa, Igbo, Wolof and Yoruba. 
-- The project for this app is maintained at https://github.com/mereba/kasahorow-Keyboard-For-Android.
+To activate: Launch <i>'AnySoftKeyboard Settings'</i> App, and follow the instructions.
 
-Known Issue
-==========
-- Some characters including capital letters of some of the layouts are not supported by Android 4.2. Known issues in respect of font support are slated to be fixed with the release of Android 4.3. Check here -- https://code.google.com/p/android/issues/detail?id=26037  -- for more details.
-- Update -- As of Android 5.0, the new system fonts support all characters in the app.
+Main features:
+* Multi languages keyboard support via external packages.
+* Completion dictionaries for multiple languages.
+* Also completes your typed words from you contacts names (Android 2.0+)!
+* And, learns your typing behavior to provide next-word prediction.
+* Multi-Touch support (as in, pressing SHIFT along with other characters).
+* Extension keyboard (swipe your finger all the way up out of the keyboard).
+* Voice Input support (Android 2.2+).
+* Compact/Phablet Mode.
+* Gesture support:
+** Experimental Gesture-Typing (enable in the Settings app).
+** Swipe left or right to switch layouts.
+** Swipe up to shift.
+** Swipe down to close the keyboard.
+* Theme support (comes with a few built-in skins, and more available in Play Store).
+* Night Mode: Quiet, Dark keyboard at night time (enable in the Settings app).
+* Power-Saving Mode: No vibrations, sound, suggestions and a dark theme (enable in the Settings app).
+* Build-in user dictionary words editor.
+* Build-in abbreviations dictionary: create shortcuts for words and sentences.
+* Utility keyboard (swipe up from space-bar):
+** Clipboard actions copy, paste, select-all, select selectively (long-press <i>select</i> and use arrow keys).
+** Voice input
+** Arrows
+* And many more features!
 
-Supported Layouts
-==============
-Akan - http://www.kasahorow.org/node/5
-English - Standard QWERTY
-Ga-Dangme - http://www.kasahorow.org/alphabets/ga
-Gbe - http://www.kasahorow.org/node/6
-Gikuyu - http://www.kasahorow.org/alphabets/gikuyu
-Hausa - http://www.kasahorow.org/node/7
-Igbo - http://www.kasahorow.org/alphabets/igbo
-Wolof - http://www.kasahorow.org/alphabets/wolof
-Yoruba - http://www.kasahorow.org/node/21
-
-Credits
-=====
--  This app is based on the AnySoftKeyboard project maintained at https://github.com/AnySoftKeyboard/AnySoftKeyboard.
-
-Search terms
-==========
-Twi keyboard, Fanti keyboard, Akwapim/Akuapem keyboard, Akan keyboard, Ga keyboard, Ga-Dangme keyboard, Gbe keyboard, Ewe keyboard, Gikuyu keyboard, Kikuyu keyboard, Hausa keyboard, Igbo keyboard, Wolof keyboard, Yoruba keyboard, Ghanaian keyboard, Nigerian keyboard, Kenyan keyboard.
+Support at: https://github.com/AnySoftKeyboard

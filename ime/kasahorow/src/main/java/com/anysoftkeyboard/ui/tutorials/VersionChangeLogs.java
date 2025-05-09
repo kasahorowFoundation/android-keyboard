@@ -1,5 +1,6 @@
 package com.anysoftkeyboard.ui.tutorials;
 
+import com.kasahorow.android.keyboard.app.R;
 import android.net.Uri;
 import android.text.TextUtils;
 import java.util.ArrayList;
@@ -12,15 +13,13 @@ public class VersionChangeLogs {
 
         log.add(
                 new VersionChangeLog(
-                        4,
-                        0,
+                        1,
+                        10,
                         "r4",
                         Uri.parse(
                                 "https://github.com/AnySoftKeyboard/AnySoftKeyboard/milestone/92"),
-                        "Keep safe! #covid19 \uD83D\uDE37",
-                        "Updated emoji to version 13.1 - Android 8.1+",
+                        "Keep safe! #covid19",
                         "So, you just copied some text? Let me suggest pasting it.",
-                        "Wrapping selected text with \"'<>(){}[]*-_`~.",
                         "Finally, you can decide where the settings backup file should be.",
                         "People spotted bugs. We slayed them!",
                         "YABTU.",

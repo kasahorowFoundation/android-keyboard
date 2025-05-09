@@ -16,21 +16,26 @@
 
 package com.anysoftkeyboard.devicespecific;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public interface Clipboard {
 
-    interface ClipboardUpdatedListener {
-        void onClipboardEntryAdded(CharSequence text);
-    }
+  interface ClipboardUpdatedListener {
+    void onClipboardEntryAdded(@NonNull CharSequence text);
 
-    CharSequence getText(int entryIndex);
+    void onClipboardCleared();
+  }
 
-    int getClipboardEntriesCount();
+  CharSequence getText(int entryIndex);
 
-    void setText(CharSequence text);
+  int getClipboardEntriesCount();
 
-    void deleteEntry(int entryIndex);
+  boolean isOsClipboardEmpty();
 
-    void setClipboardUpdatedListener(@Nullable ClipboardUpdatedListener listener);
+  void deleteEntry(int entryIndex);
+
+  void deleteAllEntries();
+
+  void setClipboardUpdatedListener(@Nullable ClipboardUpdatedListener listener);
 }

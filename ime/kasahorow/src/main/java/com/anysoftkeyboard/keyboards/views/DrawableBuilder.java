@@ -19,33 +19,33 @@ package com.anysoftkeyboard.keyboards.views;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import com.anysoftkeyboard.theme.KeyboardTheme;
 
 public class DrawableBuilder {
-    private final int mDrawableResourceId;
-    private final KeyboardTheme mTheme;
-    @Nullable private Drawable mDrawable;
+  private final int mDrawableResourceId;
+  private final KeyboardTheme mTheme;
+  @Nullable private Drawable mDrawable;
 
-    private DrawableBuilder(KeyboardTheme theme, int drawableResId) {
-        mTheme = theme;
-        mDrawableResourceId = drawableResId;
-    }
+  private DrawableBuilder(KeyboardTheme theme, int drawableResId) {
+    mTheme = theme;
+    mDrawableResourceId = drawableResId;
+  }
 
-    @Nullable
-    public Drawable buildDrawable() {
-        if (mDrawable != null) return mDrawable;
-        final Context packageContext = mTheme.getPackageContext();
-        if (packageContext == null) return null;
-        mDrawable = ContextCompat.getDrawable(packageContext, mDrawableResourceId);
-        return mDrawable;
-    }
+  @Nullable
+  public Drawable buildDrawable() {
+    if (mDrawable != null) return mDrawable;
+    final Context packageContext = mTheme.getPackageContext();
+    if (packageContext == null) return null;
+    mDrawable = ContextCompat.getDrawable(packageContext, mDrawableResourceId);
+    return mDrawable;
+  }
 
-    public static DrawableBuilder build(KeyboardTheme theme, TypedArray a, final int index) {
-        int resId = a.getResourceId(index, 0);
-        if (resId == 0)
-            throw new IllegalArgumentException("No resource ID was found at index " + index);
-        return new DrawableBuilder(theme, resId);
-    }
+  public static DrawableBuilder build(KeyboardTheme theme, TypedArray a, final int index) {
+    int resId = a.getResourceId(index, 0);
+    if (resId == 0)
+      throw new IllegalArgumentException("No resource ID was found at index " + index);
+    return new DrawableBuilder(theme, resId);
+  }
 }

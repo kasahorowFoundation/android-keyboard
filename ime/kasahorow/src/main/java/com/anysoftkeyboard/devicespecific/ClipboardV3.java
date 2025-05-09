@@ -26,7 +26,8 @@ public class ClipboardV3 implements Clipboard {
     private final ClipboardManager mClipboardManager;
 
     ClipboardV3(Context context) {
-        mClipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        mClipboardManager =
+                (android.text.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
     }
 
     @Override
@@ -48,10 +49,5 @@ public class ClipboardV3 implements Clipboard {
     @Override
     public int getClipboardEntriesCount() {
         return mClipboardManager.hasText() ? 0 : 1;
-    }
-
-    @Override
-    public void deleteEntry(int entryIndex) {
-        mClipboardManager.setText(null);
     }
 }

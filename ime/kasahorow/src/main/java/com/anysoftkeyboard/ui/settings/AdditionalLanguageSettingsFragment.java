@@ -16,49 +16,45 @@
 
 package com.anysoftkeyboard.ui.settings;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceFragmentCompat;
 import android.view.View;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.navigation.Navigation;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 import com.kasahorow.android.keyboard.app.R;
-import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
-import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
+import net.evendanan.pixel.UiUtils;
 
 public class AdditionalLanguageSettingsFragment extends PreferenceFragmentCompat
-        implements Preference.OnPreferenceClickListener {
+    implements Preference.OnPreferenceClickListener {
 
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.prefs_addtional_language_prefs);
-    }
+  @Override
+  public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+    addPreferencesFromResource(R.xml.prefs_addtional_language_prefs);
+  }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        findPreference(getString(R.string.tweaks_group_key)).setOnPreferenceClickListener(this);
-    }
+  @Override
+  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    findPreference(getString(R.string.tweaks_group_key)).setOnPreferenceClickListener(this);
+  }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        MainSettingsActivity.setActivityTitle(
-                this, getString(R.string.language_tweaks_settings_tile));
-    }
+  @Override
+  public void onStart() {
+    super.onStart();
+    UiUtils.setActivityTitle(this, R.string.language_tweaks_settings_tile);
+  }
 
-    @Override
-    public boolean onPreferenceClick(Preference preference) {
-        if (preference.getKey().equals(getString(R.string.tweaks_group_key))) {
-            Activity activity = getActivity();
-            if (activity != null && activity instanceof FragmentChauffeurActivity) {
-                ((FragmentChauffeurActivity) activity)
-                        .addFragmentToUi(
-                                new LanguageTweaksFragment(),
-                                TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);
-                return true;
-            }
-        }
-        return false;
+  @Override
+  public boolean onPreferenceClick(Preference preference) {
+    if (preference.getKey().equals(getString(R.string.tweaks_group_key))) {
+      Navigation.findNavController(requireView())
+          .navigate(
+              AdditionalLanguageSettingsFragmentDirections
+                  .actionAdditionalLanguageSettingsFragmentToLanguageTweaksFragment());
+      return true;
     }
+    return false;
+  }
 }

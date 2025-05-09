@@ -1,109 +1,114 @@
 package com.menny.android.anysoftkeyboard;
 
+import android.app.Service;
+import android.content.ComponentName;
+import android.content.Context;
 import android.os.IBinder;
+import android.provider.Settings;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
+import com.google.common.collect.ImmutableList;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Objects;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+import org.robolectric.shadow.api.Shadow;
 
 @Implements(value = InputMethodManager.class)
 public class InputMethodManagerShadow extends org.robolectric.shadows.ShadowInputMethodManager {
 
-    private final List<InputMethodInfo> mInputMethodInfos = new ArrayList<>();
-    private final Set<String> mEnabledInputMethods = new HashSet<>();
+  private boolean mStatusIconShown;
+  private String mLastStatusIconPackageName;
+  private int mLastStatusIconId;
+  private IBinder mLastStatusIconImeToken;
 
-    private boolean mStatusIconShown;
-    private String mLastStatusIconPackageName;
-    private int mLastStatusIconId;
-    private IBinder mLastStatusIconImeToken;
+  public InputMethodManagerShadow() {
+    // adding three IMEs, ASK, Google, and AOSP (disabled)
+    final List<InputMethodInfo> inputMethodInfos = new ArrayList<>();
+    final List<InputMethodInfo> enabledInputMethods = new ArrayList<>();
 
-    public InputMethodManagerShadow() {
-        // adding three IMEs, ASK, Google, and AOSP (disabled)
-        mInputMethodInfos.add(
-                new InputMethodInfo(
-                        "com.menny.android.anysoftkeyboard",
-                        "SoftKeyboard",
-                        "AnySoftKeyboard",
-                        ".MainSettingsActivity"));
-        mEnabledInputMethods.add("com.menny.android.anysoftkeyboard");
-        mInputMethodInfos.add(
-                new InputMethodInfo(
-                        "com.google.keyboard",
-                        "GoogleKeyboard",
-                        "GoogleKeyboard",
-                        ".MainSettingsActivity"));
-        mEnabledInputMethods.add("com.google.keyboard");
-        mInputMethodInfos.add(
-                new InputMethodInfo(
-                        "android.ime.KeyboardService",
-                        "SoftKeyboard",
-                        "AOSP Keyboard",
-                        ".MainSettingsActivity"));
-    }
+    final InputMethodInfo askIme =
+        new InputMethodInfo(
+            "com.menny.android.anysoftkeyboard",
+            "com.anysoftkeyboard.TestableAnySoftKeyboard",
+            "AnySoftKeyboard",
+            ".MainSettingsActivity");
+    final InputMethodInfo gBoardIme =
+        new InputMethodInfo(
+            "com.google.keyboard", "GoogleKeyboard", "GoogleKeyboard", ".MainSettingsActivity");
+    final InputMethodInfo aospIme =
+        new InputMethodInfo(
+            "android.ime.KeyboardService",
+            "SoftKeyboard",
+            "AOSP Keyboard",
+            ".MainSettingsActivity");
 
-    @Implementation
-    public void showStatusIcon(IBinder imeToken, String packageName, int iconId) {
-        mLastStatusIconImeToken = imeToken;
-        mLastStatusIconPackageName = packageName;
-        mLastStatusIconId = iconId;
-        mStatusIconShown = true;
-    }
+    inputMethodInfos.add(askIme);
+    enabledInputMethods.add(askIme);
+    inputMethodInfos.add(gBoardIme);
+    enabledInputMethods.add(gBoardIme);
+    inputMethodInfos.add(aospIme);
 
-    public void clearStatusIconDetails() {
-        mLastStatusIconImeToken = null;
-        mLastStatusIconPackageName = null;
-        mLastStatusIconId = 0;
-    }
+    setInputMethodInfoList(ImmutableList.copyOf(inputMethodInfos));
+    setEnabledInputMethodInfoList(ImmutableList.copyOf(enabledInputMethods));
+  }
 
-    @Implementation
-    public void hideStatusIcon(IBinder imeToken) {
-        mLastStatusIconImeToken = imeToken;
-        mStatusIconShown = false;
-    }
+  public static void setKeyboardEnabled(Context context, boolean enabled) {
+    InputMethodManager imeService =
+        (InputMethodManager) context.getSystemService(Service.INPUT_METHOD_SERVICE);
+    var inputMethodManagerShadow = (InputMethodManagerShadow) Shadow.extract(imeService);
+    List<InputMethodInfo> allInputs = imeService.getInputMethodList();
+    inputMethodManagerShadow.setEnabledInputMethodInfoList(
+        allInputs.stream()
+            .filter(
+                ime -> enabled || !Objects.equals(ime.getPackageName(), context.getPackageName()))
+            .toList());
+  }
 
-    @Implementation
-    public List<InputMethodInfo> getInputMethodList() {
-        return Collections.unmodifiableList(mInputMethodInfos);
-    }
+  public static void setKeyboardAsCurrent(Context context, boolean isCurrent) {
+    // TODO support API 34
+    var currentFlat =
+        isCurrent
+            ? new ComponentName(context, ".SoftKeyboard").flattenToString()
+            : new ComponentName("com.example", ".OtherSoftKeyboard").flattenToString();
+    Settings.Secure.putString(
+        context.getContentResolver(), Settings.Secure.DEFAULT_INPUT_METHOD, currentFlat);
+  }
 
-    @Implementation
-    public List<InputMethodInfo> getEnabledInputMethodList() {
-        List<InputMethodInfo> enabledIme = new ArrayList<>();
-        for (InputMethodInfo ime : getInputMethodList()) {
-            if (mEnabledInputMethods.contains(ime.getPackageName())) enabledIme.add(ime);
-        }
-        return Collections.unmodifiableList(enabledIme);
-    }
+  @Implementation
+  public void showStatusIcon(IBinder imeToken, String packageName, int iconId) {
+    mLastStatusIconImeToken = imeToken;
+    mLastStatusIconPackageName = packageName;
+    mLastStatusIconId = iconId;
+    mStatusIconShown = true;
+  }
 
-    public List<InputMethodInfo> getModifiableInputMethodList() {
-        return mInputMethodInfos;
-    }
+  public void clearStatusIconDetails() {
+    mLastStatusIconImeToken = null;
+    mLastStatusIconPackageName = null;
+    mLastStatusIconId = 0;
+  }
 
-    public void setImeEnabled(String imePackageName, boolean isEnabled) {
-        if (isEnabled && !mEnabledInputMethods.contains(imePackageName))
-            mEnabledInputMethods.add(imePackageName);
-        else if (mEnabledInputMethods.contains(imePackageName) && !isEnabled)
-            mEnabledInputMethods.remove(imePackageName);
-    }
+  @Implementation
+  public void hideStatusIcon(IBinder imeToken) {
+    mLastStatusIconImeToken = imeToken;
+    mStatusIconShown = false;
+  }
 
-    public boolean isStatusIconShown() {
-        return mStatusIconShown;
-    }
+  public boolean isStatusIconShown() {
+    return mStatusIconShown;
+  }
 
-    public String getLastStatusIconPackageName() {
-        return mLastStatusIconPackageName;
-    }
+  public String getLastStatusIconPackageName() {
+    return mLastStatusIconPackageName;
+  }
 
-    public int getLastStatusIconId() {
-        return mLastStatusIconId;
-    }
+  public int getLastStatusIconId() {
+    return mLastStatusIconId;
+  }
 
-    public IBinder getLastStatusIconImeToken() {
-        return mLastStatusIconImeToken;
-    }
+  public IBinder getLastStatusIconImeToken() {
+    return mLastStatusIconImeToken;
+  }
 }

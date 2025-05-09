@@ -1,320 +1,208 @@
 package com.anysoftkeyboard.ui.settings;
 
+import static android.Manifest.permission.LOCATION_HARDWARE;
 import static android.Manifest.permission.READ_CONTACTS;
 import static android.content.Intent.ACTION_VIEW;
 import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
-import static com.anysoftkeyboard.PermissionsRequestCodes.CONTACTS;
 
 import android.Manifest;
 import android.app.Application;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.Lifecycle;
+import androidx.test.core.app.ActivityScenario;
 import androidx.test.core.app.ApplicationProvider;
 import com.anysoftkeyboard.AnySoftKeyboardRobolectricTestRunner;
-import com.anysoftkeyboard.PermissionsRequestCodes;
+import com.anysoftkeyboard.RobolectricFragmentTestCase;
+import com.anysoftkeyboard.permissions.PermissionRequestHelper;
 import com.anysoftkeyboard.quicktextkeys.ui.QuickTextKeysBrowseFragment;
+import com.anysoftkeyboard.rx.TestRxSchedulers;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kasahorow.android.keyboard.app.R;
-import net.evendanan.chauffeur.lib.permissions.PermissionsFragmentChauffeurActivity;
-import net.evendanan.chauffeur.lib.permissions.PermissionsRequest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
 import org.robolectric.Shadows;
-import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowActivity;
 
 @RunWith(AnySoftKeyboardRobolectricTestRunner.class)
 public class MainSettingsActivityTest {
 
-    private static Intent createAppShortcutIntent(String shortcutId) {
-        Intent intent =
-                new Intent(ACTION_VIEW, null, getApplicationContext(), MainSettingsActivity.class);
-        intent.putExtra(MainSettingsActivity.EXTRA_KEY_APP_SHORTCUT_ID, shortcutId);
+  private static Intent createAppShortcutIntent(@StringRes int deepLinkResId) {
 
-        return intent;
+    return new Intent(
+        ACTION_VIEW,
+        Uri.parse(getApplicationContext().getString(deepLinkResId)),
+        getApplicationContext(),
+        MainSettingsActivity.class);
+  }
+
+  @NonNull
+  private static Intent getContactsIntent() {
+    Intent requestIntent =
+        new Intent(ApplicationProvider.getApplicationContext(), MainSettingsActivity.class);
+    requestIntent.putExtra(
+        MainSettingsActivity.EXTRA_KEY_ACTION_REQUEST_PERMISSION_ACTIVITY, READ_CONTACTS);
+    requestIntent.setAction(MainSettingsActivity.ACTION_REQUEST_PERMISSION_ACTIVITY);
+    return requestIntent;
+  }
+
+  @Test
+  public void testBottomNavClicks() {
+    try (var activityController = ActivityScenario.launch(MainSettingsActivity.class)) {
+      activityController.moveToState(Lifecycle.State.RESUMED);
+
+      activityController.onActivity(
+          activity -> {
+            BottomNavigationView bottomNav = activity.findViewById(R.id.bottom_navigation);
+            Assert.assertEquals(R.id.mainFragment, bottomNav.getSelectedItemId());
+            Assert.assertTrue(
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity)
+                    instanceof MainFragment);
+
+            bottomNav.setSelectedItemId(R.id.languageSettingsFragment);
+            TestRxSchedulers.drainAllTasks();
+            Assert.assertTrue(
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity)
+                    instanceof LanguageSettingsFragment);
+
+            bottomNav.setSelectedItemId(R.id.userInterfaceSettingsFragment);
+            TestRxSchedulers.drainAllTasks();
+            Assert.assertTrue(
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity)
+                    instanceof UserInterfaceSettingsFragment);
+
+            bottomNav.setSelectedItemId(R.id.quickTextKeysBrowseFragment);
+            TestRxSchedulers.drainAllTasks();
+            Assert.assertTrue(
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity)
+                    instanceof QuickTextKeysBrowseFragment);
+
+            bottomNav.setSelectedItemId(R.id.gesturesSettingsFragment);
+            TestRxSchedulers.drainAllTasks();
+            Assert.assertTrue(
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity)
+                    instanceof GesturesSettingsFragment);
+
+            bottomNav.setSelectedItemId(R.id.mainFragment);
+            TestRxSchedulers.drainAllTasks();
+            Assert.assertTrue(
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity)
+                    instanceof MainFragment);
+          });
     }
+  }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testUnknownAppShortcut() {
-        ActivityController<MainSettingsActivity> activityController =
-                Robolectric.buildActivity(
-                        MainSettingsActivity.class, createAppShortcutIntent("unknown_id"));
-        activityController.setup();
+  @Test
+  public void testKeyboardsAppShortcutPassed() {
+    try (ActivityScenario<FragmentActivity> activityController =
+        ActivityScenario.launch(createAppShortcutIntent(R.string.deeplink_url_keyboards))) {
+      activityController.moveToState(Lifecycle.State.RESUMED);
+
+      activityController.onActivity(
+          activity -> {
+            Fragment fragment =
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity);
+
+            Assert.assertNotNull(fragment);
+            Assert.assertTrue(fragment instanceof KeyboardAddOnBrowserFragment);
+          });
     }
+  }
 
-    @Test
-    public void testNoAppShortcutExtra() {
-        ActivityController<MainSettingsActivity> activityController =
-                Robolectric.buildActivity(MainSettingsActivity.class);
-        activityController.setup();
+  @Test
+  public void testThemesAppShortcutPassed() {
+    try (ActivityScenario<FragmentActivity> activityController =
+        ActivityScenario.launch(createAppShortcutIntent(R.string.deeplink_url_themes))) {
+      activityController.moveToState(Lifecycle.State.RESUMED);
 
-        MainSettingsActivity activity = activityController.get();
-        Fragment fragment =
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content);
+      activityController.onActivity(
+          activity -> {
+            Fragment fragment =
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity);
 
-        Assert.assertNotNull(fragment);
-        Assert.assertTrue(fragment instanceof MainFragment);
+            Assert.assertNotNull(fragment);
+            Assert.assertTrue(fragment instanceof KeyboardThemeSelectorFragment);
+          });
     }
+  }
 
-    @Test
-    public void testNoAppShortcutExtraButWithIntent() {
-        ActivityController<MainSettingsActivity> activityController =
-                Robolectric.buildActivity(
-                        MainSettingsActivity.class,
-                        new Intent(getApplicationContext(), MainSettingsActivity.class));
-        activityController.setup();
+  @Test
+  public void testGesturesAppShortcutPassed() {
+    try (ActivityScenario<FragmentActivity> activityController =
+        ActivityScenario.launch(createAppShortcutIntent(R.string.deeplink_url_gestures))) {
+      activityController.moveToState(Lifecycle.State.RESUMED);
 
-        MainSettingsActivity activity = activityController.get();
-        Fragment fragment =
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content);
+      activityController.onActivity(
+          activity -> {
+            Fragment fragment =
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity);
 
-        Assert.assertNotNull(fragment);
-        Assert.assertTrue(fragment instanceof MainFragment);
+            Assert.assertNotNull(fragment);
+            Assert.assertTrue(fragment instanceof GesturesSettingsFragment);
+            BottomNavigationView bottomNav = activity.findViewById(R.id.bottom_navigation);
+            Assert.assertEquals(R.id.gesturesSettingsFragment, bottomNav.getSelectedItemId());
+          });
     }
+  }
 
-    @Test
-    public void testBottomNavClicks() {
-        ActivityController<MainSettingsActivity> activityController =
-                Robolectric.buildActivity(MainSettingsActivity.class);
-        activityController.setup();
+  @Test
+  public void testQuickKeysAppShortcutPassed() {
+    try (ActivityScenario<FragmentActivity> activityController =
+        ActivityScenario.launch(createAppShortcutIntent(R.string.deeplink_url_quick_text))) {
+      activityController.moveToState(Lifecycle.State.RESUMED);
 
-        MainSettingsActivity activity = activityController.get();
-        BottomNavigationView bottomNav =
-                (BottomNavigationView) activity.findViewById(R.id.bottom_navigation);
-        Assert.assertEquals(R.id.bottom_nav_home_button, bottomNav.getSelectedItemId());
-        Assert.assertTrue(
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content)
-                        instanceof MainFragment);
+      activityController.onActivity(
+          activity -> {
+            Fragment fragment =
+                RobolectricFragmentTestCase.getCurrentFragmentFromActivity(activity);
 
-        bottomNav.setSelectedItemId(R.id.bottom_nav_language_button);
-        Assert.assertTrue(
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content)
-                        instanceof LanguageSettingsFragment);
-
-        bottomNav.setSelectedItemId(R.id.bottom_nav_ui_button);
-        Assert.assertTrue(
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content)
-                        instanceof UserInterfaceSettingsFragment);
-
-        bottomNav.setSelectedItemId(R.id.bottom_nav_quick_text_button);
-        Assert.assertTrue(
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content)
-                        instanceof QuickTextKeysBrowseFragment);
-
-        /*bottomNav.setSelectedItemId(R.id.bottom_nav_gestures_button);
-        Assert.assertTrue(activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content) instanceof GesturesSettingsFragment);*/
-
-        bottomNav.setSelectedItemId(R.id.bottom_nav_home_button);
-        Assert.assertTrue(
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content)
-                        instanceof MainFragment);
+            Assert.assertNotNull(fragment);
+            Assert.assertTrue(fragment instanceof QuickTextKeysBrowseFragment);
+            BottomNavigationView bottomNav = activity.findViewById(R.id.bottom_navigation);
+            Assert.assertEquals(R.id.quickTextKeysBrowseFragment, bottomNav.getSelectedItemId());
+          });
     }
+  }
 
-    @Test
-    public void testKeyboardsAppShortcutPassed() {
-        ActivityController<MainSettingsActivity> activityController =
-                Robolectric.buildActivity(
-                        MainSettingsActivity.class, createAppShortcutIntent("keyboards"));
-        activityController.setup();
+  @Test
+  @Config(sdk = Build.VERSION_CODES.M)
+  public void testContactsPermissionRequestedWhenNotGranted() {
+    Shadows.shadowOf((Application) ApplicationProvider.getApplicationContext())
+        .denyPermissions(Manifest.permission.READ_CONTACTS);
 
-        MainSettingsActivity activity = activityController.get();
-        Fragment fragment =
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content);
+    Intent requestIntent = getContactsIntent();
+    try (var activityController = ActivityScenario.launch(requestIntent)) {
+      activityController.moveToState(Lifecycle.State.RESUMED);
 
-        Assert.assertNotNull(fragment);
-        Assert.assertTrue(fragment instanceof KeyboardAddOnBrowserFragment);
-        BottomNavigationView bottomNav =
-                (BottomNavigationView) activity.findViewById(R.id.bottom_navigation);
-        Assert.assertEquals(R.id.bottom_nav_language_button, bottomNav.getSelectedItemId());
-
-        Assert.assertFalse(
-                activity.getIntent().hasExtra(MainSettingsActivity.EXTRA_KEY_APP_SHORTCUT_ID));
+      activityController.onActivity(
+          activity -> {
+            final ShadowActivity.PermissionsRequest lastRequestedPermission =
+                Shadows.shadowOf(activity).getLastRequestedPermission();
+            Assert.assertNotNull(lastRequestedPermission);
+            Assert.assertEquals(
+                PermissionRequestHelper.CONTACTS_PERMISSION_REQUEST_CODE,
+                lastRequestedPermission.requestCode);
+          });
     }
+  }
 
-    @Test
-    public void testThemesAppShortcutPassed() {
-        ActivityController<MainSettingsActivity> activityController =
-                Robolectric.buildActivity(
-                        MainSettingsActivity.class, createAppShortcutIntent("themes"));
-        activityController.setup();
+  @Test(expected = IllegalArgumentException.class)
+  @Config(sdk = Build.VERSION_CODES.M)
+  public void testFailsIfUnknownPermission() {
+    Intent requestIntent = getContactsIntent();
+    requestIntent.putExtra(
+        MainSettingsActivity.EXTRA_KEY_ACTION_REQUEST_PERMISSION_ACTIVITY, LOCATION_HARDWARE);
+    try (var activityController = ActivityScenario.launch(requestIntent)) {
+      activityController.moveToState(Lifecycle.State.RESUMED);
 
-        MainSettingsActivity activity = activityController.get();
-        Fragment fragment =
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content);
-
-        Assert.assertNotNull(fragment);
-        Assert.assertTrue(fragment instanceof KeyboardThemeSelectorFragment);
-        BottomNavigationView bottomNav =
-                (BottomNavigationView) activity.findViewById(R.id.bottom_navigation);
-        Assert.assertEquals(R.id.bottom_nav_ui_button, bottomNav.getSelectedItemId());
-
-        Assert.assertFalse(
-                activity.getIntent().hasExtra(MainSettingsActivity.EXTRA_KEY_APP_SHORTCUT_ID));
+      activityController.onActivity(Assert::assertNotNull);
     }
-
-    @Test
-    public void testGesturesAppShortcutPassed() {
-        ActivityController<MainSettingsActivity> activityController =
-                Robolectric.buildActivity(
-                        MainSettingsActivity.class, createAppShortcutIntent("gestures"));
-        activityController.setup();
-
-        MainSettingsActivity activity = activityController.get();
-        Fragment fragment =
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content);
-
-        Assert.assertNotNull(fragment);
-        Assert.assertTrue(fragment instanceof GesturesSettingsFragment);
-        BottomNavigationView bottomNav =
-                (BottomNavigationView) activity.findViewById(R.id.bottom_navigation);
-        Assert.assertEquals(R.id.bottom_nav_gestures_button, bottomNav.getSelectedItemId());
-
-        Assert.assertFalse(
-                activity.getIntent().hasExtra(MainSettingsActivity.EXTRA_KEY_APP_SHORTCUT_ID));
-    }
-
-    @Test
-    public void testQuickKeysAppShortcutPassed() {
-        ActivityController<MainSettingsActivity> activityController =
-                Robolectric.buildActivity(
-                        MainSettingsActivity.class, createAppShortcutIntent("quick_keys"));
-        activityController.setup();
-
-        MainSettingsActivity activity = activityController.get();
-        Fragment fragment =
-                activity.getSupportFragmentManager().findFragmentById(R.id.main_ui_content);
-
-        Assert.assertNotNull(fragment);
-        Assert.assertTrue(fragment instanceof QuickTextKeysBrowseFragment);
-        BottomNavigationView bottomNav =
-                (BottomNavigationView) activity.findViewById(R.id.bottom_navigation);
-        Assert.assertEquals(R.id.bottom_nav_quick_text_button, bottomNav.getSelectedItemId());
-
-        Assert.assertFalse(
-                activity.getIntent().hasExtra(MainSettingsActivity.EXTRA_KEY_APP_SHORTCUT_ID));
-    }
-
-    @Test
-    @Config(sdk = Build.VERSION_CODES.M)
-    public void testContactsPermissionRequestedWhenNotGranted() {
-        Shadows.shadowOf((Application) ApplicationProvider.getApplicationContext())
-                .denyPermissions(Manifest.permission.READ_CONTACTS);
-
-        Intent requestIntent =
-                PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(
-                        getApplicationContext(),
-                        MyMainSettingsActivity.class,
-                        CONTACTS.getRequestCode(),
-                        READ_CONTACTS);
-
-        MyMainSettingsActivity.lastCreatedRequest = null;
-        ActivityController<MyMainSettingsActivity> activityController =
-                Robolectric.buildActivity(MyMainSettingsActivity.class, requestIntent);
-        activityController.setup();
-
-        Assert.assertNotNull(MyMainSettingsActivity.lastCreatedRequest);
-        Assert.assertEquals(
-                PermissionsRequestCodes.CONTACTS.getRequestCode(),
-                MyMainSettingsActivity.lastCreatedRequest.getRequestCode());
-        Assert.assertArrayEquals(
-                new String[] {Manifest.permission.READ_CONTACTS},
-                MyMainSettingsActivity.lastCreatedRequest.getRequestedPermissions());
-    }
-
-    @Test
-    @Config(sdk = Build.VERSION_CODES.M)
-    public void testContactsPermissionRequestedWhenNotGrantedAndUserGrants() {
-        Shadows.shadowOf((Application) ApplicationProvider.getApplicationContext())
-                .denyPermissions(Manifest.permission.READ_CONTACTS);
-
-        Intent requestIntent =
-                PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(
-                        getApplicationContext(),
-                        MyMainSettingsActivity.class,
-                        CONTACTS.getRequestCode(),
-                        READ_CONTACTS);
-
-        MyMainSettingsActivity.lastCreatedRequest = null;
-        ActivityController<MyMainSettingsActivity> activityController =
-                Robolectric.buildActivity(MyMainSettingsActivity.class, requestIntent);
-        activityController.setup();
-
-        PermissionsRequest lastCreatedRequest = MyMainSettingsActivity.lastCreatedRequest;
-        Assert.assertNotNull(lastCreatedRequest);
-
-        MyMainSettingsActivity.lastCreatedRequest = null;
-        lastCreatedRequest.onPermissionsGranted();
-        Assert.assertNull(MyMainSettingsActivity.lastCreatedRequest);
-        Assert.assertNull(
-                Shadows.shadowOf((Application) ApplicationProvider.getApplicationContext())
-                        .getLatestDialog());
-    }
-
-    @Test
-    @Config(sdk = Build.VERSION_CODES.M)
-    public void testContactsPermissionRequestedWhenNotGrantedAndUserDenies() {
-        Shadows.shadowOf((Application) ApplicationProvider.getApplicationContext())
-                .denyPermissions(Manifest.permission.READ_CONTACTS);
-
-        Intent requestIntent =
-                PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(
-                        getApplicationContext(),
-                        MyMainSettingsActivity.class,
-                        CONTACTS.getRequestCode(),
-                        READ_CONTACTS);
-
-        MyMainSettingsActivity.lastCreatedRequest = null;
-        ActivityController<MyMainSettingsActivity> activityController =
-                Robolectric.buildActivity(MyMainSettingsActivity.class, requestIntent);
-        activityController.setup();
-
-        PermissionsRequest lastCreatedRequest = MyMainSettingsActivity.lastCreatedRequest;
-        Assert.assertNotNull(lastCreatedRequest);
-
-        MyMainSettingsActivity.lastCreatedRequest = null;
-        lastCreatedRequest.onPermissionsDenied(
-                new String[0], new String[] {Manifest.permission.READ_CONTACTS}, new String[0]);
-        Assert.assertNull(MyMainSettingsActivity.lastCreatedRequest);
-
-        Assert.assertNotNull(
-                Shadows.shadowOf((Application) ApplicationProvider.getApplicationContext())
-                        .getLatestDialog());
-    }
-
-    @Test
-    @Config(sdk = Build.VERSION_CODES.M)
-    public void testContactsPermissionRequestedWhenGrantedBefore() {
-        Shadows.shadowOf((Application) ApplicationProvider.getApplicationContext())
-                .grantPermissions(Manifest.permission.READ_CONTACTS);
-
-        Intent requestIntent =
-                PermissionsFragmentChauffeurActivity.createIntentToPermissionsRequest(
-                        getApplicationContext(),
-                        MyMainSettingsActivity.class,
-                        CONTACTS.getRequestCode(),
-                        READ_CONTACTS);
-
-        MyMainSettingsActivity.lastCreatedRequest = null;
-        ActivityController<MyMainSettingsActivity> activityController =
-                Robolectric.buildActivity(MyMainSettingsActivity.class, requestIntent);
-        activityController.setup();
-
-        Assert.assertNull(MyMainSettingsActivity.lastCreatedRequest);
-    }
-
-    public static class MyMainSettingsActivity extends MainSettingsActivity {
-        public static PermissionsRequest lastCreatedRequest;
-
-        @NonNull
-        @Override
-        protected PermissionsRequest createPermissionRequestFromIntentRequest(
-                int requestId, @NonNull String[] permissions, @NonNull Intent intent) {
-            return lastCreatedRequest =
-                    super.createPermissionRequestFromIntentRequest(requestId, permissions, intent);
-        }
-    }
+  }
 }

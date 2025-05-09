@@ -3,100 +3,142 @@ package com.anysoftkeyboard.ime;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.BoolRes;
-import android.support.annotation.DimenRes;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
+import androidx.annotation.BoolRes;
+import androidx.annotation.DimenRes;
+import androidx.annotation.NonNull;
+import androidx.core.view.WindowCompat;
 import com.anysoftkeyboard.base.utils.Logger;
+import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
 import com.anysoftkeyboard.rx.GenericOnError;
 import com.kasahorow.android.keyboard.app.R;
 
 public abstract class AnySoftKeyboardColorizeNavBar extends AnySoftKeyboardIncognito {
 
-    private static final int NO_ID = 0;
+  private static final int NO_ID = 0;
 
-    @DimenRes private int mNavigationBarHeightId = NO_ID;
-    @BoolRes private int mNavigationBarShownId = NO_ID;
-    private boolean mPrefsToShow;
+  @DimenRes private int mNavigationBarHeightId = NO_ID;
+  @BoolRes private int mNavigationBarShownId = NO_ID;
+  private boolean mPrefsToShow;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
+  private int mNavigationBarMinHeight;
+  private int mExtraBottomPadding = 0;
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mNavigationBarHeightId =
-                    getResources().getIdentifier("navigation_bar_height", "dimen", "android");
-            mNavigationBarShownId =
-                    getResources().getIdentifier("config_showNavigationBar", "bool", "android");
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    mNavigationBarMinHeight =
+        getResources().getDimensionPixelOffset(R.dimen.navigation_bar_min_height);
+    // use androidx.core.view.WindowInsetsCompat
+    mNavigationBarHeightId =
+        getResources().getIdentifier("navigation_bar_height", "dimen", "android");
+    mNavigationBarShownId =
+        getResources().getIdentifier("config_showNavigationBar", "bool", "android");
 
-            Logger.d(
-                    TAG,
-                    "Colorized nav-bar resources: navigation_bar_height %d, config_showNavigationBar %d",
-                    mNavigationBarHeightId,
-                    mNavigationBarShownId);
+    Logger.d(
+        TAG,
+        "Colorized nav-bar resources: navigation_bar_height %d," + " config_showNavigationBar %d",
+        mNavigationBarHeightId,
+        mNavigationBarShownId);
 
-            addDisposable(
-                    prefs().getBoolean(
-                                    R.string.settings_key_colorize_nav_bar,
-                                    R.bool.settings_default_colorize_nav_bar)
-                            .asObservable()
-                            .subscribe(
-                                    val -> mPrefsToShow = val,
-                                    GenericOnError.onError("settings_key_colorize_nav_bar")));
-        }
+    addDisposable(
+        prefs()
+            .getBoolean(
+                R.string.settings_key_colorize_nav_bar, R.bool.settings_default_colorize_nav_bar)
+            .asObservable()
+            .subscribe(
+                val -> mPrefsToShow = val,
+                GenericOnError.onError("settings_key_colorize_nav_bar")));
+
+    addDisposable(
+        prefs()
+            .getInteger(
+                R.string.settings_key_bottom_extra_padding_in_portrait,
+                R.integer.settings_default_bottom_extra_padding_in_portrait)
+            .asObservable()
+            .subscribe(
+                val ->
+                    mExtraBottomPadding = (int) (getResources().getDisplayMetrics().density * val),
+                GenericOnError.onError("settings_key_bottom_extra_padding_in_portrait")));
+  }
+
+  private int getMinimumBottomPadding() {
+    return (getCurrentOrientation() == Configuration.ORIENTATION_PORTRAIT ? mExtraBottomPadding : 0)
+        + mNavigationBarMinHeight;
+  }
+
+  private boolean doesOsShowNavigationBar() {
+    if (mNavigationBarShownId != NO_ID) {
+      return getResources().getBoolean(mNavigationBarShownId);
+    } else {
+      return false;
     }
+  }
 
-    private boolean doesOsShowNavigationBar() {
-        if (mNavigationBarShownId != NO_ID) {
-            return getResources().getBoolean(mNavigationBarShownId);
+  @Override
+  public void onConfigurationChanged(Configuration newConfig) {
+    super.onConfigurationChanged(newConfig);
+    mNavigationBarMinHeight =
+        getResources().getDimensionPixelOffset(R.dimen.navigation_bar_min_height);
+  }
+
+  @Override
+  public void onStartInputView(EditorInfo info, boolean restarting) {
+    super.onStartInputView(info, restarting);
+    setColorizedNavBar();
+  }
+
+  private void setColorizedNavBar() {
+    final var w = getWindow().getWindow();
+    final var inputContainer = getInputViewContainer();
+    if (w != null && inputContainer != null) {
+      final var doesOsShowNavigationBar = doesOsShowNavigationBar();
+      if (doesOsShowNavigationBar) {
+        final int navBarHeight = getNavBarHeight();
+        if (navBarHeight > 0 && mPrefsToShow) {
+          Logger.d(TAG, "Showing Colorized nav-bar with height %d", navBarHeight);
+          w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+          w.setNavigationBarColor(Color.TRANSPARENT);
+          if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            // we only want to do this in R or higher (although, a compat version exists
+            // prior).
+            // Using the Compat to better handle old devices
+            WindowCompat.setDecorFitsSystemWindows(w, false);
+          }
+          inputContainer.setBottomPadding(Math.max(navBarHeight, getMinimumBottomPadding()));
         } else {
-            return false;
+          Logger.d(
+              TAG,
+              "Not showing Colorized nav-bar with height %d and prefs %s",
+              navBarHeight,
+              mPrefsToShow);
+          clearColorizedNavBar(w, inputContainer);
         }
+      } else {
+        Logger.w(TAG, "Will not show Colorized nav-bar since not doesOsShowNavigationBar");
+        clearColorizedNavBar(w, inputContainer);
+      }
     }
+  }
 
-    private boolean isInPortrait() {
-        return getResources().getConfiguration().orientation != Configuration.ORIENTATION_LANDSCAPE;
+  private void clearColorizedNavBar(
+      @NonNull Window w, @NonNull KeyboardViewContainerView containerView) {
+    w.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+      // we only want to do this in R or higher (although, a compat version exists prior).
+      // Using the Compat to better handle old devices
+      WindowCompat.setDecorFitsSystemWindows(w, true);
     }
+    containerView.setBottomPadding(0);
+  }
 
-    @Override
-    public void onStartInputView(EditorInfo info, boolean restarting) {
-        super.onStartInputView(info, restarting);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (isInPortrait() && doesOsShowNavigationBar()) {
-                final Window w = getWindow().getWindow();
-                if (w != null) {
-                    final int navBarHeight = getNavBarHeight();
-                    if (navBarHeight > 0 && mPrefsToShow) {
-                        Logger.d(TAG, "Showing Colorized nav-bar with height %d", navBarHeight);
-                        w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                        w.setNavigationBarColor(Color.TRANSPARENT);
-                        getInputViewContainer().setBottomPadding(navBarHeight);
-                    } else {
-                        Logger.d(
-                                TAG,
-                                "Showing Colorized nav-bar with height %d and prefs %s",
-                                navBarHeight,
-                                mPrefsToShow);
-                        w.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-                        getInputViewContainer().setBottomPadding(0);
-                    }
-                }
-            } else {
-                Logger.w(
-                        TAG,
-                        "Will not show Colorized nav-bar since isInPortrait %s and doesOsShowNavigationBar %s",
-                        isInPortrait(),
-                        doesOsShowNavigationBar());
-            }
-        }
+  private int getNavBarHeight() {
+    if (mNavigationBarHeightId != NO_ID) {
+      return getResources().getDimensionPixelSize(mNavigationBarHeightId);
+    } else {
+      return 0;
     }
-
-    private int getNavBarHeight() {
-        if (mNavigationBarHeightId != NO_ID) {
-            return getResources().getDimensionPixelSize(mNavigationBarHeightId);
-        } else {
-            return 0;
-        }
-    }
+  }
 }

@@ -17,18 +17,18 @@
 package com.anysoftkeyboard.canary;
 
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
+import com.kasahorow.android.keyboard.app.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.List;
 
 public class CanaryAnyApplication extends AnyApplication {
 
-    @Override
-    public List<Drawable> getInitialWatermarksList() {
-        List<Drawable> watermarks = super.getInitialWatermarksList();
-        watermarks.add(ContextCompat.getDrawable(this, R.drawable.ic_watermark_beta_build));
+  @Override
+  public List<Drawable> getInitialWatermarksList() {
+    List<Drawable> watermarks = super.getInitialWatermarksList();
+    watermarks.add(ContextCompat.getDrawable(this, R.drawable.ic_watermark_beta_build));
 
-        return watermarks;
-    }
+    return watermarks;
+  }
 }

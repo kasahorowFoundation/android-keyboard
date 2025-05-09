@@ -17,12 +17,12 @@
 package com.anysoftkeyboard.ui.settings;
 
 import android.os.Bundle;
-import android.support.v7.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceFragmentCompat;
 import com.kasahorow.android.keyboard.app.R;
 
 public class KeyboardThemeTweaksFragment extends PreferenceFragmentCompat {
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.prefs_keyboard_theme_tweaks);
-    }
+  @Override
+  public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+    addPreferencesFromResource(R.xml.prefs_keyboard_theme_tweaks);
+  }
 }

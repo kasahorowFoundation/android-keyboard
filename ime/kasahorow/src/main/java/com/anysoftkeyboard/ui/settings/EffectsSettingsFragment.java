@@ -16,47 +16,57 @@
 
 package com.anysoftkeyboard.ui.settings;
 
+import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.preference.PreferenceFragmentCompat;
 import android.view.View;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.navigation.Navigation;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 import com.kasahorow.android.keyboard.app.R;
-import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
+import net.evendanan.pixel.UiUtils;
 
 public class EffectsSettingsFragment extends PreferenceFragmentCompat {
 
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.prefs_effects_prefs);
-    }
+  @Override
+  public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+    addPreferencesFromResource(R.xml.prefs_effects_prefs);
+  }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        findPreference(getText(R.string.settings_key_power_save_mode))
-                .setOnPreferenceClickListener(
-                        preference -> {
-                            ((MainSettingsActivity) getActivity())
-                                    .addFragmentToUi(
-                                            new PowerSavingSettingsFragment(),
-                                            TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);
-                            return true;
-                        });
+  @Override
+  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    findPreference(getText(R.string.settings_key_power_save_mode))
+        .setOnPreferenceClickListener(
+            preference -> {
+              Navigation.findNavController(requireView())
+                  .navigate(
+                      EffectsSettingsFragmentDirections
+                          .actionEffectsSettingsFragmentToPowerSavingSettingsFragment());
+              return true;
+            });
 
-        findPreference(getText(R.string.settings_key_night_mode))
-                .setOnPreferenceClickListener(
-                        preference -> {
-                            ((MainSettingsActivity) getActivity())
-                                    .addFragmentToUi(
-                                            new NightModeSettingsFragment(),
-                                            TransitionExperiences.DEEPER_EXPERIENCE_TRANSITION);
-                            return true;
-                        });
+    findPreference(getText(R.string.settings_key_night_mode))
+        .setOnPreferenceClickListener(
+            preference -> {
+              Navigation.findNavController(requireView())
+                  .navigate(
+                      EffectsSettingsFragmentDirections
+                          .actionEffectsSettingsFragmentToNightModeSettingsFragment());
+              return true;
+            });
+    if (Build.VERSION.SDK_INT < 29) {
+      // Android earlier than 29 does not support predefined vibrations
+      Preference svPref = findPreference(getText(R.string.settings_key_use_system_vibration));
+      svPref.setVisible(false);
+      svPref.setSelectable(false);
     }
+  }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        MainSettingsActivity.setActivityTitle(this, getString(R.string.effects_group));
-    }
+  @Override
+  public void onStart() {
+    super.onStart();
+    UiUtils.setActivityTitle(this, getString(R.string.effects_group));
+  }
 }

@@ -18,37 +18,35 @@ package com.anysoftkeyboard.debug;
 
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.StrictMode;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import com.anysoftkeyboard.base.utils.Logger;
+import com.kasahorow.android.keyboard.app.AnyApplication;
 import com.kasahorow.android.keyboard.app.R;
-import com.menny.android.anysoftkeyboard.AnyApplication;
 import java.util.List;
 
 public class DebugAnyApplication extends AnyApplication {
 
-    @Override
-    protected void setupCrashHandler(SharedPreferences sp) {
-        super.setupCrashHandler(sp);
-        Logger.setLogProvider(new LogCatLogProvider());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            StrictMode.setThreadPolicy(
-                    new StrictMode.ThreadPolicy.Builder()
-                            .detectAll()
-                            .penaltyLog()
-                            .penaltyFlashScreen()
-                            .build());
-            StrictMode.setVmPolicy(
-                    new StrictMode.VmPolicy.Builder().detectAll().penaltyLog().build());
-        }
+  @Override
+  protected void setupCrashHandler(SharedPreferences sp) {
+    super.setupCrashHandler(sp);
+    Logger.setLogProvider(new LogCatLogProvider());
+    if (sp.getBoolean(getString(R.string.settings_key_strict_mode_enabled), false)) {
+      StrictMode.setThreadPolicy(
+          new StrictMode.ThreadPolicy.Builder()
+              .detectAll()
+              .penaltyLog()
+              .penaltyFlashScreen()
+              .build());
+      StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectAll().penaltyLog().build());
     }
+  }
 
-    @Override
-    public List<Drawable> getInitialWatermarksList() {
-        List<Drawable> watermarks = super.getInitialWatermarksList();
-        watermarks.add(ContextCompat.getDrawable(this, R.drawable.ic_watermark_dev_build));
+  @Override
+  public List<Drawable> getInitialWatermarksList() {
+    List<Drawable> watermarks = super.getInitialWatermarksList();
+    watermarks.add(ContextCompat.getDrawable(this, R.drawable.ic_watermark_dev_build));
 
-        return watermarks;
-    }
+    return watermarks;
+  }
 }
