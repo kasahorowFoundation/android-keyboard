@@ -53,6 +53,6 @@ afterEvaluate {
         }
 
         // Disable this-escape warning as it affects the entire code base
-        task.options.compilerArgs << '--disable-this-escape'
+        task.options.compilerArgs << '-Xlint:-this-escape'
     }
 }
