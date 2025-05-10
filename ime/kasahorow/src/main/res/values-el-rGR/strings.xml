@@ -5,7 +5,7 @@
     <string name="debug_tracing_finished">Η ανίχνευση τελείωσε! \nΤο αρχείο ανίχνευσης είναι <xliff:g id="trace_file">%s</xliff:g>
     </string>
     <string name="menu_about_item">Σχετικά</string>
-    <string name="how_to_pointer_title">Καλώς ήλθατε στο AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Καλώς ήλθατε στο kasahorow</string>
     <string name="notification_text_testers">Αυτή είναι μια δοκιμαστική έκδοση. Χρησιμοποιήστε τη με προσοχή!</string>
     <string name="testers_version">Έκδοση για δοκιμαστές!</string>
     <!-- UI root menu -->
@@ -115,7 +115,7 @@
     </string>
     <string name="more_ui_settings_group">Περιβάλλον χρήστη</string>
     <string name="special_dictionaries_group">Ειδικά λεξικά</string>
-    <string name="special_dictionaries_group_summary">Λεξικά υποδείξεων που χρησιμοποιούνται στο AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Λεξικά υποδείξεων που χρησιμοποιούνται στο kasahorow</string>
     <string name="use_user_dictionary">Λεξικό-χρήστη</string>
     <string name="use_auto_dictionary">Αυτόματο λεξικό</string>
     <string name="use_auto_dictionary_dialog_title">Επιλέξτε μέθοδο εκμάθησης</string>
@@ -280,7 +280,7 @@
     <string name="tweak_workarounds_group">Εναλλακτικές λύσεις</string>
     <string name="workaround_disable_rtl_fix">Απενεργοποίηση γραφής δεξιά προς αριστερά</string>
     <string name="workaround_disable_rtl_fix_summary_on">Χρήση γραφής RTL του λειτουργικού (για τηλέφωνα SE)</string>
-    <string name="workaround_disable_rtl_fix_summary_off">Χρήση γραφής RTL του AnySoftKeyboard</string>
+    <string name="workaround_disable_rtl_fix_summary_off">Χρήση γραφής RTL του kasahorow</string>
     <string name="settings_split_state_summary">Ορίστε αν το πληκτρολόγιο είναι διαιρεμένο ως προεπιλογή. Τώρα: %s</string>
     <string name="settings_split_state_merged_always">Έναρξη κανονικού</string>
     <string name="settings_split_state_split_always">Έναρξη διαιρεμένου</string>
@@ -296,10 +296,10 @@
     <string name="should_swap_punctuation_and_space_title">Εναλλαγή σημείων στίξης και διαστήματος</string>
     <string name="developer_tools">Εργαλεία προγραμματιστών</string>
     <string name="click_for_developer_features">Εργαλεία προγραμματιστών</string>
-    <string name="click_for_developer_features_summary">Διάφορα εργαλεία για προγραμματιστές του AnySoftKeyboard</string>
+    <string name="click_for_developer_features_summary">Διάφορα εργαλεία για προγραμματιστές του kasahorow</string>
     <string name="failed_to_create_mem_dump">Απέτυχε η δημιουργία αρχείου σφαλμάτων μνήμης λόγω: <xliff:g id="message">%s</xliff:g>     </string>
     <string name="created_mem_dump_file">Δημιουργήθηκε το αρχείο σφαλμάτων μνήμης στο: <xliff:g id="file_path">%s</xliff:g>     </string>
-    <string name="not_configured_with_click_here">Το AnySoftKeyboard δεν είναι πλήρως ρυθμισμένο για χρήση. Κάντε κλικ εδώ για να το ρυθμίσετε.</string>
+    <string name="not_configured_with_click_here">Το kasahorow δεν είναι πλήρως ρυθμισμένο για χρήση. Κάντε κλικ εδώ για να το ρυθμίσετε.</string>
     <string name="not_configured_with_just_click_here">Κάντε κλικ εδώ</string>
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
@@ -309,11 +309,11 @@
     <string name="click_to_add_new_word">Κάντε κλικ για να προσθέσετε μια νέα λέξη</string>
     <string name="enter_word_hint">Πληκτρολογήστε τη νέα λέξη εδώ</string>
     <string name="about_additional_software_licenses">Επιπλέον άδειες λογισμικού</string>
-    <string name="setup_wizard_step_one_title">Ενεργοποίηση AnySoftKeyboard</string>
-    <string name="setup_wizard_step_one_details">Σε αυτό το βήμα, θα πρέπει να ενεργοποιήσετε το <i>AnySoftKeyboard</i>. Παρακαλώ επιλέξτε το <i>\'AnySoftKeyboard\'</i> στη δική σας <i>Γλώσσα &amp; Ρυθμίσεις εισαγωγής</i>. Αυτό θα επιτρέψει την λειτουργία μας στη συσκευή σας.</string>
+    <string name="setup_wizard_step_one_title">Ενεργοποίηση kasahorow</string>
+    <string name="setup_wizard_step_one_details">Σε αυτό το βήμα, θα πρέπει να ενεργοποιήσετε το <i>kasahorow</i>. Παρακαλώ επιλέξτε το <i>\'kasahorow\'</i> στη δική σας <i>Γλώσσα &amp; Ρυθμίσεις εισαγωγής</i>. Αυτό θα επιτρέψει την λειτουργία μας στη συσκευή σας.</string>
     <string name="setup_wizard_step_one_action">Πηγαίνετε στο <i>Γλώσσα &amp; Ρυθμίσεις εισαγωγής</i>…</string>
-    <string name="setup_wizard_step_two_title">Μεταβείτε σε AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Το σύστημά σας μπορεί να χρησιμοποιήσει το <i>AnySoftKeyboard</i> τώρα, αλλά δεν έχει οριστεί ως ενεργό πληκτρολόγιο.\nΜε την εναλλαγή, το <i>AnySoftKeyboard</i> θα είναι το νέο πληκτρολόγιο οθόνης, μαζί με όλα τα χαρακτηριστικά του!</string>
+    <string name="setup_wizard_step_two_title">Μεταβείτε σε kasahorow</string>
+    <string name="setup_wizard_step_two_details">Το σύστημά σας μπορεί να χρησιμοποιήσει το <i>kasahorow</i> τώρα, αλλά δεν έχει οριστεί ως ενεργό πληκτρολόγιο.\nΜε την εναλλαγή, το <i>kasahorow</i> θα είναι το νέο πληκτρολόγιο οθόνης, μαζί με όλα τα χαρακτηριστικά του!</string>
     <string name="setup_wizard_step_two_action">Εναλλαγή ενεργών πληκτρολογίων</string>
     <string name="setup_wizard_step_three_action_languages">Εγκατάσταση γλωσσών…</string>
     <string name="setup_wizard_step_three_action_themes">Επιλογή θέματος…</string>

@@ -6,7 +6,7 @@
         <xliff:g id="trace_file">%s</xliff:g>
     </string>
     <string name="menu_about_item">Informatziones</string>
-    <string name="how_to_pointer_title">Bene bènnidu in AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Bene bènnidu in kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Ùrtimas modìficas pro v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Àteru:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -68,7 +68,7 @@
     <string name="night_mode_sound_control">Istuda sos sonos a s\'incarcada de sas teclas</string>
     <string name="night_mode_vibration_control">Istuda sa vibratzione a s\'incarcada de sas teclas</string>
     <string name="power_save_mode_screen">Impostatziones pro su rispàrmiu energèticu</string>
-    <string name="power_save_mode_description">Sa modalidade a rispàrmiu energèticu at a minimare su consumu de energia de AnySoftKeyboard istudende custas funtzionalidades:</string>
+    <string name="power_save_mode_description">Sa modalidade a rispàrmiu energèticu at a minimare su consumu de energia de kasahorow istudende custas funtzionalidades:</string>
     <string name="power_save_mode_state_summary">In custu momentu, su lìmite pro s\'allughìngiu de su rispàrmiu energèticu:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Allughe sa modalidade a rispàrmiu energèticu</string>
     <string name="power_save_mode_types_never">Mai</string>
@@ -211,11 +211,11 @@
     </string>
     <string name="more_ui_settings_group">Interfache impreadore</string>
     <string name="special_dictionaries_group">Ditzionàrios ispetziales</string>
-    <string name="special_dictionaries_group_summary">Ditzionàrios de impòsitu impreados in AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Ditzionàrios de impòsitu impreados in kasahorow</string>
     <string name="use_user_dictionary">Ditzionàriu impreadore</string>
     <string name="use_user_dictionary_on_summary">Cussigia sas paràulas annantas dae s\'impreadore (incarca duas bortas in un\'impòsitu pro l\'annànghere)</string>
     <string name="always_use_fallback_user_dictionary">Imprea sa memòria privada de su ditzionàriu de s\'impreadore</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Imprea su meccanismu de sarvatàgiu privadu de su ditzionàriu de s\'impreadore integradu in AnySoftKeyboard.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Imprea su meccanismu de sarvatàgiu privadu de su ditzionàriu de s\'impreadore integradu in kasahorow.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Proa a impreare su ditzionàriu de s\'impreadore globale integradu de Android.</string>
     <string name="use_auto_dictionary">Ditzionàriu automàticu</string>
     <string name="use_auto_dictionary_dialog_title">Ischerta sa manera de aprendimentu</string>
@@ -327,8 +327,8 @@
     <string name="lang_key_shows_popup_on_summary">Sa tecla de sa limba at a abèrrere una ventana de diàlogu</string>
     <string name="lang_key_shows_popup_off_summary">Sa tecla de sa limba at a iscùrrere intre sas limbas</string>
     <string name="settings_os_clipboard_sync">Sincroniza sos apuntos cun su sistema operativu</string>
-    <string name="settings_os_clipboard_sync_summary_on">Annota sas modìficas a sos apuntos e sincroniza·las cun AnySoftKeyboard.</string>
-    <string name="settings_os_clipboard_sync_summary_off">No ascurtes sas operatziones de sos apuntos in foras de AnySoftKeyboard.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Annota sas modìficas a sos apuntos e sincroniza·las cun kasahorow.</string>
+    <string name="settings_os_clipboard_sync_summary_off">No ascurtes sas operatziones de sos apuntos in foras de kasahorow.</string>
     <string name="auto_caps">Maiùscolas automàticas</string>
     <string name="grammar_group">Grammàtica</string>
     <string name="keyboard_behavior_group">Cumportamentu de sa tastiera</string>
@@ -472,11 +472,11 @@
     <string name="settings_long_press_timeout_slower">Prus lenta</string>
     <string name="settings_long_press_timeout_never">Mai</string>
     <string name="settings_force_locale_title">Forza una limba</string>
-    <string name="settings_force_locale_summary">Fortza una limba de impreare pro AnySoftKeyboard (sa modìfica bisòngiat de unu pagu de tempus pro tènnere efetu). In custu momentu: %s.</string>
+    <string name="settings_force_locale_summary">Fortza una limba de impreare pro kasahorow (sa modìfica bisòngiat de unu pagu de tempus pro tènnere efetu). In custu momentu: %s.</string>
     <string name="tweak_workarounds_group">Solutziones alternativas</string>
     <string name="workaround_disable_rtl_fix">Imprea sa gestione dae destra a manca</string>
     <string name="workaround_disable_rtl_fix_summary_on">Imprea sa gestione OS RTL, dae destra a manca. Diat dèpere funtzionare bene in sos telèfonos prus noos.</string>
-    <string name="workaround_disable_rtl_fix_summary_off">Imprea sa gestione AnySoftKeyboard RTL, dae destra a manca. Diat èssere impreada petzi si su sistema operativu (OS) non resessit a gestire s\'RTL.</string>
+    <string name="workaround_disable_rtl_fix_summary_off">Imprea sa gestione kasahorow RTL, dae destra a manca. Diat èssere impreada petzi si su sistema operativu (OS) non resessit a gestire s\'RTL.</string>
     <string name="settings_split_state_title_portrait">Istadu initziale aunidu\separadu in verticale</string>
     <string name="settings_split_state_title_landscape">Istadu initziale aunidu\separadu in orizontale</string>
     <string name="settings_split_state_summary">Issèbera si sa tastiera est separada in sas optziones predefinidas. Como: %s</string>
@@ -522,15 +522,15 @@
     <string name="emoji_default_gender_value_random_type">Gènere a casu</string>
     <string name="developer_tools">Ainas pro sos isvilupadores</string>
     <string name="click_for_developer_features">Ainas pro sos isvilupadores</string>
-    <string name="click_for_developer_features_summary">Aìnas vàrias pro sos isvilupadores de AnySoftKeyboard</string>
+    <string name="click_for_developer_features_summary">Aìnas vàrias pro sos isvilupadores de kasahorow</string>
     <string name="failed_to_create_mem_dump">Impossìbile creare su documentu "dump" de memòria pro more de:
         <xliff:g id="message">%s</xliff:g>
     </string>
     <string name="created_mem_dump_file">Documentu "dump" de memòria creadu in:
         <xliff:g id="file_path">%s</xliff:g>
     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard no est impostada de su totu pro s\'impreu. Incarca inoghe pro l\'impostare.</string>
-    <string name="not_notification_permission_text">AnySoftKeyboard non tenet su permissu tuo de publicare notìficas. Diamus pòdere, in manera rara, tènnere bisòngiu de ti notificare problemas crìticos (che a sas tancaduras improvisas).</string>
+    <string name="not_configured_with_click_here">kasahorow no est impostada de su totu pro s\'impreu. Incarca inoghe pro l\'impostare.</string>
+    <string name="not_notification_permission_text">kasahorow non tenet su permissu tuo de publicare notìficas. Diamus pòdere, in manera rara, tènnere bisòngiu de ti notificare problemas crìticos (che a sas tancaduras improvisas).</string>
     <string name="not_configured_with_just_click_here">Incarca inoghe</string>
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
@@ -543,26 +543,26 @@
     <string name="enter_abbreviation_target_hint">Fràsia intrea</string>
     <string name="toast_error_custom_path_backup">Errore: cale si siat aplicatzione de cuntestu diat pòdere èssere aberta</string>
     <string name="about_additional_software_licenses">Litzèntzias agiuntivas de sos programmas</string>
-    <string name="setup_wizard_step_one_title">Abìlita AnySoftKeyboard</string>
-    <string name="setup_wizard_step_one_details">In custu passàgiu as a dèpere abilitare <i>AnySoftKeyboard</i>. Pro praghere ischerta <i>\'AnySoftKeyboard\'</i> in sas impostatziones <i>Limba e insertadura</i>. Custu at a permìtere a s\'aplicatzione de funtzionare in su dispositivu.</string>
+    <string name="setup_wizard_step_one_title">Abìlita kasahorow</string>
+    <string name="setup_wizard_step_one_details">In custu passàgiu as a dèpere abilitare <i>kasahorow</i>. Pro praghere ischerta <i>\'kasahorow\'</i> in sas impostatziones <i>Limba e insertadura</i>. Custu at a permìtere a s\'aplicatzione de funtzionare in su dispositivu.</string>
     <string name="setup_wizard_step_one_action">Bae a sas impostatziones <i>Limba e insertadura</i> tuas…</string>
-    <string name="setup_wizard_step_one_action_error_no_settings_activity">Errore: Su dispositivu tuo non suportat tastieras de tertzas partes (esternas). AnySoftKeyboard non podet èssere ativadu!</string>
+    <string name="setup_wizard_step_one_action_error_no_settings_activity">Errore: Su dispositivu tuo non suportat tastieras de tertzas partes (esternas). kasahorow non podet èssere ativadu!</string>
     <string name="setup_wizard_step_permissions_title">Abìlita sos permissos</string>
-    <string name="setup_wizard_step_two_title">Cola a AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Su sistema tuo como podet impreare <i>AnySoftKeyboard</i>, ma no est galu impostada comente tastiera ativa. \nAtivende·la, <i>AnySoftKeyboard</i> at a divènnere sa tastiera a ischermu noa tua, cun totu sas funtzionalidades suas!</string>
+    <string name="setup_wizard_step_two_title">Cola a kasahorow</string>
+    <string name="setup_wizard_step_two_details">Su sistema tuo como podet impreare <i>kasahorow</i>, ma no est galu impostada comente tastiera ativa. \nAtivende·la, <i>kasahorow</i> at a divènnere sa tastiera a ischermu noa tua, cun totu sas funtzionalidades suas!</string>
     <string name="setup_wizard_step_two_action">Càmbia sa tastiera ativa</string>
     <string name="setup_wizard_step_three_title">E como?</string>
-    <string name="setup_wizard_step_three_details">Gràtzias pro àere isseberadu <i>AnySoftKeyboard</i>.</string>
+    <string name="setup_wizard_step_three_details">Gràtzias pro àere isseberadu <i>kasahorow</i>.</string>
     <string name="setup_wizard_step_three_details_done"><b>As acabadu 🎉\nBae a s\'aplicatzione preferida tua pro incumintzare a isperimentare.</b></string>
     <string name="setup_wizard_step_three_details_actions">O podes personalizare sa tastiera comente cheres:</string>
     <string name="setup_wizard_step_three_action_languages">Impostare sas limbas…</string>
     <string name="setup_wizard_step_three_action_themes">Isseberare unu tema…</string>
     <string name="setup_wizard_step_three_action_all_settings">Cunfigurare totu su restu…</string>
     <string name="setup_wizard_step_download_title">Iscàrriga pachetes de limba</string>
-    <string name="setup_wizard_step_download_details">As a èssere cuntentu de ischire chi <i>AnySoftKeyboard</i> suportat unu muntone de limbas. Iscàrriga su pachete de sa limba chi cheres e iscrie in cale si siat limba in su dispositivu tuo.</string>
+    <string name="setup_wizard_step_download_details">As a èssere cuntentu de ischire chi <i>kasahorow</i> suportat unu muntone de limbas. Iscàrriga su pachete de sa limba chi cheres e iscrie in cale si siat limba in su dispositivu tuo.</string>
     <string name="setup_wizard_step_download_action">Iscàrriga su pachete de sa limba</string>
     <string name="setup_wizard_step_download_skip_action">Brinca</string>
-    <string name="ime_crashed_text">B\'est istadu unu problema cun <i>AnySoftKeyboard</i>. Non ti preòcupes, b\'est una cosa chi <b>tue</b> podes fàghere pro agiudare a l\'isòrvere: imbia·nos sa sinnalatzione de errore, e amus a fàghere su chi podimus pro sistemare custu problema e megiorare s\'esperièntzia tua!\n\nCun sas iscusas sentidas nostras, su grupu de Isvilupu.</string>
+    <string name="ime_crashed_text">B\'est istadu unu problema cun <i>kasahorow</i>. Non ti preòcupes, b\'est una cosa chi <b>tue</b> podes fàghere pro agiudare a l\'isòrvere: imbia·nos sa sinnalatzione de errore, e amus a fàghere su chi podimus pro sistemare custu problema e megiorare s\'esperièntzia tua!\n\nCun sas iscusas sentidas nostras, su grupu de Isvilupu.</string>
     <string name="ime_crashed_send_button">Imbia</string>
     <string name="ime_crashed_cancel_button">Annulla</string>
     <string name="ime_crashed_intent_selector_title">Imbia sa sinnalatzione de errore pro mèdiu de</string>
@@ -581,7 +581,7 @@
     <string name="wizard_allow_contacts_permission">Permiti cunsìgios de paràulas basados in subra de sos cuntatos</string>
     <string name="turn_off_contacts_dictionary">Istuda su ditzionàriu de sos cuntatos</string>
     <string name="read_more_about_permissions">Àteras informatziones a pitzu de sos permissos…</string>
-    <string name="ask_beta_link_promo">Salude! Cheres otènnere sas novidades de <i>AnySoftKeyboard</i> prus in presse? Tando ses fortunadu! Como est disponìbile unu canale <i>BETA</i> pro <b>TIE</b>!\nRegistra·ti dae su ligàmene inoghe in suta, e agiorna impreende sa butega de aplicatziones <i>Google Play</i>!\n\n https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nE gràtzias meda pro s\'agiudu chi ses dende a s\'eliminatzione de sos errore in antis chi retzant su pùblicu.</string>
+    <string name="ask_beta_link_promo">Salude! Cheres otènnere sas novidades de <i>kasahorow</i> prus in presse? Tando ses fortunadu! Como est disponìbile unu canale <i>BETA</i> pro <b>TIE</b>!\nRegistra·ti dae su ligàmene inoghe in suta, e agiorna impreende sa butega de aplicatziones <i>Google Play</i>!\n\n https://play.google.com/apps/testing/com.menny.android.kasahorow \n\nE gràtzias meda pro s\'agiudu chi ses dende a s\'eliminatzione de sos errore in antis chi retzant su pùblicu.</string>
     <string name="clipboard_fine_select_enabled_toast">Ischertadura fina de testu abilitada. Imprea sas fritzas destra/manca.</string>
     <string name="app_shortcut_keyboards_disabled">Nàvigu de sas tastieras disabilitadu</string>
     <string name="app_shortcut_keyboards_long_label">Issèbera dispositziones de tastieras de impreare</string>
@@ -605,11 +605,11 @@
     <string name="no_internet_fields_specific_layout">Perunu</string>
     <string name="bottom_nav_home">Salude</string>
     <string name="setup_wizard_welcome_title">Bene bènnidu!</string>
-    <string name="setup_wizard_welcome_sub_title">Gràtzias pro àere isseberadu AnySoftKeyboard!</string>
-    <string name="setup_wizard_welcome_info">Comente pro totu sas àteras tastieras pro Android, depes abilitare AnySoftKeyboard in sas impostatziones de Android. Custu est pedidu dae Android pro t\'assegurare chi sos datos de iscritura tuos non siant furados dae tastieras malas*.</string>
+    <string name="setup_wizard_welcome_sub_title">Gràtzias pro àere isseberadu kasahorow!</string>
+    <string name="setup_wizard_welcome_info">Comente pro totu sas àteras tastieras pro Android, depes abilitare kasahorow in sas impostatziones de Android. Custu est pedidu dae Android pro t\'assegurare chi sos datos de iscritura tuos non siant furados dae tastieras malas*.</string>
     <string name="setup_wizard_welcome_info_2">AB, ses prontu? Incarca inoghe pro incumintzare, t\'apo a ghiare in custas atziones.</string>
     <string name="setup_wizard_welcome_start_action">Incumintza sa cunfiguratzione…</string>
-    <string name="setup_wizard_welcome_info_footnote">* Craru chi AnySoftKeyboard no est mala. Ses invitadu a abbaidare a su còdighe mitza nostru e a ti lu verificare pro contu tuo. E, fintzas, non tenimus permissos de <i>RETZA</i>, e pro custa resone non podimus imbiare datos dae su dispositivu.</string>
+    <string name="setup_wizard_welcome_info_footnote">* Craru chi kasahorow no est mala. Ses invitadu a abbaidare a su còdighe mitza nostru e a ti lu verificare pro contu tuo. E, fintzas, non tenimus permissos de <i>RETZA</i>, e pro custa resone non podimus imbiare datos dae su dispositivu.</string>
     <string name="setup_wizard_welcome_privacy_action">Bae a sa Polìtica de Privadesa…</string>
     <string name="setup_wizard_skip">Brinca</string>
     <string name="clear_all_dictionary_override">Iscantzella sas sostitutziones</string>
@@ -657,16 +657,16 @@
     <string name="aosp_dark_theme_description">Tema de sa tastiera cun colores iscuros ispiradu a s\'AOSP</string>
     <string name="aosp_light_theme_name">Tema craru AOSP</string>
     <string name="aosp_light_theme_description">Tema de sa tastiera cun colores craros ispiradu a s\'AOSP</string>
-    <string name="app_share_title">Salude dae AnySoftKeyboard</string>
-    <string name="app_share_menu_title">Cumpartzi AnySoftKeyboard impreende</string>
-    <string name="app_share_text">Lassa chi ti cunsìgies s\'aplicatzione pro sa tastiera de Android a mitza aberta, chi rispetat sa ridervadesa tua, de badas, personalizabile meda e in prus limbas: AnySoftKeyboard.\nIscàrriga·la dae su:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_title">Salude dae kasahorow</string>
+    <string name="app_share_menu_title">Cumpartzi kasahorow impreende</string>
+    <string name="app_share_text">Lassa chi ti cunsìgies s\'aplicatzione pro sa tastiera de Android a mitza aberta, chi rispetat sa ridervadesa tua, de badas, personalizabile meda e in prus limbas: kasahorow.\nIscàrriga·la dae su:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow\nF-Droid: https://f-droid.org/en/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">incarca·mi pro una sorpresa</string>
     
     
     <string name="delete_all_clipboard_entries">Punta de billete bòida</string>
     <string name="tip_swipe_from_backspace_to_clear">Impòsitu: podes trisinare a manca dae sa back-space pro iscantzellare sa paràula!</string>
     <string name="notification_read_contacts_ticker">Permissu pro lèghere sos cuntatos netzessàriu</string>
-    <string name="wizard_allow_notification_permission">Permite sas notìficas dae AnySoftKeyboard</string>
+    <string name="wizard_allow_notification_permission">Permite sas notìficas dae kasahorow</string>
     <string name="setup_wizard_step_notification_permissions_details">In casos raros (a esèmpiu sas tancaduras improvisas de s\'aplicatzione) diamus pòdere dèpere publicare una notìfica de su dispositivu. Custu est racumandadu ma non permitende sas notìficas no as a mudare su cumportamentu de s\'aplicatzione.</string>
     <string name="wizard_skip_notification_permission">Non permitas sas notìficas</string>
 </resources>

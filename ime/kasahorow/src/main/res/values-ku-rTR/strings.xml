@@ -9,7 +9,7 @@
         <xliff:g id="trace_file">%s</xliff:g>
     </string>
     <string name="menu_about_item">دەربارە</string>
-    <string name="how_to_pointer_title">AnySoftKeyboard بەخێربێیت بۆ تەختەکلیلی</string>
+    <string name="how_to_pointer_title">kasahorow بەخێربێیت بۆ تەختەکلیلی</string>
     <string name="change_log_card_version_title_template"> \u0020\u0020 نوێکارییەکانی <xliff:g id="name">%s</xliff:g> \u0020\u0020
     </string>
     <string name="change_log_entry_header_template_without_name"> \u0020\u0020v<xliff:g id="code">
@@ -534,7 +534,7 @@
     <string name="settings_long_press_timeout_slower">خاوترین</string>
     <string name="settings_long_press_timeout_never">نا چالاک</string>
     <string name="settings_force_locale_title">زمانی تەختەکلیل</string>
-    <string name="settings_force_locale_summary">زمانی بەکارهێنانیتەختەکلیل AnySoftKeyboard (ماوەیەکی پێدەچێ بۆ گۆڕین). زمانی ئێستا: %s.
+    <string name="settings_force_locale_summary">زمانی بەکارهێنانیتەختەکلیل kasahorow (ماوەیەکی پێدەچێ بۆ گۆڕین). زمانی ئێستا: %s.
     </string>
     <string name="tweak_workarounds_group">ڕێکخستنی زیاتر</string>
     <string name="workaround_disable_rtl_fix">چاککردنی ئاڕاستەی نووسین</string>
@@ -749,6 +749,6 @@
     <string name="aosp_light_theme_description">ڕووکاری سپی</string>
     <string name="app_share_title">باشترین تەختەکلیلی سیستەمی ئەندرۆید</string>
     <string name="app_share_menu_title">بڵاوکردنەوە لەڕێی</string>
-    <string name="app_share_text">یەکێک لە باشترین و خیڕاترین تەختەکلیلەکانی سیستەمی ئەندرۆید کە چەندین تایبەتمەندی جیاواز و پێشکەوتوی تێدایە وەک ڕووکاری هەمەڕەنگ، بەشی سەرەو خواری جیاواز، سەدان ئیممۆجی نایاب بەتەنها لە AnySoftKeyboard.\nدابەزاندن لە گۆگڵ پلەی:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_text">یەکێک لە باشترین و خیڕاترین تەختەکلیلەکانی سیستەمی ئەندرۆید کە چەندین تایبەتمەندی جیاواز و پێشکەوتوی تێدایە وەک ڕووکاری هەمەڕەنگ، بەشی سەرەو خواری جیاواز، سەدان ئیممۆجی نایاب بەتەنها لە kasahorow.\nدابەزاندن لە گۆگڵ پلەی:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow\nF-Droid: https://f-droid.org/en/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">پەنجەبنێ بێرەدا بۆ سوپرایز</string>
 </resources>

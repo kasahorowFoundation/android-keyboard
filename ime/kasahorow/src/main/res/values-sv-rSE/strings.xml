@@ -4,7 +4,7 @@
     <string name="debug_tracing_starting_failed">Felsökning kunde ej påbörjas. Se detaljer i logcat.</string>
     <string name="debug_tracing_finished">Felsökning avslutad!\nSe loggfil \u0020<xliff:g id="trace_file">%s</xliff:g></string>
     <string name="menu_about_item">Mer om</string>
-    <string name="how_to_pointer_title">Välkommen till AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Välkommen till kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Senaste ändringar för v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Läs mer:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -61,7 +61,7 @@
     <string name="night_mode_sound_control">Inaktivera knapptryckningsljud</string>
     <string name="night_mode_vibration_control">Inaktivera vibrationer vid knapptryckning</string>
     <string name="power_save_mode_screen">Strömsparande inställningar</string>
-    <string name="power_save_mode_description">Strömsparläge kommer att minska energiförbrukningen av AnySoftKeyboard genom att inaktivera funktioner:</string>
+    <string name="power_save_mode_description">Strömsparläge kommer att minska energiförbrukningen av kasahorow genom att inaktivera funktioner:</string>
     <string name="power_save_mode_state_summary">För närvarande utlöser strömsparläge:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Aktivera strömsparläge</string>
     <string name="power_save_mode_types_never">Aldrig</string>
@@ -197,7 +197,7 @@
     <string name="volume_key_for_left_right_support_off_summary">Volym upp flyttar markören vänster, volymen ner flyttar markören höger</string>
     <string name="more_ui_settings_group">Användargränssnitt</string>
     <string name="special_dictionaries_group">Speciella ordböcker</string>
-    <string name="special_dictionaries_group_summary">Förslagsordböcker som används i AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Förslagsordböcker som används i kasahorow</string>
     <string name="use_user_dictionary">Användarordlista</string>
     <string name="always_use_fallback_user_dictionary">Använd privat lagringsutrymme för användarordbok</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Försök att använda Androids globala, inbyggda användar-ordbok.</string>

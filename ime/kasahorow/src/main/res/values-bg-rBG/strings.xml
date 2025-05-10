@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
     <string name="debug_tracing_starting">дума</string>
     <string name="menu_about_item">Относно</string>
-    <string name="how_to_pointer_title">Добре дошли в AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Добре дошли в kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Последни промени за v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Още:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -61,7 +61,7 @@
     <string name="night_mode_sound_control">Деактивиране на звуците при натискане на клавиш</string>
     <string name="night_mode_vibration_control">Деактивиране на вибрациите при натискане на клавиши</string>
     <string name="power_save_mode_screen">Настройки за Пестене на енергия</string>
-    <string name="power_save_mode_description">Режимът за пестене на енергия ще намали консумацията на енергия от AnySoftKeyboard, като деактивира функциите:</string>
+    <string name="power_save_mode_description">Режимът за пестене на енергия ще намали консумацията на енергия от kasahorow, като деактивира функциите:</string>
     <string name="power_save_mode_dialog_title">Активиране на режима за Пестене на енергия</string>
     <string name="power_save_mode_types_never">Никога</string>
     <string name="power_save_mode_types_lower_battery">Когато батерията е слаба</string>
@@ -181,7 +181,7 @@
     <string name="volume_key_for_left_right_support_off_summary">Увеличаването на звука премества курсора наляво, намаляването на звука премества курсора надясно</string>
     <string name="more_ui_settings_group">Потребителски интерфейс</string>
     <string name="special_dictionaries_group">Специализирани речници</string>
-    <string name="special_dictionaries_group_summary">Речници с предложения за думи, изпозвани в AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Речници с предложения за думи, изпозвани в kasahorow</string>
     <string name="use_user_dictionary">Потребителски речник</string>
     <string name="use_user_dictionary_on_summary">Предлагане на добавени от потребителя думи (щракнете двукратно върху написано предложение, за да добавите)</string>
     <string name="use_auto_dictionary">Автоматичен речник</string>
@@ -310,8 +310,8 @@
     <string name="lang_key_shows_popup_on_summary">Клавиша за език ще покаже диалог за избор</string>
     <string name="lang_key_shows_popup_off_summary">Клавиша за език ще променя подредбата поред</string>
     <string name="settings_os_clipboard_sync">Синхр. на клипборда с ОС</string>
-    <string name="settings_os_clipboard_sync_summary_on">Откриване на промени в клипборда и синхронизиране с AnySoftKeyboard.</string>
-    <string name="settings_os_clipboard_sync_summary_off">Без слушане на операции с клипборда извън AnySoftKeyboard.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Откриване на промени в клипборда и синхронизиране с kasahorow.</string>
+    <string name="settings_os_clipboard_sync_summary_off">Без слушане на операции с клипборда извън kasahorow.</string>
     <string name="auto_caps">Автоматични главни букви</string>
     <string name="grammar_group">Граматика</string>
     <string name="keyboard_behavior_group">Поведение на клавиатурата</string>
@@ -496,7 +496,7 @@
     <string name="emoji_default_skin_tone_value_random_type">Случаен тон на кожата</string>
     <string name="developer_tools">Инструменти за разработчици</string>
     <string name="click_for_developer_features">Инструменти за разработчици</string>
-    <string name="click_for_developer_features_summary">Различни инструменти за AnySoftKeyboard
+    <string name="click_for_developer_features_summary">Различни инструменти за kasahorow
         разработчици
     </string>
     <string name="failed_to_create_mem_dump">Неуспешно създаване на файл за изхвърляне на паметта поради:
@@ -505,7 +505,7 @@
     <string name="created_mem_dump_file">Създаден файл за изхвърляне на памет при:
         <xliff:g id="file_path">%s</xliff:g>
     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard не е напълно настроена за използване. Щракнете
+    <string name="not_configured_with_click_here">kasahorow не е напълно настроена за използване. Щракнете
         тук, за да настроите.
     </string>
     <string name="not_configured_with_just_click_here">Щракнете тук</string>
@@ -520,25 +520,25 @@
     <string name="enter_abbreviation_target_hint">Пълно изречение</string>
     <string name="toast_error_custom_path_backup">Грешка: Всяко контекстуално приложение може да бъде отворено</string>
     <string name="about_additional_software_licenses">Допълнителни лицензи за софтуера</string>
-    <string name="setup_wizard_step_one_title">Активирай AnySoftKeyboard</string>
+    <string name="setup_wizard_step_one_title">Активирай kasahorow</string>
     <string name="setup_wizard_step_one_details">В тази стъпка ще трябва да активирате <i>
-        AnySoftKeyboard</i>. Моля, проверете <i>\'AnySoftKeyboard\'</i> във Вашите <i>настройки за
+        kasahorow</i>. Моля, проверете <i>\'kasahorow\'</i> във Вашите <i>настройки за
         Език и въвеждане</i>. Това ще ни позволи да работим с вашето устройство.
     </string>
     <string name="setup_wizard_step_one_action">Отидете при Вашите <i>настройки за Език и въвеждане</i>…
     </string>
     <string name="setup_wizard_step_one_action_error_no_settings_activity">Грешка: Вашето устройство
-        не поддържа клавиатури от трети страни. AnySoftKeyboard не може да бъде активирана!
+        не поддържа клавиатури от трети страни. kasahorow не може да бъде активирана!
     </string>
     <string name="setup_wizard_step_permissions_title">Одобряване на разрешения</string>
-    <string name="setup_wizard_step_two_title">Превключи към AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Вашата система може да използва <i>AnySoftKeyboard</i> сега, но
-        не е зададена като активна. \nС превключването, <i>AnySoftKeyboard</i> ще бъде новата Ви
+    <string name="setup_wizard_step_two_title">Превключи към kasahorow</string>
+    <string name="setup_wizard_step_two_details">Вашата система може да използва <i>kasahorow</i> сега, но
+        не е зададена като активна. \nС превключването, <i>kasahorow</i> ще бъде новата Ви
         екранна клавиатура, заедно с всичките ѝ функции!
     </string>
     <string name="setup_wizard_step_two_action">Превключване на активните клавиатури</string>
     <string name="setup_wizard_step_three_title">Какво следва</string>
-    <string name="setup_wizard_step_three_details">Благодарим Ви, че избрахте <i>AnySoftKeyboard</i>.
+    <string name="setup_wizard_step_three_details">Благодарим Ви, че избрахте <i>kasahorow</i>.
     </string>
     <string name="setup_wizard_step_three_details_done">        <b>Готови сте 🎉\nОтидете в любимото си приложение, за да я изпробвате.</b>
     </string>
@@ -549,11 +549,11 @@
     <string name="setup_wizard_step_three_action_themes">Изберете тема…</string>
     <string name="setup_wizard_step_three_action_all_settings">Конфигуриране на всичко останало…</string>
     <string name="setup_wizard_step_download_title">Изтегляне на езикови пакети</string>
-    <string name="setup_wizard_step_download_details">Добрата новина е, че <i>AnySoftKeyboard</i> поддържа десетки езици. Просто изтеглете желания езиков пакет и се наслаждавайте на писане на
+    <string name="setup_wizard_step_download_details">Добрата новина е, че <i>kasahorow</i> поддържа десетки езици. Просто изтеглете желания езиков пакет и се наслаждавайте на писане на
         който и да е език във вашето устройство.</string>
     <string name="setup_wizard_step_download_action">Изтегляне на езиков пакет</string>
     <string name="setup_wizard_step_download_skip_action">Прескачане</string>
-    <string name="ime_crashed_text">За съжаление има проблем с <i>AnySoftKeyboard</i>.
+    <string name="ime_crashed_text">За съжаление има проблем с <i>kasahorow</i>.
         Не се паникьосвайте, има нещо, което <b>Вие</b> можете да направите, за да разрешите това: изпратете ни 
 отчета
         за срив и ние ще направим всичко възможно да разрешим този проблем и да Ви върнем страхотното клавиатурно
@@ -592,10 +592,10 @@
     <string name="no_internet_fields_specific_layout">Нищо</string>
     <string name="bottom_nav_home">Здравейте</string>
     <string name="setup_wizard_welcome_title">Добре дошли!</string>
-    <string name="setup_wizard_welcome_sub_title">Благодарим Ви, че опитахте AnySoftKeyboard!
+    <string name="setup_wizard_welcome_sub_title">Благодарим Ви, че опитахте kasahorow!
     </string>
     <string name="setup_wizard_welcome_info">Както при всяка друга клавиатура на Android, от вас се изисква да
-        активирайте AnySoftKeyboard в страниците с настройки на Android. Това се изисква от Android, за да се гарантира, че
+        активирайте kasahorow в страниците с настройки на Android. Това се изисква от Android, за да се гарантира, че
         данните Ви за писане не са откраднати от зли клавиатури *.
     </string>
     <string name="setup_wizard_welcome_info_2">Добре, готови ли сте? щракнете по-долу, за да започнете, ще ви въведа в това.</string>
@@ -634,7 +634,7 @@
     <string name="media_insertion_pending_message">Щракнете върху текстовото поле, за да вмъкнете изображение</string>
     <string name="aosp_dark_theme_name">AOSP Тъмна тема</string>
     <string name="aosp_light_theme_name">AOSP Светла тема</string>
-    <string name="app_share_title">Привет от AnySoftKeyboard</string>
-    <string name="app_share_menu_title">Споделете AnySoftKeyboard с помощта на</string>
+    <string name="app_share_title">Привет от kasahorow</string>
+    <string name="app_share_menu_title">Споделете kasahorow с помощта на</string>
     <string name="click_me_for_easter_egg_info">щракни ме за изненада</string>
 </resources>

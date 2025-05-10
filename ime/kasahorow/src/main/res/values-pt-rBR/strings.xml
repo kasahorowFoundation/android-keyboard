@@ -5,7 +5,7 @@
     <string name="debug_tracing_starting_failed">Falha ao iniciar rastreamento! Verifique o log para obter detalhes.</string>
     <string name="debug_tracing_finished">Rastreamento finalizado!\nO arquivo é\u0020<xliff:g id="trace_file">%s</xliff:g></string>
     <string name="menu_about_item">Sobre</string>
-    <string name="how_to_pointer_title">Bem-vindo ao AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Bem-vindo ao kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Últimas mudanças para v<xliff:g id="name">%s </xliff:g> \u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Mais:\u0020
@@ -67,7 +67,7 @@
     <string name="night_mode_sound_control">Desativar o som das teclas</string>
     <string name="night_mode_vibration_control">Desabilitar vibração das teclas</string>
     <string name="power_save_mode_screen">Configurações de economia de energia</string>
-    <string name="power_save_mode_description">O modo de economia de energia irá reduzir o consumo de energia do AnySoftKeyboard desativando recursos:</string>
+    <string name="power_save_mode_description">O modo de economia de energia irá reduzir o consumo de energia do kasahorow desativando recursos:</string>
     <string name="power_save_mode_state_summary">Economia de energia inicia em: \u0020%s</string>
     <string name="power_save_mode_dialog_title">Ativar a economia de energia</string>
     <string name="power_save_mode_types_never">Nunca</string>
@@ -210,11 +210,11 @@
     <string name="volume_key_for_left_right_support_off_summary">Volume + move o cursor para a esquerda, volume - move o cursor para a direita    </string>
     <string name="more_ui_settings_group">Interface do usuário</string>
     <string name="special_dictionaries_group">Dicionários especiais</string>
-    <string name="special_dictionaries_group_summary">Dicionários de sugestão usados em AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Dicionários de sugestão usados em kasahorow</string>
     <string name="use_user_dictionary">Dicionário do usuário</string>
     <string name="use_user_dictionary_on_summary">Adicionar palavra sugerida (clique duas vezes na palavra para adicionar)</string>
     <string name="always_use_fallback_user_dictionary">Usar o armazenamento privado do Dicionário do Usuário</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Usar o armazenamento privado do mecanismo de Dicionário de Usuário integrado no AnySoftKeyboard.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Usar o armazenamento privado do mecanismo de Dicionário de Usuário integrado no kasahorow.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Tente usar o dicionário de usuário integrado no Android.</string>
     <string name="use_auto_dictionary">Dicionário automático</string>
     <string name="use_auto_dictionary_dialog_title">Escolha o modo de aprendizagem</string>
@@ -325,8 +325,8 @@
     <string name="lang_key_shows_popup_on_summary">Toque na tecla de idiomas irá mostrar um popup</string>
     <string name="lang_key_shows_popup_off_summary">Tecla de linguagem vai ciclar idiomas</string>
     <string name="settings_os_clipboard_sync">Sincronizar área de transferência com o SO</string>
-    <string name="settings_os_clipboard_sync_summary_on">Detectar alterações na área de transferência e sincronizar com o AnySoftKeyboard.</string>
-    <string name="settings_os_clipboard_sync_summary_off">Não monitorar ações na área de transferência fora do AnySoftKeyboard.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Detectar alterações na área de transferência e sincronizar com o kasahorow.</string>
+    <string name="settings_os_clipboard_sync_summary_off">Não monitorar ações na área de transferência fora do kasahorow.</string>
     <string name="auto_caps">Maiúscula automática</string>
     <string name="grammar_group">Gramática</string>
     <string name="keyboard_behavior_group">Comportamento do teclado</string>
@@ -471,11 +471,11 @@ simplistas    </string>
     <string name="settings_long_press_timeout_slower">Mais longo</string>
     <string name="settings_long_press_timeout_never">Infinito</string>
     <string name="settings_force_locale_title">Forçar localização</string>
-    <string name="settings_force_locale_summary">Forçar a localização usada no AnySoftKeyboard (leva um tempo para funcionar). Atualmente: %s.</string>
+    <string name="settings_force_locale_summary">Forçar a localização usada no kasahorow (leva um tempo para funcionar). Atualmente: %s.</string>
     <string name="tweak_workarounds_group">Soluções alternativas</string>
     <string name="workaround_disable_rtl_fix">Usar manipulação da direita para a esquerda do Android</string>
     <string name="workaround_disable_rtl_fix_summary_on">Usar a manipulação RTL do sistema operacional (para celulares mais novos).    </string>
-    <string name="workaround_disable_rtl_fix_summary_off">Use o AnySoftKeyboard RTL. Deve ser usado
+    <string name="workaround_disable_rtl_fix_summary_off">Use o kasahorow RTL. Deve ser usado
         apenas se o sistema operacional falhar em implementar o RTL.
     </string>
     <string name="settings_split_state_title_portrait">Estado inicial do modo retrato dividir/unir</string>
@@ -536,14 +536,14 @@ simplistas    </string>
     <string name="emoji_default_gender_value_random_type">Gênero aleatório</string>
     <string name="developer_tools">Ferramentas para desenvolvedor</string>
     <string name="click_for_developer_features">Ferramentas para desenvolvedor</string>
-    <string name="click_for_developer_features_summary">Várias ferramentas para desenvolvedores AnySoftKeyboard</string>
+    <string name="click_for_developer_features_summary">Várias ferramentas para desenvolvedores kasahorow</string>
     <string name="failed_to_create_mem_dump">Falha ao criar arquivo de despejo de memória devido a:
         <xliff:g id="message">%s</xliff:g>
     </string>
     <string name="created_mem_dump_file">Arquivo de despejo de memória criado em:
         <xliff:g id="file_path">%s</xliff:g>
     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard não está totalmente configurado para uso. Clique
+    <string name="not_configured_with_click_here">kasahorow não está totalmente configurado para uso. Clique
         aqui para configurar.
     </string>
     <string name="not_configured_with_just_click_here">Clique aqui</string>
@@ -558,30 +558,30 @@ simplistas    </string>
     <string name="enter_abbreviation_target_hint">Texto completo</string>
     <string name="toast_error_custom_path_backup">Erro: Qualquer aplicativo contextual pode ser aberto</string>
     <string name="about_additional_software_licenses">Outras licenças</string>
-    <string name="setup_wizard_step_one_title">Ativar AnySoftKeyboard</string>
+    <string name="setup_wizard_step_one_title">Ativar kasahorow</string>
     <string name="setup_wizard_step_one_details">Nesta etapa, você precisará ativar o <i>
-        AnySoftKeyboard</i>. Por favor, selecione o <i>\'AnySoftKeyboard\'</i> em configurações de <i>Idioma e Teclado</i>. Isso permitirá ativação do app no seu aparelho.
+        kasahorow</i>. Por favor, selecione o <i>\'kasahorow\'</i> em configurações de <i>Idioma e Teclado</i>. Isso permitirá ativação do app no seu aparelho.
     </string>
     <string name="setup_wizard_step_one_action">Vá para as suas configurações de <i>Idioma e Teclado</i>…</string>
     <string name="setup_wizard_step_one_action_error_no_settings_activity">Erro: O seu aparelho
-        não suporta teclados de terceiros. AnySoftKeyboard não pode ser ativado!
+        não suporta teclados de terceiros. kasahorow não pode ser ativado!
     </string>
     <string name="setup_wizard_step_permissions_title">Habilitar permissões</string>
-    <string name="setup_wizard_step_two_title">Mudar para o AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Agora o <i>AnySoftKeyboard</i> está disponível no seu aparelho, no entanto ele não está ativado.\n Ao ativar o <i>AnySoftKeyboard</i> se tornará seu novo teclado, junto com todas as suas funcionalidades!</string>
+    <string name="setup_wizard_step_two_title">Mudar para o kasahorow</string>
+    <string name="setup_wizard_step_two_details">Agora o <i>kasahorow</i> está disponível no seu aparelho, no entanto ele não está ativado.\n Ao ativar o <i>kasahorow</i> se tornará seu novo teclado, junto com todas as suas funcionalidades!</string>
     <string name="setup_wizard_step_two_action">Mudar teclados ativos</string>
     <string name="setup_wizard_step_three_title">O quê vem agora</string>
-    <string name="setup_wizard_step_three_details">Obrigado por escolher o <i>AnySoftKeyboard</i>.</string>
+    <string name="setup_wizard_step_three_details">Obrigado por escolher o <i>kasahorow</i>.</string>
     <string name="setup_wizard_step_three_details_done"><b>Você terminou 🎉\nAbra um app de sua escolha e experimente.</b></string>
     <string name="setup_wizard_step_three_details_actions">Ou você pode customizar o teclado ao seu gosto:</string>
     <string name="setup_wizard_step_three_action_languages">Configure idiomas…</string>
     <string name="setup_wizard_step_three_action_themes">Selecione temas…</string>
     <string name="setup_wizard_step_three_action_all_settings">E muito mais…</string>
     <string name="setup_wizard_step_download_title">Baixe pacotes de idiomas</string>
-    <string name="setup_wizard_step_download_details">Você ficará feliz em saber que <i>AnySoftKeyboard</i> suporta dezenas de idiomas. Basta baixar o pacote de idioma desejado e digitar em qualquer idioma no seu dispositivo.</string>
+    <string name="setup_wizard_step_download_details">Você ficará feliz em saber que <i>kasahorow</i> suporta dezenas de idiomas. Basta baixar o pacote de idioma desejado e digitar em qualquer idioma no seu dispositivo.</string>
     <string name="setup_wizard_step_download_action">Baixar pacotes de idioma</string>
     <string name="setup_wizard_step_download_skip_action">Pular</string>
-    <string name="ime_crashed_text">Infelizmente houve um problema com o <i>AnySoftKeyboard</i>. Não se preocupe, exite uma coise que <b>você</b> pode fazer para nos ajudar a resolver isso, envie um relatório de erro, e nos vamos dar o nosso melhor para resolver esse problema e trazer de volta sua incrível experiência com o teclado!\n\n Com as sinceras desculpas do time de desenvolvedores.</string>
+    <string name="ime_crashed_text">Infelizmente houve um problema com o <i>kasahorow</i>. Não se preocupe, exite uma coise que <b>você</b> pode fazer para nos ajudar a resolver isso, envie um relatório de erro, e nos vamos dar o nosso melhor para resolver esse problema e trazer de volta sua incrível experiência com o teclado!\n\n Com as sinceras desculpas do time de desenvolvedores.</string>
     <string name="ime_crashed_send_button">Enviar</string>
     <string name="ime_crashed_cancel_button">Cancelar</string>
     <string name="ime_crashed_intent_selector_title">Enviar relatório de erro por</string>
@@ -600,7 +600,7 @@ simplistas    </string>
     <string name="wizard_allow_contacts_permission">Permitir sugestão de palavras baseada no nome de seus contatos</string>
     <string name="turn_off_contacts_dictionary">Desligue o dicionário de contatos</string>
     <string name="read_more_about_permissions">Leia mais sobre permissões…</string>
-    <string name="ask_beta_link_promo">Ei! Quer ver coisas novas do <i>AnySoftKeyboard</i> mais rápido? Então você está com sorte! O Canal <i>BETA</i> já está disponível para <b>você</b>!\nCadastre-se no link abaixo e atualize através da <i>Google Play-Store</i>! \n\n https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard\n\n Obrigado por ajudar a encontrar os bugs antes do lançamento final.</string>
+    <string name="ask_beta_link_promo">Ei! Quer ver coisas novas do <i>kasahorow</i> mais rápido? Então você está com sorte! O Canal <i>BETA</i> já está disponível para <b>você</b>!\nCadastre-se no link abaixo e atualize através da <i>Google Play-Store</i>! \n\n https://play.google.com/apps/testing/com.menny.android.kasahorow\n\n Obrigado por ajudar a encontrar os bugs antes do lançamento final.</string>
     <string name="clipboard_fine_select_enabled_toast">Seleção precisa de texto ativada. Use as setas direcionais.</string>
     <string name="app_shortcut_keyboards_disabled">Navegação do teclado desativada</string>
     <string name="app_shortcut_keyboards_long_label">Selecione um layout de teclado para usar</string>
@@ -624,11 +624,11 @@ simplistas    </string>
     <string name="no_internet_fields_specific_layout">Nenhum</string>
     <string name="bottom_nav_home">Olá</string>
     <string name="setup_wizard_welcome_title">Bem-vindo!</string>
-    <string name="setup_wizard_welcome_sub_title">Obrigado por experimentar o AnySoftKeyboard!</string>
-    <string name="setup_wizard_welcome_info">Assim como com outros teclados para Android, você precisa habilitar o AnySoftKeyboard nas configurações. Isso é requerido pelo Android para garantir que o seu método de entrada não foi alterado por ação maliciosa*.</string>
+    <string name="setup_wizard_welcome_sub_title">Obrigado por experimentar o kasahorow!</string>
+    <string name="setup_wizard_welcome_info">Assim como com outros teclados para Android, você precisa habilitar o kasahorow nas configurações. Isso é requerido pelo Android para garantir que o seu método de entrada não foi alterado por ação maliciosa*.</string>
     <string name="setup_wizard_welcome_info_2">Pronto? Clique abaixo para começar, vou lhe guiar nessa tarefa.</string>
     <string name="setup_wizard_welcome_start_action">Começar configuração…</string>
-    <string name="setup_wizard_welcome_info_footnote">*Claro que o AnySoftKeyboard não é malicioso. Esperamos que olhe nosso código fonte e se certifique disso. Além do mais, não possuimos permissões de <i>REDE</i>, então não podemos enviar nenhum dado de seu aparelho.</string>
+    <string name="setup_wizard_welcome_info_footnote">*Claro que o kasahorow não é malicioso. Esperamos que olhe nosso código fonte e se certifique disso. Além do mais, não possuimos permissões de <i>REDE</i>, então não podemos enviar nenhum dado de seu aparelho.</string>
     <string name="setup_wizard_welcome_privacy_action">Política de Privacidade…</string>
     <string name="clear_all_dictionary_override">Limpar substituições</string>
     <string name="theme_case_type_override_dialog_title">Selecione a substituição do formato da fonte</string>
@@ -675,8 +675,8 @@ simplistas    </string>
     <string name="aosp_dark_theme_description">Baseado no AOSP, tema com cores escuras</string>
     <string name="aosp_light_theme_name">Tema claro AOSP</string>
     <string name="aosp_light_theme_description">Baseado no AOSP, tema com cores claras</string>
-    <string name="app_share_title">Bem-vindo ao AnySoftKeyboard</string>
-    <string name="app_share_menu_title">Compartilhar AnySoftKeyboard via</string>
-    <string name="app_share_text">Deixe-me recomendar um app de teclado - AnySoftKeyboard para Android, ele é de software livre, focado na privacidade, gratuito, personalizável, e multilíngue.\nBaixe na:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_title">Bem-vindo ao kasahorow</string>
+    <string name="app_share_menu_title">Compartilhar kasahorow via</string>
+    <string name="app_share_text">Deixe-me recomendar um app de teclado - kasahorow para Android, ele é de software livre, focado na privacidade, gratuito, personalizável, e multilíngue.\nBaixe na:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow\nF-Droid: https://f-droid.org/en/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">clique aqui para uma surpresa</string>
 </resources>

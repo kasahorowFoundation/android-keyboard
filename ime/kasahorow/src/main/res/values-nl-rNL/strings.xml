@@ -5,7 +5,7 @@
     <string name="debug_tracing_finished">Tracering is klaar!\nTraceerbestand is 
 <xliff:g id="trace_file">%s</xliff:g></string>
     <string name="menu_about_item">Over</string>
-    <string name="how_to_pointer_title">Welkom bij AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Welkom bij kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Laatste wijzigingen voor v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Meer:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -71,7 +71,7 @@ woordenlijst
     <string name="night_mode_sound_control">Schakel toetsgeluiden uit</string>
     <string name="night_mode_vibration_control">Schakel toetsvibraties uit</string>
     <string name="power_save_mode_screen">Energiebesparende modus</string>
-    <string name="power_save_mode_description">Energiebesparende modus vermindert het energieverbruik van AnySoftKeyboard door de volgende features uit te schakelen:</string>
+    <string name="power_save_mode_description">Energiebesparende modus vermindert het energieverbruik van kasahorow door de volgende features uit te schakelen:</string>
     <string name="power_save_mode_state_summary">Momenteel, energiebesparende drempel:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Schakel energiebesparende modus in</string>
     <string name="power_save_mode_types_never">Nooit</string>
@@ -213,11 +213,11 @@ woordenlijst
      </string>
     <string name="more_ui_settings_group">Gebruikersinterface</string>
     <string name="special_dictionaries_group">Speciale woordenlijsten</string>
-    <string name="special_dictionaries_group_summary">Woordenlijsten met voorstellen gebruikt in AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Woordenlijsten met voorstellen gebruikt in kasahorow</string>
     <string name="use_user_dictionary">Gebruikerswoordenlijst</string>
     <string name="use_user_dictionary_on_summary">Stel woorden voor die door gebruiker zijn toegevoegd (dubbelklik een voorstel om toe te voegen)</string>
     <string name="always_use_fallback_user_dictionary">Gebruik privé gebruikers-woordenboek opslag</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Gebruik het ingebouwde Gebruikerswoordenboekmechanisme voor AnySoftKeyboard.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Gebruik het ingebouwde Gebruikerswoordenboekmechanisme voor kasahorow.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Probeer de globale ingebouwde gebruikerswoordenlijst van Android te gebruiken.</string>
     <string name="use_auto_dictionary">Automatische woordenlijst</string>
     <string name="use_auto_dictionary_dialog_title">Kies leermethode</string>
@@ -331,8 +331,8 @@ woordenlijst
     <string name="lang_key_shows_popup_on_summary">Taaltoets toont een selectiedialoog</string>
     <string name="lang_key_shows_popup_off_summary">Taaltoets wisselt talen</string>
     <string name="settings_os_clipboard_sync">Synchroniseer klembord met OS</string>
-    <string name="settings_os_clipboard_sync_summary_on">detecteer klembordwijzigingen en synchroniseer met AnySoftKeyboard</string>
-    <string name="settings_os_clipboard_sync_summary_off">Luister niet naar klembordoperaties buiten AnySoftKeyboard.</string>
+    <string name="settings_os_clipboard_sync_summary_on">detecteer klembordwijzigingen en synchroniseer met kasahorow</string>
+    <string name="settings_os_clipboard_sync_summary_off">Luister niet naar klembordoperaties buiten kasahorow.</string>
     <string name="auto_caps">Automatische hoofdletters</string>
     <string name="grammar_group">Grammatica</string>
     <string name="keyboard_behavior_group">Toetsenbord gedrag</string>
@@ -478,11 +478,11 @@ woordenlijst
     <string name="settings_long_press_timeout_slower">Langzamer</string>
     <string name="settings_long_press_timeout_never">Nooit</string>
     <string name="settings_force_locale_title">Forceer locale</string>
-    <string name="settings_force_locale_summary">Forceer locale in AnySoftKeyboard (duurt even voordat dit effect heeft). Momenteel: %s.</string>
+    <string name="settings_force_locale_summary">Forceer locale in kasahorow (duurt even voordat dit effect heeft). Momenteel: %s.</string>
     <string name="tweak_workarounds_group">Tijdelijke oplossingen</string>
     <string name="workaround_disable_rtl_fix">Gebruik Androids rechts-naar-linksafhandeling</string>
     <string name="workaround_disable_rtl_fix_summary_on">Gebruik OS RTL verwerking (voor SE telefoons)</string>
-    <string name="workaround_disable_rtl_fix_summary_off">Gebruik AnySoftKeyboard RTL verwerking</string>
+    <string name="workaround_disable_rtl_fix_summary_off">Gebruik kasahorow RTL verwerking</string>
     <string name="settings_split_state_title_portrait">Begintoestand portretmodus Opgesplitst/Verenigd</string>
     <string name="settings_split_state_title_landscape">Begintoestand landschapsmodus Opgesplitst/Verenigd</string>
     <string name="settings_split_state_summary">Kies of toetsenbord standaard is gesplitst. Nu: %s</string>
@@ -528,13 +528,13 @@ woordenlijst
     <string name="emoji_default_gender_value_random_type">Willekeurig geslacht</string>
     <string name="developer_tools">Tools voor ontwikkelaars</string>
     <string name="click_for_developer_features">Tools voor ontwikkelaars</string>
-    <string name="click_for_developer_features_summary">Verschillende tools voor AnySoftKeyboard-ontwikkelaars</string>
+    <string name="click_for_developer_features_summary">Verschillende tools voor kasahorow-ontwikkelaars</string>
     <string name="failed_to_create_mem_dump">Kan geen geheugendumpbestand maken vanwege: <xliff:g id="message">%s</xliff:g>
     </string>
     <string name="created_mem_dump_file">Geheugendumpbestand gemaakt op: <xliff:g id="file_path">%s</xliff:g>
      </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard is niet volledig ingesteld. Klik hier als u wilt instellen.</string>
-    <string name="not_notification_permission_text">AnySoftKeyboard heeft geen toestemming om meldingen weer te geven. We gebruiken het - heel zelden - om je op de hoogte te stellen van kritieke problemen (zoals crashes).</string>
+    <string name="not_configured_with_click_here">kasahorow is niet volledig ingesteld. Klik hier als u wilt instellen.</string>
+    <string name="not_notification_permission_text">kasahorow heeft geen toestemming om meldingen weer te geven. We gebruiken het - heel zelden - om je op de hoogte te stellen van kritieke problemen (zoals crashes).</string>
     <string name="not_configured_with_just_click_here">Klik hier</string>
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
@@ -547,26 +547,26 @@ woordenlijst
     <string name="enter_abbreviation_target_hint">Volledige zin</string>
     <string name="toast_error_custom_path_backup">Fout: Een willekeurige contextuele app kan geopend zijn</string>
     <string name="about_additional_software_licenses">Extra softwarelicenties</string>
-    <string name="setup_wizard_step_one_title">AnySoftKeyboard aanzetten</string>
-    <string name="setup_wizard_step_one_details">In deze stap moet u <i>AnySoftKeyboard</i> aanzetten. Vink <i>\'AnySoftKeyboard\'</i> aan in uw <i>Taal en invoer instellingen</i>. Daardoor kan <i>AnySoftKeyboard</i> werken op uw apparaat.</string>
+    <string name="setup_wizard_step_one_title">kasahorow aanzetten</string>
+    <string name="setup_wizard_step_one_details">In deze stap moet u <i>kasahorow</i> aanzetten. Vink <i>\'kasahorow\'</i> aan in uw <i>Taal en invoer instellingen</i>. Daardoor kan <i>kasahorow</i> werken op uw apparaat.</string>
     <string name="setup_wizard_step_one_action">Ga naar uw <i>Taal en invoer instellingen</i>…</string>
-    <string name="setup_wizard_step_one_action_error_no_settings_activity">Fout: Uw apparaat biedt geen ondersteuning voor toetsenborden van andere partijen. AnySoftKeyboard kan niet worden geactiveerd!</string>
+    <string name="setup_wizard_step_one_action_error_no_settings_activity">Fout: Uw apparaat biedt geen ondersteuning voor toetsenborden van andere partijen. kasahorow kan niet worden geactiveerd!</string>
     <string name="setup_wizard_step_permissions_title">Sta rechten toe</string>
-    <string name="setup_wizard_step_two_title">Schakel over naar AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Uw systeem kan <i>AnySoftKeyboard</i> nu gebruiken, maar het is niet ingesteld als het actieve toetsenbord.\nDoor inschakelen wordt <i>AnySoftKeyboard</i> uw nieuwe schermtoetsenbord, samen met alle mogelijkheden!</string>
+    <string name="setup_wizard_step_two_title">Schakel over naar kasahorow</string>
+    <string name="setup_wizard_step_two_details">Uw systeem kan <i>kasahorow</i> nu gebruiken, maar het is niet ingesteld als het actieve toetsenbord.\nDoor inschakelen wordt <i>kasahorow</i> uw nieuwe schermtoetsenbord, samen met alle mogelijkheden!</string>
     <string name="setup_wizard_step_two_action">Omschakelen actieve toetsenbord</string>
     <string name="setup_wizard_step_three_title">Wat komt hierna</string>
-    <string name="setup_wizard_step_three_details">Dank u voor het kiezen van <i>AnySoftKeyboard</i>.</string>
+    <string name="setup_wizard_step_three_details">Dank u voor het kiezen van <i>kasahorow</i>.</string>
     <string name="setup_wizard_step_three_details_done"><b>u klaar bent 🎉\nProbeer het uit in uw favoriete app.</b></string>
     <string name="setup_wizard_step_three_details_actions">Of, u kan het toetsenbord aanpassen en personaliseren naar uw wens:</string>
     <string name="setup_wizard_step_three_action_languages">Talen instellen…</string>
     <string name="setup_wizard_step_three_action_themes">Kies thema…</string>
     <string name="setup_wizard_step_three_action_all_settings">Alles configureren…</string>
     <string name="setup_wizard_step_download_title">Download taalpakketten</string>
-    <string name="setup_wizard_step_download_details">U mag zich verheugen dat <i>AnySoftKeyboard</i> tientallen talen ondersteunt. Download het gewenste taalpakket en geniet van het typen in de taal van uw keuze op uw apparaat.</string>
+    <string name="setup_wizard_step_download_details">U mag zich verheugen dat <i>kasahorow</i> tientallen talen ondersteunt. Download het gewenste taalpakket en geniet van het typen in de taal van uw keuze op uw apparaat.</string>
     <string name="setup_wizard_step_download_action">Download taalpakket</string>
     <string name="setup_wizard_step_download_skip_action">Overslaan</string>
-    <string name="ime_crashed_text">Helaas, er is een probleem met <i>AnySoftKeyboard</i>. Raak niet in paniek, er is iets dat <b>u</b> kunt doen om te helpen dit probleem op te lossen: stuur ons het crashrapport en we zullen ons best doen om het probleem op te lossen en u weer met een geweldig toetsenbord te laten werken!\n\nMet oprechte verontschuldiging, het ontwikkelteam.</string>
+    <string name="ime_crashed_text">Helaas, er is een probleem met <i>kasahorow</i>. Raak niet in paniek, er is iets dat <b>u</b> kunt doen om te helpen dit probleem op te lossen: stuur ons het crashrapport en we zullen ons best doen om het probleem op te lossen en u weer met een geweldig toetsenbord te laten werken!\n\nMet oprechte verontschuldiging, het ontwikkelteam.</string>
     <string name="ime_crashed_send_button">Verzenden</string>
     <string name="ime_crashed_cancel_button">Annuleren</string>
     <string name="ime_crashed_intent_selector_title">Verzenden crashrapport via</string>
@@ -585,7 +585,7 @@ woordenlijst
     <string name="wizard_allow_contacts_permission">Sta op contacten gebaseerde suggesties toe</string>
     <string name="turn_off_contacts_dictionary">Schakel woordenlijst van contact uit</string>
     <string name="read_more_about_permissions">Lees meer over rechten…</string>
-    <string name="ask_beta_link_promo">Hallo! Wilt u sneller nieuwe functionaliteit van <i>AnySoftKeyboard</i>? Dan heeft u geluk! Het <i>BÉTA</i>-kanaal is nu beschikbaar voor <b>U</b>!\nMeld u aan via onderstaande link en updates komen via <i>Google Play-Store</i>!\n\n https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nBedankt voor het helpen om bugs op te lossen voordat die bij het grote publiek komen.</string>
+    <string name="ask_beta_link_promo">Hallo! Wilt u sneller nieuwe functionaliteit van <i>kasahorow</i>? Dan heeft u geluk! Het <i>BÉTA</i>-kanaal is nu beschikbaar voor <b>U</b>!\nMeld u aan via onderstaande link en updates komen via <i>Google Play-Store</i>!\n\n https://play.google.com/apps/testing/com.menny.android.kasahorow \n\nBedankt voor het helpen om bugs op te lossen voordat die bij het grote publiek komen.</string>
     <string name="clipboard_fine_select_enabled_toast">Nauwkeurige tekstselectie ingeschakeld. Gebruik pijltjes links/rechts.</string>
     <string name="app_shortcut_keyboards_disabled">Toetsenbordennavigatie uitgeschakeld</string>
     <string name="app_shortcut_keyboards_long_label">Kies toetsenboordindeling om te gebruiken</string>
@@ -609,11 +609,11 @@ woordenlijst
     <string name="no_internet_fields_specific_layout">Geen</string>
     <string name="bottom_nav_home">Hallo</string>
     <string name="setup_wizard_welcome_title">Welkom!</string>
-    <string name="setup_wizard_welcome_sub_title">Bedankt voor het proberen van AnySoftKeyboard!</string>
-    <string name="setup_wizard_welcome_info">Zoals met elk ander Android toetsenbord, moet u AnySoftKeyboard in de Android Instellingen inschakelen. Dit is voor Android vereist om te verzekeren dat uw getypte data niet door kwaadaardige toetsenborden gestolen wordt*.</string>
+    <string name="setup_wizard_welcome_sub_title">Bedankt voor het proberen van kasahorow!</string>
+    <string name="setup_wizard_welcome_info">Zoals met elk ander Android toetsenbord, moet u kasahorow in de Android Instellingen inschakelen. Dit is voor Android vereist om te verzekeren dat uw getypte data niet door kwaadaardige toetsenborden gestolen wordt*.</string>
     <string name="setup_wizard_welcome_info_2">Oké, klaar? Klik hieronder om te beginnen, ik zal u hierbij begeleiden.</string>
     <string name="setup_wizard_welcome_start_action">Starten installatie…</string>
-    <string name="setup_wizard_welcome_info_footnote">* Natuurlijk is AnySoftKeyboard niet kwaadaardig. We moedigen u aan om onze source code te bekijken en dit te verifiëren. Daarnaast hebben we geen <i>NETWERK</i> machtigingen, dus kunnen we geen data van het toestel versturen.</string>
+    <string name="setup_wizard_welcome_info_footnote">* Natuurlijk is kasahorow niet kwaadaardig. We moedigen u aan om onze source code te bekijken en dit te verifiëren. Daarnaast hebben we geen <i>NETWERK</i> machtigingen, dus kunnen we geen data van het toestel versturen.</string>
     <string name="setup_wizard_welcome_privacy_action">Ga naar Privacybeleid…</string>
     <string name="setup_wizard_skip">Overslaan</string>
     <string name="clear_all_dictionary_override">Verwijder omzeilingen</string>
@@ -661,14 +661,14 @@ woordenlijst
     <string name="aosp_dark_theme_description">AOSP-geïnspireerd toetsenbordthema met donkere kleuren</string>
     <string name="aosp_light_theme_name">AOSP-lichtthema</string>
     <string name="aosp_light_theme_description">AOSP-geïnspireerd toetsenbordthema met lichte kleuren</string>
-    <string name="app_share_title">Hello van AnySoftKeyboard</string>
-    <string name="app_share_menu_title">AnySoftKeyboard delen met</string>
-    <string name="app_share_text">Laat me de open-source, privacygerichte, gratis, zeer aanpasbare, meertalige Android-toetsenbord-app AnySoftKeyboard aanbevelen.\nHaal het van:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboardnF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_title">Hello van kasahorow</string>
+    <string name="app_share_menu_title">kasahorow delen met</string>
+    <string name="app_share_text">Laat me de open-source, privacygerichte, gratis, zeer aanpasbare, meertalige Android-toetsenbord-app kasahorow aanbevelen.\nHaal het van:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.kasahorownF-Droid: https://f-droid.org/en/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">klik op mij voor een verrassing</string>
     <string name="delete_all_clipboard_entries">Leeg klembord</string>
     <string name="tip_swipe_from_backspace_to_clear">Tip: je kunt vanaf de achtergrond naar links vegen om het woord te verwijderen!</string>
     <string name="notification_read_contacts_ticker">Leesrechten contacten nodig</string>
-    <string name="wizard_allow_notification_permission">Meldingen van AnySoftKeyboard toestaan</string>
+    <string name="wizard_allow_notification_permission">Meldingen van kasahorow toestaan</string>
     <string name="setup_wizard_step_notification_permissions_details">In zeldzame gevallen (bijvoorbeeld app-crashes) moeten we een apparaatmelding plaatsen. Dit wordt aanbevolen, maar het niet toestaan van meldingen heeft geen invloed op het gedrag van deze app.</string>
     <string name="wizard_skip_notification_permission">Meldingen niet toestaan</string>
 </resources>

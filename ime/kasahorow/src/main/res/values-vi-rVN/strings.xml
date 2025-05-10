@@ -9,7 +9,7 @@
         <xliff:g id="trace_file">%s</xliff:g>
     </string>
     <string name="menu_about_item">Thông tin</string>
-    <string name="how_to_pointer_title">Chào mừng đến với AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Chào mừng đến với kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Những thay đổi mới nhất cho v<xliff:g id="name">%s</xliff:g>\u0020\u0020
     </string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
@@ -74,7 +74,7 @@
     <string name="night_mode_sound_control">Tắt âm thanh khi nhấn phím</string>
     <string name="night_mode_vibration_control">Tắt rung khi nhấn phím</string>
     <string name="power_save_mode_screen">Thiết lập tiết kiệm pin</string>
-    <string name="power_save_mode_description">Chế độ Tiết kiệm pin sẽ giảm mức hao pin của AnySoftKeyboard bằng cách tắt các tính năng:</string>
+    <string name="power_save_mode_description">Chế độ Tiết kiệm pin sẽ giảm mức hao pin của kasahorow bằng cách tắt các tính năng:</string>
     <string name="power_save_mode_state_summary">Hiện tại, kích hoạt Tiết kiệm pin:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Kích hoạt chế độ Tiết kiệm pin</string>
     <string name="power_save_mode_types_never">Không bao giờ</string>
@@ -226,11 +226,11 @@
     <string name="volume_key_for_left_right_support_off_summary">Tăng âm lượng đưa con trỏ qua trái, giảm âm lượng đưa con trỏ qua phải</string>
     <string name="more_ui_settings_group">Giao diện người dùng</string>
     <string name="special_dictionaries_group">Từ điển đặc biệt</string>
-    <string name="special_dictionaries_group_summary">Từ điển gợi ý được sử dụng trong AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Từ điển gợi ý được sử dụng trong kasahorow</string>
     <string name="use_user_dictionary">Từ điển cá nhân</string>
     <string name="use_user_dictionary_on_summary">Đề xuất các từ đã thêm của người dùng (nhấp đúp vào đề xuất đã nhập để Thêm)</string>
     <string name="always_use_fallback_user_dictionary">Sử dụng bộ nhớ Từ điển cá nhân riêng</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Sử dụng cơ chế Từ điển cá nhân được tích hợp sẵn trong bộ nhớ riêng của AnySoftKeyboard.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Sử dụng cơ chế Từ điển cá nhân được tích hợp sẵn trong bộ nhớ riêng của kasahorow.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Cố gắng sử dụng Từ điển cá nhân tích hợp sẵn toàn cầu của Android</string>
     <string name="use_auto_dictionary">Từ điển tự động</string>
     <string name="use_auto_dictionary_dialog_title">Chọn phương pháp học</string>
@@ -315,8 +315,8 @@
     <string name="lang_key_shows_popup_on_summary">Phím ngôn ngữ sẽ bật lên một hộp thoại lựa chọn</string>
     <string name="lang_key_shows_popup_off_summary">Phím ngôn ngữ sẽ thay đổi ngôn ngữ</string>
     <string name="settings_os_clipboard_sync">Đồng bộ khay nhớ tạm với hệ điều hành</string>
-    <string name="settings_os_clipboard_sync_summary_on">Phát hiện các thay đổi của khay nhớ tạm và đồng bộ hóa với AnySoftKeyboard.</string>
-    <string name="settings_os_clipboard_sync_summary_off">Không nghe các thao tác trên khay nhớ tạm bên ngoài AnySoftKeyboard.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Phát hiện các thay đổi của khay nhớ tạm và đồng bộ hóa với kasahorow.</string>
+    <string name="settings_os_clipboard_sync_summary_off">Không nghe các thao tác trên khay nhớ tạm bên ngoài kasahorow.</string>
     <string name="auto_caps">Tự động viết hoa</string>
     <string name="grammar_group">Ngữ pháp</string>
     <string name="keyboard_behavior_group">Hành vi bàn phím</string>

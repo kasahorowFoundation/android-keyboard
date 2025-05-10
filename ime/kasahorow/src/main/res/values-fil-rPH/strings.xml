@@ -4,7 +4,7 @@
     <string name="debug_tracing_starting_failed">Pagsunod sa nasimulan ay bigo! Tingnan ang logcat para sa mga detalye.</string>
     <string name="debug_tracing_finished">Pagsunod ay natapos!\nAng trace file ay <xliff:g id="trace_file">%s</xliff:g>    </string>
     <string name="menu_about_item">Tungol ito</string>
-    <string name="how_to_pointer_title">Magligayang padating sa AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Magligayang padating sa kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Bagong mga pagbabgo para sa v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Marami::\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -152,7 +152,7 @@
     <string name="volume_key_for_left_right_support_off_summary">Ang volume pataas ay iikot sa cursor pakaliwa, volume pababa ikot sa cursor pakanan    </string>
     <string name="more_ui_settings_group">User Interface</string>
     <string name="special_dictionaries_group">Espesyal na mga diksyunaryo</string>
-    <string name="special_dictionaries_group_summary">Mga mungkahing ginagamit ng diksyunaryo sa AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Mga mungkahing ginagamit ng diksyunaryo sa kasahorow</string>
     <string name="use_user_dictionary">User-diksyunaryo</string>
     <string name="use_user_dictionary_on_summary">Magmungkahi sa mga dinadagdag ng mga salita ng mga gumagamit(I-double-click ang typed-suggestion upang maidagdag)</string>
     <string name="use_auto_dictionary">Auomatikong diksyunaryo</string>
@@ -384,7 +384,7 @@
     <string name="settings_long_press_timeout_slower">Mas mabagal</string>
     <string name="settings_long_press_timeout_never">Hindi kailanman</string>
     <string name="settings_force_locale_title">Foce Locale</string>
-    <string name="settings_force_locale_summary">Pilitin ang locale na ginagamit sa loob ng AnySoftKeyboard(tumatagal lamang ng iilang sandali para makaapekto):%s.</string>
+    <string name="settings_force_locale_summary">Pilitin ang locale na ginagamit sa loob ng kasahorow(tumatagal lamang ng iilang sandali para makaapekto):%s.</string>
     <string name="tweak_workarounds_group">Workarounds</string>
     <string name="workaround_disable_rtl_fix">Gumamit ng Android\'s Pakanan-hanggang-pakaliwa</string>
     <string name="workaround_disable_rtl_fix_summary_on">Gumamit ng OS RTL handline. Dapat gumana ng mas maayos para sa mga bagong kagamitan.</string>
@@ -419,10 +419,10 @@
     <string name="initial_quick_text_tab_history_tab">Magsimula sa kasaysayan na grupo</string>
     <string name="developer_tools">Mga developer tool</string>
     <string name="click_for_developer_features">Mga developer tool</string>
-    <string name="click_for_developer_features_summary">Iba\'t ibang mga kagamitan para sa mga developer ng AnySoftKeyboard</string>
+    <string name="click_for_developer_features_summary">Iba\'t ibang mga kagamitan para sa mga developer ng kasahorow</string>
     <string name="failed_to_create_mem_dump">Nabigong gumawa ng memori na mapagimbakan dahil sa:<xliff:g id="message">%s</xliff:g>    </string>
     <string name="created_mem_dump_file">Gumawa ng memori na mapagimbakan sa:<xliff:g id="file_path">%s</xliff:g>    </string>
-    <string name="not_configured_with_click_here">Ang AnySoftKeyboard ay hindi lubusang nai-setup para ito gamitin. Mag click dito para ma-setup.</string>
+    <string name="not_configured_with_click_here">Ang kasahorow ay hindi lubusang nai-setup para ito gamitin. Mag click dito para ma-setup.</string>
     <string name="not_configured_with_just_click_here">Mag-click dio</string>
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
@@ -434,26 +434,26 @@
     <string name="enter_abbreviation_hint">Daglat</string>
     <string name="enter_abbreviation_target_hint">Buong pangungusap</string>
     <string name="about_additional_software_licenses">Karagdagang mga lisensya ng software</string>
-    <string name="setup_wizard_step_one_title">Magpagana ng AnySoftKeyboard</string>
-    <string name="setup_wizard_step_one_details">Sa hakbang na ito, kailanganin itong mapagana <i>AnySoftKeyboard</i>. Magyaring suriin ang <i>\'AnySoftKeyboard\'</i> sa iyong <i>Wika&amp;Mga input settings</i>. Ito ay magpapahintulot sa atin na maitatakbo sa iyong device.</string>
+    <string name="setup_wizard_step_one_title">Magpagana ng kasahorow</string>
+    <string name="setup_wizard_step_one_details">Sa hakbang na ito, kailanganin itong mapagana <i>kasahorow</i>. Magyaring suriin ang <i>\'kasahorow\'</i> sa iyong <i>Wika&amp;Mga input settings</i>. Ito ay magpapahintulot sa atin na maitatakbo sa iyong device.</string>
     <string name="setup_wizard_step_one_action">Pumunta sa iyong <i>Language&amp;Input settings</i>…</string>
-    <string name="setup_wizard_step_one_action_error_no_settings_activity">Mali: Ang iyong device ay hindi sumusuporta ng 3rd-party na mga keyboard. AnySoftKeyboard ay hindi maka-activate!</string>
+    <string name="setup_wizard_step_one_action_error_no_settings_activity">Mali: Ang iyong device ay hindi sumusuporta ng 3rd-party na mga keyboard. kasahorow ay hindi maka-activate!</string>
     <string name="setup_wizard_step_permissions_title">Magpapagana ng mga permiso</string>
-    <string name="setup_wizard_step_two_title">Lumipat sa AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Iyong sustema ay maaring gamitin ang <i>AnySoftKeyboard</i> ngayon, ngunit hindi ito nakalagay sa aktibo na keyboard.\nBy switching, <i>AnySoftKeyboard</i> iyong bagong on-screen keyboard, kasama ang lahat ng tampok nito!</string>
+    <string name="setup_wizard_step_two_title">Lumipat sa kasahorow</string>
+    <string name="setup_wizard_step_two_details">Iyong sustema ay maaring gamitin ang <i>kasahorow</i> ngayon, ngunit hindi ito nakalagay sa aktibo na keyboard.\nBy switching, <i>kasahorow</i> iyong bagong on-screen keyboard, kasama ang lahat ng tampok nito!</string>
     <string name="setup_wizard_step_two_action">Magpalit ng aktibong mga keyboard</string>
     <string name="setup_wizard_step_three_title">What\'s sususnod</string>
-    <string name="setup_wizard_step_three_details">Salamat sa pagpili ng <i>AnySoftKeyboard</i>.</string>
+    <string name="setup_wizard_step_three_details">Salamat sa pagpili ng <i>kasahorow</i>.</string>
     <string name="setup_wizard_step_three_details_done"><b>Ikaw ay natapos 🎉\nPumunta sa iyong paboritong app para subukan ito.</b></string>
     <string name="setup_wizard_step_three_details_actions">O, maaari mo i-customize at i-personalize ang keyboard sa gusto mo:</string>
     <string name="setup_wizard_step_three_action_languages">I-set setup ang mga wika…</string>
     <string name="setup_wizard_step_three_action_themes">Pumili ng tema…</string>
     <string name="setup_wizard_step_three_action_all_settings">Magkumpigura ng lahat ng iba pa…</string>
     <string name="setup_wizard_step_download_title">I-download ang mga Language packs</string>
-    <string name="setup_wizard_step_download_details">Ikaw\ ay maging masaya na malaman ang <i>AnySoftKeyboard</i> ay sumusuporta ng napakaraming wika. I-download ang iyong ninanais na language-pack at maenjoy ang pag-type sa anumang wika ng iyong device.</string>
+    <string name="setup_wizard_step_download_details">Ikaw\ ay maging masaya na malaman ang <i>kasahorow</i> ay sumusuporta ng napakaraming wika. I-download ang iyong ninanais na language-pack at maenjoy ang pag-type sa anumang wika ng iyong device.</string>
     <string name="setup_wizard_step_download_action">I-download ang language pack</string>
     <string name="setup_wizard_step_download_skip_action">Laktawan</string>
-    <string name="ime_crashed_text">Sa kasamaang palad, mayroong problema sa <i>AnySoftKeyboard</i>. Gawin ang hindi takot, mayroong isang bagay na magagawa <b>mo</b> upang malutas ito: ipadala sa amin ang mga ulat ng pag-crash, at gagawin natin ang lahat upang malutas ang mga ito ang madaliang at bumalik ka sa isang kasindak-sindak na keyboard karanasan ang we\! \n\nWith taos-pusong paghingi ng tawad, Dev team.</string>
+    <string name="ime_crashed_text">Sa kasamaang palad, mayroong problema sa <i>kasahorow</i>. Gawin ang hindi takot, mayroong isang bagay na magagawa <b>mo</b> upang malutas ito: ipadala sa amin ang mga ulat ng pag-crash, at gagawin natin ang lahat upang malutas ang mga ito ang madaliang at bumalik ka sa isang kasindak-sindak na keyboard karanasan ang we\! \n\nWith taos-pusong paghingi ng tawad, Dev team.</string>
     <string name="ime_crashed_send_button">Ipadala ang mga</string>
     <string name="ime_crashed_cancel_button">Kanselahin</string>
     <string name="ime_crashed_intent_selector_title">Magpadala ng ulat ng pag crash via</string>
@@ -472,7 +472,7 @@
     <string name="wizard_allow_contacts_permission">Payagan ang mga nakabaseng kontaks sa mga mungkahing nakatype</string>
     <string name="turn_off_contacts_dictionary">Patayin ang mga kontak sa diksyunaryu</string>
     <string name="read_more_about_permissions">Basahin pa ang tungkol sa mga permiso…</string>
-    <string name="ask_beta_link_promo">Uy! Gusto mo ng bago <i>AnySoftKeyboard</i> mas mabilis ng stuff? Ngayon ikaw ay maswerte! <i>BETA</i> na channel ay pwede na para <b>SAYO</b>!\nmag signup lang sa link sa baba, at i-update mo gamit ang <i>Google Play</i> app store!\n\n https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nAt salamat sa pagtulong na pagpatay sa mga bugs bago ito makarating sa publiko.</string>
+    <string name="ask_beta_link_promo">Uy! Gusto mo ng bago <i>kasahorow</i> mas mabilis ng stuff? Ngayon ikaw ay maswerte! <i>BETA</i> na channel ay pwede na para <b>SAYO</b>!\nmag signup lang sa link sa baba, at i-update mo gamit ang <i>Google Play</i> app store!\n\n https://play.google.com/apps/testing/com.menny.android.kasahorow \n\nAt salamat sa pagtulong na pagpatay sa mga bugs bago ito makarating sa publiko.</string>
     <string name="clipboard_fine_select_enabled_toast">Mabuting-teksto-seleksyon ay pinagana. Gamitin ay kaliwa/kanan na mga arrows.</string>
     <string name="app_shortcut_keyboards_disabled">Nabigasyon ng kayboard ay naka disabled</string>
     <string name="app_shortcut_keyboards_long_label">Pumili ng keyboard para sa mga layout na ginagamit</string>
@@ -496,11 +496,11 @@
     <string name="no_internet_fields_specific_layout">Walang sinuman</string>
     <string name="bottom_nav_home">Hello</string>
     <string name="setup_wizard_welcome_title">Maligayang pagdatin!</string>
-    <string name="setup_wizard_welcome_sub_title">Salamat sa pagbibigay subok sa AnySoftKeyboard!</string>
-    <string name="setup_wizard_welcome_info">Bilang sa anumang Android keyboard, ikaw ay kinakailangan upang maipagana ang AnySoftKeyboard sa paghina ng Android Settings. Ito ay kailangan sa Android para matiyak ang iyong mga nai-type na data para hindi ito manakaw sa ibang masasamang keyboards*.</string>
+    <string name="setup_wizard_welcome_sub_title">Salamat sa pagbibigay subok sa kasahorow!</string>
+    <string name="setup_wizard_welcome_info">Bilang sa anumang Android keyboard, ikaw ay kinakailangan upang maipagana ang kasahorow sa paghina ng Android Settings. Ito ay kailangan sa Android para matiyak ang iyong mga nai-type na data para hindi ito manakaw sa ibang masasamang keyboards*.</string>
     <string name="setup_wizard_welcome_info_2">Okey, handa? mag-click sa ibaba para magsimula. Ikaw ay bigyan gabay para dito.</string>
     <string name="setup_wizard_welcome_start_action">Simulan ang setup…</string>
-    <string name="setup_wizard_welcome_info_footnote">* Siyempre pa, ang AnySoftKeyboard ay hindi masama. Ikaw ay hinihikayat ng tumingin sa aming source code para mapatunayan ito. Dagdag, wala kaming mga <i>NETWORK</i> na mga permiso, kaya hindi kami nagpapadala ng anumang datus sa iyong aparato.</string>
+    <string name="setup_wizard_welcome_info_footnote">* Siyempre pa, ang kasahorow ay hindi masama. Ikaw ay hinihikayat ng tumingin sa aming source code para mapatunayan ito. Dagdag, wala kaming mga <i>NETWORK</i> na mga permiso, kaya hindi kami nagpapadala ng anumang datus sa iyong aparato.</string>
     <string name="setup_wizard_welcome_privacy_action">Pumunta sa Privacy Policy…</string>
     <string name="clear_all_dictionary_override">Malinaw na napagtungang</string>
 </resources>

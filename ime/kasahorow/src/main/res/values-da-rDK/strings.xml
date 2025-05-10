@@ -7,7 +7,7 @@
     </string>
     <string name="debug_tracing_finished">Sporing færdig!\nSporingsfil er\u0020<xliff:g id="trace_file">%s</xliff:g></string>
     <string name="menu_about_item">Omkring</string>
-    <string name="how_to_pointer_title">Velkommen til AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Velkommen til kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Seneste ændringer for v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Mere:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -70,7 +70,7 @@
     <string name="night_mode_sound_control">Deaktivér tastelyde</string>
     <string name="night_mode_vibration_control">Deaktivér tastevibrationer</string>
     <string name="power_save_mode_screen">Strømbesparende indstillinger</string>
-    <string name="power_save_mode_description">Strømbesparende tilstand vil reducere energiforbruget for AnySoftKeyboard ved at deaktivere funktionerne:</string>
+    <string name="power_save_mode_description">Strømbesparende tilstand vil reducere energiforbruget for kasahorow ved at deaktivere funktionerne:</string>
     <string name="power_save_mode_state_summary">I øjeblikket udløser strømbesparelse:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Aktivér strømbesparende tilstand</string>
     <string name="power_save_mode_types_never">Aldrig</string>
@@ -221,11 +221,11 @@
     <string name="volume_key_for_left_right_support_off_summary">Lydstyrke op vender markøren til venstre, lydstyrke ned vender markøren til højre</string>
     <string name="more_ui_settings_group">Brugergrænseflade</string>
     <string name="special_dictionaries_group">Særlige ordbøger</string>
-    <string name="special_dictionaries_group_summary">Forslagsordbøger brugt i AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Forslagsordbøger brugt i kasahorow</string>
     <string name="use_user_dictionary">Brugerordbog</string>
     <string name="use_user_dictionary_on_summary">Foreslå brugertilføjede ord (dobbelttryk på et indtastet forslag for at tilføje)</string>
     <string name="always_use_fallback_user_dictionary">Brug privat lagerplads for brugerordbog </string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Brug privatlagring AnySoftKeyboard\'s indbyggede brugerordbogsmekanisme.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Brug privatlagring kasahorow\'s indbyggede brugerordbogsmekanisme.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Forsøg at bruge Android\'s globale indbyggede brugerordbog.</string>
     <string name="use_auto_dictionary">Auto ordbog</string>
     <string name="use_auto_dictionary_dialog_title">Vælg læringsmetode</string>
@@ -362,8 +362,8 @@
     <string name="lang_key_shows_popup_on_summary">Sprogtast vil vise valgmuligheder</string>
     <string name="lang_key_shows_popup_off_summary">Sprogtast vil gennemløbe sprog</string>
     <string name="settings_os_clipboard_sync">Synkroniser udklipsholder med OS</string>
-    <string name="settings_os_clipboard_sync_summary_on">Registrer ændringer i udklipsholderen og synkroniser med AnySoftKeyboard.</string>
-    <string name="settings_os_clipboard_sync_summary_off">Lyt ikke til udklipsholderoperationer uden for AnySoftKeyboard.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Registrer ændringer i udklipsholderen og synkroniser med kasahorow.</string>
+    <string name="settings_os_clipboard_sync_summary_off">Lyt ikke til udklipsholderoperationer uden for kasahorow.</string>
     <string name="auto_caps">Auto-store og små bogstaver</string>
     <string name="grammar_group">Grammatik</string>
     <string name="keyboard_behavior_group">Tastaturs virkemåde</string>
@@ -516,13 +516,13 @@
     <string name="settings_long_press_timeout_slower">Langsommere</string>
     <string name="settings_long_press_timeout_never">Aldrig</string>
     <string name="settings_force_locale_title">Gennemtving sprog</string>
-    <string name="settings_force_locale_summary">Gennemtving sprog brugt inde i AnySoftKeyboard (tager
+    <string name="settings_force_locale_summary">Gennemtving sprog brugt inde i kasahorow (tager
         et stykke tid at træde i kraft). Nuværende: %s.
     </string>
     <string name="tweak_workarounds_group">Alternativer</string>
     <string name="workaround_disable_rtl_fix">Deaktiver Højre-til-venstre håndtering</string>
     <string name="workaround_disable_rtl_fix_summary_on">Brug OS RTL håndtering (for SE telefoner)</string>
-    <string name="workaround_disable_rtl_fix_summary_off">Brug AnySoftKeyboard RTL håndtering. Bør
+    <string name="workaround_disable_rtl_fix_summary_off">Brug kasahorow RTL håndtering. Bør
         kun bruges, hvis OS ikke laver RTL.
     </string>
     <string name="settings_split_state_title_portrait">Del/flet starttilstand for portræt</string>
@@ -584,7 +584,7 @@
     <string name="emoji_default_gender_value_random_type">Tilfældigt køn</string>
     <string name="developer_tools">Udviklingsværktøjer</string>
     <string name="click_for_developer_features">Udviklingsværktøjer</string>
-    <string name="click_for_developer_features_summary">Forskellige værktøjer til AnySoftKeyboard
+    <string name="click_for_developer_features_summary">Forskellige værktøjer til kasahorow
         -udviklere
     </string>
     <string name="failed_to_create_mem_dump">Kunne ikke oprette hukommelsesdump-fil på grund af:
@@ -593,7 +593,7 @@
     <string name="created_mem_dump_file">Oprettede hukommelsesdump-fil på:
         <xliff:g id="file_path">%s</xliff:g>
     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard er ikke fuldt konfigureret til brug. Klik
+    <string name="not_configured_with_click_here">kasahorow er ikke fuldt konfigureret til brug. Klik
         her for at konfigurere.
     </string>
     <string name="not_configured_with_just_click_here">Klik her</string>
@@ -608,25 +608,25 @@
     <string name="enter_abbreviation_target_hint">Fuld sætning</string>
     <string name="toast_error_custom_path_backup">Fejl: Enhver kontekstuel app kan være åben</string>
     <string name="about_additional_software_licenses">Yderligere softwarelicenser</string>
-    <string name="setup_wizard_step_one_title">Aktivér AnySoftKeyboard</string>
+    <string name="setup_wizard_step_one_title">Aktivér kasahorow</string>
     <string name="setup_wizard_step_one_details">I dette trin skal du aktivere <i>
-        AnySoftKeyboard</i>. Tjek venligst <i>\'AnySoftKeyboard\'</i> i dine <i>Sprog&amp;Input-
+        kasahorow</i>. Tjek venligst <i>\'kasahorow\'</i> i dine <i>Sprog&amp;Input-
         indstillinger</i>. Dette vil give ASK mulighed for at køre på din enhed.
     </string>
     <string name="setup_wizard_step_one_action">Gå til dine <i>Sprog&amp;Input-indstillinger</i>…
     </string>
     <string name="setup_wizard_step_one_action_error_no_settings_activity">Fejl: Din enhed understøtter
-        ikke tredjeparts-tastaturer. AnySoftKeyboard kan ikke aktiveres!
+        ikke tredjeparts-tastaturer. kasahorow kan ikke aktiveres!
     </string>
     <string name="setup_wizard_step_permissions_title">Aktivér tilladelser</string>
-    <string name="setup_wizard_step_two_title">Skift til AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Dit system kan nu bruge <i>AnySoftKeyboard</i>, men
-        det er ikke indstillet som det aktive tastatur.\nVed at skifte vil <i>AnySoftKeyboard</i> blive dit nye
+    <string name="setup_wizard_step_two_title">Skift til kasahorow</string>
+    <string name="setup_wizard_step_two_details">Dit system kan nu bruge <i>kasahorow</i>, men
+        det er ikke indstillet som det aktive tastatur.\nVed at skifte vil <i>kasahorow</i> blive dit nye
         tastatur på skærmen med alle dets funktioner!
     </string>
     <string name="setup_wizard_step_two_action">Skift aktive tastaturer</string>
     <string name="setup_wizard_step_three_title">Hvad er næste skridt?</string>
-    <string name="setup_wizard_step_three_details">Tak for at vælge <i>AnySoftKeyboard</i>.
+    <string name="setup_wizard_step_three_details">Tak for at vælge <i>kasahorow</i>.
     </string>
     <string name="setup_wizard_step_three_details_done">        <b>du er færdig 🎉\nStart din favorit-app og prøv det.</b>
     </string>
@@ -637,11 +637,11 @@
     <string name="setup_wizard_step_three_action_themes">Vælg tema…</string>
     <string name="setup_wizard_step_three_action_all_settings">Konfigurer alt andet…</string>
     <string name="setup_wizard_step_download_title">Hent sprogpakker</string>
-    <string name="setup_wizard_step_download_details">Det vil glæde dig at vide, at <i>AnySoftKeyboard</i> understøtter snesevis af sprog. Bare download den ønskede sprogpakke og nyd at skrive på
+    <string name="setup_wizard_step_download_details">Det vil glæde dig at vide, at <i>kasahorow</i> understøtter snesevis af sprog. Bare download den ønskede sprogpakke og nyd at skrive på
         ethvert sprog på din enhed.</string>
     <string name="setup_wizard_step_download_action">Hent sprogpakke</string>
     <string name="setup_wizard_step_download_skip_action">Spring over</string>
-    <string name="ime_crashed_text">Desværre er der et problem med <i>AnySoftKeyboard</i>.
+    <string name="ime_crashed_text">Desværre er der et problem med <i>kasahorow</i>.
         Ingen grund til panik. Der er noget <b>du</b> kan gøre for at hjælpe med at løse dette: send os nedbruds-
         rapporten og vi vil gøre vores bedste for at løse dette nedbrud og få dig tilbage til en fantastisk tastatur-
         oplevelse!\n\nMed oprigtig undskyldning, Dev teamet.
@@ -664,10 +664,10 @@
     <string name="wizard_allow_contacts_permission">Tillad kontaktbaserede indtastningsforslag</string>
     <string name="turn_off_contacts_dictionary">Slå kontaktordbog fra</string>
     <string name="read_more_about_permissions">Læs mere om tilladelser…</string>
-    <string name="ask_beta_link_promo">Hej! Vil du have nye <i>AnySoftKeyboard</i> ting hurtigere? Så
+    <string name="ask_beta_link_promo">Hej! Vil du have nye <i>kasahorow</i> ting hurtigere? Så
         er du heldig! <i>BETA</i> kanalen er nu tilgængelig for <b>DIG</b>!\nBare tilmeld dig på
         linket nedenfor og opdater via <i>Google Play</i> app-butik!\n\n
-        https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nOg tak for
+        https://play.google.com/apps/testing/com.menny.android.kasahorow \n\nOg tak for
         hjælpe med at udrydde fejl, før de når offentligheden.
     </string>
     <string name="clipboard_fine_select_enabled_toast">Fin-tekstvalg aktiveret. Brug venstre/højre pile.</string>
@@ -693,15 +693,15 @@
     <string name="no_internet_fields_specific_layout">Ingen</string>
     <string name="bottom_nav_home">Hej</string>
     <string name="setup_wizard_welcome_title">Velkommen!</string>
-    <string name="setup_wizard_welcome_sub_title">Tak fordi du giver AnySoftKeyboard en chance!
+    <string name="setup_wizard_welcome_sub_title">Tak fordi du giver kasahorow en chance!
     </string>
     <string name="setup_wizard_welcome_info">Som med ethvert andet Android-tastatur, skal du
-        aktivere AnySoftKeyboard i Android-indstillingerne. Dette kræves af Android for at sikre, at
+        aktivere kasahorow i Android-indstillingerne. Dette kræves af Android for at sikre, at
         dine indtastningsdata ikke stjæles af ondsindede tastaturer*.
     </string>
     <string name="setup_wizard_welcome_info_2">Okay, klar? Klik nedenfor for at starte. Jeg vil guide dig gennem dette.</string>
     <string name="setup_wizard_welcome_start_action">Start opsætning…</string>
-    <string name="setup_wizard_welcome_info_footnote">* AnySoftKeyboard er naturligvis ikke ondsindet. Du
+    <string name="setup_wizard_welcome_info_footnote">* kasahorow er naturligvis ikke ondsindet. Du
         opfordres til at se på vores kildekode og verificere det. Vi har desuden ikke <i>NETVÆRK
         </i> tilladelser, så vi ikke kan sende data fra enheden.
     </string>
@@ -750,9 +750,9 @@
     <string name="aosp_dark_theme_description">Tastaturtema med AOSP-Inspireret mørke farver</string>
     <string name="aosp_light_theme_name">AOSP Lyst tema</string>
     <string name="aosp_light_theme_description">Tastaturtema med AOSP-Inspireret lyse farver</string>
-    <string name="app_share_title">Hej fra AnySoftKeyboard</string>
-    <string name="app_share_menu_title">Del AnySoftKeyboard med</string>
-    <string name="app_share_text">Lad mig anbefale den open source, privatlivfokuseret, gratis, tilpasningsdygtige, flersproget Android tastatur-app AnySoftKeyboard.\nHent den fra:\nPlay Butik: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.android.anysoftkeyboard /</string>
+    <string name="app_share_title">Hej fra kasahorow</string>
+    <string name="app_share_menu_title">Del kasahorow med</string>
+    <string name="app_share_text">Lad mig anbefale den open source, privatlivfokuseret, gratis, tilpasningsdygtige, flersproget Android tastatur-app kasahorow.\nHent den fra:\nPlay Butik: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow\nF-Droid: https://f-droid.org/en/packages/com.menny.android.android.kasahorow /</string>
     <string name="click_me_for_easter_egg_info">klik på mig for en overraskelse</string>
     <string name="wizard_skip_notification_permission">Tillad ikke notifikationer</string>
 </resources>

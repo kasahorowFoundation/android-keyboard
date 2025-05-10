@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
     <string name="menu_about_item">เกี่ยวกับ</string>
-    <string name="how_to_pointer_title">ยินดีต้อนรับสู่ AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">ยินดีต้อนรับสู่ kasahorow</string>
     <string name="language_root_tile">ภาษา</string>
     <string name="language_keyboards_settings_tile">เปิดใช้งานแป้นพิมพ์และภาษา</string>
     <string name="language_grammar_settings_tile">ตั้งค่าพฤติกรรมการแก้ไขคำ และพจนานุกรมอื่น ๆ </string>
@@ -52,7 +52,7 @@
     <string name="night_mode_type_follow_system">ตามระบบ</string>
     <string name="night_mode_type_always">เสมอ</string>
     <string name="power_save_mode_screen">ตั้งค่าการประหยัดพลังงาน</string>
-    <string name="power_save_mode_description">โหมดประหยัดพลังงานจะลดการใช้พลังงานของ AnySoftKeyboard โดยการปิดคุณสมบัติ:</string>
+    <string name="power_save_mode_description">โหมดประหยัดพลังงานจะลดการใช้พลังงานของ kasahorow โดยการปิดคุณสมบัติ:</string>
     <string name="power_save_mode_state_summary">ปัจจุบัน ทริกเกอร์โหมดประหยัดพลังงาน:\u0020%s</string>
     <string name="power_save_mode_dialog_title">เปิดใช้งานโหมดประหยัดพลังงาน</string>
     <string name="power_save_mode_types_never">ไม่เลย</string>
@@ -156,11 +156,11 @@
     <string name="volume_key_for_left_right_support_off_summary">เพิ่มระดับเสียงจะขยับเคอร์เซอร์ไปทางซ้าย ลดระดับเสียงจะขยับเคอร์เซอร์ไปทางขวา</string>
     <string name="more_ui_settings_group">ส่วนติดต่อผู้ใช้</string>
     <string name="special_dictionaries_group">พจนานุกรมพิเศษ</string>
-    <string name="special_dictionaries_group_summary">พจนานุกรมแนะนำคำที่ใช้ใน AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">พจนานุกรมแนะนำคำที่ใช้ใน kasahorow</string>
     <string name="use_user_dictionary">พจนานุกรมของผู้ใช้</string>
     <string name="use_user_dictionary_on_summary">เพิ่มแนะนำคำของผู้ใช้ (ดับเบิลคลิกที่คำแนะนำที่พิมพ์เพื่อเพิ่ม)</string>
     <string name="always_use_fallback_user_dictionary">ใช้พื้นที่จัดเก็บพจนานุกรมผู้ใช้ส่วนตัว</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">ใช้ Private-storage AnySoftKeyboard\'s built-in User-dictionary mechanism.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">ใช้ Private-storage kasahorow\'s built-in User-dictionary mechanism.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">พยายามใช้ Android\'s global built-in User-dictionary.</string>
     <string name="auto_pick_suggestion_aggressiveness_none">ปิด</string>
     <string name="tweaks_group">ปรับแต่ง</string>
@@ -290,7 +290,7 @@
     <string name="setup_wizard_step_three_action_themes">เลือกธีม…</string>
     <string name="setup_wizard_step_three_action_all_settings">ตั้งค่าที่เหลือ…</string>
     <string name="setup_wizard_step_download_title">ดาวน์โหลดชุดภาษา</string>
-    <string name="setup_wizard_step_download_details">คุณยินดีที่ทราบว่า <i>AnySoftKeyboard</i> รองรับหลายสิบภาษา เพียงดาวน์โหลดชุดภาษาที่ต้องการและสนุกกับการพิมพ์ภาษาใดก็ได้บนอุปกรณ์ของคุณ</string>
+    <string name="setup_wizard_step_download_details">คุณยินดีที่ทราบว่า <i>kasahorow</i> รองรับหลายสิบภาษา เพียงดาวน์โหลดชุดภาษาที่ต้องการและสนุกกับการพิมพ์ภาษาใดก็ได้บนอุปกรณ์ของคุณ</string>
     <string name="setup_wizard_step_download_action">ดาวน์โหลดชุดภาษา</string>
     <string name="setup_wizard_step_download_skip_action">ข้าม​</string>
     <string name="clipboard_paste_entries_title">เลือกข้อความที่จะวาง</string>
@@ -302,7 +302,7 @@
     <string name="no_internet_fields_specific_layout">ไม่มี</string>
     <string name="bottom_nav_home">สวัสดี</string>
     <string name="setup_wizard_welcome_title">ยินดีต้อนรับ!</string>
-    <string name="setup_wizard_welcome_sub_title">ขอบคุณที่ทดลองใช้ AnySoftKeyboard!
+    <string name="setup_wizard_welcome_sub_title">ขอบคุณที่ทดลองใช้ kasahorow!
     </string>
     <string name="pick_prefs_providers_to_backup">ต้องการสำรองข้อมูลอะไร ?</string>
     <string name="pick_prefs_providers_to_restore">ต้องการกู้ข้อมูลอะไร</string>
