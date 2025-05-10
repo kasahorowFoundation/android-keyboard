@@ -1,7 +1,6 @@
 package com.anysoftkeyboard.ime;
 
 import android.view.inputmethod.EditorInfo;
-import com.kasahorow.android.keyboard.app.R;
 import com.anysoftkeyboard.base.utils.Logger;
 
 public abstract class AnySoftKeyboardIncognito extends AnySoftKeyboardWithGestureTyping {

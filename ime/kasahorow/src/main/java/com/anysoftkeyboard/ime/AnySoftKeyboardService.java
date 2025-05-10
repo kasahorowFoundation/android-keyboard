@@ -1,6 +1,5 @@
 package com.anysoftkeyboard.ime;
 
-import com.kasahorow.android.keyboard.app.R;
 import android.os.IBinder;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

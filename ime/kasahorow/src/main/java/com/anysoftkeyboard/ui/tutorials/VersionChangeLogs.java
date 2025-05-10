@@ -1,6 +1,5 @@
 package com.anysoftkeyboard.ui.tutorials;
 
-import com.kasahorow.android.keyboard.app.R;
 import android.net.Uri;
 import android.text.TextUtils;
 import java.util.ArrayList;
