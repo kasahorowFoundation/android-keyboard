@@ -51,5 +51,8 @@ afterEvaluate {
             //for tests, we do not check other stuff too
             task.options.compilerArgs << '-Xlint:-rawtypes' << '-Xlint:-cast' << '-Xlint:-unchecked' << '-Xlint:-classfile'
         }
+
+        // Disable this-escape warning as it affects the entire code base
+        task.options.compilerArgs << '-Xlint:-this-escape'
     }
 }
