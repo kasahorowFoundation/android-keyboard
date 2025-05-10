@@ -19,6 +19,10 @@ package com.anysoftkeyboard.dictionaries.jni;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.XmlRes;
 import com.anysoftkeyboard.base.utils.CompatUtils;
 import com.anysoftkeyboard.base.utils.GCUtils;
 import com.anysoftkeyboard.base.utils.Logger;
@@ -69,9 +73,9 @@ public class ResourceBinaryDictionary extends Dictionary {
    * @param resId the resource containing the raw binary dictionary
    */
   public ResourceBinaryDictionary(
-      @NonNull CharSequence dictionaryName,
-      @NonNull Context originPackageContext,
-      @XmlRes int resId) {
+          @NonNull CharSequence dictionaryName,
+          @NonNull Context originPackageContext,
+          @XmlRes int resId) {
     super(dictionaryName);
     CompatUtils.loadNativeLibrary(originPackageContext, "anysoftkey2_jni", "1.0.3");
     mOriginPackageContext = originPackageContext;
@@ -85,17 +89,17 @@ public class ResourceBinaryDictionary extends Dictionary {
   private native boolean isValidWordNative(long dictPointer, char[] word, int wordLength);
 
   private native int getSuggestionsNative(
-      long dictPointer,
-      int[] inputCodes,
-      int codesSize,
-      char[] outputChars,
-      int[] frequencies,
-      int maxWordLength,
-      int maxWords,
-      int maxAlternatives,
-      int skipPos,
-      @Nullable int[] nextLettersFrequencies,
-      int nextLettersSize);
+          long dictPointer,
+          int[] inputCodes,
+          int codesSize,
+          char[] outputChars,
+          int[] frequencies,
+          int maxWordLength,
+          int maxWords,
+          int maxAlternatives,
+          int skipPos,
+          @Nullable int[] nextLettersFrequencies,
+          int nextLettersSize);
 
   private native void getWordsNative(long dictPointer, GetWordsCallback callback);
 
@@ -121,17 +125,17 @@ public class ResourceBinaryDictionary extends Dictionary {
     }
     if (isClosed()) return;
     GCUtils.getInstance()
-        .performOperationWithMemRetry(
-            TAG,
-            () -> {
-              // The try-catch is for issue 878:
-              // http://code.google.com/p/softkeyboard/issues/detail?id=878
-              try {
-                loadDictionaryFromResource(resId);
-              } catch (UnsatisfiedLinkError ex) {
-                Log.w(TAG, "Failed to load binary JNI connection! Error: " + ex.getMessage());
-              }
-            });
+            .performOperationWithMemRetry(
+                    TAG,
+                    () -> {
+                      // The try-catch is for issue 878:
+                      // http://code.google.com/p/softkeyboard/issues/detail?id=878
+                      try {
+                        loadDictionaryFromResource(resId);
+                      } catch (UnsatisfiedLinkError ex) {
+                        Log.w(TAG, "Failed to load binary JNI connection! Error: " + ex.getMessage());
+                      }
+                    });
   }
 
   private void loadDictionaryFromResource(int[] resId) {
@@ -146,12 +150,12 @@ public class ResourceBinaryDictionary extends Dictionary {
         if (isClosed()) return;
         final int dictSize = is[i].available();
         Log.d(
-            TAG,
-            "Will load a resource dictionary id "
-                + resId[i]
-                + " whose size is "
-                + dictSize
-                + " bytes.");
+                TAG,
+                "Will load a resource dictionary id "
+                        + resId[i]
+                        + " whose size is "
+                        + dictSize
+                        + " bytes.");
         total += dictSize;
       }
 
@@ -165,16 +169,16 @@ public class ResourceBinaryDictionary extends Dictionary {
         Log.e(TAG, "Read " + got + " bytes, expected " + total);
       } else {
         mNativeDictPointer.set(
-            openNative(
-                mNativeDictDirectBuffer,
-                Dictionary.TYPED_LETTER_MULTIPLIER,
-                Dictionary.FULL_WORD_FREQ_MULTIPLIER));
+                openNative(
+                        mNativeDictDirectBuffer,
+                        Dictionary.TYPED_LETTER_MULTIPLIER,
+                        Dictionary.FULL_WORD_FREQ_MULTIPLIER));
         Logger.d(
-            TAG,
-            "Will use pointer %d for %s - %d",
-            mNativeDictPointer.get(),
-            toString(),
-            hashCode());
+                TAG,
+                "Will use pointer %d for %s - %d",
+                mNativeDictPointer.get(),
+                toString(),
+                hashCode());
       }
     } catch (IOException e) {
       Log.w(TAG, "No available memory for binary dictionary: " + e.getMessage());
@@ -191,8 +195,8 @@ public class ResourceBinaryDictionary extends Dictionary {
 
   @Override
   public void getSuggestions(
-      final KeyCodesProvider codes,
-      final WordCallback callback /*, int[] nextLettersFrequencies*/) {
+          final KeyCodesProvider codes,
+          final WordCallback callback /*, int[] nextLettersFrequencies*/) {
     if (isLoading() || isClosed()) return;
     final int codesSize = codes.codePointCount();
     // Won't deal with really long words.
@@ -202,28 +206,28 @@ public class ResourceBinaryDictionary extends Dictionary {
     for (int i = 0; i < codesSize; i++) {
       int[] alternatives = codes.getCodesAt(i);
       System.arraycopy(
-          alternatives,
-          0,
-          mInputCodes,
-          i * MAX_ALTERNATIVES,
-          Math.min(alternatives.length, MAX_ALTERNATIVES));
+              alternatives,
+              0,
+              mInputCodes,
+              i * MAX_ALTERNATIVES,
+              Math.min(alternatives.length, MAX_ALTERNATIVES));
     }
     Arrays.fill(mOutputChars, (char) 0);
     Arrays.fill(mFrequencies, 0);
 
     int count =
-        getSuggestionsNative(
-            mNativeDictPointer.get(),
-            mInputCodes,
-            codesSize,
-            mOutputChars,
-            mFrequencies,
-            MAX_WORD_LENGTH,
-            MAX_WORDS,
-            MAX_ALTERNATIVES,
-            -1,
-            null,
-            0);
+            getSuggestionsNative(
+                    mNativeDictPointer.get(),
+                    mInputCodes,
+                    codesSize,
+                    mOutputChars,
+                    mFrequencies,
+                    MAX_WORD_LENGTH,
+                    MAX_WORDS,
+                    MAX_ALTERNATIVES,
+                    -1,
+                    null,
+                    0);
 
     // If there aren't sufficient suggestions, search for words by allowing
     // wild cards at
@@ -235,18 +239,18 @@ public class ResourceBinaryDictionary extends Dictionary {
     if (ENABLE_MISSED_CHARACTERS && count < 5) {
       for (int skip = 0; skip < codesSize; skip++) {
         int tempCount =
-            getSuggestionsNative(
-                mNativeDictPointer.get(),
-                mInputCodes,
-                codesSize,
-                mOutputChars,
-                mFrequencies,
-                MAX_WORD_LENGTH,
-                MAX_WORDS,
-                MAX_ALTERNATIVES,
-                skip,
-                null,
-                0);
+                getSuggestionsNative(
+                        mNativeDictPointer.get(),
+                        mInputCodes,
+                        codesSize,
+                        mOutputChars,
+                        mFrequencies,
+                        MAX_WORD_LENGTH,
+                        MAX_WORDS,
+                        MAX_ALTERNATIVES,
+                        skip,
+                        null,
+                        0);
         count = Math.max(count, tempCount);
         if (tempCount > 0) break;
       }
@@ -262,8 +266,8 @@ public class ResourceBinaryDictionary extends Dictionary {
       }
       if (len > 0) {
         requestContinue =
-            callback.addWord(
-                mOutputChars, start, len, mFrequencies[j] /*, mDicTypeId, DataType.UNIGRAM*/, this);
+                callback.addWord(
+                        mOutputChars, start, len, mFrequencies[j] /*, mDicTypeId, DataType.UNIGRAM*/, this);
       }
     }
   }
@@ -280,7 +284,7 @@ public class ResourceBinaryDictionary extends Dictionary {
     final long dictionaryPointer = mNativeDictPointer.getAndSet(0L);
     if (dictionaryPointer != 0) {
       Logger.d(
-          TAG, "Going to close pointer %d for %s - %d", dictionaryPointer, toString(), hashCode());
+              TAG, "Going to close pointer %d for %s - %d", dictionaryPointer, toString(), hashCode());
       closeNative(dictionaryPointer);
     }
   }
