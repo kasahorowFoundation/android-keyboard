@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <array name="croatian_words_dict_array">
-        <item>@raw/croatian_words_1</item>
-        <item>@raw/croatian_words_2</item>
-    </array>
-</resources>

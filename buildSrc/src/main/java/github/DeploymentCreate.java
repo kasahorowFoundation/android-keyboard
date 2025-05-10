@@ -1,6 +1,5 @@
 package github;
 
-import deployment.DeploymentUrl;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import org.apache.http.client.methods.HttpPost;
@@ -17,7 +16,7 @@ public class DeploymentCreate
   @Override
   protected HttpUriRequest createHttpRequest(Request request, String requestJsonAsString) {
     final HttpPost httpPost =
-        new HttpPost(DeploymentUrl.KASAHOROW_GITHUB_API_DEPLOYMENTS_URL);
+        new HttpPost("https://api.github.com/repos/AnySoftKeyboard/AnySoftKeyboard/deployments");
     httpPost.setEntity(new StringEntity(requestJsonAsString, StandardCharsets.UTF_8));
     return httpPost;
   }

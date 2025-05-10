@@ -113,11 +113,11 @@ if (project.ext.shouldBePublished && !publishingTrack.isEmpty()) {
 
 
     tasks.configureEach { newTask ->
-        if (newTask.getClass().name.startsWith('com.github.triplet.gradle.play.tasks.Publish')) {
-            println("Task ${newTask.path} publish is ${allowPublishing? 'enabled' : 'disabled'} for track-name is ${publishingTrack}.")
-            newTask.enabled(allowPublishing)
+            if (newTask.getClass().name.startsWith('com.github.triplet.gradle.play.tasks.Publish')) {
+                println("Task ${newTask.path} publish is ${allowPublishing? 'enabled' : 'disabled'} for track-name is ${publishingTrack}.")
+                newTask.enabled(allowPublishing)
+            }
         }
-    }
 
     //verifying release-notes file
     File playStoreWhatsNewFile = file("${project.projectDir}/src/main/play/release-notes/en-US/alpha.txt")

@@ -225,8 +225,7 @@ public abstract class ChewbaccaUncaughtExceptionHandler implements UncaughtExcep
     NotifyBuilder notifyBuilder =
         mNotificationDriver.buildNotification(
             NotificationIds.CrashDetected,
-            0,
-            //R.drawable.ic_crash_detected,
+            R.drawable.ic_crash_detected,
             R.string.ime_crashed_title);
 
     notifyBuilder

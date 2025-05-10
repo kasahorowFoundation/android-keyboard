@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <array name="german_words_dict_array">
-        <item>@raw/german_words_1</item>
-        <item>@raw/german_words_2</item>
-        <item>@raw/german_words_3</item>
-        <item>@raw/german_words_4</item>
-    </array>
-</resources>

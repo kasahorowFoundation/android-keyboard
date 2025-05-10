@@ -1,6 +1,5 @@
 package github;
 
-import deployment.DeploymentUrl;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 

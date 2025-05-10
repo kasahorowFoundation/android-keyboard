@@ -37,30 +37,29 @@ public class TesterNotification {
   private static final String KEY = "testers_version_version_hash";
 
   public static void showDragonsIfNeeded(
-          Context context, NotificationDriver notifier, boolean tester) {
+      Context context, NotificationDriver notifier, boolean tester) {
     if (tester && firstTestersTimeVersionLoaded(context)) {
       Logger.i(TAG, "TESTERS VERSION added");
 
       PendingIntent contentIntent =
-              PendingIntent.getActivity(
-                      context,
-                      0,
-                      new Intent(context, TestersNoticeActivity.class)
-                              .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
-                      CompatUtils.appendImmutableFlag(0));
+          PendingIntent.getActivity(
+              context,
+              0,
+              new Intent(context, TestersNoticeActivity.class)
+                  .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+              CompatUtils.appendImmutableFlag(0));
 
       var builder =
-              notifier
-                      .buildNotification(
-                              NotificationIds.Tester,
-                              0,
-                              //R.drawable.ic_notification_debug_version,
-                              R.string.ime_name)
-                      .setContentText(context.getText(R.string.notification_text_testers))
-                      .setContentIntent(contentIntent)
-                      .setColor(
-                              ContextCompat.getColor(context, R.color.notification_background_debug_version))
-                      .setAutoCancel(true);
+          notifier
+              .buildNotification(
+                  NotificationIds.Tester,
+                  R.drawable.ic_notification_debug_version,
+                  R.string.ime_name)
+              .setContentText(context.getText(R.string.notification_text_testers))
+              .setContentIntent(contentIntent)
+              .setColor(
+                  ContextCompat.getColor(context, R.color.notification_background_debug_version))
+              .setAutoCancel(true);
 
       if (notifier.notify(builder, true)) {
         markTutorialShown(context);
@@ -71,7 +70,7 @@ public class TesterNotification {
   private static String getPrefsValue(@NonNull Context context) {
     try {
       PackageInfo packageInfo =
-              context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+          context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
       var versionName = packageInfo.versionName;
       var versionCode = packageInfo.versionCode;
       return String.format(Locale.ROOT, "%s code %s", versionName, versionCode);

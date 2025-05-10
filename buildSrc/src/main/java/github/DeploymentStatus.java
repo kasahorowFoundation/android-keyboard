@@ -1,6 +1,5 @@
 package github;
 
-import deployment.DeploymentUrl;
 import java.nio.charset.StandardCharsets;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
