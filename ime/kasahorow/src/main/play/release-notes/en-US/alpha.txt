@@ -1,0 +1,12 @@
+* Support for Android 15.
+* Clipboard support improvements.
+* A few Settings app navigation fixes.
+* Vibration fixes.
+* Suggestions pick and order fixes.
+* Improved pop-up keys order.
+* Gesture-typing improvements.
+* Support for Direct-Boot devices.
+* Reduced installation size (for supporting devices).
+* Updated translations from the community (at crowdin.net).
+
+More here: https://github.com/AnySoftKeyboard/AnySoftKeyboard/milestone/94
