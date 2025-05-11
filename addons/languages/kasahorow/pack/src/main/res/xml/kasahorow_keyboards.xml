@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Keyboards>
     <Keyboard
-        id="@string/main_english_keyboard_id"
+        id="@string/main_kasahorow_keyboard_id"
         defaultDictionaryLocale="ak"
         description="@string/ak_desc"
         iconResId="@drawable/ak"

@@ -2,11 +2,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools"
            xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
            tools:ignore="MissingTranslation,TypographyDashes">
-
     <string name="english_dictionary">English</string>
     <string name="english_keyboard">English</string>
     <string name="english_keyboard_symbols">English</string>
-    <string name="main_english_keyboard_id">e99e252e-fc49-42dd-b763-9f78294cb0f0</string>
+    <string name="main_kasahorow_keyboard_id">22f76193-fa73-4fa5-aaa7-8efe2702e4f8</string>
     <string name="compact_keyboard_16keys">EN Keypad</string>
     <string name="ak_dictionary">Akan</string>
     <string name="din_dictionary">Dinka</string>
