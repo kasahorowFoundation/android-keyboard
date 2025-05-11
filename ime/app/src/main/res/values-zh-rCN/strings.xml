@@ -5,7 +5,7 @@
     <string name="debug_tracing_starting_failed">跟踪启动失败！有关详细信息，请查看logcat。</string>
     <string name="debug_tracing_finished">追踪完成！\n追踪文件是\u0020<xliff:g id="trace_file">%s</xliff:g></string>
     <string name="menu_about_item">关于</string>
-    <string name="how_to_pointer_title">欢迎使用 AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">欢迎使用 kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020v的最新更改<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v的最新更改<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">更多：\u0020<xliff:g id="url">%s</xliff:g></string>

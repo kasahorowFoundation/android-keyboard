@@ -7,7 +7,7 @@
     
     </string>
     <string name="menu_about_item">Hakkında</string>
-    <string name="how_to_pointer_title">AnySoftKeyboard\'a hoş geldiniz</string>
+    <string name="how_to_pointer_title">kasahorow\'a hoş geldiniz</string>
     <string name="change_log_card_version_title_template">\u0020\u0020v<xliff:g id="name">%s</xliff:g> sürümü için son değişiklikler\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="kod">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Daha fazlası için:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -69,7 +69,7 @@ bulamıyorum. Bu özellik cihazınızda çalışamaz, üzgünüz.</string>
     <string name="night_mode_sound_control">Tuş basma sesleri devre dışı</string>
     <string name="night_mode_vibration_control">Tuş titreşimini devre dışı bırak</string>
     <string name="power_save_mode_screen">Güç tasarrufu ayarları</string>
-    <string name="power_save_mode_description">Güç tasarrufu modu özellikleri devre dışı bırakarak AnySoftKeyboard\'ın enerji tüketimini azaltır:</string>
+    <string name="power_save_mode_description">Güç tasarrufu modu özellikleri devre dışı bırakarak kasahorow\'ın enerji tüketimini azaltır:</string>
     <string name="power_save_mode_state_summary">Geçerli Güç tasarrufu tetikleyici:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Güç tasarrufu kipini etkinleştir</string>
     <string name="power_save_mode_types_never">Hiçbir zaman</string>
@@ -209,11 +209,11 @@ bulamıyorum. Bu özellik cihazınızda çalışamaz, üzgünüz.</string>
     <string name="volume_key_for_left_right_support_off_summary">Ses açma sola kaydırma, ses kısma sağa kaydırma işlevi yapar</string>
     <string name="more_ui_settings_group">Kullanıcı arayüzü</string>
     <string name="special_dictionaries_group">Özel sözlükler</string>
-    <string name="special_dictionaries_group_summary">AnySoftKeyboard için kullanılan öneri sözlükleri</string>
+    <string name="special_dictionaries_group_summary">kasahorow için kullanılan öneri sözlükleri</string>
     <string name="use_user_dictionary">Kullanıcı-sözlüğü</string>
     <string name="use_user_dictionary_on_summary">Kullanıcının tanımladığı kelime önerileri (eklemek için öneriye çift dokunun)</string>
     <string name="always_use_fallback_user_dictionary">Özel Kullanıcı-Sözlüğü depolama alanını kullan</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">AnySoftKeyboard\'un yerleşik Kullanıcı-sözlüğü mekanizması özel depolama alanını kullan.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">kasahorow\'un yerleşik Kullanıcı-sözlüğü mekanizması özel depolama alanını kullan.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Android\'in global yerleşik Kullanıcı-sözlüğünü kullanmaya çalış.</string>
     <string name="use_auto_dictionary">Oto sözlük</string>
     <string name="use_auto_dictionary_dialog_title">Öğrenme metodunu seçin</string>
@@ -326,8 +326,8 @@ bulamıyorum. Bu özellik cihazınızda çalışamaz, üzgünüz.</string>
     <string name="lang_key_shows_popup_on_summary">Dil tuşu bir açılır pencere seçim diyaloğu açacak</string>
     <string name="lang_key_shows_popup_off_summary">Dil tuşu diller arasında geçiş yapacak</string>
     <string name="settings_os_clipboard_sync">İşletim sistemi ile panoyu eşzamanla</string>
-    <string name="settings_os_clipboard_sync_summary_on">Pano değişikliklerini algıla ve AnySoftKeyboard ile eşzamanla.</string>
-    <string name="settings_os_clipboard_sync_summary_off">AnySoftKeyboard dışındaki pano işlemlerini dinlemeyin.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Pano değişikliklerini algıla ve kasahorow ile eşzamanla.</string>
+    <string name="settings_os_clipboard_sync_summary_off">kasahorow dışındaki pano işlemlerini dinlemeyin.</string>
     <string name="auto_caps">Otomatik büyük harfe çevirme</string>
     <string name="grammar_group">Gramer</string>
     <string name="keyboard_behavior_group">Klavye Davranışı</string>
@@ -470,11 +470,11 @@ bulamıyorum. Bu özellik cihazınızda çalışamaz, üzgünüz.</string>
     <string name="settings_long_press_timeout_slower">Daha yavaş</string>
     <string name="settings_long_press_timeout_never">Asla</string>
     <string name="settings_force_locale_title">Yerel ayarlara zorla</string>
-    <string name="settings_force_locale_summary">AnySoftKeyboard içinde kullanılan yerel ayara zorlamak (etkili olması bir süre alır). Şu an: %s.</string>
+    <string name="settings_force_locale_summary">kasahorow içinde kullanılan yerel ayara zorlamak (etkili olması bir süre alır). Şu an: %s.</string>
     <string name="tweak_workarounds_group">Geçici çözümler</string>
     <string name="workaround_disable_rtl_fix">Android\'in sağdan sola idare şeklini kullan</string>
     <string name="workaround_disable_rtl_fix_summary_on">İşletim Sisteminin RTL idare şeklini kullan. Daha yeni cihazlarda sorunsuz çalışmalı.</string>
-    <string name="workaround_disable_rtl_fix_summary_off">AnySoftKeyboard\'un RTL idare sistemini kullan. Sadece işletim sistemi RLT yapmayı başaramadığında kullanılmalıdır.</string>
+    <string name="workaround_disable_rtl_fix_summary_off">kasahorow\'un RTL idare sistemini kullan. Sadece işletim sistemi RLT yapmayı başaramadığında kullanılmalıdır.</string>
     <string name="settings_split_state_title_portrait">Dikey mod Bölünmüş/Birleşik başlangıç durumu</string>
     <string name="settings_split_state_title_landscape">Yatay mod Ayrı/birleşik başlangıç durumu</string>
     <string name="settings_split_state_summary">Klavyenin varsayılan olarak bölünmüş olup olmadığını tanımla. Şimdi: %s</string>
@@ -520,12 +520,12 @@ bulamıyorum. Bu özellik cihazınızda çalışamaz, üzgünüz.</string>
     <string name="emoji_default_gender_value_random_type">Rastgele</string>
     <string name="developer_tools">Geliştirici araçları</string>
     <string name="click_for_developer_features">Geliştirici araçları</string>
-    <string name="click_for_developer_features_summary">AnySoftKeyboard geliştiricilerinden çeşitli araçlar</string>
+    <string name="click_for_developer_features_summary">kasahorow geliştiricilerinden çeşitli araçlar</string>
     <string name="failed_to_create_mem_dump">Şu yüzden bellek dökümü dosyası oluşturulamadı:        <xliff:g id="message">%s</xliff:g>    </string>
     <string name="created_mem_dump_file">Bellek dökümü dosyası şurada oluşturuldu:        <xliff:g id="file_path">%s</xliff:g>
     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard kullanım için tamamen kurulu değil. Kurmak için burayı tıklatın.</string>
-    <string name="not_notification_permission_text">AnySoftKeyboard\'un bildirim gösterme izni yok. Nadiren de olsa kritik sorunları (çökmeler gibi) bildirmemiz gerekebilir.</string>
+    <string name="not_configured_with_click_here">kasahorow kullanım için tamamen kurulu değil. Kurmak için burayı tıklatın.</string>
+    <string name="not_notification_permission_text">kasahorow\'un bildirim gösterme izni yok. Nadiren de olsa kritik sorunları (çökmeler gibi) bildirmemiz gerekebilir.</string>
     <string name="not_configured_with_just_click_here">Buraya tıklayın</string>
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
@@ -538,26 +538,26 @@ bulamıyorum. Bu özellik cihazınızda çalışamaz, üzgünüz.</string>
     <string name="enter_abbreviation_target_hint">Tam cümle</string>
     <string name="toast_error_custom_path_backup">Error: Any contextual app could be open</string>
     <string name="about_additional_software_licenses">Diğer Yazılım Lisanları</string>
-    <string name="setup_wizard_step_one_title">AnySoftKeyboard etkinleştir</string>
-    <string name="setup_wizard_step_one_details">Bu adımda <i>AnySoftKeyboard</i>\'u etkinleştirmeniz gerekecek. Lütfen <i>Dil&amp;giriş ayarlarınızda</i> <i>\'AnySoftKeyboard\'</i>u kontrol ediniz. Bu sizin cihazınızda çalışmamıza izin verir.</string>
+    <string name="setup_wizard_step_one_title">kasahorow etkinleştir</string>
+    <string name="setup_wizard_step_one_details">Bu adımda <i>kasahorow</i>\'u etkinleştirmeniz gerekecek. Lütfen <i>Dil&amp;giriş ayarlarınızda</i> <i>\'kasahorow\'</i>u kontrol ediniz. Bu sizin cihazınızda çalışmamıza izin verir.</string>
     <string name="setup_wizard_step_one_action"><i>Dil&amp;girişi ayarlarınıza</i> gidiniz…</string>
-    <string name="setup_wizard_step_one_action_error_no_settings_activity">Hata: Cihazınız 3üncü parti klavyeleri desteklemiyor. AnySoftKeyboard aktifleştirilemedi!</string>
+    <string name="setup_wizard_step_one_action_error_no_settings_activity">Hata: Cihazınız 3üncü parti klavyeleri desteklemiyor. kasahorow aktifleştirilemedi!</string>
     <string name="setup_wizard_step_permissions_title">İzinleri etkinleştir</string>
-    <string name="setup_wizard_step_two_title">AnySoftKeyboard a geç</string>
-    <string name="setup_wizard_step_two_details">Sisteminiz şuan <i>AnySoftKeyboard</i>\'u kullanabilir, fakat etkin klavye olarak ayarlanmamış.\nGeçiş yaptığınızda, <i>AnySoftKeyboard</i> bütün özellikleriyle birlikte yeni ekran klavyeniz olacaktır!</string>
+    <string name="setup_wizard_step_two_title">kasahorow a geç</string>
+    <string name="setup_wizard_step_two_details">Sisteminiz şuan <i>kasahorow</i>\'u kullanabilir, fakat etkin klavye olarak ayarlanmamış.\nGeçiş yaptığınızda, <i>kasahorow</i> bütün özellikleriyle birlikte yeni ekran klavyeniz olacaktır!</string>
     <string name="setup_wizard_step_two_action">Etkin klavyeleri değiştir</string>
     <string name="setup_wizard_step_three_title">Sırada ne var</string>
-    <string name="setup_wizard_step_three_details"><i>AnySoftKeyboard</i>\'u seçtiğiniz için teşekkürler.</string>
+    <string name="setup_wizard_step_three_details"><i>kasahorow</i>\'u seçtiğiniz için teşekkürler.</string>
     <string name="setup_wizard_step_three_details_done"><b>Artık hazırsınız 🎉\nDenemek için favori uygulamanıza gidin.</b></string>
     <string name="setup_wizard_step_three_details_actions">Ya da, klavyeyi istediğiniz gibi özelleştirebilir ve kişiselleştirebilirsiniz:</string>
     <string name="setup_wizard_step_three_action_languages">Dilleri kur…</string>
     <string name="setup_wizard_step_three_action_themes">Tema seç…</string>
     <string name="setup_wizard_step_three_action_all_settings">Her şeyi yapılandırma…</string>
     <string name="setup_wizard_step_download_title">Dil Paketleri İndir</string>
-    <string name="setup_wizard_step_download_details"><i>AnySoftKeyboard</i>\'un bir çok dili desteklediğini bilmek sizi mutlu edecektir. Sadece istediğiniz dil paketini indirin ve cihazınızda herhangi bir dilde yazmanın tadını çıkarın.</string>
+    <string name="setup_wizard_step_download_details"><i>kasahorow</i>\'un bir çok dili desteklediğini bilmek sizi mutlu edecektir. Sadece istediğiniz dil paketini indirin ve cihazınızda herhangi bir dilde yazmanın tadını çıkarın.</string>
     <string name="setup_wizard_step_download_action">Dil paketleri indir</string>
     <string name="setup_wizard_step_download_skip_action">Atla</string>
-    <string name="ime_crashed_text">Maalesef <i>AnySoftKeyboard</i> ile ilgili bir problem var. Panik yapmayın, bunu düzeltmeye yardım etmek için <b>sizin</b> yapabileceğiniz bir şey var: çökme raporunu bize gönderin ve biz de bu hatayı çözmek ve sizi harika klavye deneyiminize tekrar kavuşturmak için elimizden gelenin en iyisini yapalım!\n\nEn içten özürlerimizle, Geliştirici ekibi.</string>
+    <string name="ime_crashed_text">Maalesef <i>kasahorow</i> ile ilgili bir problem var. Panik yapmayın, bunu düzeltmeye yardım etmek için <b>sizin</b> yapabileceğiniz bir şey var: çökme raporunu bize gönderin ve biz de bu hatayı çözmek ve sizi harika klavye deneyiminize tekrar kavuşturmak için elimizden gelenin en iyisini yapalım!\n\nEn içten özürlerimizle, Geliştirici ekibi.</string>
     <string name="ime_crashed_send_button">Gönder</string>
     <string name="ime_crashed_cancel_button">İptal</string>
     <string name="ime_crashed_intent_selector_title">Çökme raporunu şu şekilde gönder</string>
@@ -576,8 +576,8 @@ bulamıyorum. Bu özellik cihazınızda çalışamaz, üzgünüz.</string>
     <string name="wizard_allow_contacts_permission">Kişiler\ tabanlı yazım önerilerine izin ver</string>
     <string name="turn_off_contacts_dictionary">Kişi Sözlüğünü kapat</string>
     <string name="read_more_about_permissions">Izinler hakkında daha çok bilgi…</string>
-    <string name="ask_beta_link_promo">Hey! Yeni <i>AnySoftKeyboard</i> sürümüne hemen ulaşmak ister misin? O halde şanslısın! <i>BETA</i> kanalı <b>SENİN</b> için açık!\nAşağıdaki linke girip giriş yap ve <i>Google Play-Store</i> ile güncellemeni al!\n\n
-https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nSürüm yayınlanmadan hataları ayıklamada yardımcı olma isteğin için teşekkürler.</string>
+    <string name="ask_beta_link_promo">Hey! Yeni <i>kasahorow</i> sürümüne hemen ulaşmak ister misin? O halde şanslısın! <i>BETA</i> kanalı <b>SENİN</b> için açık!\nAşağıdaki linke girip giriş yap ve <i>Google Play-Store</i> ile güncellemeni al!\n\n
+https://play.google.com/apps/testing/com.menny.android.kasahorow \n\nSürüm yayınlanmadan hataları ayıklamada yardımcı olma isteğin için teşekkürler.</string>
     <string name="clipboard_fine_select_enabled_toast">Ince-ayar kelime seçimi etkinleştirildi. Sol/sağ yön tuşlarını kullanın.</string>
     <string name="app_shortcut_keyboards_disabled">Klavyeler arası gezinti devre dışı</string>
     <string name="app_shortcut_keyboards_long_label">Kullanılacak klavye düzenlerini seç</string>
@@ -601,11 +601,11 @@ https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nSür�
     <string name="no_internet_fields_specific_layout">Hiçbiri</string>
     <string name="bottom_nav_home">Merhaba</string>
     <string name="setup_wizard_welcome_title">Hoş geldiniz!</string>
-    <string name="setup_wizard_welcome_sub_title">AnySoftKeyboard\'u denediğiniz için teşekkürler!</string>
-    <string name="setup_wizard_welcome_info">Diğer büyün Android klavyelerde olduğu gibi AnySoftKeyboard\'u Android Ayarları sayfasında etkinleştirmeniz gerekmekte. Bu, şeytani klavyeler*in sizin yazı verilerinizi çalmamasını sağlamak için Android tarafından zorunlu tutulmaktadır.</string>
+    <string name="setup_wizard_welcome_sub_title">kasahorow\'u denediğiniz için teşekkürler!</string>
+    <string name="setup_wizard_welcome_info">Diğer büyün Android klavyelerde olduğu gibi kasahorow\'u Android Ayarları sayfasında etkinleştirmeniz gerekmekte. Bu, şeytani klavyeler*in sizin yazı verilerinizi çalmamasını sağlamak için Android tarafından zorunlu tutulmaktadır.</string>
     <string name="setup_wizard_welcome_info_2">Tamam, hazır mısınız? Başlamak için aşağıya tıklayın. Bu süreçte size rehberlik edeceğim.</string>
     <string name="setup_wizard_welcome_start_action">Kurulumu başlat…</string>
-    <string name="setup_wizard_welcome_info_footnote">* Tabii ki AnySoftKeyboard şeytani değildir. Bunu, kaynak kodumuza bakıp onaylamaya teşvik ediliyorsunuz. Ayrıca, <i>AĞ</i> iznimiz de bulunmamakta, yani cihazınızdan dışarıya hiçbir veri gönderemeyiz.</string>
+    <string name="setup_wizard_welcome_info_footnote">* Tabii ki kasahorow şeytani değildir. Bunu, kaynak kodumuza bakıp onaylamaya teşvik ediliyorsunuz. Ayrıca, <i>AĞ</i> iznimiz de bulunmamakta, yani cihazınızdan dışarıya hiçbir veri gönderemeyiz.</string>
     <string name="setup_wizard_welcome_privacy_action">Gizlilik politikası sayfasına gidin…</string>
     <string name="setup_wizard_skip">Atla</string>
     <string name="clear_all_dictionary_override">Üstüne yazmaları temizle</string>
@@ -653,16 +653,16 @@ https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nSür�
     <string name="aosp_dark_theme_description">AOSP-Esinlenilmiş koyu renkler klavye teması</string>
     <string name="aosp_light_theme_name">AOSP Hafif tema</string>
     <string name="aosp_light_theme_description">AOSP-Esinlenilmiş açık renkler klavye teması</string>
-    <string name="app_share_title">AnySoftKeyboard\'dan merhaba</string>
-    <string name="app_share_menu_title">AnySoftKeyboard kullanmayı paylaş</string>
-    <string name="app_share_text">Açık-kaynak, mahremiyet-odaklı, özgür, fazlasıyla kişiselleştirilebilen, çok-dilli Android klavye uygulaması AnySoftKeyboard\'u tavsiye ediyorum.\nEdinebileceğiniz adresler:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard&amp;hl=tr\nF-Droid: https://f-droid.org/tr/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_title">kasahorow\'dan merhaba</string>
+    <string name="app_share_menu_title">kasahorow kullanmayı paylaş</string>
+    <string name="app_share_text">Açık-kaynak, mahremiyet-odaklı, özgür, fazlasıyla kişiselleştirilebilen, çok-dilli Android klavye uygulaması kasahorow\'u tavsiye ediyorum.\nEdinebileceğiniz adresler:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow&amp;hl=tr\nF-Droid: https://f-droid.org/tr/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">Bir şaşırtma için bana tıklayın</string>
     
     
     <string name="delete_all_clipboard_entries">Panoyu temizle</string>
     <string name="tip_swipe_from_backspace_to_clear">İpucu: Boşluk tuşundan sola doğru kaydırarak kelimeyi silebilirsiniz!</string>
     <string name="notification_read_contacts_ticker">Kişilere erişim izni gerekli</string>
-    <string name="wizard_allow_notification_permission">AnySoftKeyboard\'dan bildirimlere izin ver</string>
+    <string name="wizard_allow_notification_permission">kasahorow\'dan bildirimlere izin ver</string>
     <string name="setup_wizard_step_notification_permissions_details">Nadir durumlarda (örneğin uygulama çökmeleri gibi) bildirim göndermemiz gerekebilir. İzin verilmesini öneririz ancak bildirim gönderme izin vermeme uygulamanın davranışını etkilemez.</string>
     <string name="wizard_skip_notification_permission">Bildirimlere izin verme</string>
 </resources>

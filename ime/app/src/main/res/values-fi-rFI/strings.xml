@@ -6,7 +6,7 @@
     </string>
     <string name="debug_tracing_finished">Seuranta päättyi!\nSeurantatiedosto on\u0020<xliff:g id="trace_file">%s</xliff:g></string>
     <string name="menu_about_item">Tietoja</string>
-    <string name="how_to_pointer_title">Tervetuloa käyttämään AnySoftKeyboardia</string>
+    <string name="how_to_pointer_title">Tervetuloa käyttämään kasahorowia</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Viimeisimmät muutokset v <xliff:g id="name">%s </xliff:g> \u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">More:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -67,7 +67,7 @@
     <string name="night_mode_sound_control">Poista näppäinäänet käytöstä</string>
     <string name="night_mode_vibration_control">Poista painalluksen värinä käytöstä</string>
     <string name="power_save_mode_screen">Virransäästöasetukset</string>
-    <string name="power_save_mode_description">Virransäästötila vähentää AnySoftKeyboardin virrankulutusta poistamalla käytöstä seuraavat ominaisuudet:</string>
+    <string name="power_save_mode_description">Virransäästötila vähentää kasahorowin virrankulutusta poistamalla käytöstä seuraavat ominaisuudet:</string>
     <string name="power_save_mode_dialog_title">Ota virransäästötila käyttöön</string>
     <string name="power_save_mode_types_never">Ei koskaan</string>
     <string name="power_save_mode_types_lower_battery">Alhainen lataustaso</string>
@@ -288,8 +288,8 @@
     <string name="lang_key_shows_popup_on_summary">Kielinäppäin avaa valintadialogin</string>
     <string name="lang_key_shows_popup_off_summary">Kielinäppäin näyttää vuorotellen kielet</string>
     <string name="settings_os_clipboard_sync">Synkronoi leikepöytä käyttöjärjestelmän kanssa</string>
-    <string name="settings_os_clipboard_sync_summary_on">Tunnista leikepöydän muutokset ja synkronoi ne AnySoftKeyboardin kanssa.</string>
-    <string name="settings_os_clipboard_sync_summary_off">Älä kuuntele leikepöydän toimintoja AnySoftKeyboardin ulkopuolella.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Tunnista leikepöydän muutokset ja synkronoi ne kasahorowin kanssa.</string>
+    <string name="settings_os_clipboard_sync_summary_off">Älä kuuntele leikepöydän toimintoja kasahorowin ulkopuolella.</string>
     <string name="auto_caps">Automaattinen isot kirjaimet</string>
     <string name="grammar_group">Kielioppi</string>
     <string name="keyboard_behavior_group">Näppäimistön käyttäytyminen</string>
@@ -435,7 +435,7 @@
     <string name="settings_long_press_timeout_slower">Hitaampi</string>
     <string name="settings_long_press_timeout_never">Ei lainkaan</string>
     <string name="settings_force_locale_title">Pakota kieli</string>
-    <string name="settings_force_locale_summary">Pakota AnySoftKeyboardissa käytettävä kieli
+    <string name="settings_force_locale_summary">Pakota kasahorowissa käytettävä kieli
         (käyttöönotto saattaa kestää hetken). Tällä hetkellä: %s.
     </string>
     <string name="tweak_workarounds_group">Korjaukset</string>
@@ -443,7 +443,7 @@
     <string name="workaround_disable_rtl_fix_summary_on">Käytä järjestelmän oikealta vasemmalle-menetelmää.
         Pitäisi toimia uudemmissa laitteissa.
     </string>
-    <string name="workaround_disable_rtl_fix_summary_off">Käytä AnySoftKeyboardin oikealta vasemmalle-menetelmää.
+    <string name="workaround_disable_rtl_fix_summary_off">Käytä kasahorowin oikealta vasemmalle-menetelmää.
         Käytä vain, jos käyttöjärjestelmän menetelmä ei toimi.
     </string>
     <!-- User dictionary settings -->
@@ -461,7 +461,7 @@
     <string name="emoji_default_skin_tone_value_random_type">Satunnainen ihon sävy</string>
     <string name="developer_tools">Kehittäjätyökalut</string>
     <string name="click_for_developer_features">Kehittäjätyökalut</string>
-    <string name="click_for_developer_features_summary">Eri työkaluja AnySoftKeyboard
+    <string name="click_for_developer_features_summary">Eri työkaluja kasahorow
         kehittäjille
     </string>
     <string name="failed_to_create_mem_dump">Muistivedostiedoston luonti epäonnistui:
@@ -469,7 +469,7 @@
     </string>
     <string name="created_mem_dump_file">Muistivedostiedosto luotu:
         <xliff:g id="file_path">%s</xliff:g></string>
-    <string name="not_configured_with_click_here">AnySoftKeyboardia ei ole täysin asettu käyttökuntoon.
+    <string name="not_configured_with_click_here">kasahorowia ei ole täysin asettu käyttökuntoon.
         Paina tästä asettaaksesi
     </string>
     <string name="not_configured_with_just_click_here">Paina tästä</string>
@@ -481,17 +481,17 @@
     <string name="enter_abbreviation_hint">Lyhenne</string>
     <string name="enter_abbreviation_target_hint">Koko lause</string>
     <string name="setup_wizard_step_one_action_error_no_settings_activity">Virhe: Laitteesi ei tue
-        3. osapuolen näppäimistöjä. AnySoftKeyboardia ei voida aktivoida!
+        3. osapuolen näppäimistöjä. kasahorowia ei voida aktivoida!
     </string>
     <string name="setup_wizard_step_permissions_title">Anna käyttöoikeudet</string>
-    <string name="setup_wizard_step_two_title">Vaihda AnySoftKeyboardiin</string>
-    <string name="setup_wizard_step_two_details">Järjestelmäsi voi käyttää nyt <i>AnySoftKeyboardia</i>, mutta
-        se ei ole vielä aktiivinen näppäimistösi.\nAsettamalla <i>AnySoftKeyboardin</i> aktiiviseksi 
+    <string name="setup_wizard_step_two_title">Vaihda kasahorowiin</string>
+    <string name="setup_wizard_step_two_details">Järjestelmäsi voi käyttää nyt <i>kasahorowia</i>, mutta
+        se ei ole vielä aktiivinen näppäimistösi.\nAsettamalla <i>kasahorowin</i> aktiiviseksi 
         siitä tulee uusi näppäimistösi kaikkine ominaisuuksineen!
     </string>
     <string name="setup_wizard_step_two_action">Vaihda käytettävää näppäimistöä</string>
     <string name="setup_wizard_step_three_title">Mitä seuraavaksi?</string>
-    <string name="setup_wizard_step_three_details">Kiitos, että valitsit <i>AnySoftKeyboardin</i>.
+    <string name="setup_wizard_step_three_details">Kiitos, että valitsit <i>kasahorowin</i>.
     </string>
     <string name="setup_wizard_step_three_details_done">        <b>Olet valmis 🎉\nMene suosikkisovellukseesi kokeillaksesi sitä.</b>
     </string>
@@ -502,11 +502,11 @@
     <string name="setup_wizard_step_three_action_themes">Valitse teema…</string>
     <string name="setup_wizard_step_three_action_all_settings">Hallitse kaikkea muuta…</string>
     <string name="setup_wizard_step_download_title">Lataa kielipaketteja</string>
-    <string name="setup_wizard_step_download_details">Ilahdut varmasti siitä, että <i>AnySoftKeyboard</i> tukee kymmeniä kieliä. Lataa haluamasi kielipaketti ja nauti kirjoittamisesta laitteellasi
+    <string name="setup_wizard_step_download_details">Ilahdut varmasti siitä, että <i>kasahorow</i> tukee kymmeniä kieliä. Lataa haluamasi kielipaketti ja nauti kirjoittamisesta laitteellasi
         millä tahansa kielellä.</string>
     <string name="setup_wizard_step_download_action">Lataa kielipaketti</string>
     <string name="setup_wizard_step_download_skip_action">Ohita</string>
-    <string name="ime_crashed_text">Valitettavasti  <i>AnySoftKeyboardin</i> kanssa on ongelma.
+    <string name="ime_crashed_text">Valitettavasti  <i>kasahorowin</i> kanssa on ongelma.
         Ei hätää, <b>sinä</b> voit auttaa ongelman ratkaisussa lähettämällä meille kaatumisilmoitus
         ja teemme parhaamme ratkaistaksemme tämän ongelman ja saadaksemme sinulle takaisin upean
         näppäimistökokemuksen!\n\nVilpittömällä anteeksipyynnöllä, sovelluksen kehittäjätiimi.
@@ -524,10 +524,10 @@
     <string name="wizard_allow_contacts_permission">Salli yhteystietopohjaiset kirjoitusehdotukset</string>
     <string name="turn_off_contacts_dictionary">Poista yhteystietosanakirja käytöstä</string>
     <string name="read_more_about_permissions">Lue lisää käyttöoikeuksista…</string>
-    <string name="ask_beta_link_promo">Hei! Haluatko uusia <i>AnySoftKeyboard</i> juttuja nopeammin? Sitten
+    <string name="ask_beta_link_promo">Hei! Haluatko uusia <i>kasahorow</i> juttuja nopeammin? Sitten
         olet onnekas! <i>BETA</i>-kanava on  <b>sinun</b> saatavillasi!\nRekisteröidy alla olevasta 
         linkistä ja päivitä <i>Google Play</i> -sovelluskaupassa!\n\n
-        https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nJa kiitos
+        https://play.google.com/apps/testing/com.menny.android.kasahorow \n\nJa kiitos
         kun autat bugien tappamisessa, ennen kuin sovellus julkaistaan laajemmalle yleisölle.
     </string>
     <string name="clipboard_fine_select_enabled_toast">Tarkka tekstin valinta käytössä. Käytä vasen/oikeaa nuolta.</string>
@@ -551,8 +551,8 @@
     <string name="aosp_dark_theme_description">Tummavärinen, AOSP-inspiroitu näppäimistön teema</string>
     <string name="aosp_light_theme_name">AOSP vaalea teema</string>
     <string name="aosp_light_theme_description">Vaaleavärinen, AOSP-inspiroitu näppäimistön teema</string>
-    <string name="app_share_title">Hei AnySoftKeyboardilta</string>
-    <string name="app_share_menu_title">Jaa AnySoftKeyboard…</string>
-    <string name="app_share_text">Saanen suositella avoimen lähdekoodin yksityisyyteen keskittynyttä, ilmaista ja muokattavaa monikielistä Android-näppäimistösovellusta AnySoftKeyboardia.\nHanki täältä:\nPlay-kauppa: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_title">Hei kasahorowilta</string>
+    <string name="app_share_menu_title">Jaa kasahorow…</string>
+    <string name="app_share_text">Saanen suositella avoimen lähdekoodin yksityisyyteen keskittynyttä, ilmaista ja muokattavaa monikielistä Android-näppäimistösovellusta kasahorowia.\nHanki täältä:\nPlay-kauppa: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow\nF-Droid: https://f-droid.org/en/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">Klikkaa minua, tiedossa yllätys</string>
 </resources>

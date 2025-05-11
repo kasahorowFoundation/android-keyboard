@@ -6,7 +6,7 @@
         <xliff:g id="trace_file">%s</xliff:g>
     </string>
     <string name="menu_about_item">O aplikácii</string>
-    <string name="how_to_pointer_title">Vitajte v AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Vitajte v kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Najnovšie zmeny pre v<xliff:g id="name">%s</xliff:g>\u0020\u0020
     </string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">
@@ -59,7 +59,7 @@
     <string name="vibrate_on_key_press_value_template">%d milisekúnd</string>
     <string name="night_mode_dialog_title">Zapnúť nočný režim</string>
     <string name="power_save_mode_screen">Nastavenie šetriaceho režimu úspory energie</string>
-    <string name="power_save_mode_description">Režim úspory energie zníži spotrebu energie AnySoftKeyboard vypnutím týchto funkcií:</string>
+    <string name="power_save_mode_description">Režim úspory energie zníži spotrebu energie kasahorow vypnutím týchto funkcií:</string>
     <string name="power_save_mode_dialog_title">Zapnúť mód úspory energie</string>
     <string name="power_save_mode_types_lower_battery">Pri nízkej úrovni batérie</string>
     <string name="power_save_mode_types_always">Vždy</string>

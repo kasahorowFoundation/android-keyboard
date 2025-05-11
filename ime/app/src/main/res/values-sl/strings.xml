@@ -6,7 +6,7 @@
         <xliff:g id="trace_file">%s</xliff:g>
     </string>
     <string name="menu_about_item">O programu</string>
-    <string name="how_to_pointer_title">Dobrodošli v AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Dobrodošli v kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Zadnje spremembe za v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="notification_text_testers">To je različica beta. Bodite previdni pri uporabi!</string>
@@ -149,7 +149,7 @@
     </string>
     <string name="more_ui_settings_group">Uporabniški vmesnik</string>
     <string name="special_dictionaries_group">Posebni slovarji</string>
-    <string name="special_dictionaries_group_summary">Slovarji predlogov, ki se uporabljajo v AnySoftKeyboardu</string>
+    <string name="special_dictionaries_group_summary">Slovarji predlogov, ki se uporabljajo v kasahorowu</string>
     <string name="use_user_dictionary">Uporabniški slovar</string>
     <string name="use_user_dictionary_on_summary">Predlagaj uporabniško dodane besede (dvokliknite vtipkani predlog za dodajanje)</string>
     <string name="use_auto_dictionary">Samodejni slovar</string>
@@ -380,7 +380,7 @@
     <string name="tweak_workarounds_group">Zaobidenja</string>
     <string name="workaround_disable_rtl_fix">Onemogoči pisanje od desne proti levi</string>
     <string name="workaround_disable_rtl_fix_summary_on">Uporabi sistemsko pisanje od desne proti levi (za telefone SE)</string>
-    <string name="workaround_disable_rtl_fix_summary_off">Uporabi AnySoftKeyboardovo pisanje od desne proti levi</string>
+    <string name="workaround_disable_rtl_fix_summary_off">Uporabi kasahorowovo pisanje od desne proti levi</string>
     <string name="settings_split_state_title_portrait">Razcepi/Združi začetno stanje (pokončno)</string>
     <string name="settings_split_state_title_landscape">Razcepi/Združi začetno stanje (ležeče)</string>
     <string name="settings_split_state_summary">Določi privzeto razcepitev tipkovnice. Trenutno: %s</string>
@@ -411,14 +411,14 @@
     <string name="initial_quick_text_tab_history_tab">Začni s skupino Zgodovina</string>
     <string name="developer_tools">Orodja za razvijalce</string>
     <string name="click_for_developer_features">Orodja za razvijalce</string>
-    <string name="click_for_developer_features_summary">Razna orodja za razvijalce AnySoftKeyboarda</string>
+    <string name="click_for_developer_features_summary">Razna orodja za razvijalce kasahorowa</string>
     <string name="failed_to_create_mem_dump">Ustvarjanje datoteke izpisa pomnilnika je spodletelo zaradi:
         <xliff:g id="message">%s</xliff:g>
     </string>
     <string name="created_mem_dump_file">Datoteke izpisa pomnilnika ustvarjena v:
         <xliff:g id="file_path">%s</xliff:g>
     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard ni popolnoma nastavljen za uporabo. Kliknite tukaj za nastavitev.</string>
+    <string name="not_configured_with_click_here">kasahorow ni popolnoma nastavljen za uporabo. Kliknite tukaj za nastavitev.</string>
     <string name="not_configured_with_just_click_here">Kliknite tukaj</string>
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
@@ -430,22 +430,22 @@
     <string name="enter_abbreviation_hint">Kratica</string>
     <string name="enter_abbreviation_target_hint">Celotni stavek</string>
     <string name="about_additional_software_licenses">Dodatne programske licence</string>
-    <string name="setup_wizard_step_one_title">Omogoči AnySoftKeyboard</string>
-    <string name="setup_wizard_step_one_details">V tem koraku morate omogočiti <i>AnySoftKeyboard</i>. <i>AnySoftKeyboard</i> preverite v <i>nastavitvah za jezik in vnos</i>. To nam bo omogočilo, da ga zaženemo v vaši napravi.</string>
+    <string name="setup_wizard_step_one_title">Omogoči kasahorow</string>
+    <string name="setup_wizard_step_one_details">V tem koraku morate omogočiti <i>kasahorow</i>. <i>kasahorow</i> preverite v <i>nastavitvah za jezik in vnos</i>. To nam bo omogočilo, da ga zaženemo v vaši napravi.</string>
     <string name="setup_wizard_step_one_action">Pojdi v <i>nastavitve za jezik in vnos</i> …</string>
-    <string name="setup_wizard_step_one_action_error_no_settings_activity">Napaka: vaša naprava ne podpira tipkovnic tretjih oseb. AnySoftKeyboarda ni mogoče omogočiti!</string>
+    <string name="setup_wizard_step_one_action_error_no_settings_activity">Napaka: vaša naprava ne podpira tipkovnic tretjih oseb. kasahorowa ni mogoče omogočiti!</string>
     <string name="setup_wizard_step_permissions_title">Omogoči dovoljenja</string>
-    <string name="setup_wizard_step_two_title">Preklopi na AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Vaš sistem lahko sedaj uporablja <i>AnySoftKeyboard</i>, vendar ni nastavljen kot dejavna tipkovnica.\nS preklopom bo <i>AnySoftKeyboard</i> skupaj z vsemi njenimi značilnostmi vaša nova zaslonska tipkovnica!</string>
+    <string name="setup_wizard_step_two_title">Preklopi na kasahorow</string>
+    <string name="setup_wizard_step_two_details">Vaš sistem lahko sedaj uporablja <i>kasahorow</i>, vendar ni nastavljen kot dejavna tipkovnica.\nS preklopom bo <i>kasahorow</i> skupaj z vsemi njenimi značilnostmi vaša nova zaslonska tipkovnica!</string>
     <string name="setup_wizard_step_two_action">Preklopi dejavne tipkovnice</string>
     <string name="setup_wizard_step_three_title">Kaj sledi</string>
-    <string name="setup_wizard_step_three_details">Hvala, ker ste izbrali <i>AnySoftKeyboard</i>.</string>
+    <string name="setup_wizard_step_three_details">Hvala, ker ste izbrali <i>kasahorow</i>.</string>
     <string name="setup_wizard_step_three_details_done"><b>Končali ste 🎉\nPojdite v svoj priljubljen program in ga preizkusite.</b></string>
     <string name="setup_wizard_step_three_details_actions">Tipkovnico lahko prilagodite po svojem okusu:</string>
     <string name="setup_wizard_step_three_action_languages">Nastavitev jezikov …</string>
     <string name="setup_wizard_step_three_action_themes">Izberi temo …</string>
     <string name="setup_wizard_step_three_action_all_settings">Nastavi vse ostalo …</string>
-    <string name="ime_crashed_text">Na žalost z <i>AnySoftKeyboardom</i> obstaja težava. Ne skrbite, nekaj lahko naredite, da to razrešite: pošljite nam poročilo po sesutju in kar najbolj se bomo potrudili, da sesutje razrešimo in vas vrnemo na čudovito izkušnjo tipkovnice!\n\nIskreno se opravičujemo, ekipa razvijalcev.</string>
+    <string name="ime_crashed_text">Na žalost z <i>kasahorowom</i> obstaja težava. Ne skrbite, nekaj lahko naredite, da to razrešite: pošljite nam poročilo po sesutju in kar najbolj se bomo potrudili, da sesutje razrešimo in vas vrnemo na čudovito izkušnjo tipkovnice!\n\nIskreno se opravičujemo, ekipa razvijalcev.</string>
     <string name="ime_crashed_send_button">Pošlji</string>
     <string name="ime_crashed_cancel_button">Prekliči</string>
     <string name="ime_crashed_intent_selector_title">Pošlji poročilo o sesutju preko</string>
@@ -464,7 +464,7 @@
     <string name="wizard_allow_contacts_permission">Dovoli predloge osnovane na stikih</string>
     <string name="turn_off_contacts_dictionary">Izklopi slovar stikov</string>
     <string name="read_more_about_permissions">Več o dovoljenjih …</string>
-    <string name="ask_beta_link_promo">Pozdravljeni! Želite takojšnji dostop do novih značilnosti <i>AnySoftKeyboarda</i>? Imate srečo! Za <b>VAS</b> je sedaj na voljo kanal <i>BETA</i>!\nVpišite se na spodnji povezavi in posodobite program preko <i>Trgovine Google Play</i>!\n\n https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nHvala za pomoč pri uničevanju hroščev, preden dosežejo javnost.</string>
+    <string name="ask_beta_link_promo">Pozdravljeni! Želite takojšnji dostop do novih značilnosti <i>kasahorowa</i>? Imate srečo! Za <b>VAS</b> je sedaj na voljo kanal <i>BETA</i>!\nVpišite se na spodnji povezavi in posodobite program preko <i>Trgovine Google Play</i>!\n\n https://play.google.com/apps/testing/com.menny.android.kasahorow \n\nHvala za pomoč pri uničevanju hroščev, preden dosežejo javnost.</string>
     <string name="clipboard_fine_select_enabled_toast">Podrobna izbira besedila omogočena. Uporabite puščico levo/desno.</string>
     <string name="app_shortcut_keyboards_disabled">Krmarjenje po tipkovnicah onemogočeno</string>
     <string name="app_shortcut_keyboards_long_label">Izberite razporeditve tipkovnic, ki jih želite uporabiti</string>

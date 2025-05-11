@@ -6,7 +6,7 @@
     </string>
     <string name="debug_tracing_finished">Jälitamine õnnestus!\nJälitusfail on\u0020<xliff:g id="trace_file">%s</xliff:g></string>
     <string name="menu_about_item">Meist</string>
-    <string name="how_to_pointer_title">Tere tulemast kasutama AnySoftKeyboard virtuaalset klaviatuuri</string>
+    <string name="how_to_pointer_title">Tere tulemast kasutama kasahorow virtuaalset klaviatuuri</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Muudatused versioonis<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Rohkem infot veebis:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -57,7 +57,7 @@
     <string name="night_mode_sound_control">Keela klahvipuudutuse helid</string>
     <string name="night_mode_vibration_control">Keela klahvide vibreerimine puudutusel</string>
     <string name="power_save_mode_screen">Energiasäästuseaded</string>
-    <string name="power_save_mode_description">AnySoftKeyboardi energiakasutamise vähendamiseks keelatakse energiasäästurežiimil lisavõimalused:</string>
+    <string name="power_save_mode_description">kasahorowi energiakasutamise vähendamiseks keelatakse energiasäästurežiimil lisavõimalused:</string>
     <string name="power_save_mode_state_summary">Energiasäästu pani tööle:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Luba akusäästmise režiim</string>
     <string name="power_save_mode_types_never">Mitte kunagi</string>

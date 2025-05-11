@@ -60,7 +60,7 @@ public class ExternalDictionaryFactory extends AddOnsFactory<DictionaryAddOnAndB
         "Dictionaries",
         "Dictionary",
         "dictionary_",
-        R.xml.english_dictionaries,
+        R.xml.kasahorow_dictionaries,
         0,
         true,
         BuildConfig.TESTING_BUILD);

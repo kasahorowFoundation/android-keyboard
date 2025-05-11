@@ -6,7 +6,7 @@
         <xliff:g id="trace_file">%s</xliff:g>
     </string>
     <string name="menu_about_item">Honi buruz</string>
-    <string name="how_to_pointer_title">Ongi etorri AnySoftKeyboard teklatura</string>
+    <string name="how_to_pointer_title">Ongi etorri kasahorow teklatura</string>
     <string name="change_log_card_version_title_template">\u0020\u0020<xliff:g id="name">%s</xliff:g> bertsioaren azken aldaketak\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">
         %s</xliff:g>\u0020\u0020
@@ -206,11 +206,11 @@
     <string name="volume_key_for_left_right_support_off_summary">Bolumena gora botoiak kurtsorea ezkerrera darama, bolumena behera botoiak kurtsorea eskumara darama    </string>
     <string name="more_ui_settings_group">Erabiltzailearen interfazea</string>
     <string name="special_dictionaries_group">Hiztegi bereziak</string>
-    <string name="special_dictionaries_group_summary">Proposamenak egiteko AnySoftKeyboard teklatuak darabiltzan hiztegiak</string>
+    <string name="special_dictionaries_group_summary">Proposamenak egiteko kasahorow teklatuak darabiltzan hiztegiak</string>
     <string name="use_user_dictionary">Erabiltzailearen hiztegia</string>
     <string name="use_user_dictionary_on_summary">Proposatu erabiltzaileak gehitutako hitzak (klik bikoitza proposamen barran idatzitako hitza gehitzeko)</string>
     <string name="always_use_fallback_user_dictionary">Erabili erabiltzaile-hiztegiaren biltegiratze pribatua</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Erabili AnySoftKeyboard teklatuak hornitutako biltegiratze pribatua erabiltzaile-hiztegiak gordetzeko.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Erabili kasahorow teklatuak hornitutako biltegiratze pribatua erabiltzaile-hiztegiak gordetzeko.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Saiatu Androidek hornitutako erabiltzaile-hiztegi biltegi globala erabiltzen.</string>
     <string name="use_auto_dictionary">Hiztegi automatikoa</string>
     <string name="use_auto_dictionary_dialog_title">Aukeratu ikasteko metodoa</string>
@@ -318,8 +318,8 @@
     <string name="lang_key_shows_popup_on_summary">Hizkuntza teklak laster-leiho bat irekiko du</string>
     <string name="lang_key_shows_popup_off_summary">Hizkuntza teklak hizkuntzak txandakatzen ditu</string>
     <string name="settings_os_clipboard_sync">Sinkronizatu arbela sistema eragilearekin</string>
-    <string name="settings_os_clipboard_sync_summary_on">Antzeman aldaketak arbelean eta sinkronizatu AnySoftKeyboard teklatuarekin.</string>
-    <string name="settings_os_clipboard_sync_summary_off">Ez entzun arbelaren eragiketak AnySoftKeyboard teklatutik kanpo.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Antzeman aldaketak arbelean eta sinkronizatu kasahorow teklatuarekin.</string>
+    <string name="settings_os_clipboard_sync_summary_off">Ez entzun arbelaren eragiketak kasahorow teklatutik kanpo.</string>
     <string name="auto_caps">Kapitalizazio automatikoa</string>
     <string name="grammar_group">Gramatika</string>
     <string name="keyboard_behavior_group">Teklatuaren portaera</string>
@@ -459,11 +459,11 @@
     <string name="settings_long_press_timeout_slower">Motelago</string>
     <string name="settings_long_press_timeout_never">Inoiz ez</string>
     <string name="settings_force_locale_title">Behartu localea</string>
-    <string name="settings_force_locale_summary">Behartu AnySoftKeyboard-ek erabiliko duen hizkuntza (denbora bat behar du aktibatzeko). Orain: %s.    </string>
+    <string name="settings_force_locale_summary">Behartu kasahorow-ek erabiliko duen hizkuntza (denbora bat behar du aktibatzeko). Orain: %s.    </string>
     <string name="tweak_workarounds_group">Konponbideak</string>
     <string name="workaround_disable_rtl_fix">Desgaitu \'eskuinetik-ezkerrerantz\' erabiltzeko aukera</string>
     <string name="workaround_disable_rtl_fix_summary_on">Erabili sistemaren RTL kudeaketa (SE telefonoentzat)</string>
-    <string name="workaround_disable_rtl_fix_summary_off">Erabili AnySoftKeyboard RTL kudeaketa</string>
+    <string name="workaround_disable_rtl_fix_summary_off">Erabili kasahorow RTL kudeaketa</string>
     <string name="settings_split_state_title_portrait">Banatu/batu hasierako egoera bertikalean</string>
     <string name="settings_split_state_title_landscape">Banatu/batu hasierako egoera horizontalean</string>
     <string name="settings_split_state_summary">Definitu ea lehenetsita bezala teklatua zatituta agertuko den ala ez. Orain: %s</string>
@@ -503,13 +503,13 @@
     <string name="emoji_default_skin_tone_value_random_type">Ausazko azal-kolorea</string>
     <string name="developer_tools">Garatzaileen tresnak</string>
     <string name="click_for_developer_features">Garatzaileen tresnak</string>
-    <string name="click_for_developer_features_summary">Hainbat tresna AnySoftKeyboard garatzaileentzat</string>
+    <string name="click_for_developer_features_summary">Hainbat tresna kasahorow garatzaileentzat</string>
     <string name="failed_to_create_mem_dump">Huts egin du memoriaren erauzketa fitxategia, hau dela eta:
         <xliff:g id="message">%s</xliff:g>    </string>
     <string name="created_mem_dump_file">Memoriaren erauzketa fitxategia sortu da hemen:
         <xliff:g id="file_path">%s</xliff:g>
     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard ez dago guztiz ezarrita. Egin klik hemen ezartzeko.</string>
+    <string name="not_configured_with_click_here">kasahorow ez dago guztiz ezarrita. Egin klik hemen ezartzeko.</string>
     <string name="not_configured_with_just_click_here">Egin klik hemen</string>
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
@@ -522,16 +522,16 @@
     <string name="enter_abbreviation_target_hint">Esaldi osoa</string>
     <string name="toast_error_custom_path_backup">Errorea: edozein testuinguru-aplikazio irekia izan liteke</string>
     <string name="about_additional_software_licenses">Software lizentzia gehigarriak</string>
-    <string name="setup_wizard_step_one_title">Gaitu AnySoftKeyboard</string>
-    <string name="setup_wizard_step_one_details">Urrats honetan <i>AnySoftKeyboard</i> gaitu behar duzu. Markatu <i>\'AnySoftKeyboard\'</i> zure gailuko <i>Hizkuntza eta idazketa</i> atalean. Honek teklatua zure gailuan erabiltzea ahalbidetuko du.</string>
+    <string name="setup_wizard_step_one_title">Gaitu kasahorow</string>
+    <string name="setup_wizard_step_one_details">Urrats honetan <i>kasahorow</i> gaitu behar duzu. Markatu <i>\'kasahorow\'</i> zure gailuko <i>Hizkuntza eta idazketa</i> atalean. Honek teklatua zure gailuan erabiltzea ahalbidetuko du.</string>
     <string name="setup_wizard_step_one_action">Joan <i>Hizkuntza eta idazketa</i> atalera…</string>
-    <string name="setup_wizard_step_one_action_error_no_settings_activity">Errorea: zure gailuak ez ditu onartzen aparteko teklatuak. Ezin da AnySoftKeyboard gaitu!</string>
+    <string name="setup_wizard_step_one_action_error_no_settings_activity">Errorea: zure gailuak ez ditu onartzen aparteko teklatuak. Ezin da kasahorow gaitu!</string>
     <string name="setup_wizard_step_permissions_title">Gaitu baimenak</string>
-    <string name="setup_wizard_step_two_title">Aldatu AnySoftKeyboard teklatura</string>
-    <string name="setup_wizard_step_two_details">Zure sistemak <i>AnySoftKeyboard</i> erabili dezake orain, baina ez da oraindik teklatu aktibo bezala jarri.\nAldatuz gero, <i>AnySoftKeyboard</i> izango da zure pantailako teklatua, eta bere ezaugarri guztiak izango dituzu!</string>
+    <string name="setup_wizard_step_two_title">Aldatu kasahorow teklatura</string>
+    <string name="setup_wizard_step_two_details">Zure sistemak <i>kasahorow</i> erabili dezake orain, baina ez da oraindik teklatu aktibo bezala jarri.\nAldatuz gero, <i>kasahorow</i> izango da zure pantailako teklatua, eta bere ezaugarri guztiak izango dituzu!</string>
     <string name="setup_wizard_step_two_action">Aldatu teklatu aktiboak</string>
     <string name="setup_wizard_step_three_title">Zer da hurrengoa</string>
-    <string name="setup_wizard_step_three_details">Eskerrik asko <i>AnySoftKeyboard</i> aukeratzeagatik.</string>
+    <string name="setup_wizard_step_three_details">Eskerrik asko <i>kasahorow</i> aukeratzeagatik.</string>
     <string name="setup_wizard_step_three_details_done"><b>Bukatu duzu 🎉\nZoaz nahiago duzun aplikaziora eta han frogatu.</b></string>
     <string name="setup_wizard_step_three_details_actions">Edo, pertsonalizatu teklatua:</string>
     <string name="setup_wizard_step_three_action_languages">Ezarri hizkuntzak…</string>
@@ -541,7 +541,7 @@
     <string name="setup_wizard_step_download_details"><i>AnySoftKeiboard</i> teklatuak hamaika hizkuntza onartzen dituela jakieak poztuko zaitu. Besterik gabe deskargatu nahi duzun hizkuntza-paketea eta gozatu edozin hizkuntzatan idazten.</string>
     <string name="setup_wizard_step_download_action">Deskargatu hizkuntza paketea</string>
     <string name="setup_wizard_step_download_skip_action">Saltatu</string>
-    <string name="ime_crashed_text">Zoritxarrez arazo bat dago <i>AnySoftKeyboard</i> teklatuarekin. Ez larritu, badago <b>zuk</b> egin dezakezun zerbait hau konpontzen laguntzeko: bidali kraskatze-txostena, eta guk ahalegina egingo dugu kraskatze hau konpondu eta zuri teklatu esperientzia zoragarri bat emateko!\n\nBarkatu eragozpenak, garapen taldea.</string>
+    <string name="ime_crashed_text">Zoritxarrez arazo bat dago <i>kasahorow</i> teklatuarekin. Ez larritu, badago <b>zuk</b> egin dezakezun zerbait hau konpontzen laguntzeko: bidali kraskatze-txostena, eta guk ahalegina egingo dugu kraskatze hau konpondu eta zuri teklatu esperientzia zoragarri bat emateko!\n\nBarkatu eragozpenak, garapen taldea.</string>
     <string name="ime_crashed_send_button">Bidali</string>
     <string name="ime_crashed_cancel_button">Utzi</string>
     <string name="ime_crashed_intent_selector_title">Bidali kraskatze txostena honen bidez:</string>
@@ -560,7 +560,7 @@
     <string name="wizard_allow_contacts_permission">Baimendu kontaktuetan oinarritutako idazketa proposamenak</string>
     <string name="turn_off_contacts_dictionary">Desgaitu kontaktuen hiztegia</string>
     <string name="read_more_about_permissions">Irakurri gehiago baimenei buruz…</string>
-    <string name="ask_beta_link_promo">Adi! <i>AnySoftKeyboard</i> teklatuaren berritasunak azkarrago lortu nahi dituzu? Zorionekoa zu, <i>BETA</i> kanala eskuragarri baitago <b>ZURETZAT</b>!\nEman izena beheko loturan eta eguneratu <i>Google Play-Store</i> bidez!\n\nhttps://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nEta eskerrik asko publikora zabaldu aurretik akatsak konpontzen laguntzeagatik.    </string>
+    <string name="ask_beta_link_promo">Adi! <i>kasahorow</i> teklatuaren berritasunak azkarrago lortu nahi dituzu? Zorionekoa zu, <i>BETA</i> kanala eskuragarri baitago <b>ZURETZAT</b>!\nEman izena beheko loturan eta eguneratu <i>Google Play-Store</i> bidez!\n\nhttps://play.google.com/apps/testing/com.menny.android.kasahorow \n\nEta eskerrik asko publikora zabaldu aurretik akatsak konpontzen laguntzeagatik.    </string>
     <string name="clipboard_fine_select_enabled_toast">Testuaren hautaketa fina gaitu da. Erabili ezker/eskuin geziak.</string>
     <string name="app_shortcut_keyboards_disabled">Teklatuen nabigazioa desgaituta</string>
     <string name="app_shortcut_keyboards_long_label">Aukeratu erabiliko diten teklatu disposizioak</string>
@@ -584,11 +584,11 @@
     <string name="no_internet_fields_specific_layout">Bat ere ez</string>
     <string name="bottom_nav_home">Kaixo</string>
     <string name="setup_wizard_welcome_title">Ongi etorri!</string>
-    <string name="setup_wizard_welcome_sub_title">Eskerrik asko AnySoftKeyboard probatzeagatik!</string>
-    <string name="setup_wizard_welcome_info">Beste edozein Android teklatu bezala, AnySoftKeyboard Android ezarpenetan gaitu behar duzu. Hau Androidek behartzen du zuk idatzitako testua teklatu gaiztoek* lapurtu ez dezaten.</string>
+    <string name="setup_wizard_welcome_sub_title">Eskerrik asko kasahorow probatzeagatik!</string>
+    <string name="setup_wizard_welcome_info">Beste edozein Android teklatu bezala, kasahorow Android ezarpenetan gaitu behar duzu. Hau Androidek behartzen du zuk idatzitako testua teklatu gaiztoek* lapurtu ez dezaten.</string>
     <string name="setup_wizard_welcome_info_2">Prest? Egin klik behean hasteko, nik lagunduko zaitut bidean.</string>
     <string name="setup_wizard_welcome_start_action">Hasi ezarpena…</string>
-    <string name="setup_wizard_welcome_info_footnote">* Jakina, AnySoftKeyboard ez da gaiztoa. Iturburu kodea begiratzera animatzen zaitugu hori egiaztatzeko. Gainera, ez dugu <i>SAREA</i> erabiltzeko baimenik, beraz ezin diogu inori daturik bidali zure gailutik.</string>
+    <string name="setup_wizard_welcome_info_footnote">* Jakina, kasahorow ez da gaiztoa. Iturburu kodea begiratzera animatzen zaitugu hori egiaztatzeko. Gainera, ez dugu <i>SAREA</i> erabiltzeko baimenik, beraz ezin diogu inori daturik bidali zure gailutik.</string>
     <string name="setup_wizard_welcome_privacy_action">Joan pribatutasun politikara…</string>
     <string name="clear_all_dictionary_override">Garbitu gainidazketak</string>
     <string name="theme_case_type_override_dialog_title">Hautatu maiuskula/minuskulen gainidaztea</string>
@@ -634,8 +634,8 @@
     <string name="aosp_dark_theme_description">AOSP-n inspiratutako kolore ilunetako teklatu azala</string>
     <string name="aosp_light_theme_name">AOSP azal argia</string>
     <string name="aosp_light_theme_description">AOSP-n inspiratutako kolore argietako teklatu azala</string>
-    <string name="app_share_title">Kaixo AnySoftKeyboard-etik</string>
-    <string name="app_share_menu_title">Partekatu anySoftKeyboard honen bidez</string>
-    <string name="app_share_text">Pribatutasuna aintzat duen hizkuntza askotarako Android teklatu aplikazio libre doako eta pertsonalizagarri hau aholkatzen dizut.\nEskuratu hemen:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_title">Kaixo kasahorow-etik</string>
+    <string name="app_share_menu_title">Partekatu kasahorow honen bidez</string>
+    <string name="app_share_text">Pribatutasuna aintzat duen hizkuntza askotarako Android teklatu aplikazio libre doako eta pertsonalizagarri hau aholkatzen dizut.\nEskuratu hemen:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow\nF-Droid: https://f-droid.org/en/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">sakatu sorpresa baterako</string>
 </resources>

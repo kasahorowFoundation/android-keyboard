@@ -4,7 +4,7 @@
     <string name="debug_tracing_starting_failed">Запуск отслеживания не удался! Проверьте каталог логов для подробностей.</string>
     <string name="debug_tracing_finished">Отслеживание завершено! \nВот файл отслеживания\u0020<xliff:g id="trace_file">%s </xliff:g></string>
     <string name="menu_about_item">О нас</string>
-    <string name="how_to_pointer_title">Добро пожаловать в AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Добро пожаловать в kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Последние изменения для версии<xliff:g id="name">%s </xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Ещё:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -65,7 +65,7 @@
     <string name="night_mode_sound_control">Отключить звуки нажатия клавиш</string>
     <string name="night_mode_vibration_control">Отключить вибрацию нажатия клавиш</string>
     <string name="power_save_mode_screen">Настройки энергосбережения</string>
-    <string name="power_save_mode_description">Режим экономии энергии снизит потребление энергии AnySoftKeyboard путем отключения функций:</string>
+    <string name="power_save_mode_description">Режим экономии энергии снизит потребление энергии kasahorow путем отключения функций:</string>
     <string name="power_save_mode_state_summary">В настоящее время триггер энергосбережения:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Включить режим экономии энергии</string>
     <string name="power_save_mode_types_never">Никогда</string>
@@ -206,11 +206,11 @@
     <string name="volume_key_for_left_right_support_off_summary">Увеличение громкости передвигает курсор влево, уменьшение передвигает курсор вправо</string>
     <string name="more_ui_settings_group">Интерфейс</string>
     <string name="special_dictionaries_group">Специальные словари</string>
-    <string name="special_dictionaries_group_summary">Словари, используемые в AnySoftKeyboard</string>
+    <string name="special_dictionaries_group_summary">Словари, используемые в kasahorow</string>
     <string name="use_user_dictionary">Словарь пользователя</string>
     <string name="use_user_dictionary_on_summary">Предлагать пользователю добавлять слова (двойное нажатие на слово для добавления)</string>
     <string name="always_use_fallback_user_dictionary">Использовать личные пользовательские словари</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Использовать встроенный в AnySoftKeyboard приватный пользовательский словарь.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Использовать встроенный в kasahorow приватный пользовательский словарь.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Использовать приватный словарь, встроенный в Android.</string>
     <string name="use_auto_dictionary">Автоматический словарь</string>
     <string name="use_auto_dictionary_dialog_title">Выберите метод запоминания</string>
@@ -318,8 +318,8 @@
     <string name="lang_key_shows_popup_on_summary">Кнопка языка покажет диалоговое окно</string>
     <string name="lang_key_shows_popup_off_summary">Кнопка языка будет циклировать через включенные языки</string>
     <string name="settings_os_clipboard_sync">Синхронизировать буфер обмена с ОС</string>
-    <string name="settings_os_clipboard_sync_summary_on">Обнаруживать изменения буфера обмена и синхронизации с AnySoftKeyboard.</string>
-    <string name="settings_os_clipboard_sync_summary_off">Не просматривать операции буфера обмена вне AnySoftKeyboard.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Обнаруживать изменения буфера обмена и синхронизации с kasahorow.</string>
+    <string name="settings_os_clipboard_sync_summary_off">Не просматривать операции буфера обмена вне kasahorow.</string>
     <string name="auto_caps">Авто-заглавные</string>
     <string name="grammar_group">Грамматика</string>
     <string name="keyboard_behavior_group">Поведение клавиатуры</string>
@@ -463,11 +463,11 @@
     <string name="settings_long_press_timeout_slower">Медленней</string>
     <string name="settings_long_press_timeout_never">Никогда</string>
     <string name="settings_force_locale_title">Язык приложения</string>
-    <string name="settings_force_locale_summary">Язык, который используется внутри AnySoftKeyboard (изменения вступят в силу через некоторое время). Текущий: %s.</string>
+    <string name="settings_force_locale_summary">Язык, который используется внутри kasahorow (изменения вступят в силу через некоторое время). Текущий: %s.</string>
     <string name="tweak_workarounds_group">Временные решения</string>
     <string name="workaround_disable_rtl_fix">Отключить обработку справа-налево</string>
     <string name="workaround_disable_rtl_fix_summary_on">Использование ОС RTL обработки (для SE телефонов)</string>
-    <string name="workaround_disable_rtl_fix_summary_off">Использование обработки AnySoftKeyboard RTL </string>
+    <string name="workaround_disable_rtl_fix_summary_off">Использование обработки kasahorow RTL </string>
     <string name="settings_split_state_title_portrait">Портретное разделение/Сохранять текущее состояние</string>
     <string name="settings_split_state_title_landscape">Вертикальное разделение/Сохранять текущее состояние</string>
     <string name="settings_split_state_summary">Определите, разделена ли клавиатура по умолчанию. Сейчас: %s</string>
@@ -513,11 +513,11 @@
     <string name="emoji_default_gender_value_random_type">Случайный пол</string>
     <string name="developer_tools">Инструменты разработчика</string>
     <string name="click_for_developer_features">Инструменты разработчика</string>
-    <string name="click_for_developer_features_summary">Различные инструменты для разработчиков AnySoftKeyboard</string>
+    <string name="click_for_developer_features_summary">Различные инструменты для разработчиков kasahorow</string>
     <string name="failed_to_create_mem_dump">Не удалось создать файл дампа памяти из-за: <xliff:g id="message">%s </xliff:g>     </string>
     <string name="created_mem_dump_file">Создан файл дампа памяти в: <xliff:g id="file_path">%s </xliff:g>     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard не включен. Нажмите здесь, чтобы включить.</string>
-    <string name="not_notification_permission_text">AnySoftKeyboard не имеет вашего разрешения на публикацию уведомлений. В редких случаях нам может потребоваться уведомить вас о критических проблемах (например, сбоях).</string>
+    <string name="not_configured_with_click_here">kasahorow не включен. Нажмите здесь, чтобы включить.</string>
+    <string name="not_notification_permission_text">kasahorow не имеет вашего разрешения на публикацию уведомлений. В редких случаях нам может потребоваться уведомить вас о критических проблемах (например, сбоях).</string>
     <string name="not_configured_with_just_click_here">Нажмите здесь</string>
     <!--  Strings for possible PreferenceActivity Back/Next buttons -->
     <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
@@ -530,26 +530,26 @@
     <string name="enter_abbreviation_target_hint">Полное предложение</string>
     <string name="toast_error_custom_path_backup">Ошибка: Любое контекстное приложение может быть открыто</string>
     <string name="about_additional_software_licenses">Дополнительные лицензии на программное обеспечение</string>
-    <string name="setup_wizard_step_one_title">Включить AnySoftKeyboard</string>
-    <string name="setup_wizard_step_one_details">В этом шаге Вы должны включить <i>AnySoftKeyboard</i>. Пожалуйста, включите <i>\'AnySoftKeyboard\'</i> в окне <i>Клавиатура и способы ввода</i>.</string>
+    <string name="setup_wizard_step_one_title">Включить kasahorow</string>
+    <string name="setup_wizard_step_one_details">В этом шаге Вы должны включить <i>kasahorow</i>. Пожалуйста, включите <i>\'kasahorow\'</i> в окне <i>Клавиатура и способы ввода</i>.</string>
     <string name="setup_wizard_step_one_action">Перейти к настройке…</string>
-    <string name="setup_wizard_step_one_action_error_no_settings_activity">Ошибка: Ваше устройство не поддерживает сторонние клавиатуры. AnySoftKeyboard не может быть активирован!</string>
+    <string name="setup_wizard_step_one_action_error_no_settings_activity">Ошибка: Ваше устройство не поддерживает сторонние клавиатуры. kasahorow не может быть активирован!</string>
     <string name="setup_wizard_step_permissions_title">Включить разрешения</string>
-    <string name="setup_wizard_step_two_title">Переключение на AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details"><i>AnySoftKeyboard</i> включен.\nВыберите раскладку <i>AnySoftKeyboard</i> из списка доступных раскладок.</string>
+    <string name="setup_wizard_step_two_title">Переключение на kasahorow</string>
+    <string name="setup_wizard_step_two_details"><i>kasahorow</i> включен.\nВыберите раскладку <i>kasahorow</i> из списка доступных раскладок.</string>
     <string name="setup_wizard_step_two_action">Выбрать раскладку</string>
     <string name="setup_wizard_step_three_title">Что дальше</string>
-    <string name="setup_wizard_step_three_details">Спасибо Вам, что выбрали <i>AnySoftKeyboard</i>.</string>
+    <string name="setup_wizard_step_three_details">Спасибо Вам, что выбрали <i>kasahorow</i>.</string>
     <string name="setup_wizard_step_three_details_done"><b>Готово 🎉\nПерейдите в Ваше любимое приложение чтобы попробовать.</b></string>
     <string name="setup_wizard_step_three_details_actions">Или вы можете настроить и персонализировать клавиатуру по своему вкусу:</string>
     <string name="setup_wizard_step_three_action_languages">Установка языков…</string>
     <string name="setup_wizard_step_three_action_themes">Выбрать тему…</string>
     <string name="setup_wizard_step_three_action_all_settings">Персональные настройки…</string>
     <string name="setup_wizard_step_download_title">Скачать языковые пакеты</string>
-    <string name="setup_wizard_step_download_details">Вы будете рады узнать, что <i>AnySoftKeyboard</i> поддерживает десятки языков. Просто загрузите нужный языковой пакет и наслаждайтесь печатанием на любом языке вашего устройства.</string>
+    <string name="setup_wizard_step_download_details">Вы будете рады узнать, что <i>kasahorow</i> поддерживает десятки языков. Просто загрузите нужный языковой пакет и наслаждайтесь печатанием на любом языке вашего устройства.</string>
     <string name="setup_wizard_step_download_action">Скачать языковый пакет</string>
     <string name="setup_wizard_step_download_skip_action">Пропустить</string>
-    <string name="ime_crashed_text">К сожалению, есть проблема с <i>AnySoftKeyboard</i>. Не паникуйте, есть что-то <b> вы </b> может сделать, чтобы помочь решить эту проблему: послать нам отчет по аварии, и мы \ \'сделаем  самое лучшее для того чтобы решить эту аварию и вы получите обратно с удивительным опытом клавиатуры! \ N \ N с искренним извинением, команда Dev.</string>
+    <string name="ime_crashed_text">К сожалению, есть проблема с <i>kasahorow</i>. Не паникуйте, есть что-то <b> вы </b> может сделать, чтобы помочь решить эту проблему: послать нам отчет по аварии, и мы \ \'сделаем  самое лучшее для того чтобы решить эту аварию и вы получите обратно с удивительным опытом клавиатуры! \ N \ N с искренним извинением, команда Dev.</string>
     <string name="ime_crashed_send_button">Отправить</string>
     <string name="ime_crashed_cancel_button">Отменить</string>
     <string name="ime_crashed_intent_selector_title">Отправить отчет аварии через</string>
@@ -568,7 +568,7 @@
     <string name="wizard_allow_contacts_permission">Разрешить предложения на основе контактов</string>
     <string name="turn_off_contacts_dictionary">Выключить словарь из Контакты</string>
     <string name="read_more_about_permissions">Прочитать больше про разрешения…</string>
-    <string name="ask_beta_link_promo">Эй! Хочешь быстрее получать новые функции <i>AnySoftKeyboard</i>? Тогда тебе повезло! Канал <i>BETA</i> просто создан для <b>ТЕБЯ</b>!\nПросто зарегистрируйся по ссылке ниже и обнови через <i>Google Play Маркет</i>!\n\nhttps://play.google.com/apps/testing/com.menny.android.anysoftkeyboard\n\nИ спасибо за помощь в устранении багов перед переходом нововведений в релиз.</string>
+    <string name="ask_beta_link_promo">Эй! Хочешь быстрее получать новые функции <i>kasahorow</i>? Тогда тебе повезло! Канал <i>BETA</i> просто создан для <b>ТЕБЯ</b>!\nПросто зарегистрируйся по ссылке ниже и обнови через <i>Google Play Маркет</i>!\n\nhttps://play.google.com/apps/testing/com.menny.android.kasahorow\n\nИ спасибо за помощь в устранении багов перед переходом нововведений в релиз.</string>
     <string name="clipboard_fine_select_enabled_toast">Выделение текста активировано. Используйте стрелки влево/вправо.</string>
     <string name="app_shortcut_keyboards_disabled">Навигация по клавиатурам отключена</string>
     <string name="app_shortcut_keyboards_long_label">Выберите раскладки клавиатуры</string>
@@ -592,11 +592,11 @@
     <string name="no_internet_fields_specific_layout">Отсутствует</string>
     <string name="bottom_nav_home">Привет</string>
     <string name="setup_wizard_welcome_title">Приветствуем!</string>
-    <string name="setup_wizard_welcome_sub_title">Спасибо, что решили попробовать AnySoftKeyboard!</string>
-    <string name="setup_wizard_welcome_info">Как и любимая другая клавиатура AnySoftKeyboard требует активации в Настройках Android. Это требуется для того, чтобы программы с вредным кодом в виде клавиатур не своровали ваши данные.</string>
+    <string name="setup_wizard_welcome_sub_title">Спасибо, что решили попробовать kasahorow!</string>
+    <string name="setup_wizard_welcome_info">Как и любимая другая клавиатура kasahorow требует активации в Настройках Android. Это требуется для того, чтобы программы с вредным кодом в виде клавиатур не своровали ваши данные.</string>
     <string name="setup_wizard_welcome_info_2">Готовы? Нажмите ниже, чтобы начать сопровождение.</string>
     <string name="setup_wizard_welcome_start_action">Запуск установки…</string>
-    <string name="setup_wizard_welcome_info_footnote">* Нет сомнений, что AnySoftKeyboard не представляет никакой опасности. Вы можете убедиться в этом, заглянув в исходный код программы. Более того, программа не требует <i>СЕТЕВЫХ</i> разрешений, т.е. она никуда не отправляет данные с вашего устройства.</string>
+    <string name="setup_wizard_welcome_info_footnote">* Нет сомнений, что kasahorow не представляет никакой опасности. Вы можете убедиться в этом, заглянув в исходный код программы. Более того, программа не требует <i>СЕТЕВЫХ</i> разрешений, т.е. она никуда не отправляет данные с вашего устройства.</string>
     <string name="setup_wizard_welcome_privacy_action">Переход к политике конфиденциальности…</string>
     <string name="setup_wizard_skip">Пропустить</string>
     <string name="clear_all_dictionary_override">Очистить перезаписи</string>
@@ -644,14 +644,14 @@
     <string name="aosp_dark_theme_description">Вдохновленная AOSP тёмная тема для клавиатуры</string>
     <string name="aosp_light_theme_name">Светлая тема AOSP</string>
     <string name="aosp_light_theme_description">Вдохновленная AOSP светлая тема для клавиатуры</string>
-    <string name="app_share_title">Привет из AnySoftKeyboard</string>
-    <string name="app_share_menu_title">Поделился использованием AnySoftKeyboard</string>
-    <string name="app_share_text">Позвольте мне порекомендовать вам приватно-ориентированное, бесплатное, легконастраиваемое, многоязычное приложение с открытым исходным кодом для Android AnySoftKeyboard.\nЗагрузите его из:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_title">Привет из kasahorow</string>
+    <string name="app_share_menu_title">Поделился использованием kasahorow</string>
+    <string name="app_share_text">Позвольте мне порекомендовать вам приватно-ориентированное, бесплатное, легконастраиваемое, многоязычное приложение с открытым исходным кодом для Android kasahorow.\nЗагрузите его из:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow\nF-Droid: https://f-droid.org/en/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">нажмите сюда, чтобы увидеть сюрприз</string>
     <string name="delete_all_clipboard_entries">Пустой буфер обмена</string>
     <string name="tip_swipe_from_backspace_to_clear">Подсказка: Вы можете провести влево с кнопки Backspaсе, чтобы удалить слово!</string>
     <string name="notification_read_contacts_ticker">Требуется разрешение на контакты</string>
-    <string name="wizard_allow_notification_permission">Разрешить уведомления от AnySoftKeyboard</string>
+    <string name="wizard_allow_notification_permission">Разрешить уведомления от kasahorow</string>
     <string name="setup_wizard_step_notification_permissions_details">В редких случаях (например, сбои приложения) нам необходимо опубликовать уведомление об устройстве. Это рекомендуется, но запрет на уведомление не повлияет на поведение этого приложения.</string>
     <string name="wizard_skip_notification_permission">Запретить уведомления</string>
 </resources>

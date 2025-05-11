@@ -3,7 +3,7 @@ import java.util.stream.Collectors
 
 group 'net.evendanan'
 
-ext.override_app_id = 'com.menny.android.anysoftkeyboard'
+ext.override_app_id = 'com.kasahorow.android.keyboard.app'
 ext.shouldBePublished = true
 ext.override_release_key_alias = 'anysoftkeyboard'
 ext.closedTestingTrackName = 'alpha'
@@ -97,7 +97,7 @@ android {
 dependencies {
     implementation project(':api')
     implementation project(':addons:base')
-    implementation project(':addons:languages:english:pack')
+    implementation project(':addons:languages:kasahorow:pack')
     implementation project(':ime:base')
     implementation project(':ime:base-rx')
     implementation project(':ime:nextword')

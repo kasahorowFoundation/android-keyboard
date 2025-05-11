@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
     <string name="debug_tracing_starting">Dewindagol fuɗɗiima!\nƳeew dartinde ɗum ɗoo e yeeso</string>
     <string name="menu_about_item">Baɗte</string>
-    <string name="how_to_pointer_title">A jaɓɓaama e AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">A jaɓɓaama e kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Bayle cakkitiiɗe e v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Goɗɗi:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -51,7 +51,7 @@
     <string name="night_mode_sound_control">Daaƴ hitooji ñoƴunde-feɗo</string>
     <string name="night_mode_vibration_control">Daƴ jerɓule ñoƴƴunde-feɗo</string>
     <string name="power_save_mode_screen">Teelte Danndol-Jaynge</string>
-    <string name="power_save_mode_description">Danndol-Jaynge maa ustu ñaamdu jaynge AnySoftKeyboard so daaƴde fannuuji:</string>
+    <string name="power_save_mode_description">Danndol-Jaynge maa ustu ñaamdu jaynge kasahorow so daaƴde fannuuji:</string>
     <string name="power_save_mode_state_summary">Oo sahaa, kurmal Danndol-Jaynge:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Hurmin mbayka Danndol-Jaynge</string>
     <string name="power_save_mode_types_never">Hay sahaa</string>

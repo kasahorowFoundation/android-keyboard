@@ -8,7 +8,7 @@
     <string name="debug_tracing_finished">Şopandin qediya!\nPelê şopandinê ye\u0020<xliff:g id="trace_file">%s</xliff:g>
     </string>
     <string name="menu_about_item">Derbarê de</string>
-    <string name="how_to_pointer_title">Bi xêr hatî AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Bi xêr hatî kasahorow</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Guherandinên herî dawî ji bo v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Zêde:\u0020<xliff:g id="url">%s</xliff:g></string>
@@ -73,7 +73,7 @@
     <string name="night_mode_sound_control">Dengên pêlîkirina kilîla neçalak bike</string>
     <string name="night_mode_vibration_control">Dengê recifandina kilîla neçalak bike</string>
     <string name="power_save_mode_screen">Sexbêriya hêz</string>
-    <string name="power_save_mode_description">Moda Teserûfa-Pîl dê bi seqetkirina taybetiyên xwe ve veberhênerên enerjiyê yên AnySoftKeyboard kêm bike:</string>
+    <string name="power_save_mode_description">Moda Teserûfa-Pîl dê bi seqetkirina taybetiyên xwe ve veberhênerên enerjiyê yên kasahorow kêm bike:</string>
     <string name="power_save_mode_state_summary">Niha, Teserûfa-Pîl kişok:\u0020%s</string>
     <string name="power_save_mode_dialog_title">Sexbêriya hêzê biçalakîn</string>
     <string name="power_save_mode_types_never">Qet</string>
@@ -231,7 +231,7 @@
     <string name="use_user_dictionary">Ferhenga bikarnîvan</string>
     <string name="use_user_dictionary_on_summary">Pêşniyara peyvên zêdekirî yên bikarhêner (du-tikandina pêşniyarek ji bo lêzêdekirinê)</string>
     <string name="always_use_fallback_user_dictionary">Hilanîna taybet-Bikarhêner-Bikaranîn bikar bînin</string>
-    <string name="always_use_fallback_user_dictionary_on_summary">Mekanîzmaya ferhenga-bikarhêner a navborî AnySoftKeyboard\'a taybet bi kar bîne.</string>
+    <string name="always_use_fallback_user_dictionary_on_summary">Mekanîzmaya ferhenga-bikarhêner a navborî kasahorow\'a taybet bi kar bîne.</string>
     <string name="always_use_fallback_user_dictionary_off_summary">Hewl bide ferhenga gerdûnî ya binavkirî ya Android bikar bîne.</string>
     <string name="use_auto_dictionary">Ferhenga Otomatîkî</string>
     <string name="use_auto_dictionary_dialog_title">Metoda hînbûnê hilbijêre</string>
@@ -366,8 +366,8 @@
     <string name="lang_key_shows_popup_on_summary">Dê kilîta zimên diyaloga hilbijartinê vebike</string>
     <string name="lang_key_shows_popup_off_summary">Mifteya ziman dê zimanan çerx bike</string>
     <string name="settings_os_clipboard_sync">Panelê bi OS\'ê re hevdem bikin</string>
-    <string name="settings_os_clipboard_sync_summary_on">Guherandinên panelê kifş bikin û bi AnySoftKeyboard re senkronîze bikin</string>
-    <string name="settings_os_clipboard_sync_summary_off">Li derveyî AnySoftKeyboard guh nedin çalakiyên panelê.</string>
+    <string name="settings_os_clipboard_sync_summary_on">Guherandinên panelê kifş bikin û bi kasahorow re senkronîze bikin</string>
+    <string name="settings_os_clipboard_sync_summary_off">Li derveyî kasahorow guh nedin çalakiyên panelê.</string>
     <string name="auto_caps">Bixweber-kapîtalîzasyon</string>
     <string name="grammar_group">Rêziman</string>
     <string name="keyboard_behavior_group">Behsa Keyboard</string>
@@ -523,7 +523,7 @@
     <string name="settings_long_press_timeout_slower">Hêdîtir</string>
     <string name="settings_long_press_timeout_never">Qet</string>
     <string name="settings_force_locale_title">Hêza Herêmî</string>
-    <string name="settings_force_locale_summary">Herêma hêza ku di AnySoftKeyboard de tê bikaranîn (digire
+    <string name="settings_force_locale_summary">Herêma hêza ku di kasahorow de tê bikaranîn (digire
         ji bo ku bandor bikin.) Niha: %s.
     </string>
     <string name="tweak_workarounds_group">Çareseriyên</string>
@@ -531,7 +531,7 @@
     <string name="workaround_disable_rtl_fix_summary_on">Karûbarê OS RTL bikar bînin. Divê li ser xweş bixebitin
          alavên nûtir.
     </string>
-    <string name="workaround_disable_rtl_fix_summary_off">Karanîna RTL ya AnySoftKeyboard bikar bînin.  Divêt
+    <string name="workaround_disable_rtl_fix_summary_off">Karanîna RTL ya kasahorow bikar bînin.  Divêt
          tenê heke OS RTL nekare were bikar anîn.
     </string>
     <string name="settings_split_state_title_portrait">Dabeşandina Qelişandin/Bihevkelyan destpêkê li hev bikin</string>
@@ -593,7 +593,7 @@
     <string name="emoji_default_gender_value_random_type">Zayenda rasthatî</string>
     <string name="developer_tools">Alavên pêşvebir</string>
     <string name="click_for_developer_features">Amûrên pêşdebir</string>
-    <string name="click_for_developer_features_summary">Amûrên cûrbecûr ji bo AnySoftKeyboard
+    <string name="click_for_developer_features_summary">Amûrên cûrbecûr ji bo kasahorow
          pêşdebiran
     </string>
     <string name="failed_to_create_mem_dump">Afirandina pelê dûxana bîrê bi ser neket ji ber:
@@ -602,7 +602,7 @@
     <string name="created_mem_dump_file">Pela dûmanê ya bîrê hat afirandin li:
         <xliff:g id="file_path">%s</xliff:g>
     </string>
-    <string name="not_configured_with_click_here">AnySoftKeyboard bi temamî ji bo bikaranînê ne sazkar e. Tikandin
+    <string name="not_configured_with_click_here">kasahorow bi temamî ji bo bikaranînê ne sazkar e. Tikandin
         ji bo danîna vê derê.
     </string>
     <string name="not_configured_with_just_click_here">Li vir bitikin</string>
@@ -617,26 +617,26 @@
     <string name="enter_abbreviation_target_hint">Hevoka tam</string>
     <string name="toast_error_custom_path_backup">Çewtî: Her pêveka çarçoveyî dikare were vekirin</string>
     <string name="about_additional_software_licenses">Lîsansên Nermalava Zêdetir</string>
-    <string name="setup_wizard_step_one_title">AnySoftKeyboard çalak bike</string>
+    <string name="setup_wizard_step_one_title">kasahorow çalak bike</string>
     <string name="setup_wizard_step_one_details">Di vê pêngavê de, hûn ê hewce ne ku bikin <i>
-        AnySoftKeyboard</i>. Ji kerema xwe <i>\'AnySoftKeyboard\'</i>  di ya te de
+        kasahorow</i>. Ji kerema xwe <i>\'kasahorow\'</i>  di ya te de
 <i>Ziman&amp;Beyan
         mîhengên</i>. Ev ê dihêle em li ser cîhaza we bimeşin.
     </string>
     <string name="setup_wizard_step_one_action">Biçe mîhengên xwe yên<i>Ziman&amp;Têvedan</i>…
     </string>
     <string name="setup_wizard_step_one_action_error_no_settings_activity">Çewtî: Cîhaza te dike
-        piştgiriya klavyeyên partiya 3\' an nake. AnySoftKeyboard nikare were çalak kirin!
+        piştgiriya klavyeyên partiya 3\' an nake. kasahorow nikare were çalak kirin!
     </string>
     <string name="setup_wizard_step_permissions_title">Destûrnedanan çalak bike</string>
-    <string name="setup_wizard_step_two_title">Biguherîne AnySoftKeyboard</string>
-    <string name="setup_wizard_step_two_details">Pergala we dikare niha <i>AnySoftKeyboard</i> bikar bîne, lê
-        wekî klavyeya çalak nayê danîn.\nBi guherîna, <i>AnySoftKeyboard</i> dê bibe ya te ya nû
+    <string name="setup_wizard_step_two_title">Biguherîne kasahorow</string>
+    <string name="setup_wizard_step_two_details">Pergala we dikare niha <i>kasahorow</i> bikar bîne, lê
+        wekî klavyeya çalak nayê danîn.\nBi guherîna, <i>kasahorow</i> dê bibe ya te ya nû
         klavyeya li ser ekranê, tevî hemû taybetmendiyên wê!
     </string>
     <string name="setup_wizard_step_two_action">Klavyeyên çalak biguherîne</string>
     <string name="setup_wizard_step_three_title">Ya dî çi ye</string>
-    <string name="setup_wizard_step_three_details">Spas ji bo hilbijartina <i>AnySoftKeyboard</i>.
+    <string name="setup_wizard_step_three_details">Spas ji bo hilbijartina <i>kasahorow</i>.
     </string>
     <string name="setup_wizard_step_three_details_done"><b>Hûn hatine kirin 🎉\nGo ji bo ku hûn wê biceribînin biceribînin.</b>
     </string>
@@ -647,11 +647,11 @@
     <string name="setup_wizard_step_three_action_themes">Tema hilbijêre…</string>
     <string name="setup_wizard_step_three_action_all_settings">Her tiştên din vehewîne…</string>
     <string name="setup_wizard_step_download_title">Pakêtên Zimên Dakêşin</string>
-    <string name="setup_wizard_step_download_details">Tu yê kêfxweş bibî ku <i>AnySoftKeyboard</i> bi dehan zimanan piştgirî dike. Tenê ziman-pakêta daxwazkirî dakêşin û kêfa xwe li nivîsandinê bistînin
+    <string name="setup_wizard_step_download_details">Tu yê kêfxweş bibî ku <i>kasahorow</i> bi dehan zimanan piştgirî dike. Tenê ziman-pakêta daxwazkirî dakêşin û kêfa xwe li nivîsandinê bistînin
         di cîhaza te de her zimanek heye.</string>
     <string name="setup_wizard_step_download_action">Pakêta ziman dakêşe</string>
     <string name="setup_wizard_step_download_skip_action">Derbas bûn</string>
-    <string name="ime_crashed_text">Mixabin, pirsgirêkek bi <i>AnySoftKeyboard </i>.
+    <string name="ime_crashed_text">Mixabin, pirsgirêkek bi <i>kasahorow </i>.
         Panîk neke, tiştekî ku <b>tu</b> ji bo çareserkirina vê yekê bike heye: qezayê ji me re bişîne
         rapor bikin, û em ê ji bo çareserkirina vê qezayê û vegerîna te bi klavyeyeke ecêb bikin
         tecrûbe!\n\nBi lêborîna ji dil, tîma Dev.</string>
@@ -673,10 +673,10 @@
     <string name="wizard_allow_contacts_permission">Destûrê bide pêşniyarên tîpkirina têkiliyan</string>
     <string name="turn_off_contacts_dictionary">Ferhenga Têkiliyan Veke</string>
     <string name="read_more_about_permissions">Li ser destûrên bêtir bixwînin…</string>
-    <string name="ask_beta_link_promo">Hey! Dixwazî tiştên nû <i>AnySoftKeyboard</i> zûtir bikî? Piştre
+    <string name="ask_beta_link_promo">Hey! Dixwazî tiştên nû <i>kasahorow</i> zûtir bikî? Piştre
         tu di bextê xwe de yî! <i>BETA</i> niha ji bo <b>YOU</b>!\nTenê li ser tomar bike
         lînka jêrîn, û bi rêya <i>Google Play</i> app store!\n\n rojane bike
-        https://play.google.com/apps/testing/com.menny.android.anysoftkeyboard \n\nÛ Spas ji bo
+        https://play.google.com/apps/testing/com.menny.android.kasahorow \n\nÛ Spas ji bo
         berî ku bigihîjin gel, alîkariya kuştina kêzikan dikin.</string>
     <string name="clipboard_fine_select_enabled_toast">Bijartina-nivîsar çalak e. Tîrên çep/rast bi kar bîne.</string>
     <string name="app_shortcut_keyboards_disabled">Navîgasyona klavyeyê neçalak e</string>
@@ -701,15 +701,15 @@
     <string name="no_internet_fields_specific_layout">Netû</string>
     <string name="bottom_nav_home">Slav</string>
     <string name="setup_wizard_welcome_title">Hûn bi xêr hatin!</string>
-    <string name="setup_wizard_welcome_sub_title">Spas dikim ku we ceribandinek da AnySoftKeyboard!
+    <string name="setup_wizard_welcome_sub_title">Spas dikim ku we ceribandinek da kasahorow!
     </string>
     <string name="setup_wizard_welcome_info">Wekî din klavyeya Androidê, ji we re lazim e ku
-        di rûpelên Mîhengên Android ê de AnySoftKeyboard çalak bike. Ev ji hêla Android ve tê xwestin ku pê ewle bike ku
+        di rûpelên Mîhengên Android ê de kasahorow çalak bike. Ev ji hêla Android ve tê xwestin ku pê ewle bike ku
         daneyên te yên nivîsandî ji hêla klavyeyên xerab *ve nayê dizîn.
     </string>
     <string name="setup_wizard_welcome_info_2">Baş e, amade ye? ji bo destpêkê li jêr bitikin, ez ê bi rêya vê rêberiya te bikim.</string>
     <string name="setup_wizard_welcome_start_action">Dest bi amadekirinê bike…</string>
-    <string name="setup_wizard_welcome_info_footnote">* Helbet, AnySoftKeyboard ne xerab e. Tu
+    <string name="setup_wizard_welcome_info_footnote">* Helbet, kasahorow ne xerab e. Tu
         tên teşwîqkirin ku li koda me ya çavkaniyê binêrin û vê yekê piştrast bikin. Wekî din, tora me ya <i>tune ye
         </i>, ji ber vê yekê em nikarin daneyên ji cîhazê bişînin.
     </string>
@@ -760,9 +760,9 @@
     <string name="aosp_dark_theme_description">Tema klavyeya rengên tarî ya AOSP-Inspired</string>
     <string name="aosp_light_theme_name">Tema Ronahiya AOSP</string>
     <string name="aosp_light_theme_description">Tema klavyeya rengên ronahiyê a AOSP</string>
-    <string name="app_share_title">Silav ji AnySoftKeyboard</string>
-    <string name="app_share_menu_title">Bikaranîna AnySoftKeyboard parve bike</string>
-    <string name="app_share_text">Bila ez pêşniyara çavkaniya vekirî, nepenî-fokus, belaş, pir taybetmendî, pir zimanî Android keyboard app AnySoftKeyboard.\nGet it from:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.anysoftkeyboard\nF-Droid: https://f-droid.org/en/packages/com.menny.android.anysoftkeyboard/</string>
+    <string name="app_share_title">Silav ji kasahorow</string>
+    <string name="app_share_menu_title">Bikaranîna kasahorow parve bike</string>
+    <string name="app_share_text">Bila ez pêşniyara çavkaniya vekirî, nepenî-fokus, belaş, pir taybetmendî, pir zimanî Android keyboard app kasahorow.\nGet it from:\nPlay Store: https://play.google.com/store/apps/details?id=com.menny.android.kasahorow\nF-Droid: https://f-droid.org/en/packages/com.menny.android.kasahorow/</string>
     <string name="click_me_for_easter_egg_info">ji bo surprîzekê bitikîne</string>
     
     
