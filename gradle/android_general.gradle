@@ -52,7 +52,9 @@ afterEvaluate {
             task.options.compilerArgs << '-Xlint:-rawtypes' << '-Xlint:-cast' << '-Xlint:-unchecked' << '-Xlint:-classfile'
         }
 
-        // Disable this-escape warning as it affects the entire code base
-        task.options.compilerArgs << '-Xlint:-this-escape'
+        // Disable this-escape warning as it affects the entire code base when compile with JDK >=21
+        if (JavaVersion.current() >= JavaVersion.VERSION_21) {
+            task.options.compilerArgs << '-Xlint:-this-escape'
+        }
     }
 }
