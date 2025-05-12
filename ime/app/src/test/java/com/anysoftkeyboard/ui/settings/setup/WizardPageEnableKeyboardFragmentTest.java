@@ -99,7 +99,9 @@ public class WizardPageEnableKeyboardFragmentTest
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testKeyboardEnabled() {
     InputMethodManagerShadow.setKeyboardEnabled(RuntimeEnvironment.getApplication(), true);
 
@@ -189,7 +191,9 @@ public class WizardPageEnableKeyboardFragmentTest
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testSettingsObserverReturnsToActivityOnTrigger() {
     final ShadowContentResolver shadowContentResolver =
         Shadows.shadowOf(getApplicationContext().getContentResolver());

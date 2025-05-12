@@ -560,7 +560,9 @@ public class AnyKeyboardViewTest extends AnyKeyboardViewWithMiniKeyboardTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testEdgeTouchRightKeyL() {
     AnyKeyboard.AnyKey edgeKey = findKey('l');
     Assert.assertNotNull(edgeKey);

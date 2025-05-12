@@ -57,7 +57,9 @@ public class LauncherSettingsActivityTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testOnCreateWhenASKEnabledAndActive() throws Exception {
     // mocking ASK as enable and inactive
     Settings.Secure.putString(
@@ -93,7 +95,9 @@ public class LauncherSettingsActivityTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testOnCreateWhenASKEnabledAndInactive() throws Exception {
     // mocking ASK as enable and inactive
     Settings.Secure.putString(

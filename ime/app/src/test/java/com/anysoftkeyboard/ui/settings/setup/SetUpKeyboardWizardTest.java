@@ -67,7 +67,9 @@ public class SetUpKeyboardWizardTest {
   @Test
   /*I don't want to also verify the permissions page*/
   @Config(sdk = Build.VERSION_CODES.LOLLIPOP)
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testHappyPath() {
     mActivityScenarioRule.getScenario().moveToState(Lifecycle.State.STARTED);
     mActivityScenarioRule

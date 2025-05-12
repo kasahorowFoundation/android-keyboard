@@ -83,7 +83,9 @@ public class AnySoftKeyboardGesturesTest extends AnySoftKeyboardBaseTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testSwipeRight() {
     AnyKeyboard currentKeyboard = mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests();
     TestInputConnection inputConnection =
@@ -161,7 +163,9 @@ public class AnySoftKeyboardGesturesTest extends AnySoftKeyboardBaseTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testSwipeRightFromSpace() {
     AnyKeyboard currentKeyboard = mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests();
     TestInputConnection inputConnection =

@@ -37,11 +37,13 @@ public class KeyboardAddOnTest {
     }
     assertTrue(askEnglishEnabled);
     // only one enabled keyboard
-    Assert.assertEquals(1, enabledKeyboards.size());
+    Assert.assertEquals(2, enabledKeyboards.size());
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testGetEnabledDefaultFromAllKeyboards() throws Exception {
     List<KeyboardAddOnAndBuilder> allAvailableKeyboards =
         AnyApplication.getKeyboardFactory(getApplicationContext()).getAllAddOns();
@@ -72,7 +74,9 @@ public class KeyboardAddOnTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testGetKeyboardLocale() throws Exception {
     KeyboardAddOnAndBuilder askEnglish = getKeyboardFromFactory(ASK_ENGLISH_1_ID);
     assertNotNull(askEnglish);

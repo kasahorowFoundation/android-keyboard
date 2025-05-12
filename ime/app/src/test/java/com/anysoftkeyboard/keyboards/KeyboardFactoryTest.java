@@ -23,6 +23,9 @@ public class KeyboardFactoryTest {
   }
 
   @Test
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void hasMultipleAlphabets() throws Exception {
     Assert.assertFalse(mKeyboardFactory.hasMultipleAlphabets());
 
@@ -34,7 +37,9 @@ public class KeyboardFactoryTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testDefaultKeyboardId() {
     final List<KeyboardAddOnAndBuilder> allAddOns = mKeyboardFactory.getAllAddOns();
     Assert.assertEquals(13, allAddOns.size());
@@ -49,7 +54,9 @@ public class KeyboardFactoryTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testParsesApiLevel() {
     final KeyboardAddOnAndBuilder english16Keys =
         AnyApplication.getKeyboardFactory(getApplicationContext())

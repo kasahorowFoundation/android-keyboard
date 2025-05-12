@@ -68,7 +68,9 @@ public class ExternalAnyKeyboardTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testGeneralProperties() throws Exception {
     AnyKeyboard keyboard =
         AnyApplication.getKeyboardFactory(getApplicationContext())
@@ -84,7 +86,9 @@ public class ExternalAnyKeyboardTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testLoadedKeyboard() throws Exception {
     AnyKeyboard keyboard =
         AnyApplication.getKeyboardFactory(getApplicationContext())

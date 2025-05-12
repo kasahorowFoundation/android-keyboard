@@ -61,7 +61,9 @@ public class AboutAnySoftKeyboardFragmentTest
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testRateApp() {
     AboutAnySoftKeyboardFragment fragment = startFragment();
     View icon = fragment.getView().findViewById(R.id.rate_app_in_store);

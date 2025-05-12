@@ -37,9 +37,9 @@ public class LanguageTweaksFragmentTest
                 fragment.getString(R.string.settings_key_layout_for_internet_fields));
     Assert.assertNotNull(listPreference);
 
-    Assert.assertEquals(2, keyboardFactory.getEnabledIds().size());
-    Assert.assertEquals(3, listPreference.getEntries().length);
-    Assert.assertEquals(3, listPreference.getEntryValues().length);
+    Assert.assertEquals(3, keyboardFactory.getEnabledIds().size());
+    Assert.assertEquals(4, listPreference.getEntries().length);
+    Assert.assertEquals(4, listPreference.getEntryValues().length);
     Assert.assertEquals(keyboardFactory.getEnabledAddOn().getId(), listPreference.getValue());
 
     Assert.assertEquals("None", listPreference.getEntries()[0]);

@@ -75,7 +75,9 @@ public class AnySoftKeyboardViewRelatedTest extends AnySoftKeyboardBaseTest {
   }
 
   @Test
-  @Ignore("Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test yet.")
+  @Ignore(
+      "Disabling due to kasahorow keyboard changes which haven't been ported to work with unit test"
+          + " yet.")
   public void testSettingsOverrideDictionary() throws Exception {
     mAnySoftKeyboardUnderTest.simulateKeyPress(KeyCodes.SETTINGS);
     final AlertDialog settingsAlertDialog = GeneralDialogTestUtil.getLatestShownDialog();
