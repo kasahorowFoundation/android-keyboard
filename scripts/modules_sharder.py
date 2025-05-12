@@ -66,7 +66,7 @@ if __name__ == "__main__":
         extra_args = "--tests=\"*AllSdkTest*\""
     elif sharding_type == 'non_app':
         modules_to_shard = filter(lambda m: m != ":ime:app" and not m.startswith(":addons:"), all_modules)
-    elif sharding_type in ['binaries_0', 'binaries_1', 'binaries_2', 'binaries_app']:
+    elif sharding_type in ['binaries_app']:
         if sharding_type == 'binaries_app':
             modules_to_shard = [":ime:app"]
         else:

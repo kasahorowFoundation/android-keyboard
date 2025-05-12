@@ -210,7 +210,7 @@ jobs:
       KEY_STORE_FILE_DEFAULT_ALIAS_PASSWORD: alias_password
     strategy:
       matrix:
-        shard_type: [binaries_0, binaries_1, binaries_2, app]
+        shard_type: [app]
         include:
           - supports_canary: false
             supports_logo: true
