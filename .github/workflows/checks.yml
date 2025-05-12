@@ -324,8 +324,8 @@ jobs:
           token: ${{ secrets.BOT_MASTER_RW_GITHUB_TOKEN }}
           commit-message: 'Merge to default branch from ${{ github.ref_name }}.'
           title: 'Automated Merge to default branch from ${{ github.ref_name }}.'
-          committer: 'Polyglot <ask@evendanan.net>'
-          author: 'Polyglot <ask@evendanan.net>'
+          committer: 'Polyglot <code+bot@kasahorow.com>'
+          author: 'Polyglot <code+bot@kasahorow.com>'
           body: 'Generated from commit ${{ github.sha }} on ${{ github.ref }}.'
           team-reviewers: maintainers
           branch: 'bot-pr/merge-to-default-branch-from-${{ github.ref_name }}'

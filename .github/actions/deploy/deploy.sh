@@ -43,7 +43,7 @@ echo "for ${DEPLOYMENT_ENVIRONMENT}: will deploy process ${PROCESS_NAME} to ${DE
 export BUILD_COUNT_FOR_VERSION=${GITHUB_RUN_NUMBER}
 
 echo "Copying secret files..."
-cp "${SECRETS_REPO_FOLDER}/anysoftkeyboard.keystore" /tmp/anysoftkeyboard.keystore
+cp "${SECRETS_REPO_FOLDER}/kasahorow.keystore" /tmp/kasahorow.keystore
 cp "${SECRETS_REPO_FOLDER}/playstore-publisher-certs.json" /tmp/apk_upload_key.json
 
 echo "Preparing change log files..."
@@ -124,7 +124,7 @@ if [[ "${FRACTION}" == "1.00" ]] && [[ "${DEPLOY_CHANNEL}" == "production" ]]; t
     BRANCH_NAME="$(git name-rev --name-only HEAD)"
     echo "Will create ${MARKER_FILE} to halt future releases in the branch '${BRANCH_NAME}'."
     echo "Full deployment to production '${DEPLOYMENT_ENVIRONMENT}' was successful." > "${MARKER_FILE}"
-    git config --global user.email "ask@evendanan.net"
+    git config --global user.email "code+bot@kasahorow.com"
     git config --global user.name "Polyglot"
     git add "${MARKER_FILE}"
     git commit -m "Halting deploy to ${DEPLOYMENT_ENVIRONMENT}"

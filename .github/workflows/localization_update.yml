@@ -57,8 +57,8 @@ jobs:
           token: ${{ secrets.BOT_MASTER_RW_GITHUB_TOKEN }}
           commit-message: 'Automated Localization Update from crowdin'
           title: 'Automated Localization Update from crowdin'
-          committer: 'Polyglot <ask@evendanan.net>'
-          author: 'Polyglot <ask@evendanan.net>'
+          committer: 'Polyglot <code+bot@kasahorow.com>'
+          author: 'Polyglot <code+bot@kasahorow.com>'
           body: 'Generated from latest _main_ strings and crowdin data.'
           team-reviewers: add-on-maintainers
           branch: 'bot-pr/localization-update'
