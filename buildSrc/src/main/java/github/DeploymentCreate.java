@@ -16,7 +16,7 @@ public class DeploymentCreate
   @Override
   protected HttpUriRequest createHttpRequest(Request request, String requestJsonAsString) {
     final HttpPost httpPost =
-        new HttpPost("https://api.github.com/repos/AnySoftKeyboard/AnySoftKeyboard/deployments");
+        new HttpPost("https://api.github.com/repos/kasahorowFoundation/android-keyboard/deployments");
     httpPost.setEntity(new StringEntity(requestJsonAsString, StandardCharsets.UTF_8));
     return httpPost;
   }

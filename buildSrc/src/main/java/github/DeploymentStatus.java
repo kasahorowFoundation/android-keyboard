@@ -16,7 +16,7 @@ public class DeploymentStatus
   protected HttpUriRequest createHttpRequest(Request request, String requestJsonAsString) {
     final HttpPost httpPost =
         new HttpPost(
-            "https://api.github.com/repos/AnySoftKeyboard/AnySoftKeyboard/deployments/"
+            "https://api.github.com/repos/kasahorowFoundation/android-keyboard/deployments/"
                 + request.id
                 + "/statuses");
     httpPost.setEntity(new StringEntity(requestJsonAsString, StandardCharsets.UTF_8));

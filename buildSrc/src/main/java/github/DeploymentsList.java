@@ -13,7 +13,7 @@ public class DeploymentsList
   @Override
   protected HttpUriRequest createHttpRequest(Request request, String requestJsonAsString) {
     return new HttpGet(
-        "https://api.github.com/repos/AnySoftKeyboard/AnySoftKeyboard/deployments?sha="
+        "https://api.github.com/repos/kasahorowFoundation/android-keyboard/deployments?sha="
             + request.sha);
   }
 
