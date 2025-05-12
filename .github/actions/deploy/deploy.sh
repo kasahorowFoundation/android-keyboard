@@ -43,7 +43,7 @@ echo "for ${DEPLOYMENT_ENVIRONMENT}: will deploy process ${PROCESS_NAME} to ${DE
 export BUILD_COUNT_FOR_VERSION=${GITHUB_RUN_NUMBER}
 
 echo "Copying secret files..."
-cp "${SECRETS_REPO_FOLDER}/kasahorow.keystore" /tmp/kasahorow.keystore
+cp "${SECRETS_REPO_FOLDER}/kasahorow.keystore" /tmp/anysoftkeyboard.keystore
 cp "${SECRETS_REPO_FOLDER}/playstore-publisher-certs.json" /tmp/apk_upload_key.json
 
 echo "Preparing change log files..."
