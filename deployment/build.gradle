@@ -27,13 +27,13 @@ deployments {
     imeProduction {
         environmentSteps = ['production_010', '', 'production_020', '', '', 'production_030', 'production_040', 'production_050', '', '', '', 'production_075', '', 'production_100']
     }
-
-    addOnsMain {
+    // Disable deployments of add-ons for now
+    /*addOnsMain {
         environmentSteps = ['alpha_100', 'beta_100']
     }
     addOnsProduction {
         environmentSteps = ['production_010', '', 'production_050', '', 'production_100']
-    }
+    }*/
 }
 
 long getDaysFromLastCommitFromGit() {
