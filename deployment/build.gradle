@@ -27,13 +27,12 @@ deployments {
     imeProduction {
         environmentSteps = ['production_010', '', 'production_020', '', '', 'production_030', 'production_040', 'production_050', '', '', '', 'production_075', '', 'production_100']
     }
-    // Disable deployments of add-ons for now
-    /*addOnsMain {
+    addOnsMain {
         environmentSteps = ['alpha_100', 'beta_100']
     }
     addOnsProduction {
         environmentSteps = ['production_010', '', 'production_050', '', 'production_100']
-    }*/
+    }
 }
 
 long getDaysFromLastCommitFromGit() {
@@ -160,17 +159,22 @@ tasks.register('deploymentRequestProcess').configure {
                 if (newDeploy == 'true') {
                     println('deploy-request for a new deploy')
                     imeDeploy = imeOnMainPush
-                    addOnsDeploy = addOnsOnMainPush
+                    // Disable deployments of add-ons for now
+                    addOnsDeploy = noOpTask
+                    //addOnsDeploy = addOnsOnMainPush
                 } else if (newDeploy == 'false') {
                     println('deploy-request for a promote')
                     imeDeploy = imePromoteMain
-                    addOnsDeploy = addOnsPromoteMain
+                    // Disable deployments of add-ons for now
+                    addOnsDeploy = noOpTask
+                    //addOnsDeploy = addOnsPromoteMain
                 }
             } else if (ref.matches('release-branch-ime-v.+')) {
                 println('deploy-request from ime release branch')
                 if (newDeploy == 'true') {
                     println('deploy-request for a new deploy')
                     imeDeploy = imeOnReleasePush
+                    // Disable deployments of add-ons for now
                     addOnsDeploy = noOpTask
                 } else if (newDeploy == 'false') {
                     println('deploy-request for a promote')
@@ -182,11 +186,14 @@ tasks.register('deploymentRequestProcess').configure {
                 if (newDeploy == 'true') {
                     println('deploy-request for a new deploy')
                     imeDeploy = noOpTask
+                    // Disable deployments of add-ons for now
                     addOnsDeploy = addOnsOnReleasePush
                 } else if (newDeploy == 'false') {
                     println('deploy-request for a promote')
                     imeDeploy = noOpTask
-                    addOnsDeploy = addOnsPromoteRelease
+                    // Disable deployments of add-ons for now
+                    addOnsDeploy = noOpTask
+                    //addOnsDeploy = addOnsPromoteRelease
                 }
             }
 

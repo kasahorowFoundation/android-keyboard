@@ -29,6 +29,7 @@
 1. <img src='indonesian/apk/flag/flag.svg?sanitize=1' height='16'>&nbsp;Indonesian: [Source](indonesian) • [Play Store](https://play.google.com/store/apps/details?id=com.anysoftkeyboard.languagepack.indonesian)
 1. <img src='italian/apk/flag/flag.svg?sanitize=1' height='16'>&nbsp;Italian: [Source](italian) • [Play Store](https://play.google.com/store/apps/details?id=com.anysoftkeyboard.languagepack.italian)
 1. <img src='kachin/apk/flag/flag.png' height='16'>&nbsp;Kachin: [Source](kachin) • [Play Store](https://play.google.com/store/apps/details?id=com.anysoftkeyboard.languagepack.kachin)
+1. <img src='kasahorow/apk/flag/flag.svg?sanitize=1' height='16'>&nbsp;Kasahorow: [Source](kasahorow) (not published reason: 'Part of the main AnySoftKeyboard app.')
 1. <img src='kurdish/apk/flag/flag.svg?sanitize=1' height='16'>&nbsp;Kurdish: [Source](kurdish) • [Play Store](https://play.google.com/store/apps/details?id=com.anysoftkeyboard.languagepack.kurdish)
 1. <img src='latvian/apk/flag/flag.svg?sanitize=1' height='16'>&nbsp;Latvian: [Source](latvian) • [Play Store](https://play.google.com/store/apps/details?id=com.anysoftkeyboard.languagepack.latvian)
 1. <img src='lithuanian/apk/flag/flag.svg?sanitize=1' height='16'>&nbsp;Lithuanian: [Source](lithuanian) • [Play Store](https://play.google.com/store/apps/details?id=org.herrlado.ask.languagepack.lithuanian)
