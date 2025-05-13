@@ -18,6 +18,9 @@ inputs:
   api_token:
     description: "token for github api"
     required: true
+  deployment_environment:
+    description: "Deployment environment name"
+    required: false
 runs:
   using: "docker"
   image: "docker://ghcr.io/menny/android:1.21.2"
@@ -33,6 +36,7 @@ runs:
     - ${{ inputs.new_deploy }}
     - ${{ inputs.api_username }}
     - ${{ inputs.api_token }}
+    - ${{ inputs.deployment_environment }}
 branding:
   icon: 'upload-cloud'
   color: 'blue'

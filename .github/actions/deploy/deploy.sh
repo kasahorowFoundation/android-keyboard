@@ -82,8 +82,10 @@ if [[ "${DEPLOYMENT_TASK}" == "deploy" ]]; then
       ;;
 
     addOns*)
-      DEPLOY_ARGS+=( "--track" "${DEPLOY_CHANNEL}" )
-      DEPLOY_TASKS+=( "assembleRelease" "bundleRelease" "publishReleaseBundle" "-x" "ime:app:assembleRelease" "-x" "ime:app:bundleRelease" "-x" "ime:app:publishReleaseBundle" )
+      #DEPLOY_ARGS+=( "--track" "${DEPLOY_CHANNEL}" )
+      #DEPLOY_TASKS+=( "assembleRelease" "bundleRelease" "publishReleaseBundle" "-x" "ime:app:assembleRelease" "-x" "ime:app:bundleRelease" "-x" "ime:app:publishReleaseBundle" )
+      echo "Addons/language pack deployment is disabled."
+      exit 0
       ;;
 
     *)
@@ -102,8 +104,10 @@ elif [[ "${DEPLOYMENT_TASK}" == "deploy:migration" ]]; then
       ;;
 
     addOns*)
-      DEPLOY_ARGS+=( "--from-track" "${PREVIOUS_DEPLOY_CHANNEL}" "--promote-track" "${DEPLOY_CHANNEL}" )
-      DEPLOY_TASKS+=( "promoteReleaseArtifact" "-x" "ime:app:promoteReleaseArtifact" )
+      #DEPLOY_ARGS+=( "--from-track" "${PREVIOUS_DEPLOY_CHANNEL}" "--promote-track" "${DEPLOY_CHANNEL}" )
+      #DEPLOY_TASKS+=( "promoteReleaseArtifact" "-x" "ime:app:promoteReleaseArtifact" )
+      echo "Addons/language pack migration is disabled."
+      exit 0
       ;;
 
   esac

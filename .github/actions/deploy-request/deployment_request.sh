@@ -11,6 +11,14 @@ API_USERNAME="${1}"
 shift
 API_TOKEN="${1}"
 shift
+DEPLOYMENT_ENVIRONMENT="${1}"
+shift
+
+# Block deploy requests for addons/language packs
+if [[ "${DEPLOYMENT_ENVIRONMENT}" == addOns* ]] || [[ "${DEPLOYMENT_ENVIRONMENT}" == *addOns* ]]; then
+  echo "Deploy requests for addons/language packs are disabled."
+  exit 0
+fi
 
 if [[ "${SHA}" == "HEAD" ]]; then
   echo "HEAD was specified as SHA. Taking from git:"

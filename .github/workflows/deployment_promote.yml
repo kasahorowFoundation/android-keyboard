@@ -26,3 +26,4 @@ jobs:
           new_deploy: false
           api_username: ${{ secrets.BOT_MASTER_RW_GITHUB_USERNAME }}
           api_token: ${{ secrets.BOT_MASTER_RW_GITHUB_TOKEN }}
+          deployment_environment: ${{ github.event.deployment.environment }}
