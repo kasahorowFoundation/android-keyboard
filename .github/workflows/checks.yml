@@ -65,9 +65,9 @@ jobs:
       - uses: actions/cache@v4.2.3
         with:
           path: .github_cache_gradle/
-          key: global-v11-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}
+          key: global-v12-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/*.gradle') }}
           restore-keys: |
-            global-v11-
+            global-v12-
       - name: setup
         run: ./scripts/ci/ci_setup.sh
       - name: check
