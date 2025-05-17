@@ -915,15 +915,15 @@ public class AnySoftKeyboardGimmicksTest extends AnySoftKeyboardBaseTest {
     mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getShiftKey().onPressed();
 
     mAnySoftKeyboardUnderTest.simulateKeyPress('\'');
-    Assert.assertEquals("''''''\"", inputConnection.getCurrentTextInInputConnection());
+    Assert.assertEquals("''''''\'", inputConnection.getCurrentTextInInputConnection());
     mAnySoftKeyboardUnderTest.simulateKeyPress('\'');
-    Assert.assertEquals("''''''\"\"", inputConnection.getCurrentTextInInputConnection());
+    Assert.assertEquals("''''''\'\'", inputConnection.getCurrentTextInInputConnection());
 
     mAnySoftKeyboardUnderTest.onRelease(KeyCodes.SHIFT);
     mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getShiftKey().onReleased();
 
     mAnySoftKeyboardUnderTest.simulateKeyPress('\'');
-    Assert.assertEquals("''''''\"\"'", inputConnection.getCurrentTextInInputConnection());
+    Assert.assertEquals("''''''\'\''", inputConnection.getCurrentTextInInputConnection());
   }
 
   @Test

@@ -580,7 +580,7 @@ public class ExternalAnyKeyboardRowsTest {
 
     TestingAnyKeyboard keyboardWithoutRows =
         new TestingAnyKeyboard(R.xml.keyboard_without_top_bottom_rows);
-    Assert.assertEquals(18, keyboardWithoutRows.getKeys().size());
+    Assert.assertEquals(16, keyboardWithoutRows.getKeys().size());
   }
 
   @Test
@@ -589,11 +589,11 @@ public class ExternalAnyKeyboardRowsTest {
         R.string.settings_key_allow_layouts_to_provide_generic_rows, false);
     TestingAnyKeyboard keyboardWithRows =
         new TestingAnyKeyboard(R.xml.keyboard_with_top_bottom_rows);
-    Assert.assertEquals(18, keyboardWithRows.getKeys().size());
+    Assert.assertEquals(16, keyboardWithRows.getKeys().size());
 
     TestingAnyKeyboard keyboardWithoutRows =
         new TestingAnyKeyboard(R.xml.keyboard_without_top_bottom_rows);
-    Assert.assertEquals(18, keyboardWithoutRows.getKeys().size());
+    Assert.assertEquals(16, keyboardWithoutRows.getKeys().size());
   }
 
   private static class TestingAnyKeyboard extends ExternalAnyKeyboard {
