@@ -142,6 +142,7 @@ jobs:
           title: 'JS Dependencies Update'
           committer: 'Polyglot <ask@evendanan.net>'
           author: 'Polyglot <ask@evendanan.net>'
-          team-reviewers: infra, maintainers
+          # Disable team reviewers for now.
+          #team-reviewers: infra, maintainers
           branch: 'bot-pr/js-deps-update'
           delete-branch: true
