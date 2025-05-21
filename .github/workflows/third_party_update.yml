@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - main
+      - patch/fixThirdPartyAuthomation
     paths:
       - 'scripts/ci/third-party-update/**/*'
       - '.github/workflows/third_party_update.yml'
