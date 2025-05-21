@@ -39,7 +39,7 @@ do
   latest_version="$(./scripts/ci/third-party-update/get_latest_github_version.sh $action)"
   echo "   latest version $latest_version"
   for f in $(find .github/workflows/ -name "*.yml" -type f); do
-    python3 scripts/file_text_replace_in_place.py "${f}" "${action}@.*" "${action}@v${latest_version}"
+    python3 scripts/file_text_replace_in_place.py "${f}" "${action}@.*" "${action}@${latest_version}"
   done
 
   if [[ -n $(git status -s) ]]; then
