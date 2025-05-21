@@ -116,7 +116,8 @@ jobs:
           committer: 'Polyglot <ask@evendanan.net>'
           author: 'Polyglot <ask@evendanan.net>'
           body: ${{ matrix.pr_body}}
-          team-reviewers: infra, maintainers
+          # Disable team reviewers for now.
+          #team-reviewers: infra, maintainers
           branch: 'bot-pr/auto-update-${{ matrix.type}}'
           delete-branch: true
   general-js-deps:
