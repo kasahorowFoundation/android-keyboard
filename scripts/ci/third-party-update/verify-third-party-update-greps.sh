@@ -35,7 +35,9 @@ testRegex "1.2-beta" "1.2-beta"
 testRegex " 1.2.32 " "1.2.32"
 testRegex ":1.22.2" "1.22.2"
 testRegex "11.2.4 " "11.2.4"
-testRegex "v13.12.2" "13.12.2"
+testRegex "v13.12.2" "v13.12.2"
+testRegex "v1.2-beta" "v1.2-beta"
+testRegex "v1.2.1-rc3" "v1.2.1-rc3"
 
 echo "${PASSED} tests passed out of ${TESTS}."
 if [[ "$PASSED" != "$TESTS" ]]; then

@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     with open(file_path, "r") as input:
         lines = input.readlines()
-    
+
     output_lines = map(lambda l: re.sub(regex_input, text, l), lines)
 
     with open(file_path, "w") as output:
