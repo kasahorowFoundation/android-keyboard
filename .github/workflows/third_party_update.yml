@@ -40,7 +40,8 @@ jobs:
           title: 'Automated Maven Artifacts Update'
           committer: 'Polyglot <ask@evendanan.net>'
           author: 'Polyglot <ask@evendanan.net>'
-          team-reviewers: infra, maintainers
+          # Disable team reviewers for now.
+          #team-reviewers: infra, maintainers
           branch: 'bot-pr/maven-update'
           delete-branch: true
   github-actions-update:
@@ -62,7 +63,8 @@ jobs:
           title: 'Automated GitHub Actions Update'
           committer: 'Polyglot <ask@evendanan.net>'
           author: 'Polyglot <ask@evendanan.net>'
-          team-reviewers: infra, maintainers
+          # Disable team reviewers for now.
+          #team-reviewers: infra, maintainers
           branch: 'bot-pr/github-actions-update'
           delete-branch: true
   third-party-update:
