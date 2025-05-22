@@ -549,6 +549,10 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardColorizeNavBar {
       case KeyCodes.DISABLED:
         Logger.d(TAG, "Disabled key was pressed.");
         break;
+      case KeyCodes.MONIFERE:
+        Logger.d(TAG, "Monifere key was pressed.");
+        launchMonifere();
+        break;
       default:
         if (BuildConfig.DEBUG) {
           // this should not happen! We should handle ALL function keys.
@@ -770,6 +774,20 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardColorizeNavBar {
             getKeyboardSwitcher().nextAlphabetKeyboard(currentEditorInfo, id.toString());
           }
         });
+  }
+
+  private void launchMonifere() {
+    try {
+      String keyboardName = getCurrentAlphabetKeyboard().getKeyboardName().toString();
+      Logger.d(TAG, "launchMonifere: keyboardName: %s", keyboardName);
+      getCurrentAlphabetKeyboard().getKeyboardName();
+      String kasahorowMonifereUrl = getString(R.string.kasahorow_monifere, keyboardName);
+      Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(kasahorowMonifereUrl));
+      browserIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      startActivity(browserIntent);
+    } catch (Exception e) {
+      Toast.makeText(getApplicationContext(), "Could not open browser", Toast.LENGTH_SHORT).show();
+    }
   }
 
   @Override

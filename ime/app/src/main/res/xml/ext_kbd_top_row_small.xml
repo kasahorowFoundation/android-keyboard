@@ -4,14 +4,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ask="http://schemas.android.com/apk/res-auto">
     <Row android:rowEdgeFlags="top"
-         android:keyWidth="35%p"
-         android:keyHeight="@integer/key_short_height">
+        android:keyWidth="35%p"
+        android:keyHeight="@integer/key_short_height">
         <Key android:codes="@integer/key_code_mode_symbols" ask:isFunctional="true"
-             android:isModifier="true" ask:keyDynamicEmblem="text" android:keyEdgeFlags="left"/>
-        <Key android:codes="@integer/key_code_arrow_left" ask:isFunctional="true" android:keyWidth="15%p" android:isRepeatable="true"/>
-        <Key android:codes="@integer/key_code_arrow_right" ask:isFunctional="true" android:keyWidth="15%p" android:isRepeatable="true"/>
-        <Key android:codes="@integer/key_code_mode_alphabet" ask:isFunctional="true" ask:longPressCode="@integer/key_code_mode_alphabet_popup"
-             android:isModifier="true" ask:keyDynamicEmblem="text" android:keyEdgeFlags="right"/>
+            android:isModifier="true" ask:keyDynamicEmblem="text" android:keyEdgeFlags="left"/>
+        <Key android:codes="@integer/key_code_monifere" android:keyLabel="Monifere"
+            ask:isFunctional="true" android:isModifier="true" ask:keyDynamicEmblem="text"/>
+        <Key android:codes="@integer/key_code_mode_alphabet" ask:isFunctional="true"
+            ask:longPressCode="@integer/key_code_mode_alphabet_popup"
+            android:isModifier="true" ask:keyDynamicEmblem="text" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row android:rowEdgeFlags="top" android:keyWidth="52%p" android:keyHeight="@integer/key_short_height">
+        <Key android:codes="@integer/key_code_arrow_left" ask:isFunctional="true" android:keyWidth="52%p"
+            android:isRepeatable="true" android:keyEdgeFlags="left"/>
+        <Key android:codes="@integer/key_code_arrow_right" ask:isFunctional="true" android:keyWidth="52%p"
+            android:isRepeatable="true" android:keyEdgeFlags="right"/>
     </Row>
     <Row android:keyboardMode="@integer/keyboard_mode_password" android:rowEdgeFlags="top" android:keyWidth="10%p"
     android:keyHeight="@integer/key_short_height">
@@ -25,5 +32,5 @@
         <Key android:codes="56" android:keyLabel="8" ask:shiftedCodes="42"/>
         <Key android:codes="57" android:keyLabel="9" ask:shiftedCodes="40"/>
         <Key android:codes="48" android:keyLabel="0" ask:shiftedCodes="41" android:keyEdgeFlags="right"/>
-</Row>
+    </Row>
 </Keyboard>
