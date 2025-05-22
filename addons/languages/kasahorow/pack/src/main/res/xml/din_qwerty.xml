@@ -30,8 +30,8 @@
     </Row>
 
     <Row>
-        <Key android:codes="-1" android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left" android:popupCharacters="" />
-        <Key android:codes="122" android:horizontalGap="5%p" android:keyLabel="z" android:popupCharacters="" />
+        <Key android:codes="-1" android:keyWidth="15%p" android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left" android:popupCharacters="" />
+        <Key android:codes="122" android:keyLabel="z" android:popupCharacters="" />
         <Key android:codes="596" android:keyLabel="ɔ" android:popupCharacters="ɔ̈" />
         <Key android:codes="99" android:keyLabel="c" android:popupCharacters="" />
         <Key android:codes="331" android:keyLabel="ŋ" android:popupCharacters="v" />
