@@ -9,7 +9,7 @@
         android:keyHeight="@integer/key_normal_height">
         <Key android:codes="@integer/key_code_mode_symbols" ask:isFunctional="true"
             android:isModifier="true" ask:keyDynamicEmblem="text" android:keyEdgeFlags="left"/>
-        <Key android:codes="@integer/key_code_monifere" android:keyLabel="Monifere"
+        <Key android:codes="@integer/key_code_kasahorow" android:keyLabel="@string/kasahorow"
             ask:isFunctional="true" android:isModifier="true" ask:keyDynamicEmblem="text"/>
         <Key android:codes="@integer/key_code_mode_alphabet" ask:isFunctional="true"
             ask:longPressCode="@integer/key_code_mode_alphabet_popup"

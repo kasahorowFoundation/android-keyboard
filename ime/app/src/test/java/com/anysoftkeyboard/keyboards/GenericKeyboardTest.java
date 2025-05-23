@@ -89,7 +89,7 @@ public class GenericKeyboardTest {
             Keyboard.KEYBOARD_ROW_MODE_NORMAL);
     anyKeyboard.loadKeyboard(SIMPLE_KeyboardDimens, mTopRow, mBottomRow);
 
-    final int indexAfterTopRow = 4;
+    final int indexAfterTopRow = 5;
 
     Assert.assertFalse(anyKeyboard.showPreview);
     Assert.assertEquals(52, anyKeyboard.getKeys().get(indexAfterTopRow).getPrimaryCode());
@@ -117,7 +117,7 @@ public class GenericKeyboardTest {
             Keyboard.KEYBOARD_ROW_MODE_NORMAL);
     anyKeyboard.loadKeyboard(SIMPLE_KeyboardDimens, mTopRow, mBottomRow);
 
-    final int indexAfterTopRow = 4;
+    final int indexAfterTopRow = 5;
 
     Assert.assertTrue(anyKeyboard.showPreview);
     Assert.assertTrue(anyKeyboard.getKeys().get(indexAfterTopRow).showPreview);
@@ -141,7 +141,7 @@ public class GenericKeyboardTest {
             Keyboard.KEYBOARD_ROW_MODE_NORMAL);
     anyKeyboard.loadKeyboard(SIMPLE_KeyboardDimens, mTopRow, mBottomRow);
 
-    final int indexAfterTopRow = 4;
+    final int indexAfterTopRow = 5;
 
     Assert.assertTrue(anyKeyboard.showPreview);
     Assert.assertTrue(anyKeyboard.getKeys().get(indexAfterTopRow).showPreview);

@@ -407,7 +407,7 @@ public class ExternalAnyKeyboardRowsTest {
         AnyApplication.getKeyboardFactory(getApplicationContext()).hasMultipleAlphabets());
 
     // ensuring there is a language key
-    Assert.assertEquals(38, keyboard.getKeys().size());
+    Assert.assertEquals(39, keyboard.getKeys().size());
     int foundLanguageKeys = 0;
     for (Keyboard.Key key : keyboard.getKeys()) {
       if (KeyCodes.MODE_ALPHABET == key.getPrimaryCode()) foundLanguageKeys++;
@@ -469,7 +469,7 @@ public class ExternalAnyKeyboardRowsTest {
         AnyApplication.getKeyboardFactory(getApplicationContext()).hasMultipleAlphabets());
 
     // ensuring no language key exists
-    Assert.assertEquals(39 /*one was removed*/, keyboard.getKeys().size());
+    Assert.assertEquals(40 /*one was removed*/, keyboard.getKeys().size());
     int langKeysSeen = 0;
     List<Keyboard.Key> keys = keyboard.getKeys();
     for (int i = 0; i < keys.size(); i++) {
@@ -535,19 +535,18 @@ public class ExternalAnyKeyboardRowsTest {
     AnyKeyboard keyboard =
         createAndLoadKeyboardForModeWithBottomRowIndex(Keyboard.KEYBOARD_ROW_MODE_NORMAL, 3);
 
-    // should have four keys at top row
+    // should have 3 keys at top row
     final int topY = (int) SIMPLE_KeyboardDimens.getRowVerticalGap();
     Assert.assertEquals(topY, keyboard.getKeys().get(0).y);
     Assert.assertEquals(topY, keyboard.getKeys().get(1).y);
     Assert.assertEquals(topY, keyboard.getKeys().get(2).y);
-    Assert.assertEquals(topY, keyboard.getKeys().get(3).y);
     // next row
-    Assert.assertNotEquals(topY, keyboard.getKeys().get(4).y);
+    Assert.assertNotEquals(topY, keyboard.getKeys().get(3).y);
 
     // positions (note - keys are not evenly spread)
     int[] keyIndices = new int[] {32, 33, 34, 35, 36, 37};
-    int[] xPositions = new int[] {1, 19, 31, 79, 91, 103};
-    int[] widths = new int[] {16, 10, 46, 10, 10, 16};
+    int[] xPositions = new int[] {103, 1, 19, 31, 79, 91};
+    int[] widths = new int[] {16, 16, 10, 46, 10, 10};
     int[] gaps = new int[] {0, 0, 0, 0, 0, 0};
     for (int keyIndexIndex = 0; keyIndexIndex < keyIndices.length; keyIndexIndex++) {
       final int keyIndex = keyIndices[keyIndexIndex];
@@ -580,7 +579,7 @@ public class ExternalAnyKeyboardRowsTest {
 
     TestingAnyKeyboard keyboardWithoutRows =
         new TestingAnyKeyboard(R.xml.keyboard_without_top_bottom_rows);
-    Assert.assertEquals(16, keyboardWithoutRows.getKeys().size());
+    Assert.assertEquals(17, keyboardWithoutRows.getKeys().size());
   }
 
   @Test
@@ -589,11 +588,11 @@ public class ExternalAnyKeyboardRowsTest {
         R.string.settings_key_allow_layouts_to_provide_generic_rows, false);
     TestingAnyKeyboard keyboardWithRows =
         new TestingAnyKeyboard(R.xml.keyboard_with_top_bottom_rows);
-    Assert.assertEquals(16, keyboardWithRows.getKeys().size());
+    Assert.assertEquals(17, keyboardWithRows.getKeys().size());
 
     TestingAnyKeyboard keyboardWithoutRows =
         new TestingAnyKeyboard(R.xml.keyboard_without_top_bottom_rows);
-    Assert.assertEquals(16, keyboardWithoutRows.getKeys().size());
+    Assert.assertEquals(17, keyboardWithoutRows.getKeys().size());
   }
 
   private static class TestingAnyKeyboard extends ExternalAnyKeyboard {
