@@ -38,17 +38,17 @@ public class SupportKeyboardController {
   private static final String TAG = "SupportKeyboardController";
 
   private final Context context;
-  private final String selectedKeyboardName;
-  private final String sourceScreen;
+  private final String mSelectedKeyboardName;
+  private final String mSourceScreen;
 
   public SupportKeyboardController(@NonNull Context context, @NonNull String selectedKeyboardName, @NonNull String sourceScreen) {
     this.context = context;
-    this.selectedKeyboardName = selectedKeyboardName;
-    this.sourceScreen = sourceScreen;
+    this.mSelectedKeyboardName = selectedKeyboardName;
+    this.mSourceScreen = sourceScreen;
   }
 
   public void launchSupportKeyboard() {
-    startSupportActivity(context, selectedKeyboardName, sourceScreen);
+    startSupportActivity(context, mSelectedKeyboardName, mSourceScreen);
   }
 
   public static void startSupportActivity(
