@@ -35,7 +35,7 @@ import com.kasahorow.keyboard.R;
 public class SupportKeyboardController {
   private static final String TAG = "SupportKeyboardController";
 
-  private final Context context;
+  private final Context mContext;
   private final String mSelectedKeyboardName;
   private final String mSourceScreen;
 
@@ -43,13 +43,13 @@ public class SupportKeyboardController {
       @NonNull Context context,
       @NonNull String selectedKeyboardName,
       @NonNull String sourceScreen) {
-    this.context = context;
+    this.mContext = context;
     this.mSelectedKeyboardName = selectedKeyboardName;
     this.mSourceScreen = sourceScreen;
   }
 
   public void launchSupportKeyboard() {
-    startSupportActivity(context, mSelectedKeyboardName, mSourceScreen);
+    startSupportActivity(mContext, mSelectedKeyboardName, mSourceScreen);
   }
 
   public static void startSupportActivity(
