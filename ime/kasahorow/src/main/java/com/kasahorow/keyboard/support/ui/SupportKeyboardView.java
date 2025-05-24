@@ -28,11 +28,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
-
 import com.kasahorow.keyboard.R;
-
 
 public class SupportKeyboardView extends FrameLayout {
 

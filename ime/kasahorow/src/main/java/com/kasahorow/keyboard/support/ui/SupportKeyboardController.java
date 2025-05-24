@@ -28,9 +28,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-
 import com.anysoftkeyboard.base.utils.Logger;
 import com.kasahorow.keyboard.R;
 
@@ -41,7 +39,10 @@ public class SupportKeyboardController {
   private final String mSelectedKeyboardName;
   private final String mSourceScreen;
 
-  public SupportKeyboardController(@NonNull Context context, @NonNull String selectedKeyboardName, @NonNull String sourceScreen) {
+  public SupportKeyboardController(
+      @NonNull Context context,
+      @NonNull String selectedKeyboardName,
+      @NonNull String sourceScreen) {
     this.context = context;
     this.mSelectedKeyboardName = selectedKeyboardName;
     this.mSourceScreen = sourceScreen;
@@ -54,16 +55,17 @@ public class SupportKeyboardController {
   public static void startSupportActivity(
       @NonNull Context context,
       @NonNull String selectedKeyboardName,
-      @NonNull String sourceScreen
-  ) {
+      @NonNull String sourceScreen) {
     try {
-      String supportKeyboardUrl = context.getString(R.string.support_keyboard_url, sourceScreen, selectedKeyboardName );
+      String supportKeyboardUrl =
+          context.getString(R.string.support_keyboard_url, sourceScreen, selectedKeyboardName);
       Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(supportKeyboardUrl));
       browserIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       context.startActivity(browserIntent);
     } catch (Exception ex) {
       Logger.e(TAG, "Could not launch Store search!", ex);
-      Toast.makeText(context, context.getText(R.string.could_not_open_browser), Toast.LENGTH_LONG).show();
+      Toast.makeText(context, context.getText(R.string.could_not_open_browser), Toast.LENGTH_LONG)
+          .show();
     }
   }
 }

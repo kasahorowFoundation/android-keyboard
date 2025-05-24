@@ -183,11 +183,8 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
           new AddOnStoreSearchController(requireActivity(), getMarketSearchKeyword());
     }
 
-    mSupportKeyboardController = new SupportKeyboardController(
-            requireActivity(),
-            "",
-            "settings_screen"
-    );
+    mSupportKeyboardController =
+        new SupportKeyboardController(requireActivity(), "", "settings_screen");
     return paramLayoutInflater.inflate(
         mIsSingleSelection
             ? R.layout.add_on_browser_single_selection_layout
@@ -277,7 +274,8 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
         new GridLayoutManager.SpanSizeLookup() {
           @Override
           public int getSpanSize(int position) {
-            if (position == 0 || (position == mAllAddOns.size() + 1 && getMarketSearchTitle() != 0)) { // Footer
+            if (position == 0
+                || (position == mAllAddOns.size() + 1 && getMarketSearchTitle() != 0)) { // Footer
               return mColumnsCount;
             }
             return 1; // Regular items take one column
@@ -336,7 +334,8 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
       if (mIsSingleSelection) {
         if (isEnabled) return; // already enabled
         final E previouslyEnabled = mFactory.getEnabledAddOn();
-        final int previouslyEnabledIndex = mAllAddOns.indexOf(previouslyEnabled) + 1; // Add 1 for header
+        final int previouslyEnabledIndex =
+            mAllAddOns.indexOf(previouslyEnabled) + 1; // Add 1 for header
 
         mEnabledAddOnsIds.clear();
         mEnabledAddOnsIds.add(addOn.getId());
@@ -377,7 +376,6 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_ITEM = 1;
     private static final int TYPE_FOOTER = 2; // For AddOnStoreSearchView if needed
-
 
     private final LayoutInflater mLayoutInflater;
 
