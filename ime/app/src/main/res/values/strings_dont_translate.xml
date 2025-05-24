@@ -37,7 +37,6 @@
     <string name="switch_incognito_template">🕵️\u0020<xliff:g id="incognito">%s</xliff:g></string>
 
     <string name="rate_app_in_store_url">http://play.google.com/store/apps/details?id=<xliff:g id="rate_url">%s</xliff:g></string>
-    <string name="kasahorow_monifere">https://monifere.kasahorow.com?utm_campaign=android&amp;utm_source=<xliff:g id="keyboard_name">%s</xliff:g></string>
 
     <string name="deeplink_url_keyboards">anysoftkeyboard://settings/language/layouts</string>
     <string name="deeplink_url_themes">anysoftkeyboard://settings/ui/themes</string>
