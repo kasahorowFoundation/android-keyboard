@@ -61,6 +61,7 @@ import com.anysoftkeyboard.ui.dev.DeveloperUtils;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.anysoftkeyboard.utils.IMEUtil;
 import com.google.android.voiceime.VoiceRecognitionTrigger;
+import com.kasahorow.keyboard.support.ui.SupportKeyboardController;
 import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.menny.android.anysoftkeyboard.BuildConfig;
 import com.menny.android.anysoftkeyboard.R;
@@ -549,9 +550,9 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardColorizeNavBar {
       case KeyCodes.DISABLED:
         Logger.d(TAG, "Disabled key was pressed.");
         break;
-      case KeyCodes.MONIFERE:
-        Logger.d(TAG, "Monifere key was pressed.");
-        launchMonifere();
+      case KeyCodes.KASAHOROW:
+        Logger.d(TAG, "Kasahorow key was pressed.");
+        launchSupportKeyboard();
         break;
       default:
         if (BuildConfig.DEBUG) {
@@ -776,18 +777,9 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardColorizeNavBar {
         });
   }
 
-  private void launchMonifere() {
-    try {
-      String keyboardName = getCurrentAlphabetKeyboard().getKeyboardName().toString();
-      Logger.d(TAG, "launchMonifere: keyboardName: %s", keyboardName);
-      getCurrentAlphabetKeyboard().getKeyboardName();
-      String kasahorowMonifereUrl = getString(R.string.kasahorow_monifere, keyboardName);
-      Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(kasahorowMonifereUrl));
-      browserIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-      startActivity(browserIntent);
-    } catch (Exception e) {
-      Toast.makeText(getApplicationContext(), "Could not open browser", Toast.LENGTH_SHORT).show();
-    }
+  private void launchSupportKeyboard() {
+    String keyboardName = getCurrentAlphabetKeyboard().getKeyboardName().toString();
+    SupportKeyboardController.startSupportActivity(this, keyboardName, "keyboard_layout");
   }
 
   @Override

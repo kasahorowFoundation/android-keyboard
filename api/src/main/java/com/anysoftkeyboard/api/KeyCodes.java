@@ -69,7 +69,7 @@ public class KeyCodes {
 
   public static final int EXTERNAL_INTEGRATION = -200;
 
-  public static final int MONIFERE = -138;
+  public static final int KASAHOROW = -138;
 
   public static boolean isOutputKeyCode(final int code) {
     if (code > 0) {

@@ -40,6 +40,8 @@ import com.anysoftkeyboard.addons.ui.AddOnStoreSearchController;
 import com.anysoftkeyboard.addons.ui.AddOnStoreSearchView;
 import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.keyboards.views.DemoAnyKeyboardView;
+import com.kasahorow.keyboard.support.ui.SupportKeyboardController;
+import com.kasahorow.keyboard.support.ui.SupportKeyboardView;
 import com.menny.android.anysoftkeyboard.R;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -64,6 +66,8 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
   @Nullable private DemoAnyKeyboardView mSelectedKeyboardView;
 
   @Nullable private AddOnStoreSearchController mMarketSearchController;
+
+  @Nullable private SupportKeyboardController mSupportKeyboardController;
   private int mColumnsCount = 2;
 
   protected AbstractAddOnsBrowserFragment(
@@ -178,6 +182,12 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
       mMarketSearchController =
           new AddOnStoreSearchController(requireActivity(), getMarketSearchKeyword());
     }
+
+    mSupportKeyboardController = new SupportKeyboardController(
+            requireActivity(),
+            "",
+            "settings_screen"
+    );
     return paramLayoutInflater.inflate(
         mIsSingleSelection
             ? R.layout.add_on_browser_single_selection_layout
@@ -190,6 +200,7 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
   public void onDestroyView() {
     super.onDestroyView();
     if (mMarketSearchController != null) mMarketSearchController.dismiss();
+    mSupportKeyboardController = null;
   }
 
   @Override
@@ -266,11 +277,10 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
         new GridLayoutManager.SpanSizeLookup() {
           @Override
           public int getSpanSize(int position) {
-            if (position == mAllAddOns.size()) {
+            if (position == 0 || (position == mAllAddOns.size() + 1 && getMarketSearchTitle() != 0)) { // Footer
               return mColumnsCount;
-            } else {
-              return 1;
             }
+            return 1; // Regular items take one column
           }
         });
 
@@ -316,28 +326,33 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
 
     @Override
     public void onClick(View v) {
-      final boolean isEnabled = mEnabledAddOnsIds.contains(mAddOn.getId());
+      // Adjust position for header
+      final int adapterPosition = getBindingAdapterPosition() - 1; // Subtract 1 for header
+      if (adapterPosition < 0 || adapterPosition >= mAllAddOns.size()) return;
+
+      final E addOn = mAllAddOns.get(adapterPosition);
+      final boolean isEnabled = mEnabledAddOnsIds.contains(addOn.getId());
+
       if (mIsSingleSelection) {
         if (isEnabled) return; // already enabled
         final E previouslyEnabled = mFactory.getEnabledAddOn();
-        final int previouslyEnabledIndex = mAllAddOns.indexOf(previouslyEnabled);
+        final int previouslyEnabledIndex = mAllAddOns.indexOf(previouslyEnabled) + 1; // Add 1 for header
 
         mEnabledAddOnsIds.clear();
-        mEnabledAddOnsIds.add(mAddOn.getId());
-        // clicking in single selection mode, means ENABLED
-        mFactory.setAddOnEnabled(mAddOn.getId(), true);
+        mEnabledAddOnsIds.add(addOn.getId());
+        mFactory.setAddOnEnabled(addOn.getId(), true);
         if (mSelectedKeyboardView != null) {
-          applyAddOnToDemoKeyboardView(mAddOn, mSelectedKeyboardView);
+          applyAddOnToDemoKeyboardView(addOn, mSelectedKeyboardView);
         }
         mRecyclerView.getAdapter().notifyItemChanged(previouslyEnabledIndex);
       } else {
-        // clicking in multi-selection means flip
+        // Multi-selection mode
         if (isEnabled) {
-          mEnabledAddOnsIds.remove(mAddOn.getId());
-          mFactory.setAddOnEnabled(mAddOn.getId(), false);
+          mEnabledAddOnsIds.remove(addOn.getId());
+          mFactory.setAddOnEnabled(addOn.getId(), false);
         } else {
-          mEnabledAddOnsIds.add(mAddOn.getId());
-          mFactory.setAddOnEnabled(mAddOn.getId(), true);
+          mEnabledAddOnsIds.add(addOn.getId());
+          mFactory.setAddOnEnabled(addOn.getId(), true);
         }
       }
 
@@ -345,7 +360,24 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
     }
   }
 
+  private class HeaderViewHolder extends RecyclerView.ViewHolder {
+    HeaderViewHolder(View itemView) {
+      super(itemView);
+    }
+  }
+
+  private class FooterViewHolder extends RecyclerView.ViewHolder {
+    FooterViewHolder(View itemView) {
+      super(itemView);
+    }
+  }
+
   private class DemoKeyboardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+    private static final int TYPE_HEADER = 0;
+    private static final int TYPE_ITEM = 1;
+    private static final int TYPE_FOOTER = 2; // For AddOnStoreSearchView if needed
+
 
     private final LayoutInflater mLayoutInflater;
 
@@ -356,42 +388,50 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-      if (viewType == 0) {
-        View itemView = mLayoutInflater.inflate(R.layout.add_on_browser_view_item, parent, false);
-        return new KeyboardAddOnViewHolder(itemView);
-      } else {
+      if (viewType == TYPE_HEADER) {
+        SupportKeyboardView supportKeyboardView = new SupportKeyboardView(getActivity(), null);
+        CharSequence supportKeyboard = getText(R.string.support_keyboard);
+        supportKeyboardView.setTag(supportKeyboard);
+        supportKeyboardView.setTitle(supportKeyboard);
+        supportKeyboardView.setSupportKeyboardController(mSupportKeyboardController);
+        return new HeaderViewHolder(supportKeyboardView);
+      } else if (viewType == TYPE_FOOTER) {
         AddOnStoreSearchView searchView = new AddOnStoreSearchView(getActivity(), null);
         searchView.setTag(getMarketSearchKeyword());
         searchView.setTitle(getText(getMarketSearchTitle()));
         searchView.setSearchController(mMarketSearchController);
-        return new RecyclerView.ViewHolder(searchView) {
-          /*empty implementation*/
-        };
+        return new FooterViewHolder(searchView);
+      } else {
+        View itemView = mLayoutInflater.inflate(R.layout.add_on_browser_view_item, parent, false);
+        return new KeyboardAddOnViewHolder(itemView);
       }
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-      if (getItemViewType(position) == 0) {
-        E addOn = mAllAddOns.get(position);
-        ((KeyboardAddOnViewHolder) holder).bindToAddOn(addOn);
+      if (holder instanceof AbstractAddOnsBrowserFragment.KeyboardAddOnViewHolder) {
+        // Adjust position for header
+        E addOn = mAllAddOns.get(position - 1); // Subtract 1 for header
+        ((AbstractAddOnsBrowserFragment.KeyboardAddOnViewHolder) holder).bindToAddOn(addOn);
       }
     }
 
     @Override
     public int getItemViewType(int position) {
-      if (position == mAllAddOns.size()) {
-        return 1;
+      if (position == 0) {
+        return TYPE_HEADER;
+      } else if (position == getItemCount() - 1 && getMarketSearchTitle() != 0) {
+        return TYPE_FOOTER;
       } else {
-        return 0;
+        return TYPE_ITEM;
       }
     }
 
     @Override
     public int getItemCount() {
-      final int extra = getMarketSearchKeyword() != null ? 1 : 0;
-      return mAllAddOns.size() + extra;
+      // Add 1 for header, 1 for footer (if needed)
+      return mAllAddOns.size() + 1 + (getMarketSearchTitle() != 0 ? 1 : 0);
     }
   }
 }
