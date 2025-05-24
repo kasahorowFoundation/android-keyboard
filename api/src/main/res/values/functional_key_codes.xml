@@ -63,4 +63,6 @@
 
     <integer name="key_code_delete_word">-7</integer>
     <integer name="key_code_forward_delete">-8</integer>
+    <integer name="key_code_kasahorow">-138</integer>
+
 </resources>

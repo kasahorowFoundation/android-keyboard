@@ -61,6 +61,7 @@ import com.anysoftkeyboard.ui.dev.DeveloperUtils;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
 import com.anysoftkeyboard.utils.IMEUtil;
 import com.google.android.voiceime.VoiceRecognitionTrigger;
+import com.kasahorow.keyboard.support.ui.SupportKeyboardController;
 import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.menny.android.anysoftkeyboard.BuildConfig;
 import com.menny.android.anysoftkeyboard.R;
@@ -549,6 +550,10 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardColorizeNavBar {
       case KeyCodes.DISABLED:
         Logger.d(TAG, "Disabled key was pressed.");
         break;
+      case KeyCodes.KASAHOROW:
+        Logger.d(TAG, "Kasahorow key was pressed.");
+        launchSupportKeyboard();
+        break;
       default:
         if (BuildConfig.DEBUG) {
           // this should not happen! We should handle ALL function keys.
@@ -770,6 +775,11 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardColorizeNavBar {
             getKeyboardSwitcher().nextAlphabetKeyboard(currentEditorInfo, id.toString());
           }
         });
+  }
+
+  private void launchSupportKeyboard() {
+    String keyboardName = getCurrentAlphabetKeyboard().getKeyboardName().toString();
+    SupportKeyboardController.startSupportActivity(this, keyboardName, "keyboard_layout");
   }
 
   @Override

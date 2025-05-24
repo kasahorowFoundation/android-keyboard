@@ -254,8 +254,8 @@ public class AnyKeyboardViewTest extends AnyKeyboardViewWithMiniKeyboardTest {
 
   @Test
   public void testSlideToNextKeyHappyPath() {
-    AnyKeyboard.AnyKey key1 = (AnyKeyboard.AnyKey) mEnglishKeyboard.getKeys().get(14);
-    AnyKeyboard.AnyKey key2 = (AnyKeyboard.AnyKey) mEnglishKeyboard.getKeys().get(15);
+    AnyKeyboard.AnyKey key1 = (AnyKeyboard.AnyKey) mEnglishKeyboard.getKeys().get(15);
+    AnyKeyboard.AnyKey key2 = (AnyKeyboard.AnyKey) mEnglishKeyboard.getKeys().get(16);
     int primaryKey1 = key1.getCodeAtIndex(0, false);
     int primaryKey2 = key2.getCodeAtIndex(0, false);
 

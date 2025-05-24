@@ -1102,7 +1102,7 @@ public class AnySoftKeyboardGimmicksTest extends AnySoftKeyboardBaseTest {
     Assert.assertFalse(mAnySoftKeyboardUnderTest.isKeyboardViewHidden());
     mAnySoftKeyboardUnderTest.getKeyboardSwitcherForTests().verifyKeyboardsFlushed();
     assertKeyDimensions(
-        mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeys().get(0), 168, 5, 105);
+        mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeys().get(0), 176, 5, 105);
 
     SharedPrefsHelper.setPrefsValue(
         R.string.settings_key_default_split_state_portrait, "compact_left");
@@ -1163,7 +1163,7 @@ public class AnySoftKeyboardGimmicksTest extends AnySoftKeyboardBaseTest {
     Assert.assertFalse(mAnySoftKeyboardUnderTest.isKeyboardViewHidden());
     mAnySoftKeyboardUnderTest.getKeyboardSwitcherForTests().verifyKeyboardsFlushed();
     assertKeyDimensions(
-        mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeys().get(0), 378, 5, 87);
+        mAnySoftKeyboardUnderTest.getCurrentKeyboardForTests().getKeys().get(0), 398, 5, 87);
 
     SharedPrefsHelper.setPrefsValue(
         R.string.settings_key_default_split_state_landscape, "compact_left");

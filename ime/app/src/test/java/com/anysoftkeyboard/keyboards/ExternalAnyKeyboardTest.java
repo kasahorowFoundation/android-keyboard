@@ -117,7 +117,7 @@ public class ExternalAnyKeyboardTest {
     keyboard.loadKeyboard(SIMPLE_KeyboardDimens);
 
     KeyDrawableStateProvider provider = new KeyDrawableStateProvider(1, 2, 3, 4, 5);
-    AnyKeyboard.AnyKey key = (AnyKeyboard.AnyKey) keyboard.getKeys().get(4);
+    AnyKeyboard.AnyKey key = (AnyKeyboard.AnyKey) keyboard.getKeys().get(5);
     Assert.assertFalse(key.isFunctional());
     Assert.assertArrayEquals(provider.KEY_STATE_NORMAL, key.getCurrentDrawableState(provider));
     key.onPressed();
