@@ -184,7 +184,7 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
     }
 
     mSupportKeyboardController =
-        new SupportKeyboardController(requireActivity(), "", "settings_screen");
+        new SupportKeyboardController(requireActivity(), "", getKasahorowSupportSource());
     return paramLayoutInflater.inflate(
         mIsSingleSelection
             ? R.layout.add_on_browser_single_selection_layout
@@ -293,6 +293,8 @@ public abstract class AbstractAddOnsBrowserFragment<E extends AddOn> extends Fra
 
   @StringRes
   protected abstract int getMarketSearchTitle();
+
+  protected abstract String getKasahorowSupportSource();
 
   private class KeyboardAddOnViewHolder extends RecyclerView.ViewHolder
       implements View.OnClickListener {

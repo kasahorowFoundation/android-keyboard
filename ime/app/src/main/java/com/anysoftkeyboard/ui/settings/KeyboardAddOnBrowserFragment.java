@@ -58,6 +58,11 @@ public class KeyboardAddOnBrowserFragment
   }
 
   @Override
+  protected String getKasahorowSupportSource() {
+    return "keyboard_selection";
+  }
+
+  @Override
   protected void applyAddOnToDemoKeyboardView(
       @NonNull KeyboardAddOnAndBuilder addOn, @NonNull DemoAnyKeyboardView demoKeyboardView) {
     AnyKeyboard defaultKeyboard = addOn.createKeyboard(Keyboard.KEYBOARD_ROW_MODE_NORMAL);

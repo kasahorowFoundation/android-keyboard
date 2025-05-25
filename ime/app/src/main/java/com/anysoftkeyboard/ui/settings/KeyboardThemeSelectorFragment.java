@@ -154,6 +154,11 @@ public class KeyboardThemeSelectorFragment extends AbstractAddOnsBrowserFragment
     return R.string.search_market_for_keyboard_addons;
   }
 
+  @Override
+  protected String getKasahorowSupportSource() {
+    return "keyboard_theme";
+  }
+
   @Nullable
   @Override
   protected String getMarketSearchKeyword() {
