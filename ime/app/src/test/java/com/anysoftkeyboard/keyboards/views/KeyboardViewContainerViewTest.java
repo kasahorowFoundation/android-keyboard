@@ -371,7 +371,7 @@ public class KeyboardViewContainerViewTest {
     Assert.assertEquals(View.VISIBLE, mUnderTest.getCandidateView().getVisibility());
 
     Assert.assertEquals(1024, mUnderTest.getMeasuredWidth());
-    Assert.assertEquals(1068, mUnderTest.getMeasuredHeight());
+    Assert.assertEquals(1070, mUnderTest.getMeasuredHeight());
 
     mUnderTest.setActionsStripVisibility(false);
     mUnderTest.onMeasure(

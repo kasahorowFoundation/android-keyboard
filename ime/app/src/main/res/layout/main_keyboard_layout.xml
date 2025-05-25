@@ -32,7 +32,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/candidate_strip_height"
         android:layout_margin="0px"
-        android:padding="0px" />
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp" />
 
     <com.anysoftkeyboard.keyboards.views.AnyKeyboardView
         android:id="@+id/AnyKeyboardMainView"
