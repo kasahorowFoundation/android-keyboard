@@ -173,6 +173,11 @@ public class AdditionalUiSettingsFragment extends PreferenceFragmentCompat
     }
 
     @Override
+    protected final String getKasahorowSupportSource() {
+      return "";
+    }
+
+    @Override
     protected final void applyAddOnToDemoKeyboardView(
         @NonNull KeyboardExtension addOn, @NonNull DemoAnyKeyboardView demoKeyboardView) {
       AnyKeyboard defaultKeyboard =

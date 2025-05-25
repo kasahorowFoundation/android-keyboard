@@ -124,4 +124,9 @@ public class QuickTextKeysBrowseFragment extends AbstractAddOnsBrowserFragment<Q
   protected int getMarketSearchTitle() {
     return R.string.search_market_for_quick_key_addons;
   }
+
+  @Override
+  protected String getKasahorowSupportSource() {
+    return "quick_text";
+  }
 }
