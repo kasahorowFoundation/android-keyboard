@@ -13,7 +13,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="com.anysoftkeyboard.ui.settings.MainSettingsActivity"
-            android:targetPackage="com.menny.android.anysoftkeyboard"
+            android:targetPackage="com.kasahorow.android.keyboard.app"
             android:data="@string/deeplink_url_keyboards"/>
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
@@ -29,7 +29,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="com.anysoftkeyboard.ui.settings.MainSettingsActivity"
-            android:targetPackage="com.menny.android.anysoftkeyboard"
+            android:targetPackage="com.kasahorow.android.keyboard.app"
             android:data="@string/deeplink_url_themes"/>
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
@@ -45,7 +45,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="com.anysoftkeyboard.ui.settings.MainSettingsActivity"
-            android:targetPackage="com.menny.android.anysoftkeyboard"
+            android:targetPackage="com.kasahorow.android.keyboard.app"
             android:data="@string/deeplink_url_quick_text"/>
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
@@ -61,7 +61,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="com.anysoftkeyboard.ui.settings.MainSettingsActivity"
-            android:targetPackage="com.menny.android.anysoftkeyboard"
+            android:targetPackage="com.kasahorow.android.keyboard.app"
             android:data="@string/deeplink_url_gestures"/>
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
